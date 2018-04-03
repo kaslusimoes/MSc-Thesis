@@ -1,3 +1,6 @@
+meta-ignore/
+
+# GitHub's TeX project default .gitignore
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
