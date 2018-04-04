@@ -71,4 +71,7 @@ $$ \eta^b_{n+1} = \eta^b_{(n)} - \frac{\partial \log Z_{n+1}}{\partial \theta_b^
 
 where we defined $\mathcal{E}_n = - \log Z_n$ the cost function of our problem. This cost function, or *"free energy"*, depends on the *intrinsic* mechanisms of the machine, not taking into account the generator family chosen. We will deal more with this topic in section [@sec:bayesgaussperceptron].
 
-[^einstein-summation]: Here we start using Einstein summation convention $$ x_a y^a \equiv \sum_a x_a y_a $$
+
+[^einstein-summation]:
+
+    Here we start using Einstein summation convention $$ x_a y^a \equiv \sum_a x_a y_a $$

@@ -1,6 +1,7 @@
 .PHONY: help pdf tex
 
 BASEDIR=$(CURDIR)
+INPUTDIR=$(BASEDIR)/chapters
 OUTPUTDIR=$(BASEDIR)/output
 
 help:
@@ -12,16 +13,20 @@ help:
 	@echo 'get local templates with: pandoc -D latex/html/etc                     '
 	@echo 'or generic ones from: https://github.com/jgm/pandoc-templates          '
 
-pdf: ./chapters/*.md
-	pandoc --verbose --toc summary.md chapters/*.md \
-	-V fontsize=12pt -V documentclass:tufte-book -V papersize:a4paper \
-	--filter pandoc-crossref --number-sections \
+pdf:
+	pandoc --verbose --toc \
+	metadata.yaml "$(INPUTDIR)"/*.md \
+	-V fontsize=12pt -V papersize:a4paper \
+	-V documentclass=report \
+	--filter pandoc-crossref \
+	--number-sections \
 	-o $(OUTPUTDIR)/thesis.pdf
 
-
-tex: ./chapters/*.md
+tex:
 	pandoc --verbose --toc --wrap=none \
-	summary.md chapters/*.md \
-	-V fontsize=12pt -V documentclass:tufte-book -V papersize:a4paper \
-	--filter pandoc-crossref --number-sections \
+	metadata.yaml "$(INPUTDIR)"/*.md \
+	-V fontsize=12pt -V papersize:a4paper \
+	-V documentclass=report \
+	--filter pandoc-crossref \
+	--number-sections \
 	-s -o $(OUTPUTDIR)/thesis.tex
