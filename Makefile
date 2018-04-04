@@ -1,4 +1,4 @@
-.PHONY: help pdf tex tex2pdf
+.PHONY: help clean cleanall pdf tex tex2pdf 
 
 PDFLATEX=xelatex
 
@@ -15,6 +15,12 @@ help:
 	@echo '                                                                       '
 	@echo 'get local templates with: pandoc -D latex/html/etc                     '
 	@echo 'or generic ones from: https://github.com/jgm/pandoc-templates          '
+
+clean:
+	rm "$(OUTPUTDIR)"/thesis.{aux,log,out,toc,lof}
+
+cleanall:
+	rm "$(OUTPUTDIR)"/thesis.{aux,log,out,toc,lof,tex,pdf}
 
 pdf:
 	pandoc --verbose \
