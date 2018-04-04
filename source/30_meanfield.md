@@ -40,9 +40,9 @@ In fact, one can think of $m$ and $r$ as parameters that describe the overall be
 
 We can represent this self-consistently with the following set of equations to be obeyed:
 
-<!-- $$ m = \int \mathrm{d}\mathbf{J}\ h(\mathbf{J}) P_\mathrm{MF}(\mathbf{J}) $$ -->
+$$ m = \int \mathrm{d}\mathbf{J}\ h(\mathbf{J}) P_{\mathrm{MF}}(\mathbf{J}) $$
 
-<!-- $$ r = \int \mathrm{d}\mathbf{J}\ \sigma(\mathbf{J}) P_\mathrm{MF}(\mathbf{J}) $$ -->
+$$ r = \int \mathrm{d}\mathbf{J}\ \sigma(\mathbf{J}) P_{\mathrm{MF}}(\mathbf{J}) $$
 
 Then the mean field probability distribution becomes:
 

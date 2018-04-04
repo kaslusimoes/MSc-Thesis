@@ -22,7 +22,7 @@ pdf:
 	metadata.yaml "$(INPUTDIR)"/*.md \
 	--template="$(STYLEDIR)/template.tex" \
 	-V fontsize=12pt \
-	-V papersize:a4paper \
+	-V papersize:a4 \
 	-V documentclass=report \
 	--filter pandoc-crossref \
 	--pdf-engine="$(PDFLATEX)" \
@@ -34,7 +34,7 @@ tex:
 	metadata.yaml "$(INPUTDIR)"/*.md \
 	--template="$(STYLEDIR)/template.tex" \
 	-V fontsize=12pt \
-	-V papersize:a4paper \
+	-V papersize:a4 \
 	-V documentclass=report \
 	--filter pandoc-crossref \
 	-s -o $(OUTPUTDIR)/thesis.tex
