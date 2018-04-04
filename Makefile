@@ -3,6 +3,7 @@
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/chapters
 OUTPUTDIR=$(BASEDIR)/output
+STYLEDIR=$(BASEDIR)/style
 
 help:
 	@echo '                                                                       '
@@ -14,19 +15,21 @@ help:
 	@echo 'or generic ones from: https://github.com/jgm/pandoc-templates          '
 
 pdf:
-	pandoc --verbose --toc \
+	pandoc --verbose \
 	metadata.yaml "$(INPUTDIR)"/*.md \
-	-V fontsize=12pt -V papersize:a4paper \
+	--template="$(STYLEDIR)/template.tex" \
+	-V fontsize=12pt \
+	-V papersize:a4paper \
 	-V documentclass=report \
 	--filter pandoc-crossref \
-	--number-sections \
 	-o $(OUTPUTDIR)/thesis.pdf
 
 tex:
-	pandoc --verbose --toc --wrap=none \
+	pandoc --verbose --wrap=none \
 	metadata.yaml "$(INPUTDIR)"/*.md \
-	-V fontsize=12pt -V papersize:a4paper \
+	--template="$(STYLEDIR)/template.tex" \
+	-V fontsize=12pt \
+	-V papersize:a4paper \
 	-V documentclass=report \
 	--filter pandoc-crossref \
-	--number-sections \
 	-s -o $(OUTPUTDIR)/thesis.tex

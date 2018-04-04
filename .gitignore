@@ -1,5 +1,6 @@
 meta-ignore/
-output/*
+output/*.pdf
+output/*.tex
 
 # GitHub's TeX project default .gitignore
 ## Core latex/pdflatex auxiliary files:
