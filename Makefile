@@ -1,5 +1,7 @@
 .PHONY: help pdf tex tex2pdf
 
+PDFLATEX=xelatex
+
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/source
 OUTPUTDIR=$(BASEDIR)/output
@@ -23,6 +25,7 @@ pdf:
 	-V papersize:a4paper \
 	-V documentclass=report \
 	--filter pandoc-crossref \
+	--pdf-engine="$(PDFLATEX)" \
 	-o $(OUTPUTDIR)/thesis.pdf
 
 tex:
@@ -37,6 +40,6 @@ tex:
 	-s -o $(OUTPUTDIR)/thesis.tex
 
 tex2pdf:
-	pdflatex -output-directory="$(OUTPUTDIR)" thesis.tex
-	pdflatex -output-directory="$(OUTPUTDIR)" thesis.tex
-	rm "$(OUTPUTDIR)"/thesis.{aux,log,out,toc}
+	"$(PDFLATEX)" -output-directory="$(OUTPUTDIR)" thesis.tex
+	"$(PDFLATEX)" -output-directory="$(OUTPUTDIR)" thesis.tex
+	rm "$(OUTPUTDIR)"/thesis.{aux,log,out,toc,lof}
