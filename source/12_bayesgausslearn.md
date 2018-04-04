@@ -1,5 +1,6 @@
-Gaussian Parametric Family {#sec:bayesgausslearn}
-==========================
+
+## Gaussian Parametric Family {#sec:bayesgausslearn}
+
 
 Now we analyze separately a special case of parametric family. The assumed relevant generators to make inference over a vector $\mathbf{B}\in \mathbb{R}^K$ will be
 

@@ -1,6 +1,6 @@
 
-Mean Field approximation {#sec:meanfield}
-========================
+# Mean Field approximation {#sec:meanfield}
+
 
 A possible strategy to study a society of the agents developed in section [@sec:bayesgaussperceptron] is to define conserved quantities - such as the Hamiltonian associated with the interaction potential of those agents - and proceed with the usual Statistical Mechanics tools. At some point the calculation might become intractable and that is when one must transition to approximate results and/or computational methods. In this section we develop a Mean Field approach to an specific canonical ensemble of social agents in a noisy society.
 
@@ -8,7 +8,7 @@ Let us consider that a society of agents $\{ \mathbf{J}_i \}$ which we suppose c
 
 $$  \mathcal{H}=  - \Gamma^2 \sum_{\langle i,j \rangle} \log \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\Gamma \left( \sigma_i h_j + \sigma_j h_i \right) \right) \right] = \sum_{\langle i,j \rangle} V_{ij} $$ {#eq:hamiltonian}
 
-We also suppose that the mean value of this quantity $\left\langle \mathcal{H} \right\rangle$ is conserved throughout the configuration evolution of the society, that is, $\mathcal{H}$ remains close to some fixed value $E$ of energy but has the possibility of oscillating to higher/lower energy values depending on some \"temperature\" parameter (which can also be seen as a \"social pressure\"). In a Maximum Entropy framework, we can say that the probability distribution describing this society with this information paradigm is given by the canonical (Boltzmann) distribution:
+We also suppose that the mean value of this quantity $\left\langle \mathcal{H} \right\rangle$ is conserved throughout the configuration evolution of the society, that is, $\mathcal{H}$ remains close to some fixed value $E$ of energy but has the possibility of oscillating to higher/lower energy values depending on some "temperature" parameter (which can also be seen as a "social pressure"). In a Maximum Entropy framework, we can say that the probability distribution describing this society with this information paradigm is given by the canonical (Boltzmann) distribution:
 
 $$P_B(\{ \mathbf{J}_i \}) = \frac{1}{Z_B} \exp \left( - \beta \mathcal{H}\left( \{ \mathbf{J}_i \} \right)\ \right)$$
 

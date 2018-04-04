@@ -1,7 +1,7 @@
-.PHONY: help pdf tex
+.PHONY: help pdf tex tex2pdf
 
 BASEDIR=$(CURDIR)
-INPUTDIR=$(BASEDIR)/chapters
+INPUTDIR=$(BASEDIR)/source
 OUTPUTDIR=$(BASEDIR)/output
 STYLEDIR=$(BASEDIR)/style
 
@@ -16,6 +16,7 @@ help:
 
 pdf:
 	pandoc --verbose \
+	--include-in-header="$(STYLEDIR)"/preamble.tex \
 	metadata.yaml "$(INPUTDIR)"/*.md \
 	--template="$(STYLEDIR)/template.tex" \
 	-V fontsize=12pt \
@@ -26,6 +27,7 @@ pdf:
 
 tex:
 	pandoc --verbose --wrap=none \
+	--include-in-header="$(STYLEDIR)"/preamble.tex \
 	metadata.yaml "$(INPUTDIR)"/*.md \
 	--template="$(STYLEDIR)/template.tex" \
 	-V fontsize=12pt \
@@ -33,3 +35,8 @@ tex:
 	-V documentclass=report \
 	--filter pandoc-crossref \
 	-s -o $(OUTPUTDIR)/thesis.tex
+
+tex2pdf:
+	pdflatex -output-directory="$(OUTPUTDIR)" thesis.tex
+	pdflatex -output-directory="$(OUTPUTDIR)" thesis.tex
+	rm "$(OUTPUTDIR)"/thesis.{aux,log,out,toc}

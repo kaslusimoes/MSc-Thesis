@@ -1,6 +1,6 @@
 
-Bayesian Machine Update Learning  {#sec:bayeslearn}
-=================================
+## Bayesian Machine Update Learning  {#sec:bayeslearn}
+
 
 Consider a machine prepared to work with a fixed (*hardcoded*) model $\mathcal{M}$ which depends on some internal variables $\mathbf{x}$. Such machine is presented with examples $\mathcal{D}_t = \left\{ (\xi_\mu, \sigma_\mu)_{\mu=1}^t \right\}$ and seeks to update its knowledge about $\mathbf{x}$ in such a way to describe correctly (with $\mathcal{M}$) the received examples while still improving its ability to predict future inputs (also known as capability of *generalization*). 
 

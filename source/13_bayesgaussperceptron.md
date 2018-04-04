@@ -1,5 +1,6 @@
-Bayesian & Gaussian Perceptron {#sec:bayesgaussperceptron}
-==============================
+
+## Bayesian & Gaussian Perceptron {#sec:bayesgaussperceptron}
+
 
 Proceeding a bit further, we consider the following machine $\mathcal{M}$ hardcoded to infer the value of $\mathbf{B}\in \mathbb{R}^K$ (what we have been calling $\mathbf{x}$) and make predictions $\sigma$ about $\xi \in \mathbb{R}^K$ using the following mechanisms:
 
@@ -56,7 +57,7 @@ $$ Z_{n+1} = k_\xi \left[ \varepsilon + \left( 1 - 2\varepsilon \right)\Phi\left
 
 where $\Phi$ is the cumulative distribution function of the gaussian distribution.
 
-Finally, our \"free energy\" cost function (discarding the constant part $k_\xi$) will be:
+Finally, our "free energy" cost function (discarding the constant part $k_\xi$) will be:
 
 $$ \mathcal{E}_{n+1} = -\log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\Gamma_n} \right)\right] $$ {#eq:costbayesgaussperceptron}
 
