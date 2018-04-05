@@ -1,4 +1,4 @@
-.PHONY: help clean cleanall pdf tex tex2pdf 
+.PHONY: help clean cleanall pdf tex tex2pdf
 
 PDFLATEX=xelatex
 
@@ -31,6 +31,7 @@ pdf:
 	-V papersize:a4 \
 	-V documentclass=report \
 	--filter pandoc-crossref \
+	--filter pandoc-citeproc \
 	--pdf-engine="$(PDFLATEX)" \
 	-o $(OUTPUTDIR)/thesis.pdf
 
@@ -43,6 +44,7 @@ tex:
 	-V papersize:a4 \
 	-V documentclass=report \
 	--filter pandoc-crossref \
+	--filter pandoc-citeproc \
 	-s -o $(OUTPUTDIR)/thesis.tex
 
 tex2pdf:
