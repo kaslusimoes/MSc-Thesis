@@ -1,10 +1,9 @@
 
 ## Gaussian Parametric Family {#sec:bayesgausslearn}
 
-
 Now we analyze separately a special case of parametric family. The assumed relevant generators to make inference over a vector $\mathbf{B}\in \mathbb{R}^K$ will be
 
-$$\begin{cases} 
+$$\begin{cases}
     \mathbb{E}_n[B^{i}] &= J^{i}_n \\  
     \mathbb{E}_n[B^{i}B^{j}] &= C^{ij}_n + J^{i}_n J^{j}_n
     \end{cases}$$
@@ -19,7 +18,7 @@ and the resulting ME distribution is a **Multivariate Gaussian**:
 
 where $\theta^i_n = - \sum_j \left( C^{-1}_n\right)_{ij}J^{j}_n$ and $\underline{\theta_n}^{ij} =  \frac12 \left( C^{-1}_n \right)_{ij}$ are the Lagrange multipliers relevant to define the distribution.
 
-In this section we analyze how the parameters of the gaussian distribution update under the framework developed in section [@sec:bayeslearn]. In particular, we want to find two simplified equations for the evolution of $J^{i}_n$ and $C^{ij}_n$. 
+In this section we analyze how the parameters of the gaussian distribution update under the framework developed in section [@sec:bayeslearn]. In particular, we want to find two simplified equations for the evolution of $J^{i}_n$ and $C^{ij}_n$.
 
 First of all, let us analyze the Lagrange multipliers associated with the former:
 

@@ -1,12 +1,11 @@
 
 ## Bayesian Machine Update Learning  {#sec:bayeslearn}
 
-
-Consider a machine prepared to work with a fixed (*hardcoded*) model $\mathcal{M}$ which depends on some internal variables $\mathbf{x}$. Such machine is presented with examples $\mathcal{D}_t = \left\{ (\xi_\mu, \sigma_\mu)_{\mu=1}^t \right\}$ and seeks to update its knowledge about $\mathbf{x}$ in such a way to describe correctly (with $\mathcal{M}$) the received examples while still improving its ability to predict future inputs (also known as capability of *generalization*). 
+Consider a machine prepared to work with a fixed (*hardcoded*) model $\mathcal{M}$ which depends on some internal variables $\mathbf{x}$. Such machine is presented with examples $\mathcal{D}_t = \left\{ (\xi_\mu, \sigma_\mu)_{\mu=1}^t \right\}$ and seeks to update its knowledge about $\mathbf{x}$ in such a way to describe correctly (with $\mathcal{M}$) the received examples while still improving its ability to predict future inputs (also known as capability of *generalization*).
 
 That machine needs to somehow codify which values of $\mathbf{x}$ are more appropriate to the classification task being learned. As this is an incomplete information situation (that is, we do not have full access to the optimal parameters $\hat{\mathbf{x}}$), we use probability theory tools to describe the plausibility (or beliefs) the machine attributes - through its mechanical-logical-electronic processes - to each value of $\mathbf{x}$. This we call the distribution $Q(\mathbf{x})$.
 
-By means of practicality we are going to consider that the distribution $Q(\mathbf{x})$ belongs to some *parametric family* of probability distributions. That is, there is a set of conditions (from now on called **generators**) satisfied by and, more than that, *defining* the utilized distribution: 
+By means of practicality we are going to consider that the distribution $Q(\mathbf{x})$ belongs to some *parametric family* of probability distributions. That is, there is a set of conditions (from now on called **generators**) satisfied by and, more than that, *defining* the utilized distribution:
 
 $$ \exists\ \{F_a(\mathbf{x})\}_{a=1}^G\ \ \text{such that} \ \ \mathbb{E}_Q[F_a] = \eta_a $$
 
@@ -19,9 +18,9 @@ $$Q(\mathbf{x}) = P(\mathbf{x}|\theta) = \frac1\zeta \exp\left(- \sum_{a=1}^G \t
 where $\zeta = \int \mathrm{d}\mathbf{x}\ \exp\left(- \sum_{a=1}^G \theta_a F_a(\mathbf{x})\right)$ is the normalization of the probability distribution $Q$, also called the **partition function**. We calculate some identities that are going to be useful later on:
 
 $$  \frac{\partial \log \zeta}{\partial \theta_b} = \frac1\zeta \frac{\partial \zeta}{\partial \theta_b} = \frac1\zeta \int \mathrm{d}\mathbf{x}\ (-F_b(\mathbf{x})) \mathrm{e}^{- \sum_a \theta_a F_a(\mathbf{x})} $$
-  
+
 $$ \qquad\therefore\ \frac{\partial \log \zeta}{\partial \theta_b} = - \eta_b $$ {#eq:ident1}
-  
+
 $$  \frac{\partial Q}{\partial \theta_b} = \frac1\zeta \mathrm{e}^{- \sum_a \theta_a F_a(\mathbf{x})} \left( -F_b(\mathbf{x})\right) +  \mathrm{e}^{- \sum_a \theta_a F_a(\mathbf{x})} \left( \frac{-1}{\zeta^2} \right) \frac{\partial \zeta}{\partial \theta_b} $$
 
 $$ \qquad\therefore\ \frac{\partial Q}{\partial \theta_b} = [\eta_b - F_b(\mathbf{x})] Q $$ {#eq:ident2}

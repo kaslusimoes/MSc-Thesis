@@ -1,16 +1,15 @@
 
 ## Bayesian & Gaussian Perceptron {#sec:bayesgaussperceptron}
 
-
 Proceeding a bit further, we consider the following machine $\mathcal{M}$ hardcoded to infer the value of $\mathbf{B}\in \mathbb{R}^K$ (what we have been calling $\mathbf{x}$) and make predictions $\sigma$ about $\xi \in \mathbb{R}^K$ using the following mechanisms:
 
 $$
 \mathcal{M}: \begin{cases}
     \emph{input/data:}  & y = \left( \xi \in \mathbb{R}^K;\ \sigma \in \{ -1, +1 \} \right) \\
     \emph{architecture:}& \tau = \mathrm{sign} (\xi \cdot \mathbf{B}) \\
-                        & \sigma = 
-    \begin{cases} -\tau\ &\text{with probability}\ \ \ \varepsilon \\ 
-    \ \ \tau\vphantom{\frac{0}{0}}\ &\text{with probability}\ 1 - \varepsilon 
+                        & \sigma =
+    \begin{cases} -\tau\ &\text{with probability}\ \ \ \varepsilon \\
+    \ \ \tau\vphantom{\frac{0}{0}}\ &\text{with probability}\ 1 - \varepsilon
     \end{cases} \\
 \emph{inference:}& \mathbb{E}[B^{i}] = J^{i},\  \mathbb{E}[B^{i}B^{j}] = C_{ij} + J^{i}J^{j}
 \end{cases}
@@ -60,5 +59,3 @@ where $\Phi$ is the cumulative distribution function of the gaussian distributio
 Finally, our "free energy" cost function (discarding the constant part $k_\xi$) will be:
 
 $$ \mathcal{E}_{n+1} = -\log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\Gamma_n} \right)\right] $$ {#eq:costbayesgaussperceptron}
-
-
