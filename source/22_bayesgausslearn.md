@@ -1,7 +1,34 @@
 
 ## Gaussian Parametric Family {#sec:bayesgausslearn}
 
-Now we analyze separately a special case of parametric family. The assumed relevant generators to make inference over a vector $\mathbf{B}\in \mathbb{R}^K$ will be
+Due to its generality, importance and easy of use, we analyze a special case of parametric family: the Gaussian distributions family. We will start with the univariate case, so that we can build our intuition on it, and then we shall proceed to the multivariate one.
+
+In this section we analyze how the parameters of the gaussian distribution update under the framework developed in section [@sec:bayeslearn].
+
+### Univariate Case
+
+The generators we assume to be relevant to draw inference over $x\in \mathbb{R}$ will be
+
+$$\begin{cases}
+    \mathbb{E}_n[x]   &= \mu_n \\  
+    \mathbb{E}_n[x^2] &= \sigma^2_n + \mu^2_n
+  \end{cases}$$
+
+and the resulting ME distribution is a **Univariate Gaussian**, or Normal distribution:
+
+\begin{align}
+    \label{eq:multigaussian}
+      Q_n(x) &\equiv \mathcal{N}(x| \mu_n, \sigma^2_n) = (2\pi \sigma_n^2)^{-1/2} \exp\left[ -\frac12 \frac{(x- \mu_n)^2}{\sigma^2} \right] \\
+             &= \frac{1}{Z_{\mathcal{N}_n}} \exp\left[ -\theta^{(1)}_n x- \theta^{(2)}_n x^2 \right]
+\end{align}
+
+where $\theta^{(1)}_n = -\dfrac{\mu_n}{\sigma_n^2}$ and $\theta^{(2)}_n =  \dfrac{1}{2\sigma_n^2}$ are the relevant Lagrange multipliers to define the distribution.
+
+FINISH THE INFERENCE
+
+### Multivariate Case
+
+The next set of generators we assume to be relevant to draw an inference, now over a vector $\mathbf{B}\in \mathbb{R}^K$, will be
 
 $$\begin{cases}
     \mathbb{E}_n[B^{i}] &= J^{i}_n \\  
@@ -16,17 +43,15 @@ and the resulting ME distribution is a **Multivariate Gaussian**:
     &= \frac{1}{Z_{\mathcal{N}_n}} \exp\left[ -\vec{\theta}_n\cdot \mathbf{B}- \mathbf{B}\cdot \underline{\theta_n} \mathbf{B}\right]
 \end{align}
 
-where $\theta^i_n = - \sum_j \left( C^{-1}_n\right)_{ij}J^{j}_n$ and $\underline{\theta_n}^{ij} =  \frac12 \left( C^{-1}_n \right)_{ij}$ are the Lagrange multipliers relevant to define the distribution.
+where $\theta^i_n = - \left( C^{-1}_n\right)_{ij}J^{j}_n$ and $\underline{\theta_n}^{ij} =  \frac12 \left( C^{-1}_n \right)_{ij}$ are the Lagrange multipliers relevant to define the distribution.
 
-In this section we analyze how the parameters of the gaussian distribution update under the framework developed in section [@sec:bayeslearn]. In particular, we want to find two simplified equations for the evolution of $J^{i}_n$ and $C^{ij}_n$.
+Remembering that in the update equation [@eq:gradientdescent] we had to evaluate a derivative with respective to the Lagrange multipliers, we transform that derivative in another, more tractable, one:
 
-First of all, let us analyze the Lagrange multipliers associated with the former:
+$$\theta^i_n = - \left( C^{-1}_n\right)_{ij}J^{j}_n\quad \Rightarrow\quad \vec{\theta}_n =  - \mathbf{C}_n^{-1} \mathbf{J}_n\quad \Rightarrow\quad \mathbf{J}_n = - \mathbf{C}_n \vec{\theta}_n$$
 
-$$\theta^i_n = - \sum_j \left( C^{-1}_n\right)_{ij}J^{j}_n\quad \Rightarrow\quad \vec{\theta}_n =  - \mathbf{C}_n^{-1} \mathbf{J}_n\quad \Rightarrow\quad \mathbf{J}_n = - \mathbf{C}_n \vec{\theta}_n$$
+From this equation we can obtain[^einstein-reminder]:
 
-From this equation we can obtain:
-
-$$\frac{\partial}{\partial \theta_n^i} = \sum_{l=1}^K \frac{\partial J^{l}_n}{\partial \theta_n^i} \frac{\partial}{\partial J^{l}_n} = - \sum_l C_n^{li} \frac{\partial}{\partial J^{l}_n}$$
+$$\frac{\partial}{\partial \theta_n^i} = \frac{\partial J^{l}_n}{\partial \theta_n^i} \frac{\partial}{\partial J^{l}_n} = - C_n^{li} \frac{\partial}{\partial J^{l}_n}$$
 
 And finally:
 
@@ -36,7 +61,7 @@ In vectorial form (noticing that $\mathbf{C}$ is symmetric):
 
 $$ \mathbf{J}_{n+1} = \mathbf{J}_n - \mathbf{C}_n \cdot \nabla_{\mathbf{J}_n} \mathcal{E}_{n+1}$$ {#eq:upstudent}
 
-We could follow the same procedure to study the evolution of $C^{ij}_n$ but in that case we would need to study the derivative of $\mathcal{E}_{n+1}$ with respect to $\left(C^{-1}_n\right)_{ij}$, which can be quite complicated. An easier approach is to match the generators' expected values. Either way, this evolution will not be important to the work we develop in this report so we only state the result:
+Similarly, one can follow the same procedure to study the evolution of $C^{ij}_n$:
 
 $$ C^{ij}_{n+1} = C_n^{ji} - \sum_k \sum_l  C_n^{jk} C_n^{il} \frac{\partial}{\partial J^{k}_n} \frac{\partial}{\partial J^{l}_n} \mathcal{E}_{n+1}$$ {#eq:upcij}
 
@@ -45,3 +70,8 @@ In vectorial form (noticing that $\mathbf{C}$ is symmetric since it is a covaria
 $$ \mathbf{C}_{n+1} = \mathbf{C}_n - \mathbf{C}_n \cdot \left( \mathbf{H}_{\mathbf{J}_n} \mathcal{E}_{n+1} \right) \cdot \mathbf{C}_n $$ {#eq:upc}
 
 where $\mathbf{H}_{\mathbf{J}_n} \mathcal{E}_{n+1}$ is the Hessian matrix of second derivatives of $\mathcal{E}_{n+1}$ with respect to the elements of $\mathbf{J}_n$.
+
+
+[^einstein-reminder]:
+
+    Remember Einstein summation convention: $\dfrac{\partial J^{l}_n}{\partial \theta_n^i} \dfrac{\partial}{\partial J^{l}_n}$ implies a sum $\sum_{l=1}^K$
