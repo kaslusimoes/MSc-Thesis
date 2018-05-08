@@ -56,6 +56,6 @@ $$ Z_{n+1} = k_\xi \left[ \varepsilon + \left( 1 - 2\varepsilon \right)\Phi\left
 
 where $\Phi$ is the cumulative distribution function of the gaussian distribution.
 
-Finally, our "free energy" cost function (discarding the constant part $k_\xi$) will be:
+Finally, taking the logarithm (and discarding the constant part $k_\xi$ which does not contribute to our inference):
 
-$$ \mathcal{E}_{n+1} = -\log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\Gamma_n} \right)\right] $$ {#eq:costbayesgaussperceptron}
+$$ \log Z_{n+1} = -\log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\Gamma_n} \right)\right] $$ {#eq:costbayesgaussperceptron}

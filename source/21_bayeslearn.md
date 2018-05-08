@@ -64,11 +64,13 @@ results [@eq:ident1] and [@eq:ident2] we find an update rule to the parameters o
   &=  \int \mathrm{d}\mathbf{x}\ \frac{L_{n+1}}{Z_{n+1}}\ \left( - \frac{\partial Q_n}{\partial \theta^b_n} \right) = - \frac{1}{Z_{n+1}} \frac{\partial}{\partial \theta^b_n} \left( \int \mathrm{d}\mathbf{x}\ L_{n+1} Q_n \right)
 \end{align}
 
-Remarkably, the schematics represented by [@fig:updateproject] is simply a **gradient descent** equation:
+Remarkably, the schematics represented by [@fig:updateproject] can be described as a **gradient descent** evolution:
 
-$$ \eta^b_{n+1} = \eta^b_{(n)} - \frac{\partial \log Z_{n+1}}{\partial \theta_b^{(n)}} = \eta^b_{(n)} + \frac{\partial \mathcal{E}_n}{\partial \theta_b^{(n)}} $$ {#eq:gradientdescent}
+$$ \eta^b_{n+1} = \eta^b_{n} - \frac{\partial}{\partial \theta_b^{(n)}} \log Z_{n+1} $$ {#eq:gradientdescent}
 
-where we defined $\mathcal{E}_n = - \log Z_n$ the cost function of our problem. This cost function, or *"free energy"*, depends on the *intrinsic* mechanisms of the machine, not taking into account the generator family chosen. We will deal more with this topic in section [@sec:bayesgaussperceptron].
+<!-- ACTUALLY THIS IS NOT REMARKABLE AT ALL, JUST REMEMBER FROM STATMECH E=-d/db logZ. MAYBE WE COULD ELIMINATE THE DERIVATION ABOVE? -->
+
+The partition function $Z_{n+1}$ depends only on the *intrinsic* mechanisms of the machine, not taking into account the generator family chosen. We will deal more with this topic in section [@sec:bayesgaussperceptron].
 
 
 [^einstein-summation]:
