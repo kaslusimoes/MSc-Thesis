@@ -3,7 +3,7 @@
 
 Let us consider that a society of agents $\{ \mathbf{J}_i \}$ which we suppose can be described mostly by one specific Hamiltonian $\mathcal{H}$:
 
-$$  \mathcal{H}=  - \Gamma^2 \sum_{\langle i,j \rangle} \log \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\Gamma \left( \sigma_i h_j + \sigma_j h_i \right) \right) \right] = \sum_{\langle i,j \rangle} V_{ij} $$ {#eq:hamiltonian}
+$$  \mathcal{H}=  - \Gamma^2 \sum_{\langle i,j \rangle} \log \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\Gamma \left( \sigma_i h_j + \sigma_j h_i \right) \right) \right] = \sum_{\langle i,j \rangle} V_{ij} $$ {#eq:hamiltonian1}
 
 We also suppose that the mean value of this quantity $\left\langle \mathcal{H} \right\rangle$ is conserved throughout the configuration evolution of the society, that is, $\mathcal{H}$ remains close to some fixed value $E$ of energy but has the possibility of oscillating to higher/lower energy values depending on some "temperature" parameter (which can also be seen as a "social pressure"). In a Maximum Entropy framework, we can say that the probability distribution describing this society with this information paradigm is given by the canonical (Boltzmann) distribution:
 
@@ -29,7 +29,7 @@ $$ P_k(\mathbf{J}_k) = \frac{1}{Z_k} \exp \left( - \beta \sum_{i \in \partial k}
 
 Unfortunately, due to the rather complex form of the potential $V_{ij}$, the equation above is intractable. In that case we are going to *choose* a mean field probability distribution family (instead of *selecting* the best one).
 
-We proceed comparing the exact mean field projection done above and the hamiltonian in [@eq:hamiltonian] to an approximate distribution that takes into account only an effective number of neighbors $\nu_{(i)}$ with effective interactions $m_{(i)}$ and $r_{(i)}$:
+We proceed comparing the exact mean field projection done above and the hamiltonian in [@eq:hamiltonian1] to an approximate distribution that takes into account only an effective number of neighbors $\nu_{(i)}$ with effective interactions $m_{(i)}$ and $r_{(i)}$:
 
 $$ P_j(\mathbf{J}_j) = \frac{1}{Z_j} \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\Gamma \left( r_{(i)} h_j + \sigma_j m_{(i)} \right) \right) \right]^{\beta \nu_{(j)} \Gamma^2} $$
 
