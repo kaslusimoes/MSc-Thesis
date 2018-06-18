@@ -20,7 +20,6 @@ Secondly, we recognize that we have only squared terms in the hamiltonian, which
 
 $$ \exp\left(\frac{A^2 + B^2 +2\rho A B}{2(1-\rho^2)} \right) = \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi\sqrt{1 - \rho^2}}\ \exp\left( -\frac{ x^2 + y^2 + 2\rho x y}{2(1-\rho^2)} \right) \exp\left(\frac{A(x+\rho y) + B(y+\rho x)}{1-\rho^2} \right)$$
 
-
 Now we can proceed
 
 \begin{align}
