@@ -1,28 +1,16 @@
 
 ## Comparison with MFQ data {#sec:comparisonmfq}
 
-From the Moral Foundations Questionnaire ([see @Graham2009]), one can obtain the empirical values for the $\{\student_i\}_{i=1}^N$, vectors in some $5$ dimensional space. The agents $\{\student_i\}$ are going to be the answers each respondent gave to the questionnaire. The issue $\xx$ remains to be defined, also from the data, but we must make an additional hypothesis. For example, one can take the Zeitgeist as the mean value of liberals, or the mean value of conservatives, or even the sum of this two last vectors. In [see @Vicente2014] they chose $\xx$ as the mean vector of Conservative respondents.
+From the Moral Foundations Questionnaire [see @Graham2009], one can obtain the empirical values for the $\{\student_i\}_{i=1}^N$, vectors in some $5$ dimensional space. The agents $\{\student_i\}$ are going to be the answers each respondent gave to the questionnaire. The issue $\xx$ remains to be defined, also from the data, but we must make an additional hypothesis. For example, one can take the Zeitgeist as the mean value of liberals, or the mean value of conservatives, or even the sum of this two last vectors. In [@Vicente2014] they chose $\xx$ as the mean vector of Conservative respondents.
 
-After we obtained the vectors, we make the additional hypothesis that all agents of a given political affiliation (\textit{pa}) have their moral opinions sampled from the same distribution $P(h|\gamma_\mathit{pa})$. This is not the same as saying that all liberals are the same, or that a liberal agent cannot have the same opinion as a conservative one in a give topic; we are only saying that there must be some similarity between people that think alike, they ought to be characterized in groups, and we can describe this using a probability distribution.
-
-NEED TO FIX A COMMENTED TEXT BELOW
-
-<!--
-Then, one can use [@eq:mfvisujeca] and apply Bayes' theorem to it to find an estimator $\tilde{\gamma}_\mathit{pa}$ given a set of data $\{h_i\}_{i \in \mathit{pa}}$:
-
-$$  P(\gamma| \{h_i\}_{i \in \mathit{pa}}) \propto P(\gamma) \prod_{i \in \mathit{pa}} P(h_i | \gamma) $$ {#eq:bayesgamma}
-
-Choosing a prior distribution $\gamma \sim \mathrm{Gamma}(k_0, \theta_0)$ - that is $P(\gamma) = \frac{\theta_0^{-h}}{\Gamma(k_0)} \gamma^{k_0-1} e^{-\gamma/\theta_0}$ -, we obtain the posterior $\gamma |\{h_i\}_{i \in \mathit{pa}} \sim \Gamma\(k_0+2n, \frac{\theta_0}{1+\theta_0(n-m)}\)$, a Gamma distribution as well:
-
-$$     P(\gamma| \{h_i\}_{i \in \mathit{pa}}) = \frac{\(\frac{1}{\theta_0} + n_\mathit{pa} - m_\mathit{pa} \)^{k_0+2n_\mathit{pa}}}{\Gamma(k_0+2n_\mathit{pa})} \gamma^{k_0+2n_\mathit{pa}-1} e^{-\gamma\(\frac{1}{\theta_0} + n_\mathit{pa} - m_\mathit{pa} \)} $$ {#eq:posteriorgamma} -->
-
-Now we can see the different gamma \textit{posteriors} for each \textit{pa}, for each choice of \textit{Zeitgeist}. We test 4 different hypothesis for $\xx$: mean of conservatives $\xx_C$, mean of liberals $\xx_L$, mean of moderates $\xx_M$ and mean of all agents $\xx_T$. All the vectors were normalized $\|x\| = 1$.
+We test 4 different hypothesis for $\xx$: mean of conservatives $\xx_C$, mean of liberals $\xx_L$, mean of moderates $\xx_M$ and mean of all agents $\xx_T$. All the vectors were normalized $\|x\| = 1$.
 
 ![The 4 different Zeitgeist hypothesis considered. All extracted from data.](images/4zeitgeists.png){#fig:zeitgeists width='75%'}
 
-We can see clear from [@fig:zeitgeists], as [see @Graham2009] already mentioned, that one can differentiate between Conservatives and Liberals by the different relevance each group gives to each moral dimension. Liberals tend to give more importance to Harm and Fairness whereas Conservatives give almost equal importance to all $5$ dimensions, attributing slightly more relevance to Ingroup, Authority and Purity dimensions. Additionally, the mean vector for the whole population tends more towards the Liberals due to a greater number of respondents with this political affiliation.
+We can see clear from [@fig:zeitgeists], as [@Graham2009] already mentioned, that one can differentiate between Conservatives and Liberals by the different relevance each group gives to each moral dimension. Liberals tend to give more importance to Harm and Fairness whereas Conservatives give almost equal importance to all $5$ dimensions, attributing slightly more relevance to Ingroup, Authority and Purity dimensions. Additionally, the mean vector for the whole population tends more towards the Liberals due to a greater number of respondents with this political affiliation.
 
-One last important fact to consider is that "Moderates" can be seen as a kind of transition between "Liberals" and "Conservatives", as expected. %In fact, although not being shown here, the mean vectors of the $7$ political affiliations can be arranged in a linear dispersion along a curve, with $\mathit{pa} = 1$ ("Very Liberal") and $\mathit{pa} = 7$ ("Very Conservative") at the extremes of this curve.
+One last important fact to consider is that "Moderates" can be seen as a kind of transition between "Liberals" and "Conservatives", as expected.
+<!-- In fact, although not being shown here, the mean vectors of the $7$ political affiliations can be arranged in a linear dispersion along a curve, with $\mathit{pa} = 1$ ("Very Liberal") and $\mathit{pa} = 7$ ("Very Conservative") at the extremes of this curve. -->
 
 The different posteriors of $\gamma$ due to each choice of those Zeitgeists are presented in [@fig:posteriorgamma]
 
