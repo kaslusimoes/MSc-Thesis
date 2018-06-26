@@ -49,46 +49,42 @@
 
 
 % My Math definitions
-% \DeclareMathOperator*{\argmin}{arg\,min}
-% \DeclareMathOperator*{\argmax}{arg\,max}
-% \DeclareMathOperator*{\adj}{adj}
-% \DeclareMathOperator*{\sign}{sign}
-%
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\adj}{adj}
+\DeclareMathOperator*{\sign}{sign}
+
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\mean}[1]{\left\langle #1 \right\rangle}
+\newcommand{\Der}[1]{\frac{\mathrm{d}}{\mathrm{d} #1}}
+\newcommand{\Derr}[1]{\frac{\mathrm{d^2}}{\mathrm{d^2} #1}}
+\newcommand{\der}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
+\newcommand{\derr}[2]{\frac{\mathrm{d^2} #1}{\mathrm{d} #2^2}}
+\newcommand{\derrr}[2]{\frac{\mathrm{d^3} #1}{\mathrm{d} #2^3}}
+\newcommand{\Del}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\Dell}[1]{\frac{\partial^2}{\partial^2 #1}}
+\newcommand{\del}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\dell}[2]{\frac{\partial^2 #1}{\partial #2^2}}
+\newcommand{\deldel}[3]{\frac{\partial^2 #1}{\partial #2 \partial #3}}
+\newcommand{\funcder}[2]{\frac{\delta #1}{\delta #2}}
+\newcommand{\Funcder}[1]{\frac{\delta}{\delta #1}}
+\newcommand{\intinf}{\int_{-\infty}^{\infty}}
+\newcommand{\intminf}{\int_{\infty}^{-\infty}}
+\newcommand{\intxinf}[1]{\int_{#1}^{\infty}}
+\newcommand{\intinfx}[1]{\int_{-\infty}^{#1}}
+
+\newcommand{\hamilt}{\mathcal{H}}
+\newcommand{\cost}{\mathcal{E}}
+\newcommand{\model}{\mathcal{M}}
+\newcommand{\prof}{\mathbf{B}}
+\newcommand{\profi}[1][i]{B^{#1}}
+\newcommand{\student}{\mathbf{J}}
+\newcommand{\studenti}[1][i]{J^{#1}}
+\newcommand{\measure}[1] {\mathrm{d}#1}
+\newcommand{\xx}{\mathbf{x}}
+
 % I get some error here I cannot fix
 % \renewcommand{\(}{\left(}
 % \renewcommand{\)}{\right)}
 % \renewcommand{\[}{\left[}
 % \renewcommand{\]}{\right]}
-%
-% \newcommand{\defeq}{\vcentcolon=}
-% \newcommand{\bra}[1]{\left\langle #1\ \right|}
-% \newcommand{\ket}[1]{\left|\ #1 \right\rangle}
-% \newcommand{\braket}[2]{\langle #1\ |\ #2 \rangle}
-\newcommand{\mean}[1]{\left\langle #1 \right\rangle}
-% \newcommand{\Der}[1]{\frac{\mathrm{d}}{\mathrm{d} #1}}
-% \newcommand{\Derr}[1]{\frac{\mathrm{d^2}}{\mathrm{d^2} #1}}
-% \newcommand{\der}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
-% \newcommand{\derr}[2]{\frac{\mathrm{d^2} #1}{\mathrm{d} #2^2}}
-% \newcommand{\derrr}[2]{\frac{\mathrm{d^3} #1}{\mathrm{d} #2^3}}
-% \newcommand{\Del}[1]{\frac{\partial}{\partial #1}}
-% \newcommand{\Dell}[1]{\frac{\partial^2}{\partial^2 #1}}
-% \newcommand{\del}[2]{\frac{\partial #1}{\partial #2}}
-% \newcommand{\dell}[2]{\frac{\partial^2 #1}{\partial #2^2}}
-% \newcommand{\deldel}[3]{\frac{\partial^2 #1}{\partial #2 \partial #3}}
-% \newcommand{\funcder}[2]{\frac{\delta #1}{\delta #2}}
-% \newcommand{\Funcder}[1]{\frac{\delta}{\delta #1}}
-% \newcommand{\intinf}{\int_{-\infty}^{\infty}}
-% \newcommand{\intminf}{\int_{\infty}^{-\infty}}
-% \newcommand{\intxinf}[1]{\int_{#1}^{\infty}}
-% \newcommand{\intinfx}[1]{\int_{-\infty}^{#1}}
-%
-% \newcommand{\hamilt}{\mathcal{H}}
-% \newcommand{\cost}{\mathcal{E}}
-% \newcommand{\model}{\mathcal{M}}
-% \newcommand{\prof}{\mathbf{B}}
-% \newcommand{\profi}[1][i]{B^{#1}}
-\newcommand{\student}{\mathbf{J}}
-% \newcommand{\studenti}[1][i]{J^{#1}}
-% \newcommand{\measure}[1] {\mathrm{d}#1}
-%
-\newcommand{\xx}{\mathbf{x}}
