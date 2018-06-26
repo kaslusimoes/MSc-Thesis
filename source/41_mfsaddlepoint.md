@@ -16,9 +16,9 @@ First, let us rewrite the hamiltonian in the following way:
   &= -\frac{N}{2} \left[ \delta \left( \frac1N \sum_{i \in A} h_i \right)^2 + \delta \left( \frac1N \sum_{j \in B} h_i \right)^2 + 2(1 - 2 \varepsilon) \left( \frac1N \sum_{i \in A} h_i \right) \left( \frac1N \sum_{j \in B} h_j \right) \right]
 \end{align}
 
-Secondly, we recognize that we have only squared terms in the hamiltonian, which difficult the evaluation of the partition function. One way around this is to use the following gaussian identity:
+Secondly, we recognize that we have only squared terms in the hamiltonian, which renders the evaluation of the partition function rather difficult. One way around this is to use the following gaussian identity:
 
-$$ \exp\left(\frac{A^2 + B^2 +2\rho A B}{2(1-\rho^2)} \right) = \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi\sqrt{1 - \rho^2}}\ \exp\left( -\frac{ x^2 + y^2 + 2\rho x y}{2(1-\rho^2)} \right) \exp\left(\frac{A(x+\rho y) + B(y+\rho x)}{1-\rho^2} \right)$$
+$$ \exp\left( \frac{A^2 + B^2 +2\rho A B}{2(1-\rho^2)} \right) = \int\displaylimits_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi\sqrt{1 - \rho^2}}\ \exp\left( -\frac{ x^2 + y^2 + 2\rho x y - 2A(x+\rho y) - 2B(y+\rho x)}{2(1-\rho^2)} \right)$$
 
 Now we can proceed
 
