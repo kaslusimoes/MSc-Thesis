@@ -1,4 +1,4 @@
-# The importance of the Zeitgeist and extremism in Societies {#sec:zeitgeistandextremism}
+# Zeitgeist and extremism in Societies {#sec:zeitgeistandextremism}
 
 This study is motivated by the following questions: Are all extremists the same? Are conservative people more extremists than liberal ones? How can we characterize those groups?
 
@@ -8,11 +8,11 @@ $$  \mathcal{H} = - \frac{1+\delta}{2} \sum_{\langle ij \rangle} h_i h_j + \frac
 
 When $\delta = 0$ they call the agents "error correctors", because they do not change their moral vectors in the case of matching opinions, and when $\delta = 1$ the agents are called "corroboration seekers", because they attribute the same amount of information to both cases: agreement or disagreement.
 
-In the same paper, the authors developed a mean-field approximation using Equation [@eq:hamiltonianvisujeca] and the Maximum Entropy method. The constraint that the energy is conserved $\mean{\mathcal{H}} = E$ enforces the appearance of a Lagrange multiplier $\beta$, the "social pressure" of the society. The resulting distribution is:
+In the same paper, the authors developed a mean-field approximation using [@eq:hamiltonianvisujeca] and the Maximum Entropy method. The constraint that the energy is conserved $\mean{\mathcal{H}} = E$ enforces the appearance of a Lagrange multiplier $\beta$, the "social pressure" of the society. The resulting distribution is:
 
 $$  P_{\mathrm{MF}}(h) = \frac{\gamma^2}{2} (1-h^2)\ e^{-\gamma(1-h)} $$ {#eq:mfvisujeca}
 
-where $\gamma$ is a parameter aggregating $\beta$ and $\delta$. Similarly to equation [@eq:meanfieldfinal], here $h$ is also the dot product of the agent's inner moral representation $\student$ and a discussed query (\textit{Zeitgeist}) $\xx$.
+where $\gamma$ is a parameter aggregating $\beta$ and $\delta$. Similarly to [@eq:meanfieldfinal], here $h$ is also the dot product of the agent's inner moral representation $\student$ and a discussed query (\textit{Zeitgeist}) $\xx$.
 
 From the Moral Foundations Questionnaire ([see @Graham2009]), one can obtain the empirical values for the $\{\student_i\}_{i=1}^N$, vectors in some $5$ dimensional space. The agents $\{\student_i\}$ are going to be the answers each respondent gave to the questionnaire. The issue $\xx$ remains to be defined, also from the data, but we must make an additional hypothesis. For example, one can take the Zeitgeist as the mean value of liberals, or the mean value of conservatives, or even the sum of this two last vectors. In [see @Vicente2014] they chose $\xx$ as the mean vector of Conservative respondents.
 
@@ -21,7 +21,7 @@ After we obtained the vectors, we make the additional hypothesis that all agents
 NEED TO FIX A COMMENTED TEXT BELOW
 
 <!--
-Then, one can use Equation [@eq:mfvisujeca] and apply Bayes' theorem to it to find an estimator $\tilde{\gamma}_\mathit{pa}$ given a set of data $\{h_i\}_{i \in \mathit{pa}}$:
+Then, one can use [@eq:mfvisujeca] and apply Bayes' theorem to it to find an estimator $\tilde{\gamma}_\mathit{pa}$ given a set of data $\{h_i\}_{i \in \mathit{pa}}$:
 
 $$  P(\gamma| \{h_i\}_{i \in \mathit{pa}}) \propto P(\gamma) \prod_{i \in \mathit{pa}} P(h_i | \gamma) $$ {#eq:bayesgamma}
 
@@ -33,15 +33,15 @@ Now we can see the different gamma \textit{posteriors} for each \textit{pa}, for
 
 ![The 4 different Zeitgeist hypothesis considered. All extracted from data.](images/4zeitgeists.png){#fig:zeitgeists width='75%'}
 
-We can see clear from figure [@fig:zeitgeists], as [see @Graham2009] already mentioned, that one can differentiate between Conservatives and Liberals by the different relevance each group gives to each moral dimension. Liberals tend to give more importance to Harm and Fairness whereas Conservatives give almost equal importance to all $5$ dimensions, attributing slightly more relevance to Ingroup, Authority and Purity dimensions. Additionally, the mean vector for the whole population tends more towards the Liberals due to a greater number of respondents with this political affiliation.
+We can see clear from [@fig:zeitgeists], as [see @Graham2009] already mentioned, that one can differentiate between Conservatives and Liberals by the different relevance each group gives to each moral dimension. Liberals tend to give more importance to Harm and Fairness whereas Conservatives give almost equal importance to all $5$ dimensions, attributing slightly more relevance to Ingroup, Authority and Purity dimensions. Additionally, the mean vector for the whole population tends more towards the Liberals due to a greater number of respondents with this political affiliation.
 
 One last important fact to consider is that Moderates can be seen as a kind of transition between Liberals and Conservatives, as expected. %In fact, although not being shown here, the mean vectors of the $7$ political affiliations can be arranged in a linear dispersion along a curve, with $\mathit{pa} = 1$ (Very Liberal) and $\mathit{pa} = 7$ (Very Conservative) at the extremes of this curve.
 
-The different posteriors of $\gamma$ due to each choice of those Zeitgeists are presented in Figure [@fig:posteriorgamma]
+The different posteriors of $\gamma$ due to each choice of those Zeitgeists are presented in [@fig:posteriorgamma]
 
 ![Different posteriors for $\gamma$ given the chosen Zeitgeist and the political affiliation of the responses $\{h\}$. DO A BOXPLOT HERE AS FELIPPE TOLD ME](images/posteriorgamma4zeitgeists.png){#fig:posteriorgamma width='80%'}
 
-One can see that the choice of the Zeitgeist matters greatly when searching for a distribution $P(h|\gamma)$ that matches the data. More specifically, one can see from Figure [@fig:posteriorgamma] that the same group, for example $\mathit{pa} = 1$, can have different values of $\gamma$ for different choices of the Zeitgeist.
+One can see that the choice of the Zeitgeist matters greatly when searching for a distribution $P(h|\gamma)$ that matches the data. More specifically, one can see from [@fig:posteriorgamma] that the same group, for example $\mathit{pa} = 1$, can have different values of $\gamma$ for different choices of the Zeitgeist.
 
 ![FIX THIS FIGURE. AGGREGATE ALL 4](images/phconservatives.png){#fig:probh width='40%'}
 
@@ -60,7 +60,7 @@ One can see that the choice of the Zeitgeist matters greatly when searching for 
 \label{fig:probh}
 \end{figure} -->
 
-Looking at Figure [@fig:probh] we can observe that the model fits the data better for higher values of $\gamma$, which come naturally from the posterior with more moderate Zeitgeists, which do not align exactly with Conservatives nor with Liberals.
+Looking at [@fig:probh] we can observe that the model fits the data better for higher values of $\gamma$, which come naturally from the posterior with more moderate Zeitgeists, which do not align exactly with Conservatives nor with Liberals.
 
 From the analysis presented above, we would like to propose $2$ ideas for future models:
 

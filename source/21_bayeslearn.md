@@ -54,7 +54,7 @@ where $\theta^{n+1}_a = \theta^n_a + \Delta_a$ and $\zeta_{n+1}$ is the new norm
 $$\mathbb{E}_{Q_{n+1}}[f_b(\mathbf{x})] \equiv \eta^b_{n+1} = \mathbb{E}_{P_{n+1}}[f_b(\mathbf{x})]$$
 
 Subtracting $\eta^b_n$ from both sides and working out the equation with
-results [@eq:ident1] and [@eq:ident2] we find an update rule to the parameters of the distribution.
+results in [@eq:ident1] and [@eq:ident2] we find an update rule to the parameters of the distribution.
 
 \begin{align}
   \eta^b_{n+1} - \eta^b_n &= \mathbb{E}_{P_{n+1}}[f_b(\mathbf{x})] - \eta^b_n =  \int \mathrm{d}\mathbf{x}\ f_b(\mathbf{x})\ P_{n+1} -  \eta^b_n \int \mathrm{d}\mathbf{x}\ P_{n+1} \\

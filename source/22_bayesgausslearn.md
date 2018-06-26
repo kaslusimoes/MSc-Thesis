@@ -45,7 +45,7 @@ and the resulting ME distribution is a **Multivariate Gaussian**:
 
 where $\theta^i_n = - \left( C^{-1}_n\right)_{ij}J^{j}_n$ and $\underline{\theta_n}^{ij} =  \frac12 \left( C^{-1}_n \right)_{ij}$ are the Lagrange multipliers relevant to define the distribution.
 
-Remembering that in the update equation [@eq:gradientdescent] we had to evaluate a derivative with respective to the Lagrange multipliers, we transform that derivative in another, more tractable, one:
+Remembering that in the [@eq:gradientdescent], the update equation, we had to evaluate a derivative with respective to the Lagrange multipliers, we transform that derivative in another, more tractable, one:
 
 $$\theta^i_n = - \left( C^{-1}_n\right)_{ij}J^{j}_n\quad \Rightarrow\quad \vec{\theta}_n =  - \mathbf{C}_n^{-1} \mathbf{J}_n\quad \Rightarrow\quad \mathbf{J}_n = - \mathbf{C}_n \vec{\theta}_n$$
 
