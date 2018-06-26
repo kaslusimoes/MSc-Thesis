@@ -13,7 +13,7 @@ The technological (and evolutionary) justification supporting the choice of a pa
 
 In possession of the generators we can do Maximum Entropy and obtain:
 
-$$Q(\mathbf{x}) = P(\mathbf{x}|\theta) = \frac1\zeta \exp\left(- \sum_{a=1}^G \theta_a f_a(\mathbf{x}) \right)$$
+$$ Q(\mathbf{x}) = P(\mathbf{x}|\theta) = \frac1\zeta \exp\left(- \sum_{a=1}^G \theta_a f_a(\mathbf{x}) \right) $$
 
 where $\zeta = \int \mathrm{d}\mathbf{x}\ \exp\left(- \sum_{a=1}^G \theta_a f_a(\mathbf{x})\right)$ is the normalization of the probability distribution $Q$, also called the **partition function**. We calculate some identities that are going to be useful later on:
 
@@ -49,9 +49,7 @@ Equating this to zero, one finds the expression for the Maximum Entropy (ME) pos
 
 $$Q_{n+1}(\mathbf{x}) = Q_n(\mathbf{x})\ \mathrm{e}^{-1 + \Delta_0 + \Delta^a f_a} = \frac{1}{\zeta_{n+1}} \exp\left(- \sum_{a=1}^G \theta_a^{n+1} f_a(\mathbf{x}) \right)$$
 
-where $\theta^{n+1}_a = \theta^n_a + \Delta_a$ and $\zeta_{n+1}$ is the
-new normalization factor. If one takes a derivative with respect to
-$\Delta_b$ it becomes evident that the constraint adopted was:
+where $\theta^{n+1}_a = \theta^n_a + \Delta_a$ and $\zeta_{n+1}$ is the new normalization factor. If one takes a derivative with respect to $\Delta_b$ it becomes evident that the constraint adopted was:
 
 $$\mathbb{E}_{Q_{n+1}}[f_b(\mathbf{x})] \equiv \eta^b_{n+1} = \mathbb{E}_{P_{n+1}}[f_b(\mathbf{x})]$$
 

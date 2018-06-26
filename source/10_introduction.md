@@ -14,3 +14,16 @@ Other things I have that I think do not fit in this thesis:
 - unfinished analysis of the convincement problem
 
 For the line segment/tightness thing, recall that I'm using the moralmatrix.csv file, not the whole data MFQ.csv. Also, instead of using some "arbitrary" 2 vectors from the data by hand, I can calculate the correlation matrix of it and take the 2 eigenvectors with greatest eigenvalues, can't I?
+
+\textbf{Some nice intro I put on my last report:}
+
+This project deals with the study of dynamics of learning in a society. We approach mainly two points: the first one is to understand how the question being discussed by the agents in a given society influences the outcomes of the discussion, and how this reflects in the overall organization of the group; the second point is dedicated to study the possible different interactions between opposing parties and to which extent disagreement affects the overall cohesiveness of the society, having the discussed question fixed.
+
+For that we employ techniques from statistical mechanics, machine learning and probability theory. Both agent-based models and typical statistical physics ones can be constructed with Maximum Entropy methods, and the results are interpreted with the usual tools from statistical mechanics and thermodynamics.
+
+On this report, we present two different studies:
+
+\begin{itemize}
+\item The first one analyzes the importance of the questions being discussed by the agents in a given society, comparing with data from Moral Foundation group of \cite{Graham2009};
+\item The second study is a bipartite society model in which we have ferromagnetic interactions inside each group, and possibly antiferromagnetic interactions between agents of the two groups.
+\end{itemize}
