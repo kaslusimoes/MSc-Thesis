@@ -3,7 +3,10 @@ title: Emergent Collective Properties in Societies of Neural Networks
 author: Lucas Silva Simões
 advisor: Nestor Caticha
 institute: Instituto de Física, Universidade de São Paulo
-abstract: This research is really nice, you should dive into it ^^
+abstract: |
+    This research is really nice, you should dive into it ^^
+
+    And one more paragraph
 
 lof: true
 toc: true
@@ -11,4 +14,12 @@ toc-depth: 2
 pagestyle: headings
 bibliography: library.bib
 numbersections: true
+
+autoEqnLabels: true
+figPrefix:
+  - "Figure"
+  - "Figures"
+eqnPrefix:
+  - "Equation"
+  - "Equations"
 ---
