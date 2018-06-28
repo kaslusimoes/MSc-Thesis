@@ -9,7 +9,7 @@ where $\delta$ is a \textit{psychological cost} of agreement between agents. Whe
 
 In the same paper, the authors developed a mean-field approximation using [@eq:hamiltonianvisujeca] and the Maximum Entropy method. The constraint that the energy is conserved $\mean{\mathcal{H}} = E$ enforces the appearance of a Lagrange multiplier $\beta$, the "social pressure" of the society. The resulting distribution is:
 
-$$  P_{\mathrm{MF}}(h) = \frac{\gamma^2}{2} (1-h^2)\ e^{-\gamma(1-h)} $$ {#eq:mfvisujeca}
+$$  P_{\mathrm{MF}}(h) = \frac{\gamma^2}{2} (1-h^2)\ e^{-\gamma\left(1-h\right)} $$ {#eq:mfvisujeca}
 
 where $\gamma$ is a parameter aggregating $\beta$ and $\delta$. Similarly to [@eq:meanfieldfinal], here $h$ is also the dot product of the agent's inner moral representation $\student$ and a discussed query (\textit{Zeitgeist}) $\xx$.
 
