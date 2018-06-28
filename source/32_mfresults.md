@@ -1,5 +1,5 @@
 
-## Results {#sec:mfresults}
+## Computational Results {#sec:mfresults}
 
 Equations  [@eq:mfeqs] can only be solved numerically, and we do it by an iterative process. Let  $u=(m,r,\zeta)$ , then the set of equations is  of the type $u= F(u)$. An initial value $u_0$ is chosen and the map
 
