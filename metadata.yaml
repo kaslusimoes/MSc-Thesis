@@ -12,6 +12,7 @@ lof: true
 toc: true
 toc-depth: 2
 pagestyle: headings
+indent: false
 bibliography: library.bib
 numbersections: true
 
