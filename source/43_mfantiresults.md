@@ -1,5 +1,5 @@
 
-## Computational Results {#sec:mfresults2}
+## Computational Results {#sec:mfantiresults}
 
 Now we can solve this equations for several values of the parameters $(\beta, \delta, \varepsilon)$ and obtain the fixed points of the system. For simplicity we only consider the situation in which the different populations have the same size, that is, $\rho_A = 0.5 = \rho_B$.
 

@@ -1,5 +1,5 @@
 
-## Moral Foundations {#sec:moralfoundations}
+## Moral Foundations Theory {#sec:moralfoundations}
 
 Hardest of all is to define which topics on humanities I will discourse.
 
