@@ -13,23 +13,23 @@ That machine needs to somehow codify which values of $\mathbf{x}$ are more appro
 
 By means of practicality we are going to consider that the distribution $Q(\mathbf{x})$ belongs to some *parametric family* of probability distributions. That is, there is a set of conditions (from now on called **generators**) satisfied by and, more than that, *defining* the utilized distribution:
 
-$$ \exists\ \{f_a(\mathbf{x})\}_{a=1}^G\ \ \text{such that} \ \ \mathbb{E}_Q[f_a] = \eta_a $$
+$$ \exists\ \{f^a(\mathbf{x})\}_{a=1}^G\ \ \text{such that} \ \ \mathbb{E}_Q[f^a] = \eta^a $$
 
 The technological (and evolutionary) justification supporting the choice of a parametric family comes from noticing that the machine's memory (or the animal's brain, in a biology analogy) is limited and thus can only store a finite amount of information usable by its processing. Therefore it is viable that we imagine a numberless of different machines with different architectures (which differ on the parametric family used) and then compare their performances in different settings.
 
 In possession of the generators we can do Maximum Entropy and obtain:
 
-$$ Q(\mathbf{x}) = P(\mathbf{x}|\theta) = \frac1\zeta \exp\left(- \sum_{a=1}^G \theta_a f_a(\mathbf{x}) \right) $$
+$$ Q(\mathbf{x}) = P(\mathbf{x}|\theta) = \frac1\zeta \exp\left(- \sum_{a=1}^G \theta_a f^a(\mathbf{x}) \right) $$
 
-where $\zeta = \int \mathrm{d}\mathbf{x}\ \exp\left(- \sum_{a=1}^G \theta_a f_a(\mathbf{x})\right)$ is the normalization of the probability distribution $Q$, also called the **partition function**. We calculate some identities that are going to be useful later on:
+where $\zeta = \int \mathrm{d}\mathbf{x}\ \exp\left(- \sum_{a=1}^G \theta_a f^a(\mathbf{x})\right)$ is the normalization of the probability distribution $Q$, also called the **partition function**. We calculate some identities that are going to be useful later on[^einstein-summation]:
 
-$$  \frac{\partial \log \zeta}{\partial \theta_b} = \frac1\zeta \frac{\partial \zeta}{\partial \theta_b} = \frac1\zeta \int \mathrm{d}\mathbf{x}\ (-f_b(\mathbf{x})) \mathrm{e}^{- \sum_a \theta_a f_a(\mathbf{x})} $$
+$$  \frac{\partial \log \zeta}{\partial \theta_b} = \frac1\zeta \frac{\partial \zeta}{\partial \theta_b} = \frac1\zeta \int \mathrm{d}\mathbf{x}\ (-f^b(\mathbf{x})) \mathrm{e}^{- \theta_a f^a(\mathbf{x})} $$
 
-$$ \qquad\therefore\ \frac{\partial \log \zeta}{\partial \theta_b} = - \eta_b $$ {#eq:ident1}
+$$ \qquad\therefore\ \frac{\partial \log \zeta}{\partial \theta_b} = - \eta^b $$ {#eq:ident1}
 
-$$  \frac{\partial Q}{\partial \theta_b} = \frac1\zeta \mathrm{e}^{- \sum_a \theta_a f_a(\mathbf{x})} \left( -f_b(\mathbf{x})\right) +  \mathrm{e}^{- \sum_a \theta_a f_a(\mathbf{x})} \left( \frac{-1}{\zeta^2} \right) \frac{\partial \zeta}{\partial \theta_b} $$
+$$  \frac{\partial Q}{\partial \theta_b} = \frac1\zeta \mathrm{e}^{- \theta_a f^a(\mathbf{x})} \left( -f^b(\mathbf{x})\right) +  \mathrm{e}^{- \theta_a f^a(\mathbf{x})} \left( \frac{-1}{\zeta^2} \right) \frac{\partial \zeta}{\partial \theta_b} $$
 
-$$ \qquad\therefore\ \frac{\partial Q}{\partial \theta_b} = [\eta_b - f_b(\mathbf{x})] Q $$ {#eq:ident2}
+$$ \qquad\therefore\ \frac{\partial Q}{\partial \theta_b} = [\eta^b - f^b(\mathbf{x})] Q $$ {#eq:ident2}
 
 Knowing the probability distribution the machine attributes to the parameters of its interior model, we might calculate how it is that the "knowledge" of the machine will change when a new example is presented to it. Using Bayes' Theorem:
 
@@ -37,34 +37,34 @@ $$ P_{n+1}(\mathbf{x}) = P(\mathbf{x}| y_{n+1}) = \frac{L_{n+1} Q_n}{Z_{n+1}} = 
 
 Although this update is exact, it does not suit our needs since the new distribution $P_{n+1}$ usually will not belong to the initial parametric family. We need an alternative step that takes into account the relevant data from Bayes' rule and remains with the same functional form as the prior.
 
-To do that one can minimize the distance (maximize the entropy) between the distributions $D_{KL}[Q_{n+1}||Q_n]$ while enforcing the expectation values of $P_n$ with $\mathbb{E}_{P_n}[f_a(\mathbf{x})] = \eta_a$. We want to minimize the following Lagrangian[^einstein-summation]:
+To do that one can minimize the distance (maximize the entropy) between the distributions $D_{KL}[Q_{n+1}||Q_n]$ while enforcing the expectation values of $P_n$ with $\mathbb{E}_{P_n}[f^a(\mathbf{x})] = \eta^a$. We want to minimize the following Lagrangian:
 
 
 \begin{align}
-     \Lambda[P, Q, \{\Delta_a\}] = &\int \mathrm{d}\mathbf{x}\ Q_{n+1} \log\frac{Q_{n+1}}{Q_n} - \Delta^a \left[\int \mathrm{d}\mathbf{x}\ f_a Q_{n+1} - \eta_a \right] \\
+     \Lambda[P, Q, \{\Delta_a\}] = &\int \mathrm{d}\mathbf{x}\ Q_{n+1} \log\frac{Q_{n+1}}{Q_n} - \Delta^a \left[\int \mathrm{d}\mathbf{x}\ f^a Q_{n+1} - \eta^a \right] \\
     &\quad - \Delta_0 \left[ \int \mathrm{d}\mathbf{x}\ Q_{n+1} - 1 \right]
 \end{align}
 
 Since both $Q_n$ and $P_n$ are already fixed, one can only minimize the Lagrangian varying the posterior distribution $Q_{n+1}$. Taking a functional derivative, one finds:
 
-$$ \frac{\delta \Lambda}{\delta Q_{n+1}} = \int \mathrm{d}\mathbf{x}\ \delta Q_{n+1} \left[ \log Q_{n+1} + 1 - \log Q_n - \Delta^a f_a - \Delta_0 \right]$$
+$$ \frac{\delta \Lambda}{\delta Q_{n+1}} = \int \mathrm{d}\mathbf{x}\ \delta Q_{n+1} \left[ \log Q_{n+1} + 1 - \log Q_n - \Delta^a f^a - \Delta_0 \right]$$
 
 ![Schematic representation of the update procedure done to revise the distribution $Q_n$. It goes as follows: one uses Bayes' Theorem (blue path) to get the new constraints and then updates the distribution through maximum entropy (red path), therefore minimizing the distance relative to the prior while enforcing the new expected values of the posterior.](images/em-updateproject.png){#fig:updateproject width='55%'}
 
 Equating this to zero, one finds the expression for the Maximum Entropy (ME) posterior:
 
-$$Q_{n+1}(\mathbf{x}) = Q_n(\mathbf{x})\ \mathrm{e}^{-1 + \Delta_0 + \Delta^a f_a} = \frac{1}{\zeta_{n+1}} \exp\left(- \sum_{a=1}^G \theta_a^{n+1} f_a(\mathbf{x}) \right)$$
+$$Q_{n+1}(\mathbf{x}) = Q_n(\mathbf{x})\ \mathrm{e}^{-1 + \Delta_0 + \Delta^a f^a} = \frac{1}{\zeta_{n+1}} \exp\left(- \theta_a^{n+1} f^a(\mathbf{x}) \right)$$
 
 where $\theta^{n+1}_a = \theta^n_a + \Delta_a$ and $\zeta_{n+1}$ is the new normalization factor. If one takes a derivative with respect to $\Delta_b$ it becomes evident that the constraint adopted was:
 
-$$\mathbb{E}_{Q_{n+1}}[f_b(\mathbf{x})] \equiv \eta^b_{n+1} = \mathbb{E}_{P_{n+1}}[f_b(\mathbf{x})]$$
+$$\mathbb{E}_{Q_{n+1}}[f^b(\mathbf{x})] \equiv \eta^b_{n+1} = \mathbb{E}_{P_{n+1}}[f^b(\mathbf{x})]$$
 
 Subtracting $\eta^b_n$ from both sides and working out the equation with
 results in [@eq:ident1] and [@eq:ident2] we find an update rule to the parameters of the distribution.
 
 \begin{align}
-  \eta^b_{n+1} - \eta^b_n &= \mathbb{E}_{P_{n+1}}[f_b(\mathbf{x})] - \eta^b_n =  \int \mathrm{d}\mathbf{x}\ f_b(\mathbf{x})\ P_{n+1} -  \eta^b_n \int \mathrm{d}\mathbf{x}\ P_{n+1} \\
-  &= \int \mathrm{d}\mathbf{x}\ [f_b(\mathbf{x}) -  \eta^b_n]\ P_{n+1}  = \int \mathrm{d}\mathbf{x}\ \frac{L_{n+1}}{Z_{n+1}}\ [f_b(\mathbf{x}) -  \eta^b_n]\ Q_n \\
+  \eta^b_{n+1} - \eta^b_n &= \mathbb{E}_{P_{n+1}}[f^b(\mathbf{x})] - \eta^b_n =  \int \mathrm{d}\mathbf{x}\ f^b(\mathbf{x})\ P_{n+1} -  \eta^b_n \int \mathrm{d}\mathbf{x}\ P_{n+1} \\
+  &= \int \mathrm{d}\mathbf{x}\ [f^b(\mathbf{x}) -  \eta^b_n]\ P_{n+1}  = \int \mathrm{d}\mathbf{x}\ \frac{L_{n+1}}{Z_{n+1}}\ [f^b(\mathbf{x}) -  \eta^b_n]\ Q_n \\
   &=  \int \mathrm{d}\mathbf{x}\ \frac{L_{n+1}}{Z_{n+1}}\ \left( - \frac{\partial Q_n}{\partial \theta^b_n} \right) = - \frac{1}{Z_{n+1}} \frac{\partial}{\partial \theta^b_n} \left( \int \mathrm{d}\mathbf{x}\ L_{n+1} Q_n \right)
 \end{align}
 
@@ -79,34 +79,9 @@ The partition function $Z_{n+1}$ depends only on the *intrinsic* mechanisms of t
 
 ### Gaussian Parametric Family {#sec:bayesgausslearn}
 
-Due to its generality, importance and easy of use, we analyze a special case of parametric family: the Gaussian distributions family. We will start with the univariate case, so that we can build our intuition on it, and then we shall proceed to the multivariate one.
+In this subsection we analyze how the parameters of a Multivariate Gaussian distribution update under the framework developed in section [@sec:bayeslearn]. We chose it due to its generality, importance and easy of use.
 
-In this section we analyze how the parameters of the gaussian distribution update under the framework developed in section [@sec:bayeslearn].
-
-#### Univariate Case
-
-The generators we assume to be relevant to draw inference over $x\in \mathbb{R}$ will be
-
-$$\begin{cases}
-    \mathbb{E}_n[x]   &= \mu_n \\  
-    \mathbb{E}_n[x^2] &= \sigma^2_n + \mu^2_n
-  \end{cases}$$
-
-and the resulting ME distribution is a **Univariate Gaussian**, or Normal distribution:
-
-\begin{align}
-    \label{eq:multigaussian}
-      Q_n(x) &\equiv \mathcal{N}(x| \mu_n, \sigma^2_n) = (2\pi \sigma_n^2)^{-1/2} \exp\left[ -\frac12 \frac{(x- \mu_n)^2}{\sigma^2} \right] \\
-             &= \frac{1}{Z_{\mathcal{N}_n}} \exp\left[ -\theta^{(1)}_n x- \theta^{(2)}_n x^2 \right]
-\end{align}
-
-where $\theta^{(1)}_n = -\dfrac{\mu_n}{\sigma_n^2}$ and $\theta^{(2)}_n =  \dfrac{1}{2\sigma_n^2}$ are the relevant Lagrange multipliers to define the distribution.
-
-FINISH THE INFERENCE
-
-#### Multivariate Case
-
-The next set of generators we assume to be relevant to draw an inference, now over a vector $\mathbf{B}\in \mathbb{R}^K$, will be
+The set of generators we assume to be relevant to draw an inference over a vector $\mathbf{B}\in \mathbb{R}^K$, will be:
 
 $$\begin{cases}
     \mathbb{E}_n[B^{i}] &= J^{i}_n \\  
@@ -156,13 +131,13 @@ Proceeding a bit further, we consider the following machine $\mathcal{M}$ hardco
 
 $$
 \mathcal{M}: \begin{cases}
-    \emph{input/data:}  & y = \left( \xi \in \mathbb{R}^K;\ \sigma \in \{ -1, +1 \} \right) \\
-    \emph{architecture:}& \tau = \mathrm{sign} (\xi \cdot \mathbf{B}) \\
+    \mathit{input/data:}  & y = \left( \xi \in \mathbb{R}^K;\ \sigma \in \{ -1, +1 \} \right) \\
+    \mathit{architecture:}& \tau = \mathrm{sign} (\xi \cdot \mathbf{B}) \\
                         & \sigma =
     \begin{cases} -\tau\ &\text{with probability}\ \ \ \varepsilon \\
     \ \ \tau\vphantom{\frac{0}{0}}\ &\text{with probability}\ 1 - \varepsilon
     \end{cases} \\
-\emph{inference:}& \mathbb{E}[B^{i}] = J^{i},\  \mathbb{E}[B^{i}B^{j}] = C_{ij} + J^{i}J^{j}
+\mathit{inference:}& \mathbb{E}[B^{i}] = J^{i},\  \mathbb{E}[B^{i}B^{j}] = C_{ij} + J^{i}J^{j}
 \end{cases}
 $$ {#eq:model}
 
