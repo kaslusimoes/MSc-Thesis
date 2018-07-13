@@ -18,7 +18,7 @@ This second study is motivated by the following questions: Are all extremists th
 
 ### Describing a posterior for $\gamma$ {#sec:bayesgamma}
 
-Assuming one has access to the distribution of opinions of several people from an specific political affiliation (\textit{pa}), we can make the hypothesis that all agents of that \textit{pa} have their moral opinions sampled from the same distribution $P(h|\gamma_\mathit{pa})$. This is not the same as saying that all liberals are the same, or that a liberal agent cannot have the same opinion as a conservative one in a give topic; we are only saying that there must be some similarity between people that think alike, they ought to be characterized in groups, and we can describe this using a probability distribution.
+Assuming one has access to the distribution of opinions of several people from an specific political affiliation (\textit{pa}), we can make the hypothesis that all agents of that \textit{pa} have their moral opinions sampled from the same distribution $P(h|\gamma_{\mathit{pa}})$. This is not the same as saying that all liberals are the same, or that a liberal agent cannot have the same opinion as a conservative one in a give topic; we are only saying that there must be some similarity between people that think alike, they ought to be characterized in groups, and we can describe this using a probability distribution.
 
 Then, one can use [@eq:mfvisujeca] and apply Bayes' theorem to it to find an estimator $\hat{\gamma}_{pa}$ given a set of data $\{h_i\}_{i \in \mathit{pa}}$:
 

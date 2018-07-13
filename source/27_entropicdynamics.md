@@ -70,7 +70,7 @@ results in [@eq:ident1] and [@eq:ident2] we find an update rule to the parameter
 
 Remarkably, the schematics represented by [@fig:updateproject] can be described as a **gradient descent** evolution:
 
-$$ \eta^b_{n+1} = \eta^b_{n} - \frac{\partial}{\partial \theta_b^{(n)}} \log Z_{n+1} $$ {#eq:gradientdescent}
+$$ \eta^b_{n+1} = \eta^b_{n} - \frac{\partial}{\partial \theta_b^{n}} \log Z_{n+1} $$ {#eq:gradientdescent}
 
 <!-- ACTUALLY THIS IS NOT REMARKABLE AT ALL, JUST REMEMBER FROM STATMECH E=-d/db logZ. MAYBE WE COULD ELIMINATE THE DERIVATION ABOVE? -->
 
@@ -108,21 +108,21 @@ $$\frac{\partial}{\partial \theta_n^i} = \frac{\partial J^{l}_n}{\partial \theta
 
 And finally:
 
-$$ J^{i}_{n+1} = J^{i}_n + \frac{\partial -Z_{n+1}}{\partial \theta^i_n} = J^{i}_n - C^{li}_n \frac{\partial -Z_{n+1}}{\partial J^{l}_n}$$ {#eq:upstudenti}
+$$ J^{i}_{n+1} = J^{i}_n - \frac{\partial \log Z_{n+1}}{\partial \theta^i_n} = J^{i}_n - C^{li}_n \frac{\partial \log Z_{n+1}}{\partial J^{l}_n}$$ {#eq:upstudenti}
 
 In vectorial form (noticing that $\mathbf{C}$ is symmetric):
 
-$$ \mathbf{J}_{n+1} = \mathbf{J}_n - \mathbf{C}_n \cdot \nabla_{\mathbf{J}_n} -Z_{n+1}$$ {#eq:upstudent}
+$$ \mathbf{J}_{n+1} = \mathbf{J}_n + \mathbf{C}_n \cdot \nabla_{\mathbf{J}_n} \log Z_{n+1}$$ {#eq:upstudent}
 
 Similarly, one can follow the same procedure to study the evolution of $C^{ij}_n$:
 
-$$ C^{ij}_{n+1} = C_n^{ji} - C_n^{jk} C_n^{il} \frac{\partial}{\partial J^{k}_n} \frac{\partial}{\partial J^{l}_n} -Z_{n+1}$$ {#eq:upcij}
+$$ C^{ij}_{n+1} = C_n^{ji} + C_n^{jk} C_n^{il} \frac{\partial}{\partial J^{k}_n} \frac{\partial}{\partial J^{l}_n} \log Z_{n+1}$$ {#eq:upcij}
 
 In vectorial form (noticing that $\mathbf{C}$ is symmetric since it is a covariance matrix):
 
-$$ \mathbf{C}_{n+1} = \mathbf{C}_n - \mathbf{C}_n \cdot \left( \mathbf{H}_{\mathbf{J}_n} -Z_{n+1} \right) \cdot \mathbf{C}_n $$ {#eq:upc}
+$$ \mathbf{C}_{n+1} = \mathbf{C}_n + \mathbf{C}_n \cdot \left( \mathbf{H}_{\mathbf{J}_n} \log Z_{n+1} \right) \cdot \mathbf{C}_n $$ {#eq:upc}
 
-where $\mathbf{H}_{\mathbf{J}_n} -Z_{n+1}$ is the Hessian matrix of second derivatives of $-Z_{n+1}$ with respect to the elements of $\mathbf{J}_n$.
+where $\mathbf{H}_{\mathbf{J}_n} \log Z_{n+1}$ is the Hessian matrix of second derivatives of $\log Z_{n+1}$ with respect to the elements of $\mathbf{J}_n$.
 
 
 ### Bayesian & Gaussian Perceptron {#sec:bayesgaussperceptron}
@@ -146,7 +146,7 @@ Since the set of generators being used is the same as last section's, we know th
 The learning situation described by $\mathcal{M}$ can be interpreted as follows: consider a pair of vectors (*perceptrons*) $\mathbf{J}, \mathbf{B}\in \mathbb{R}^K$ where $\mathbf{B}$ is called **professor** and $\mathbf{J}$ is called **student**. The student $\mathbf{J}$ will learn to imitate the professor $\mathbf{B}$ through examples $(\xi_\mu, \sigma_\mu)$, where $\xi_\mu \in \mathbb{R}^K$ is typically called an **issue** and $\tau_\mu = \mathrm{sign}(\mathbf{B}\cdot \xi_\mu)$ is the professor's **opinion** over the respective question. The student assumes the opinion can be corrupted by a multiplicative noise $\varepsilon$ (a **distrust**) when it is received from the professor. The set of $n$ pairs issue-opinion $\mathcal{D}_n = \{ (\xi_\mu, \sigma_\mu)_{\mu=1}^n \}$ is called **learning set** at time $n$.
 
 
-As we have already laid out our inference problem in section [@sec:bayeslearn] and solved it for the gaussian parametric family in section [@sec:bayesgausslearn], all that is left is to calculate the free energy $\mathcal{E}_n = - \log Z_n$.
+As we have already laid out our inference problem in section [@sec:bayeslearn] and solved it for the gaussian parametric family in section [@sec:bayesgausslearn], all that is left is to calculate the free energy $-\log Z_n$.
 
 \begin{align}
      Z_{n+1} &= \int \mathrm{d}\mathbf{x}\ P(\mathcal{D}_{n+1}| \mathbf{x}) P(\mathbf{x}| \theta_n) = \int \mathrm{d}\mathbf{B}\ P(\xi) P(\sigma| \xi, \mathbf{B}) Q_n(\mathbf{B}) \\
@@ -184,7 +184,7 @@ where $\Phi$ is the cumulative distribution function of the gaussian distributio
 
 Finally, taking the logarithm (and discarding the constant part $k_\xi$ which does not contribute to our inference):
 
-$$ \log Z_{n+1} = -\log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\Gamma_n} \right)\right] $$ {#eq:costbayesgaussperceptron}
+$$ -\log Z_{n+1} = -\log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\Gamma_n} \right)\right] $$ {#eq:costbayesgaussperceptron}
 
 
 [^einstein-summation]:

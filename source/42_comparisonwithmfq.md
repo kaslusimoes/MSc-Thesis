@@ -14,7 +14,7 @@ One last important fact to consider is that "Moderates" can be seen as a kind of
 
 The different posteriors of $\gamma$ due to each choice of those Zeitgeists are presented in [@fig:posteriorgamma]
 
-![Different posteriors for $\gamma$ given the chosen Zeitgeist and the political affiliation of the responses $\{h\}$. Since the distributions are sharp, one can describe them using only the mean value](images/posteriorgamma4zeitgeists.png){#fig:posteriorgamma width='95%'}
+![Different posteriors for $\gamma$ given the chosen Zeitgeist and the political affiliation of the responses $\{h\}$. Since the distributions are sharp, for most points the error bars cannot be distinguished from the mean values, so we can use the latter to describe the posteriors](images/posteriorgamma4zeitgeists.png){#fig:posteriorgamma width='95%'}
 
 One can see that the choice of the Zeitgeist matters greatly when searching for a distribution $P(h|\gamma)$ that matches the data. More specifically, one can see from [@fig:posteriorgamma] that the same group, for example $\mathit{pa} = 1$, can have different values of $\gamma$ for different choices of the Zeitgeist.
 
