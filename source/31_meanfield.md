@@ -5,7 +5,7 @@ A possible strategy to study a society of the agents developed in section [@sec:
 
 To look for the relevant information that describes the model we first look at the Update [@eq:upstudent; @eq:upc]. For simplicity we consider that the description of our "moral space" $\mathbb{R}^K$ is already a decoupled one, and we assume that $\mathbf{C}_n =  \gamma^2_n \mathbb1$. We also assume that, for a certain timescale, the evolution of $\gamma$ is frozen. Hence, the update mechanism is going to be led only by:
 
-$$ \mathbf{J}_{n+1} = \mathbf{J}_n - \nabla_{\mathbf{J}_n} \gamma^2 \log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\gamma} \right)\right] $$ {#eq:finalupstudent}
+$$ \mathbf{J}_{n+1} = \mathbf{J}_n - \nabla_{\mathbf{J}_n} \gamma^2 \log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\gamma} \right)\right] $$ {#eq:upstudentfinal}
 
 Under those circumstances, the only relevant information to describe the evolution of our system is going to be the term inside the differentiation, and we can consider that our society of agents $\{ \studenti \}$ can be described totally by one specific Hamiltonian $\mathcal{H}$:
 
@@ -35,13 +35,13 @@ This result can only be possible for any variation $\delta P_k$ if the term in b
 
 $$ P_k(\student_k) = \frac{1}{Z_k} \exp \left( - \beta \sum_{i \in \partial k} \int \mathrm{d}\student_i P_i V_{ik} \right)$$ {#eq:meanfieldexact}
 
-Unfortunately, due to the rather complex form of the potential $V_{ij}$, the equation above is intractable. In that case we are going to *choose* a mean field probability distribution family (instead of *selecting* the best one).
+Unfortunately, due to the rather complex form of the potential $V_{ij}$, the equation above is intractable. In that case, instead of selecting the best mean field probability distribution family, we are going to choose one with a similar functional form.
 
 We proceed comparing the exact mean field projection done above and the hamiltonian in [@eq:hamiltonian1] to an approximate distribution that takes into account only an effective number of neighbors $\nu_{(i)}$ with effective interactions $m_{(i)}$ and $r_{(i)}$:
 
 $$ P_j(\student_j) = \frac{1}{Z_j} \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\gamma \left( r_{(i)} h_j + \sigma_j m_{(i)} \right) \right) \right]^{\beta \nu_{(j)} \gamma^2} $$
 
-In fact, one can think of $m$ and $r$ as parameters that describe the overall behavior of the society, such that one agent $i$ receives signals from its neighbors irrespective of label $i$. This does not mean that all the agents are identical, but that they draw their moral vector from the same probability distribution.
+In fact, one can think of $m$ and $r$ as parameters that describe the overall behavior of the society, such that one agent $i$ receives signals from its neighbors irrespective of label $i$. This does not mean that all the agents are identical, but that they draw their moral vector from the same probability distribution (being held constant all the other parameters: $\beta, \varepsilon, \gamma$)
 
 We can represent this self-consistently with the following set of equations to be obeyed:
 
@@ -50,7 +50,7 @@ We can represent this self-consistently with the following set of equations to b
     r &= \int \mathrm{d}\student\ \sigma(\student) P_{\mathrm{MF}}(\student)
 \end{align}
 
-Then the mean field probability distribution becomes:
+Our final mean field probability distribution then becomes:
 
 $$ P_{\mathrm{MF}}(\student) = \frac{1}{Z} \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac{r}\gamma h (\student) + \frac{m}{\gamma}\sigma (\student) \right) \right]^{\beta \nu \gamma^2} $$ {#eq:meanfieldfinal}
 
@@ -77,3 +77,5 @@ Since we can always rotate the coordinate system to a given orientation, we choo
 where we implicitly defined the function $B(\theta) \equiv B(\theta| \varepsilon, \gamma, m, r, \beta\nu)$ :
 
 $$ B(\theta) = \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r\cos\theta + \mathrm{sign} \left( \cos\theta \right)  m \right) \right) \right]^{\beta \nu \gamma^2} $$ {#eq:bfunction}
+
+We can now use a computer to find the values of $(m, r \zeta)$ for each set of parameters $\varepsilon, \gamma, \beta\nu$, and have some insight of the behaviour of the system. We present this in [@sec:mfresults]
