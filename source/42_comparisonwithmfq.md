@@ -1,9 +1,9 @@
 
 ## Comparison with MFQ data {#sec:comparisonmfq}
 
-From the Moral Foundations Questionnaire [see @Graham2009], one can obtain the empirical values for the $\{\student_i\}_{i=1}^N$, vectors in some $5$ dimensional space. The agents $\{\student_i\}$ are going to be the answers each respondent gave to the questionnaire. The issue $\xx$ remains to be defined, also from the data, but we must make an additional hypothesis. For example, one can take the Zeitgeist as the mean value of liberals, or the mean value of conservatives, or even the sum of this two last vectors. In [@Vicente2014] they chose $\xx$ as the mean vector of Conservative respondents.
+From the Moral Foundations Questionnaire [see @Graham2009], one can obtain the empirical values for the $\{\student_i\}_{i=1}^N$, vectors in some $5$ dimensional space. The agents $\{\student_i\}$ are going to be the answers each respondent gave to the questionnaire. The issue $\zeitgeist$ remains to be defined, also from the data, but we must make an additional hypothesis. For example, one can take the Zeitgeist as the mean value of liberals, or the mean value of conservatives, or even the sum of this two last vectors. In [@Vicente2014] they chose $\zeitgeist$ as the mean vector of Conservative respondents.
 
-We test 4 different hypothesis for $\xx$: mean of conservatives $\xx_C$, mean of liberals $\xx_L$, mean of moderates $\xx_M$ and mean of all agents $\xx_T$. All the vectors were normalized $\|x\| = 1$.
+We test 4 different hypothesis for $\zeitgeist$: mean of conservatives $\zeitgeist_C$, mean of liberals $\zeitgeist_L$, mean of moderates $\zeitgeist_M$ and mean of all agents $\zeitgeist_T$. All the vectors were normalized $\|\zeitgeist\| = 1$.
 
 ![The 4 different Zeitgeist hypothesis considered. All extracted from data.](images/4zeitgeists.png){#fig:zeitgeists width='75%'}
 

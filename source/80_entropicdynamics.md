@@ -7,65 +7,65 @@ Here we present the full derivation of the results shown in [@sec:entropicdynami
 
 ## Bayesian Machine Update Learning  {#sec:bayeslearn}
 
-Consider a machine prepared to work with a fixed (*hardcoded*) model $\mathcal{M}$ which depends on some internal variables $\mathbf{x}$. Such machine is presented with examples $y$ and seeks to update its knowledge about $\mathbf{x}$ in such a way to describe correctly (with $\mathcal{M}$) the received examples while still improving its ability to predict future inputs (also known as capability of *generalization*).
+Consider a machine prepared to work with a fixed (*hardcoded*) model $\model$ which depends on some internal variables $\xx$. Such machine is presented with examples $y$ and seeks to update its knowledge about $\xx$ in such a way to describe correctly (with $\model$) the received examples while still improving its ability to predict future inputs (also known as capability of *generalization*).
 
-That machine needs to somehow codify which values of $\mathbf{x}$ are more appropriate to the classification task being learned. As this is an incomplete information situation (that is, we do not have full access to the optimal parameters $\hat{\mathbf{x}}$), we use probability theory tools to describe the plausibility (or beliefs) the machine attributes - through its mechanical-logical-electronic processes - to each value of $\mathbf{x}$. This we call the distribution $Q(\mathbf{x})$.
+That machine needs to somehow codify which values of $\xx$ are more appropriate to the classification task being learned. As this is an incomplete information situation (that is, we do not have full access to the optimal parameters $\hat{\xx}$), we use probability theory tools to describe the plausibility (or beliefs) the machine attributes - through its mechanical-logical-electronic processes - to each value of $\xx$. This we call the distribution $Q(\xx)$.
 
-By means of practicality we are going to consider that the distribution $Q(\mathbf{x})$ belongs to some *parametric family* of probability distributions. That is, there is a set of conditions (from now on called **generators**) satisfied by and, more than that, *defining* the utilized distribution:
+By means of practicality we are going to consider that the distribution $Q(\xx)$ belongs to some *parametric family* of probability distributions. That is, there is a set of conditions (from now on called **generators**) satisfied by and, more than that, *defining* the utilized distribution:
 
-$$ \exists\ \{f^a(\mathbf{x})\}_{a=1}^G\ \ \text{such that} \ \ \mathbb{E}_Q[f^a] = \eta^a $$
+$$ \exists\ \{f^a(\xx)\}_{a=1}^G\ \ \text{such that} \ \ \mathbb{E}_Q[f^a] = \eta^a $$
 
 The technological (and evolutionary) justification supporting the choice of a parametric family comes from noticing that the machine's memory (or the animal's brain, in a biology analogy) is limited and thus can only store a finite amount of information usable by its processing. Therefore it is viable that we imagine a numberless of different machines with different architectures (which differ on the parametric family used) and then compare their performances in different settings.
 
 In possession of the generators we can do Maximum Entropy and obtain:
 
-$$ Q(\mathbf{x}) = P(\mathbf{x}|\theta) = \frac1\zeta \exp\left(- \sum_{a=1}^G \theta_a f^a(\mathbf{x}) \right) $$
+$$ Q(\xx) = P(\xx|\theta) = \frac1\zeta \exp\left(- \sum_{a=1}^G \theta_a f^a(\xx) \right) $$
 
-where $\zeta = \int \mathrm{d}\mathbf{x}\ \exp\left(- \sum_{a=1}^G \theta_a f^a(\mathbf{x})\right)$ is the normalization of the probability distribution $Q$, also called the **partition function**. We calculate some identities that are going to be useful later on[^einstein-summation]:
+where $\zeta = \int \mathrm{d}\xx\ \exp\left(- \sum_{a=1}^G \theta_a f^a(\xx)\right)$ is the normalization of the probability distribution $Q$, also called the **partition function**. We calculate some identities that are going to be useful later on[^einstein-summation]:
 
-$$  \frac{\partial \log \zeta}{\partial \theta_b} = \frac1\zeta \frac{\partial \zeta}{\partial \theta_b} = \frac1\zeta \int \mathrm{d}\mathbf{x}\ (-f^b(\mathbf{x})) \mathrm{e}^{- \theta_a f^a(\mathbf{x})} $$
+$$  \frac{\partial \log \zeta}{\partial \theta_b} = \frac1\zeta \frac{\partial \zeta}{\partial \theta_b} = \frac1\zeta \int \mathrm{d}\xx\ (-f^b(\xx)) \mathrm{e}^{- \theta_a f^a(\xx)} $$
 
 $$ \qquad\therefore\ \frac{\partial \log \zeta}{\partial \theta_b} = - \eta^b $$ {#eq:ident1}
 
-$$  \frac{\partial Q}{\partial \theta_b} = \frac1\zeta \mathrm{e}^{- \theta_a f^a(\mathbf{x})} \left( -f^b(\mathbf{x})\right) +  \mathrm{e}^{- \theta_a f^a(\mathbf{x})} \left( \frac{-1}{\zeta^2} \right) \frac{\partial \zeta}{\partial \theta_b} $$
+$$  \frac{\partial Q}{\partial \theta_b} = \frac1\zeta \mathrm{e}^{- \theta_a f^a(\xx)} \left( -f^b(\xx)\right) +  \mathrm{e}^{- \theta_a f^a(\xx)} \left( \frac{-1}{\zeta^2} \right) \frac{\partial \zeta}{\partial \theta_b} $$
 
-$$ \qquad\therefore\ \frac{\partial Q}{\partial \theta_b} = [\eta^b - f^b(\mathbf{x})] Q $$ {#eq:ident2}
+$$ \qquad\therefore\ \frac{\partial Q}{\partial \theta_b} = [\eta^b - f^b(\xx)] Q $$ {#eq:ident2}
 
 Knowing the probability distribution the machine attributes to the parameters of its interior model, we might calculate how it is that the "knowledge" of the machine will change when a new example is presented to it. Using Bayes' Theorem:
 
-$$ P_{n+1}(\mathbf{x}) = P(\mathbf{x}| y_{n+1}) = \frac{L_{n+1} Q_n}{Z_{n+1}} = \frac{P(y_{n+1}| \mathbf{x})\ P(\mathbf{x}| \theta_n)}{\int \mathrm{d}\mathbf{x}\ P(y_{n+1}| \mathbf{x})\ P(\mathbf{x}| \theta_n)}$$
+$$ P_{n+1}(\xx) = P(\xx| y_{n+1}) = \frac{L_{n+1} Q_n}{Z_{n+1}} = \frac{P(y_{n+1}| \xx)\ P(\xx| \theta_n)}{\int \mathrm{d}\xx\ P(y_{n+1}| \xx)\ P(\xx| \theta_n)}$$
 
 Although this update is exact, it does not suit our needs since the new distribution $P_{n+1}$ usually will not belong to the initial parametric family. We need an alternative step that takes into account the relevant data from Bayes' rule and remains with the same functional form as the prior.
 
-To do that one can minimize the distance (maximize the entropy) between the distributions $D_{KL}[Q_{n+1}||Q_n]$ while enforcing the expectation values of $P_n$ with $\mathbb{E}_{P_n}[f^a(\mathbf{x})] = \eta^a$. We want to minimize the following Lagrangian:
+To do that one can minimize the distance (maximize the entropy) between the distributions $D_{KL}[Q_{n+1}||Q_n]$ while enforcing the expectation values of $P_n$ with $\mathbb{E}_{P_n}[f^a(\xx)] = \eta^a$. We want to minimize the following Lagrangian:
 
 
 \begin{align}
-     \Lambda[P, Q, \{\Delta_a\}] = &\int \mathrm{d}\mathbf{x}\ Q_{n+1} \log\frac{Q_{n+1}}{Q_n} - \Delta^a \left[\int \mathrm{d}\mathbf{x}\ f^a Q_{n+1} - \eta^a \right] \\
-    &\quad - \Delta_0 \left[ \int \mathrm{d}\mathbf{x}\ Q_{n+1} - 1 \right]
+     \Lambda[P, Q, \{\Delta_a\}] = &\int \mathrm{d}\xx\ Q_{n+1} \log\frac{Q_{n+1}}{Q_n} - \Delta^a \left[\int \mathrm{d}\xx\ f^a Q_{n+1} - \eta^a \right] \\
+    &\quad - \Delta_0 \left[ \int \mathrm{d}\xx\ Q_{n+1} - 1 \right]
 \end{align}
 
 Since both $Q_n$ and $P_n$ are already fixed, one can only minimize the Lagrangian varying the posterior distribution $Q_{n+1}$. Taking a functional derivative, one finds:
 
-$$ \frac{\delta \Lambda}{\delta Q_{n+1}} = \int \mathrm{d}\mathbf{x}\ \delta Q_{n+1} \left[ \log Q_{n+1} + 1 - \log Q_n - \Delta^a f^a - \Delta_0 \right]$$
+$$ \frac{\delta \Lambda}{\delta Q_{n+1}} = \int \mathrm{d}\xx\ \delta Q_{n+1} \left[ \log Q_{n+1} + 1 - \log Q_n - \Delta^a f^a - \Delta_0 \right]$$
 
 ![Schematic representation of the update procedure done to revise the distribution $Q_n$. It goes as follows: one uses Bayes' Theorem (blue path) to get the new constraints and then updates the distribution through maximum entropy (red path), therefore minimizing the distance relative to the prior while enforcing the new expected values of the posterior.](images/em-updateproject.png){#fig:updateproject width='55%'}
 
 Equating this to zero, one finds the expression for the Maximum Entropy (ME) posterior:
 
-$$Q_{n+1}(\mathbf{x}) = Q_n(\mathbf{x})\ \mathrm{e}^{-1 + \Delta_0 + \Delta^a f^a} = \frac{1}{\zeta_{n+1}} \exp\left(- \theta_a^{n+1} f^a(\mathbf{x}) \right)$$
+$$Q_{n+1}(\xx) = Q_n(\xx)\ \mathrm{e}^{-1 + \Delta_0 + \Delta^a f^a} = \frac{1}{\zeta_{n+1}} \exp\left(- \theta_a^{n+1} f^a(\xx) \right)$$
 
 where $\theta^{n+1}_a = \theta^n_a + \Delta_a$ and $\zeta_{n+1}$ is the new normalization factor. If one takes a derivative with respect to $\Delta_b$ it becomes evident that the constraint adopted was:
 
-$$\mathbb{E}_{Q_{n+1}}[f^b(\mathbf{x})] \equiv \eta^b_{n+1} = \mathbb{E}_{P_{n+1}}[f^b(\mathbf{x})]$$
+$$\mathbb{E}_{Q_{n+1}}[f^b(\xx)] \equiv \eta^b_{n+1} = \mathbb{E}_{P_{n+1}}[f^b(\xx)]$$
 
 Subtracting $\eta^b_n$ from both sides and working out the equation with
 results in [@eq:ident1] and [@eq:ident2] we find an update rule to the parameters of the distribution.
 
 \begin{align}
-  \eta^b_{n+1} - \eta^b_n &= \mathbb{E}_{P_{n+1}}[f^b(\mathbf{x})] - \eta^b_n =  \int \mathrm{d}\mathbf{x}\ f^b(\mathbf{x})\ P_{n+1} -  \eta^b_n \int \mathrm{d}\mathbf{x}\ P_{n+1} \\
-  &= \int \mathrm{d}\mathbf{x}\ [f^b(\mathbf{x}) -  \eta^b_n]\ P_{n+1}  = \int \mathrm{d}\mathbf{x}\ \frac{L_{n+1}}{Z_{n+1}}\ [f^b(\mathbf{x}) -  \eta^b_n]\ Q_n \\
-  &=  \int \mathrm{d}\mathbf{x}\ \frac{L_{n+1}}{Z_{n+1}}\ \left( - \frac{\partial Q_n}{\partial \theta^b_n} \right) = - \frac{1}{Z_{n+1}} \frac{\partial}{\partial \theta^b_n} \left( \int \mathrm{d}\mathbf{x}\ L_{n+1} Q_n \right)
+  \eta^b_{n+1} - \eta^b_n &= \mathbb{E}_{P_{n+1}}[f^b(\xx)] - \eta^b_n =  \int \mathrm{d}\xx\ f^b(\xx)\ P_{n+1} -  \eta^b_n \int \mathrm{d}\xx\ P_{n+1} \\
+  &= \int \mathrm{d}\xx\ [f^b(\xx) -  \eta^b_n]\ P_{n+1}  = \int \mathrm{d}\xx\ \frac{L_{n+1}}{Z_{n+1}}\ [f^b(\xx) -  \eta^b_n]\ Q_n \\
+  &=  \int \mathrm{d}\xx\ \frac{L_{n+1}}{Z_{n+1}}\ \left( - \frac{\partial Q_n}{\partial \theta^b_n} \right) = - \frac{1}{Z_{n+1}} \frac{\partial}{\partial \theta^b_n} \left( \int \mathrm{d}\xx\ L_{n+1} Q_n \right)
 \end{align}
 
 Remarkably, the schematics represented by [@fig:updateproject] can be described as a **gradient descent** evolution:
@@ -127,10 +127,10 @@ where $\mathbf{H}_{\mathbf{J}_n} \log Z_{n+1}$ is the Hessian matrix of second d
 
 ## Bayesian & Gaussian Perceptron {#sec:bayesgaussperceptron}
 
-Proceeding a bit further, we consider the following machine $\mathcal{M}$ hardcoded to infer the value of $\mathbf{B}\in \mathbb{R}^K$ (what we have been calling $\mathbf{x}$) and make predictions $\sigma$ about $\xi \in \mathbb{R}^K$ using the following mechanisms:
+Proceeding a bit further, we consider the following machine $\model$ hardcoded to infer the value of $\mathbf{B}\in \mathbb{R}^K$ (what we have been calling $\xx$) and make predictions $\sigma$ about $\xi \in \mathbb{R}^K$ using the following mechanisms:
 
 $$
-\mathcal{M}: \begin{cases}
+\model: \begin{cases}
     \mathit{input/data:}  & y = \left( \xi \in \mathbb{R}^K;\ \sigma \in \{ -1, +1 \} \right) \\
     \mathit{architecture:}& \tau = \mathrm{sign} (\xi \cdot \mathbf{B}) \\
                         & \sigma =
@@ -143,13 +143,13 @@ $$ {#eq:model}
 
 Since the set of generators being used is the same as last section's, we know that the Maximum Entropy distribution will be a multivariate gaussian as given by [@eq:multigaussian] and the update equations will be given by [@eq:upstudent] and [@eq:upc].
 
-The learning situation described by $\mathcal{M}$ can be interpreted as follows: consider a pair of vectors (*perceptrons*) $\mathbf{J}, \mathbf{B}\in \mathbb{R}^K$ where $\mathbf{B}$ is called **professor** and $\mathbf{J}$ is called **student**. The student $\mathbf{J}$ will learn to imitate the professor $\mathbf{B}$ through examples $(\xi_\mu, \sigma_\mu)$, where $\xi_\mu \in \mathbb{R}^K$ is typically called an **issue** and $\tau_\mu = \mathrm{sign}(\mathbf{B}\cdot \xi_\mu)$ is the professor's **opinion** over the respective question. The student assumes the opinion can be corrupted by a multiplicative noise $\varepsilon$ (a **distrust**) when it is received from the professor. The set of $n$ pairs issue-opinion $\mathcal{D}_n = \{ (\xi_\mu, \sigma_\mu)_{\mu=1}^n \}$ is called **learning set** at time $n$.
+The learning situation described by $\model$ can be interpreted as follows: consider a pair of vectors (*perceptrons*) $\mathbf{J}, \mathbf{B}\in \mathbb{R}^K$ where $\mathbf{B}$ is called **professor** and $\mathbf{J}$ is called **student**. The student $\mathbf{J}$ will learn to imitate the professor $\mathbf{B}$ through examples $(\xi_\mu, \sigma_\mu)$, where $\xi_\mu \in \mathbb{R}^K$ is typically called an **issue** and $\tau_\mu = \mathrm{sign}(\mathbf{B}\cdot \xi_\mu)$ is the professor's **opinion** over the respective question. The student assumes the opinion can be corrupted by a multiplicative noise $\varepsilon$ (a **distrust**) when it is received from the professor. The set of $n$ pairs issue-opinion $\mathcal{D}_n = \{ (\xi_\mu, \sigma_\mu)_{\mu=1}^n \}$ is called **learning set** at time $n$.
 
 
 As we have already laid out our inference problem in section [@sec:bayeslearn] and solved it for the gaussian parametric family in section [@sec:bayesgausslearn], all that is left is to calculate the free energy $-\log Z_n$.
 
 \begin{align}
-     Z_{n+1} &= \int \mathrm{d}\mathbf{x}\ P(\mathcal{D}_{n+1}| \mathbf{x}) P(\mathbf{x}| \theta_n) = \int \mathrm{d}\mathbf{B}\ P(\xi) P(\sigma| \xi, \mathbf{B}) Q_n(\mathbf{B}) \\
+     Z_{n+1} &= \int \mathrm{d}\xx\ P(\mathcal{D}_{n+1}| \xx) P(\xx| \theta_n) = \int \mathrm{d}\mathbf{B}\ P(\xi) P(\sigma| \xi, \mathbf{B}) Q_n(\mathbf{B}) \\
     & = k_\xi \left\langle P(\sigma| \xi, \mathbf{B}) \right\rangle_{Q_n(\mathbf{B})}
 \end{align}
 

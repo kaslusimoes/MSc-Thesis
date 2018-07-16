@@ -19,7 +19,7 @@ It can be seen that there is a phase transition depending on the parameters $\be
 We can also change variables in our mean field probability distribution. This is useful because the inner representation $\student_i$ is not readily accessible to the experimentalist, whereas the opinion field $h$ in some applications might be:
 
 \begin{align}
-    P(h) &= \int \measure{\student}\ \delta\left( \frac{1}{\sqrt{K}} \student \cdot \xx - h \right) P_{\mathrm{MF}}(\student) \\
+    P(h) &= \int \measure{\student}\ \delta\left( \frac{1}{\sqrt{K}} \student \cdot \zeitgeist - h \right) P_{\mathrm{MF}}(\student) \\
     &= \frac1C\ (1 - h^2)\ \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac{r}\gamma h + \frac{m}{\gamma}\sign h  \right) \right]^{\beta \nu \gamma^2}
 \end{align}
 
@@ -27,4 +27,4 @@ Now we can compute other interesting order parameters, such as the variance $v_m
 
 ![Variance of the field $h$ with respect to selected values of $\beta\nu$ and $\gamma$](images/variance.png){#fig:mfvariance width='90%'}
 
-A last point to note is that higher values of $\varepsilon$ shift the phase boundary in [@fig:phasem] upwards. This is because there is more noise in the interaction between agents therefore it is more difficult to establish agreement. However, for values $\varepsilon \geq 0.5$, the noise is large enough that the system yields no stable solution. This is the first idea that led us to pursue a different model in [@sec:mfantiferromagnetic;@sec:mfantiresults] with explicit antiferromagnetic interactions, 
+A last point to note is that higher values of $\varepsilon$ shift the phase boundary in [@fig:phasem] upwards. This is because there is more noise in the interaction between agents therefore it is more difficult to establish agreement. However, for values $\varepsilon \geq 0.5$, the noise is large enough that the system yields no stable solution. This is the first idea that led us to pursue a different model in [@sec:mfantiferromagnetic;@sec:mfantiresults] with explicit antiferromagnetic interactions,
