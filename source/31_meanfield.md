@@ -1,5 +1,5 @@
 
-## Mean Field society {#sec:meanfield}
+## A Mean Field society model {#sec:meanfield}
 
 A possible strategy to study a society of the agents developed in section [@sec:bayesgaussperceptron] is to recognize relevant information that describes the model and proceed with Statistical Mechanics tools. At some point the calculation might become intractable and one must transition to approximate results and/or computational methods. In this section we develop a Mean Field approach to an specific canonical ensemble of social agents in a noisy society.
 

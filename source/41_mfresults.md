@@ -1,5 +1,5 @@
 
-## Computational evaluation to Mean Field theory {#sec:mfresults}
+## Consensus formation in a Mean Field Society {#sec:mfresults}
 
 On this section we present the solutions to [@sec:meanfield]. Although we could not find analytical solutions to those equations, they can be solved numerically by an iterative process as follows: let  $u=(m,r,\zeta)$ , then the set of equations is  of the type $u= F(u)$. An initial value $u_0$ is chosen and the map
 

@@ -1,5 +1,7 @@
 
-## Zeitgeist and extremism in Societies {#sec:zeitgeistandextremism}
+## Prediction of opinions distribution in societies {#sec:zeitgeistandextremism}
+
+TALK HERE WHY I SHOULD USE ANOTHER MODEL TO MAKE COMPARISONS WITH DATA
 
 In [@Vicente2014] were introduced the following interaction Hamiltonian in a society:
 

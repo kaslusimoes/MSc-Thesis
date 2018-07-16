@@ -1,5 +1,5 @@
 
-## Comparison with MFQ data {#sec:comparisonmfq}
+## Comparison with MFQ opinions data {#sec:comparisonmfq}
 
 From the Moral Foundations Questionnaire [see @Graham2009], one can obtain the empirical values for the $\{\student_i\}_{i=1}^N$, vectors in some $5$ dimensional space. The agents $\{\student_i\}$ are going to be the answers each respondent gave to the questionnaire. The issue $\zeitgeist$ remains to be defined, also from the data, but we must make an additional hypothesis. For example, one can take the Zeitgeist as the mean value of liberals, or the mean value of conservatives, or even the sum of this two last vectors. In [@Vicente2014] they chose $\zeitgeist$ as the mean vector of Conservative respondents.
 

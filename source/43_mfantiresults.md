@@ -1,5 +1,5 @@
 
-## Computational Results {#sec:mfantiresults}
+## Bipartite society: coherence and opposition {#sec:mfantiresults}
 
 Now we can solve this equations for several values of the parameters $(\beta, \delta, \varepsilon)$ and obtain the fixed points of the system. For simplicity we only consider the situation in which the different populations have the same size, that is, $\rho_A = 0.5 = \rho_B$.
 
@@ -8,6 +8,10 @@ From [@fig:phasediagram], beyond the expected behavior of an all-agreeing phase 
 ![The phase diagram when $\beta = 10.0$ and $\rho_A = \rho_B$.](images/phasediagram-full-beta10-rho05-initial0901.png){#fig:phasediagram width='70%'}
 
 ![GET A BETTER IMAGE](images/freeenergy-beta10-delta25-eps6-rho05.png){#fig:freeenergy width='70%'}
+
+EXPLAIN MORE! 
+
+MORE PICTURES!
 
 <!-- \begin{figure}[h!]
 \centering
