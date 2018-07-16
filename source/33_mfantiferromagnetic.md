@@ -1,26 +1,30 @@
 
 ## Bipartite Society {#sec:mfantiferromagnetic}
 
-In [@sec:meanfield] the only values of mistrust $\varepsilon$ explored were between $0$ and $0.5$. That is because for values of $\varepsilon > 0.5$ the society enters a frustrated state which cannot be resolved by aligning nor anti-aligning the opinions of the agents. This problem is known for a long time on infinite-range Ising models and can be solved separating the Ising variables into 2 groups. The groups, which we will call *communities*, have ferromagnetic interactions within them and antiferromagnetic ones between elements of different the communities.
+In [@sec:meanfield] the only values of mistrust $\varepsilon$ explored were between $0$ and $0.5$. As explained before, this is because for values of $\varepsilon > 0.5$ the society enters a frustrated state which cannot be resolved by aligning nor anti-aligning the opinions of the agents. This problem is known for a long time on infinite-range Ising models and can be solved separating the Ising variables into 2 groups. The groups, which we will call communities, have ferromagnetic interactions within them and antiferromagnetic ones between elements of different the communities (depicted in [@fig:antiferro2groups]).
 
 ![Exemplification of the interactions between and inside the 2 communities in a bipartite society](images/antiferromagnetic-2groups.png){#fig:antiferro2groups width='55%'}
 
-The relevant Hamiltonian of a society if two groups we are going to use is:
+We borrow the Hamiltonian from [@eq:Hamiltonianvisujeca] in [@sec:meanfield], and consider two different situations to build the Hamiltonian of a bipartite society: the first one, in which the agents interacting are agreeing $h_ih_j>0$; and a second one, in which the agents are disagreeing $h_ih_j<0$. This two situations give us different contributions, respectively: $-\delta h_ih_j$ and $-h_ih_j$.
 
-$$  \mathcal{H} =  -\frac{\delta}{N} \sum_{\langle i, j \rangle \in A} h_i h_j -\frac{\delta}{N} \sum_{\langle i, j \rangle \in B} h_i h_j - \frac{(1 - 2 \varepsilon)}{N} \sum_{\substack{i \in A \\ j \in B}} h_i h_j $$ {#eq:hamiltonian2}
+The first term, which required $h_ih_j>0$, will be the interaction term inside a given community, whereas the second one, which required $h_ih_j<0$, will be the interaction term between communities.
+
+After modulating the antiferromagnetic interaction with a noise level, the relevant Hamiltonian is:
+
+$$  \mathcal{H} =  -\frac{\delta}{N} \sum_{\langle i, j \rangle \in A} h_i h_j -\frac{\delta}{N} \sum_{\langle i, j \rangle \in B} h_i h_j - \frac{(1 - 2 \varepsilon)}{N} \sum_{\substack{i \in A \\ j \in B}} h_i h_j $$ {#eq:Hamiltonian2}
 
 where the $h_i \in [-1, 1]$ are the opinion fields for each of the $N$ agents. The parameters $\delta$ and $\varepsilon$ can have values on the interval $[-1, 1]$. We note that $\delta$ describes the intensity of the in-group interactions (always ferromagnetic), whereas $\varepsilon$ describes the inter-group interactions (which can become antiferromagnetic when $\varepsilon > 0.5$).
 
-The canonical distribution when we consider the relevant constraint of the expected value of the energy $\langle\mathcal{H}\rangle_{P_B} = E$ is $P_B(\{h_i\}) = \frac1Z \exp(-\beta \mathcal{H})$. We want to evaluate the partition function because from that we will obtain the free energy and the thermodynamics of the model.
+The canonical distribution when we consider the relevant constraint of the expected value of the energy $\langle\mathcal{H}\rangle_{P_B} = E$ is $P_B(\{h_i\}) = \frac1Z \exp(-\beta \mathcal{H})$. We proceed evaluating the partition function of the model.
 
-First, let us rewrite the hamiltonian in the following way:
+First, let us rewrite the Hamiltonian in the following way:
 
 \begin{align}
   \mathcal{H} &=  -\frac{\delta}{N} \sum_{\langle i, j \rangle \in A} h_i h_j -\frac{\delta}{N} \sum_{\langle i, j \rangle \in B} h_i h_j - \frac{(1 - 2 \varepsilon)}{N} \sum_{\substack{i \in A \\ j \in B}} h_i h_j \\
   &= -\frac{N}{2} \left[ \delta \left( \frac1N \sum_{i \in A} h_i \right)^2 + \delta \left( \frac1N \sum_{j \in B} h_i \right)^2 + 2(1 - 2 \varepsilon) \left( \frac1N \sum_{i \in A} h_i \right) \left( \frac1N \sum_{j \in B} h_j \right) \right]
 \end{align}
 
-Secondly, we recognize that we have only squared terms in the hamiltonian, which renders the evaluation of the partition function rather difficult. One way around this is to use the following gaussian identity:
+Secondly, we recognize that we have only squared terms in the Hamiltonian, which renders the evaluation of the partition function rather difficult. One way around this is to use the following gaussian identity:
 
 $$ \exp\left( \frac{A^2 + B^2 +2\rho A B}{2(1-\rho^2)} \right) = \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi\sqrt{1 - \rho^2}}\ \exp\left( -\frac{ x^2 + y^2 + 2\rho x y - 2A(x+\rho y) - 2B(y+\rho x)}{2(1-\rho^2)} \right) $$ {#eq:gaussiantrick2d}
 

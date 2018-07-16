@@ -11,7 +11,7 @@ Consider a machine prepared to work with a fixed (*hardcoded*) model $\model$ wh
 
 That machine needs to somehow codify which values of $\xx$ are more appropriate to the classification task being learned. As this is an incomplete information situation (that is, we do not have full access to the optimal parameters $\hat{\xx}$), we use probability theory tools to describe the plausibility (or beliefs) the machine attributes - through its mechanical-logical-electronic processes - to each value of $\xx$. This we call the distribution $Q(\xx)$.
 
-By means of practicality we are going to consider that the distribution $Q(\xx)$ belongs to some *parametric family* of probability distributions. That is, there is a set of conditions (from now on called **generators**) satisfied by and, more than that, *defining* the utilized distribution:
+By means of practicality we are going to consider that the distribution $Q(\xx)$ belongs to some *parametric family* of probability distributions. That is, there is a set of conditions (from now on called generators) satisfied by and, more than that, *defining* the utilized distribution:
 
 $$ \exists\ \{f^a(\xx)\}_{a=1}^G\ \ \text{such that} \ \ \mathbb{E}_Q[f^a] = \eta^a $$
 
@@ -21,7 +21,7 @@ In possession of the generators we can do Maximum Entropy and obtain:
 
 $$ Q(\xx) = P(\xx|\theta) = \frac1\zeta \exp\left(- \sum_{a=1}^G \theta_a f^a(\xx) \right) $$
 
-where $\zeta = \int \mathrm{d}\xx\ \exp\left(- \sum_{a=1}^G \theta_a f^a(\xx)\right)$ is the normalization of the probability distribution $Q$, also called the **partition function**. We calculate some identities that are going to be useful later on[^einstein-summation]:
+where $\zeta = \int \mathrm{d}\xx\ \exp\left(- \sum_{a=1}^G \theta_a f^a(\xx)\right)$ is the normalization of the probability distribution $Q$, also called the partition function. We calculate some identities that are going to be useful later on[^einstein-summation]:
 
 $$  \frac{\partial \log \zeta}{\partial \theta_b} = \frac1\zeta \frac{\partial \zeta}{\partial \theta_b} = \frac1\zeta \int \mathrm{d}\xx\ (-f^b(\xx)) \mathrm{e}^{- \theta_a f^a(\xx)} $$
 
@@ -68,7 +68,7 @@ results in [@eq:ident1] and [@eq:ident2] we find an update rule to the parameter
   &=  \int \mathrm{d}\xx\ \frac{L_{n+1}}{Z_{n+1}}\ \left( - \frac{\partial Q_n}{\partial \theta^b_n} \right) = - \frac{1}{Z_{n+1}} \frac{\partial}{\partial \theta^b_n} \left( \int \mathrm{d}\xx\ L_{n+1} Q_n \right)
 \end{align}
 
-Remarkably, the schematics represented by [@fig:updateproject] can be described as a **gradient descent** evolution:
+Remarkably, the schematics represented by [@fig:updateproject] can be described as a gradient descent evolution:
 
 $$ \eta^b_{n+1} = \eta^b_{n} - \frac{\partial}{\partial \theta_b^{n}} \log Z_{n+1} $$ {#eq:gradientdescent}
 
@@ -88,7 +88,7 @@ $$\begin{cases}
     \mathbb{E}_n[B^{i}B^{j}] &= C^{ij}_n + J^{i}_n J^{j}_n
     \end{cases}$$
 
-and the resulting ME distribution is a **Multivariate Gaussian**:
+and the resulting ME distribution is a Multivariate Gaussian:
 
 \begin{align}
     \label{eq:multigaussian}
@@ -143,7 +143,7 @@ $$ {#eq:model}
 
 Since the set of generators being used is the same as last section's, we know that the Maximum Entropy distribution will be a multivariate gaussian as given by [@eq:multigaussian] and the update equations will be given by [@eq:upstudent] and [@eq:upc].
 
-The learning situation described by $\model$ can be interpreted as follows: consider a pair of vectors (*perceptrons*) $\mathbf{J}, \mathbf{B}\in \mathbb{R}^K$ where $\mathbf{B}$ is called **professor** and $\mathbf{J}$ is called **student**. The student $\mathbf{J}$ will learn to imitate the professor $\mathbf{B}$ through examples $(\xi_\mu, \sigma_\mu)$, where $\xi_\mu \in \mathbb{R}^K$ is typically called an **issue** and $\tau_\mu = \mathrm{sign}(\mathbf{B}\cdot \xi_\mu)$ is the professor's **opinion** over the respective question. The student assumes the opinion can be corrupted by a multiplicative noise $\varepsilon$ (a **distrust**) when it is received from the professor. The set of $n$ pairs issue-opinion $\mathcal{D}_n = \{ (\xi_\mu, \sigma_\mu)_{\mu=1}^n \}$ is called **learning set** at time $n$.
+The learning situation described by $\model$ can be interpreted as follows: consider a pair of vectors (*perceptrons*) $\mathbf{J}, \mathbf{B}\in \mathbb{R}^K$ where $\mathbf{B}$ is called professor and $\mathbf{J}$ is called student. The student $\mathbf{J}$ will learn to imitate the professor $\mathbf{B}$ through examples $(\xi_\mu, \sigma_\mu)$, where $\xi_\mu \in \mathbb{R}^K$ is typically called an issue and $\tau_\mu = \mathrm{sign}(\mathbf{B}\cdot \xi_\mu)$ is the professor's opinion over the respective question. The student assumes the opinion can be corrupted by a multiplicative noise $\varepsilon$ (a distrust) when it is received from the professor. The set of $n$ pairs issue-opinion $\mathcal{D}_n = \{ (\xi_\mu, \sigma_\mu)_{\mu=1}^n \}$ is called learning set at time $n$.
 
 
 As we have already laid out our inference problem in section [@sec:bayeslearn] and solved it for the gaussian parametric family in section [@sec:bayesgausslearn], all that is left is to calculate the free energy $-\log Z_n$.

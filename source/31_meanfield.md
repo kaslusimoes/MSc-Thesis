@@ -3,13 +3,13 @@
 
 A possible strategy to study a society of the agents developed in section [@sec:bayesgaussperceptron] is to recognize relevant information that describes the model and proceed with Statistical Mechanics tools. At some point the calculation might become intractable and one must transition to approximate results and/or computational methods. In this section we develop a Mean Field approach to an specific canonical ensemble of social agents in a noisy society.
 
-To look for the relevant information that describes the model we first look at the Update [@eq:upstudent; @eq:upc]. For simplicity we consider that the description of our "moral space" $\mathbb{R}^K$ is already a decoupled one, and we assume that $\mathbf{C}_n =  \gamma^2_n \mathbb1$. We also assume that, for a certain timescale, the evolution of $\gamma$ is frozen. Hence, the update mechanism is going to be led only by:
+To look for the relevant information that describes the model we first look at the Update [@eq:upstudent; @eq:upc]. For simplicity we consider that the description of our "moral space" $\mathbb{R}^K$ is already one that renders the "moral dimensions" independent from one another, and we assume that $\mathbf{C}_n =  \gamma^2_n \mathbb1$. We also assume that, for a certain timescale, the evolution of $\gamma$ is frozen. Hence, the update mechanism is going to be led only by:
 
 $$ \mathbf{J}_{n+1} = \mathbf{J}_n - \nabla_{\mathbf{J}_n} \gamma^2 \log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\gamma} \right)\right] $$ {#eq:upstudentfinal}
 
 Under those circumstances, the only relevant information to describe the evolution of our system is going to be the term inside the differentiation, and we can consider that our society of agents $\{ \studenti \}$ can be described totally by one specific Hamiltonian $\mathcal{H}$:
 
-$$  \mathcal{H}=  - \gamma^2 \sum_{\langle i,j \rangle} \log \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\gamma \left( \sigma_i h_j + \sigma_j h_i \right) \right) \right] = \sum_{\langle i,j \rangle} V_{ij} $$ {#eq:hamiltonian1}
+$$  \mathcal{H}=  - \gamma^2 \sum_{\langle i,j \rangle} \log \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\gamma \left( \sigma_i h_j + \sigma_j h_i \right) \right) \right] = \sum_{\langle i,j \rangle} V_{ij} $$ {#eq:Hamiltonian1}
 
 From the rules of entropic inference, we can study this society using the following canonical (Boltzmann) probability distribution:
 
@@ -17,7 +17,7 @@ From the rules of entropic inference, we can study this society using the follow
 
 $$P_B(\{ \student_i \}) = \frac{1}{Z_B} \exp \left( - \beta \mathcal{H}\left( \{ \student_i \} \right)\ \right)$$ {#eq:canonicaldistribution}
 
-This description, however, is rather complex depending on the kind of applications we want to follow. A common procedure to simplify our model is to consider a **mean field approximation**, which projects our solution (the probability distribution $P_B$, which depends on the whole set $\{\student_i\}$ all at once) into a a parametric family of separable probability distributions $P_0 = \Pi_i P_i(\student_i)$ much simpler to work with.
+This description, however, is rather complex depending on the kind of applications we want to follow. A common procedure to simplify our model is to consider a mean field approximation, which projects our solution (the probability distribution $P_B$, which depends on the whole set $\{\student_i\}$ all at once) into a a parametric family of separable probability distributions $P_0 = \Pi_i P_i(\student_i)$ much simpler to work with.
 
 In that case, we do not wish to choose a separable distribution indiscriminately; we want to pick as close as possible the specific $P_0$ which best approximates $P_B$ given the constraints we have assigned to it. That is a calculation we can do maximizing the entropy $S$ (or minimizing the Kullback-Leibler divergence), as follows:
 
@@ -37,7 +37,7 @@ $$ P_k(\student_k) = \frac{1}{Z_k} \exp \left( - \beta \sum_{i \in \partial k} \
 
 Unfortunately, due to the rather complex form of the potential $V_{ij}$, the equation above is intractable. In that case, instead of selecting the best mean field probability distribution family, we are going to choose one with a similar functional form.
 
-We proceed comparing the exact mean field projection done above and the hamiltonian in [@eq:hamiltonian1] to an approximate distribution that takes into account only an effective number of neighbors $\nu_{(i)}$ with effective interactions $m_{(i)}$ and $r_{(i)}$:
+We proceed comparing the exact mean field projection done above and the Hamiltonian in [@eq:Hamiltonian1] to an approximate distribution that takes into account only an effective number of neighbors $\nu_{(i)}$ with effective interactions $m_{(i)}$ and $r_{(i)}$:
 
 $$ P_j(\student_j) = \frac{1}{Z_j} \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\gamma \left( r_{(i)} h_j + \sigma_j m_{(i)} \right) \right) \right]^{\beta \nu_{(j)} \gamma^2} $$
 

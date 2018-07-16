@@ -17,7 +17,7 @@ student
 
 $\mathcal{Z}$
 
-: partition function or Zeitgeist?
+: Zeitgeist, the issue or topic being discussed in a given society
 
 MFT
 

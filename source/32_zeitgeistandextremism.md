@@ -1,17 +1,17 @@
 
 ## Zeitgeist and extremism in Societies {#sec:zeitgeistandextremism}
 
-In [@Vicente2014] were introduced the following interaction hamiltonian in a society:
+In [@Vicente2014] were introduced the following interaction Hamiltonian in a society:
 
-$$  \mathcal{H} = - \frac{1+\delta}{2} \sum_{\langle ij \rangle} h_i h_j + \frac{1-\delta}{2} \sum_{\langle ij \rangle} |h_i h_j| $$ {#eq:hamiltonianvisujeca}
+$$  \mathcal{H} = - \frac{1+\delta}{2} \sum_{\langle ij \rangle} h_i h_j + \frac{1-\delta}{2} \sum_{\langle ij \rangle} |h_i h_j| $$ {#eq:Hamiltonianvisujeca}
 
-where $\delta$ is a "psychological cost" of agreement between agents. When $\delta = 0$ the agents are called "error correctors", because they do not change their moral vectors in the case of matching opinions, and when $\delta = 1$ they are called "corroboration seekers", because they attribute the same amount of information to both cases: agreement or disagreement.
+where $\delta$ is a "psychological cost" of agreement between agents, with $0<\delta<1$. When $\delta = 0$ the agents are called "error correctors", because they do not change their moral vectors in the case of matching opinions, and when $\delta = 1$ they are called "corroboration seekers", because they attribute the same amount of information to both cases: agreement or disagreement.
 
-On this same paper, the authors develop a mean-field approximation using [@eq:hamiltonianvisujeca] and the Maximum Entropy method, similar to the on performed in [@sec:meanfield] to arrive at [@eq:meanfieldexact]. The information constraint on the expected value of the energy $\mean{\mathcal{H}} = E$ enforces the appearance of a Lagrange multiplier $\beta$, the "social pressure" of the society. The resulting distribution is:
+On this same paper, the authors develop a mean-field approximation using [@eq:Hamiltonianvisujeca] and the Maximum Entropy method, similar to the on performed in [@sec:meanfield] to arrive at [@eq:meanfieldexact]. The information constraint on the expected value of the energy $\mean{\mathcal{H}} = E$ enforces the appearance of a Lagrange multiplier $\beta$, the "social pressure" of the society. The resulting distribution is:
 
 $$  P_{\mathrm{MF}}(h) = \frac{g^2}{2} (1-h^2)\ e^{-g\left(1-h\right)} $$ {#eq:mfvisujeca}
 
-where $g$ is a parameter aggregating $\beta$ and $\delta$. As before, $h$ is the dot product between the agent's inner moral representation $\student$ and a discussed query (\textit{Zeitgeist}) $\zeitgeist$.
+where $g$ is a parameter aggregating $\beta$ and $\delta$. As before, $h$ is the dot product between the agent's inner moral representation $\student$ and a discussed query (Zeitgeist) $\zeitgeist$.
 
 Assuming one has access to the distribution of opinions of several people from an specific political affiliation (\textit{pa}), we can make the hypothesis that all agents of that \textit{pa} have their moral opinions sampled from the same distribution $P(h|g_{\mathit{pa}})$. This is not the same as saying that all liberals are the same, or that a liberal agent cannot have the same opinion as a conservative one in a give topic; we are only saying that there must be some similarity between people that think alike, they ought to be characterized in groups, and we can describe this using a probability distribution.
 
@@ -31,7 +31,7 @@ We note that $P(h|g)$ resembles a Gamma distribution in $g$ and choose a prior d
 where $n$ is the number of respondents in the group being considered and $m = \sum_i h_i$ is some kind of magnetization the group.
 <!-- magnetization of a given political group of respondents $\mathit{pa}$.  -->
 
-Now we recognize the Gamma integral $\Gamma(z) = \int_0^\infty \mathrm{d}t\ t^{z-1} e^{-t}$ with $z = 2n + k_0$ to solve the integral. Making the substitution $t = g\left( n -  + 1/\theta_0 \right)$, we obtain:
+Now we recognize the Gamma integral $\Gamma(z) = \int_0^\infty \mathrm{d}t\ t^{z-1} e^{-t}$ with $z = 2n + k_0$ to solve the integral. Making the substitution $t = g\left( n - m + 1/\theta_0 \right)$, we obtain:
 
 \begin{align}
     P(\{h\}) &= \frac{\theta_0^{-k_0}}{2^n \Gamma(k_0)} \left(n + 1/\theta_0 - m \right)^{-2n - k_0 + 1} \prod_{i} (1-h_i^2) \int_0^\infty \mathrm{d}t\ t^{2n + k_0-1} e^{-t}  \\
@@ -42,4 +42,4 @@ Inserting back into the Bayes' rule, we obtain the posterior $g |\{h_i\}_{i \in 
 
 $$  P(g| \{h_i\}_{i \in \mathit{pa}}) = \frac{\left(\frac{1}{\theta_0} + n_{pa} - m_{pa} \right)^{k_0+2n_{pa}}}{\Gamma(k_0 + 2n_{pa})} g^{k_0 - 1 + 2 n_{pa}} e^{-g\left(\frac{1}{\theta_0} + n_{pa} - m_{pa} \right)} $$ {#eq:posteriorgamma}
 
-Now we can see the different gamma \textit{posteriors} for each \textit{pa} and each choice of \textit{Zeitgeist}.
+Now we can see the different gamma \textit{posteriors} for each \textit{pa} and each choice of Zeitgeist.
