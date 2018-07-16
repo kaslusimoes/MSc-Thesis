@@ -1,15 +1,15 @@
 
 # Introduction {#sec:introduction}
 
-The MaxEnt result depends on the entropic learning dynamics, so I guess it should be first (because that way I can start explaining prob, maxent, and then show the model). Maybe I should present some MCMC simulations as well? Let's see. Then I can talk about the choice of the Zeitgeist, and present extremism framework. For that I'll need to explain why I defer the MaxEnt model to the ViSuJeCa one. I guess that should be okay. Finally I can recover some distrust/antiferromagnetism with the last MF model. Yay!
+Talk about how it is important that we study societies, introduce some concepts, some Haidt etc
 
-Other things I have that I think do NOT fit in this thesis:
+Talk about how the tools from statmech can help us achieve those goals, because physics rock and inference rock even more!
 
-- graphical comparison between line segments and  tightness (same thing I "showed" Peter L and Gatsby);
-- unfinished comparison between beta and tightness for different countries and political affiliations (maybe..? :sadface );
-- unfinished analysis of the convincement problem
+Talk about previous works, even talk about opinion models (maybe their weaknesses?).
 
-For the line segment/tightness thing, recall that I'm using the `moralmatrix.csv` file, not the whole `MFQ.csv` data. Also, instead of using some "arbitrary" 2 vectors from the data by hand, I can calculate the correlation matrix of it and take the 2 eigenvectors with greatest eigenvalues, can't I?
+Finish with some questions and ideas that we are going to develop here.
+
+Finish with an outline of this thesis
 
 OLD ABSTRACT:
 
