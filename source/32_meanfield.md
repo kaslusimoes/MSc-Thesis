@@ -1,14 +1,13 @@
 
 ## Mean Field society {#sec:meanfield}
 
-A possible strategy to study a society of the agents developed in section [@sec:bayesgaussperceptron] is to define conserved quantities - such as the Hamiltonian associated with the interaction potential of those agents - and proceed with the usual Statistical Mechanics tools. At some point the calculation might become intractable and that is when one must transition to approximate results and/or computational methods. In this section we develop a Mean Field approach to an specific canonical ensemble of social agents in a noisy society.
+A possible strategy to study a society of the agents developed in section [@sec:bayesgaussperceptron] is to define conserved quantities - such as the Hamiltonian associated with the update equation of those agents - and proceed with the usual Statistical Mechanics tools. At some point the calculation might become intractable and that is when one must transition to approximate results and/or computational methods. In this section we develop a Mean Field approach to an specific canonical ensemble of social agents in a noisy society.
 
-
-### Calculation and Approximation {#sec:mfcalculation}
+INSERT SOMEWHERE THAT $C -> \gamma^2 \mathbb{1}$ AND THEREFORE $\Gamma -> \gamma$
 
 Let us consider that a society of agents $\{ \studenti \}$ which we suppose can be described mostly by one specific Hamiltonian $\mathcal{H}$:
 
-$$  \mathcal{H}=  - \Gamma^2 \sum_{\langle i,j \rangle} \log \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\Gamma \left( \sigma_i h_j + \sigma_j h_i \right) \right) \right] = \sum_{\langle i,j \rangle} V_{ij} $$ {#eq:hamiltonian1}
+$$  \mathcal{H}=  - \gamma^2 \sum_{\langle i,j \rangle} \log \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\gamma \left( \sigma_i h_j + \sigma_j h_i \right) \right) \right] = \sum_{\langle i,j \rangle} V_{ij} $$ {#eq:hamiltonian1}
 
 We also suppose that the mean value of this quantity $\left\langle \mathcal{H} \right\rangle$ is conserved throughout the configuration evolution of the society, that is, $\mathcal{H}$ remains close to some fixed value $E$ of energy but has the possibility of oscillating to higher/lower energy values depending on some "temperature" parameter (which can also be seen as a "social pressure"). In a Maximum Entropy framework, we can say that the probability distribution describing this society with this information paradigm is given by the canonical (Boltzmann) distribution:
 
@@ -36,7 +35,7 @@ Unfortunately, due to the rather complex form of the potential $V_{ij}$, the equ
 
 We proceed comparing the exact mean field projection done above and the hamiltonian in [@eq:hamiltonian1] to an approximate distribution that takes into account only an effective number of neighbors $\nu_{(i)}$ with effective interactions $m_{(i)}$ and $r_{(i)}$:
 
-$$ P_j(\student_j) = \frac{1}{Z_j} \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\Gamma \left( r_{(i)} h_j + \sigma_j m_{(i)} \right) \right) \right]^{\beta \nu_{(j)} \Gamma^2} $$
+$$ P_j(\student_j) = \frac{1}{Z_j} \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\gamma \left( r_{(i)} h_j + \sigma_j m_{(i)} \right) \right) \right]^{\beta \nu_{(j)} \gamma^2} $$
 
 In fact, one can think of $m$ and $r$ as parameters that describe the overall behavior of the society, such that one agent $i$ receives signals from its neighbors irrespective of label $i$. This does not mean that all the agents are identical, but that they draw their moral vector from the same probability distribution.
 
@@ -49,30 +48,30 @@ We can represent this self-consistently with the following set of equations to b
 
 Then the mean field probability distribution becomes:
 
-$$ P_{\mathrm{MF}}(\student) = \frac{1}{Z} \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac{r}\Gamma h (\student) + \frac{m}{\Gamma}\sigma (\student) \right) \right]^{\beta \nu \Gamma^2} $$ {#eq:meanfieldfinal}
+$$ P_{\mathrm{MF}}(\student) = \frac{1}{Z} \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac{r}\gamma h (\student) + \frac{m}{\gamma}\sigma (\student) \right) \right]^{\beta \nu \gamma^2} $$ {#eq:meanfieldfinal}
 
 We can now come back to the definition of our order parameters and evaluate explicitly their values by integration:
 
 \begin{align}
-     m &= \int \mathrm{d}\student_i h_i P_i = \frac{1}{Z_k} \int \mathrm{d}\student_i h_i \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\Gamma \left( r h_i + \sigma_i m \right) \right) \right]^{\beta \nu \Gamma^2} \\
-    &= \frac{1}{Z_i} \frac{1}{\sqrt{K}} \int \mathrm{d}\student_i\ \xi \cdot \student_i \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\Gamma \left( r \frac{\xi \cdot \student_i}{\sqrt{K}} + \mathrm{sign} \left( \xi \cdot \student_i \right)  m \right) \right) \right]^{\beta \nu \Gamma^2}
+     m &= \int \mathrm{d}\student_i h_i P_i = \frac{1}{Z_k} \int \mathrm{d}\student_i h_i \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r h_i + \sigma_i m \right) \right) \right]^{\beta \nu \gamma^2} \\
+    &= \frac{1}{Z_i} \frac{1}{\sqrt{K}} \int \mathrm{d}\student_i\ \xi \cdot \student_i \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r \frac{\xi \cdot \student_i}{\sqrt{K}} + \mathrm{sign} \left( \xi \cdot \student_i \right)  m \right) \right) \right]^{\beta \nu \gamma^2}
 \end{align}
 
 \begin{align}
-     r &= \int \mathrm{d}\student_i \sigma_i P_i = \frac{1}{Z_k} \int \mathrm{d}\student_i \sigma_i \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\Gamma \left( r h_i + \sigma_i m \right) \right) \right]^{\beta \nu \Gamma^2} \\
-    &= \frac{1}{Z_i} \int \mathrm{d}\student_i\ \mathrm{sign} \left( \xi \cdot \student_i \right) \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\Gamma \left( r \frac{\xi \cdot \student_i}{\sqrt{K}} + \mathrm{sign} \left( \xi \cdot \student_i \right)  m \right) \right) \right]^{\beta \nu \Gamma^2}
+     r &= \int \mathrm{d}\student_i \sigma_i P_i = \frac{1}{Z_k} \int \mathrm{d}\student_i \sigma_i \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r h_i + \sigma_i m \right) \right) \right]^{\beta \nu \gamma^2} \\
+    &= \frac{1}{Z_i} \int \mathrm{d}\student_i\ \mathrm{sign} \left( \xi \cdot \student_i \right) \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r \frac{\xi \cdot \student_i}{\sqrt{K}} + \mathrm{sign} \left( \xi \cdot \student_i \right)  m \right) \right) \right]^{\beta \nu \gamma^2}
 \end{align}
 
 Since we can always rotate the coordinate system to a given orientation, we choose one in which $\xi = |\xi| \hat{\mathrm{e}}_5$, so that $\xi \cdot \student_i = \sqrt{K} \cos\theta$ and all the other angular integrals are trivial besides the one in $\theta$:
 
 \begin{align}
-    \nonumber m &= \frac{1}{\zeta} \int_0^\pi \mathrm{d}\theta \sin^3 \theta \cos\theta\ B(\theta| \varepsilon, \Gamma, m, r, \beta\nu)  \\
-    r &= \frac{1}{\zeta} \int_0^\pi \mathrm{d}\theta \sin^3 \theta\ \mathrm{sign} \left( \cos\theta \right)\ B(\theta| \varepsilon, \Gamma, m, r, \beta\nu) \label{eq:mfeqs} \\
-    \nonumber \zeta &= \hspace{4mm}\int_0^\pi \mathrm{d}\theta \sin^3 \theta\ B(\theta| \varepsilon, \Gamma, m, r, \beta\nu)
+    \nonumber m &= \frac{1}{\zeta} \int_0^\pi \mathrm{d}\theta \sin^3 \theta \cos\theta\ B(\theta| \varepsilon, \gamma, m, r, \beta\nu)  \\
+    r &= \frac{1}{\zeta} \int_0^\pi \mathrm{d}\theta \sin^3 \theta\ \mathrm{sign} \left( \cos\theta \right)\ B(\theta| \varepsilon, \gamma, m, r, \beta\nu) \label{eq:mfeqs} \\
+    \nonumber \zeta &= \hspace{4mm}\int_0^\pi \mathrm{d}\theta \sin^3 \theta\ B(\theta| \varepsilon, \gamma, m, r, \beta\nu)
 \end{align}
 
-where we implicitly defined the function $B(\theta) \equiv B(\theta| \varepsilon, \Gamma, m, r, \beta\nu)$ :
+where we implicitly defined the function $B(\theta) \equiv B(\theta| \varepsilon, \gamma, m, r, \beta\nu)$ :
 
-$$ B(\theta) = \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\Gamma \left( r\cos\theta + \mathrm{sign} \left( \cos\theta \right)  m \right) \right) \right]^{\beta \nu \Gamma^2} $$ {#eq:bfunction}
+$$ B(\theta) = \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r\cos\theta + \mathrm{sign} \left( \cos\theta \right)  m \right) \right) \right]^{\beta \nu \gamma^2} $$ {#eq:bfunction}
 
 Although there is no analytical solution to those equations they can be solved numerically.

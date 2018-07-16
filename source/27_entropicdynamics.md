@@ -1,7 +1,7 @@
 
 ## Entropic Dynamics {#sec:entropicdynamics}
 
-Here I will describe the idea of Entropic Dynamics
+Here I will describe the idea of Entropic Dynamics, this work has been presented in many places. See, e.g. [@Alves2015]
 
 Well, at least entropic dynamics of societies! Others have done this, such as [see @Alves2016; @Ipek2018]
 
@@ -185,6 +185,10 @@ where $\Phi$ is the cumulative distribution function of the gaussian distributio
 Finally, taking the logarithm (and discarding the constant part $k_\xi$ which does not contribute to our inference):
 
 $$ -\log Z_{n+1} = -\log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\Gamma_n} \right)\right] $$ {#eq:freeenergy}
+
+Hence, the update equation ([@eq:upstudent]) for this kind of agent will be:
+
+$$ \mathbf{J}_{n+1} = \mathbf{J}_n - \mathbf{C}_n \cdot \nabla_{\mathbf{J}_n} \log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\Gamma_n} \right)\right] $$ {#eq:finalupstudent}
 
 
 [^einstein-summation]:
