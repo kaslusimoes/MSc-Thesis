@@ -13,8 +13,16 @@ $y$
 
 student
 
-: the folk inferring something
+: the agent who is making an inference
 
 $\mathcal{Z}$
 
 : partition function or Zeitgeist?
+
+MFT
+
+: Moral Foundations Theory
+
+MFQ
+
+: Moral Foundations Questionnaire

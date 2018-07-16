@@ -6,7 +6,7 @@ institute: Instituto de Física, Universidade de São Paulo
 abstract: |
     This project deals with the study of dynamics of learning in a society. We approach mainly two points: the first one is to understand how the question being discussed by the agents in a given society influences the outcomes of the discussion, and how this reflects in the overall organization of the group; the second point is dedicated to study the possible different interactions between opposing parties and to which extent disagreement affects the overall cohesiveness of the society, having the discussed question fixed.
 
-    For that we employ techniques from statistical mechanics, machine learning and probability theory. Both agent-based models and typical statistical physics ones can be constructed with Maximum Entropy methods, and the results are interpreted with the usual tools from statistical mechanics and thermodynamics. 
+    For that we employ techniques from statistical mechanics, machine learning and probability theory. Both agent-based models and typical statistical physics ones can be constructed with Maximum Entropy methods, and the results are interpreted with the usual tools from statistical mechanics and thermodynamics.
 
 lof: true
 toc: true
@@ -23,4 +23,7 @@ figPrefix:
 eqnPrefix:
   - "Equation"
   - "Equations"
+secPrefix:
+  - "Section"
+  - "Sections"
 ---
