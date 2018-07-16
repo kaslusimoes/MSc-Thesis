@@ -186,10 +186,6 @@ Finally, taking the logarithm (and discarding the constant part $k_\xi$ which do
 
 $$ -\log Z_{n+1} = -\log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\Gamma_n} \right)\right] $$ {#eq:freeenergy}
 
-Hence, the update equation ([@eq:upstudent]) for this kind of agent will be:
-
-$$ \mathbf{J}_{n+1} = \mathbf{J}_n - \mathbf{C}_n \cdot \nabla_{\mathbf{J}_n} \log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\Gamma_n} \right)\right] $$ {#eq:finalupstudent}
-
 
 [^einstein-summation]:
 

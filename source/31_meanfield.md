@@ -1,19 +1,23 @@
 
 ## Mean Field society {#sec:meanfield}
 
-A possible strategy to study a society of the agents developed in section [@sec:bayesgaussperceptron] is to define conserved quantities - such as the Hamiltonian associated with the update equation of those agents - and proceed with the usual Statistical Mechanics tools. At some point the calculation might become intractable and that is when one must transition to approximate results and/or computational methods. In this section we develop a Mean Field approach to an specific canonical ensemble of social agents in a noisy society.
+A possible strategy to study a society of the agents developed in section [@sec:bayesgaussperceptron] is to recognize relevant information that describes the model and proceed with Statistical Mechanics tools. At some point the calculation might become intractable and one must transition to approximate results and/or computational methods. In this section we develop a Mean Field approach to an specific canonical ensemble of social agents in a noisy society.
 
-INSERT SOMEWHERE THAT $C -> \gamma^2 \mathbb{1}$ AND THEREFORE $\Gamma -> \gamma$
+To look for the relevant information that describes the model we first look at the Update [@eq:upstudent; @eq:upc]. For simplicity we consider that the description of our "moral space" $\mathbb{R}^K$ is already a decoupled one, and we assume that $\mathbf{C}_n =  \gamma^2_n \mathbb1$. We also assume that, for a certain timescale, the evolution of $\gamma$ is frozen. Hence, the update mechanism is going to be led only by:
 
-Let us consider that a society of agents $\{ \studenti \}$ which we suppose can be described mostly by one specific Hamiltonian $\mathcal{H}$:
+$$ \mathbf{J}_{n+1} = \mathbf{J}_n - \nabla_{\mathbf{J}_n} \gamma^2 \log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\gamma} \right)\right] $$ {#eq:finalupstudent}
+
+Under those circumstances, the only relevant information to describe the evolution of our system is going to be the term inside the differentiation, and we can consider that our society of agents $\{ \studenti \}$ can be described totally by one specific Hamiltonian $\mathcal{H}$:
 
 $$  \mathcal{H}=  - \gamma^2 \sum_{\langle i,j \rangle} \log \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\gamma \left( \sigma_i h_j + \sigma_j h_i \right) \right) \right] = \sum_{\langle i,j \rangle} V_{ij} $$ {#eq:hamiltonian1}
 
-We also suppose that the mean value of this quantity $\left\langle \mathcal{H} \right\rangle$ is conserved throughout the configuration evolution of the society, that is, $\mathcal{H}$ remains close to some fixed value $E$ of energy but has the possibility of oscillating to higher/lower energy values depending on some "temperature" parameter (which can also be seen as a "social pressure"). In a Maximum Entropy framework, we can say that the probability distribution describing this society with this information paradigm is given by the canonical (Boltzmann) distribution:
+From the rules of entropic inference, we can study this society using the following canonical (Boltzmann) probability distribution:
+
+<!-- We also suppose that the mean value of this quantity $\left\langle \mathcal{H} \right\rangle$ is conserved throughout the configuration evolution of the society, that is, $\mathcal{H}$ remains close to some fixed value $E$ of energy but has the possibility of oscillating to higher/lower energy values depending on some "temperature" parameter (which can also be seen as a "social pressure"). In a Maximum Entropy framework, we can say that the probability distribution describing this society with this information paradigm is given by the canonical (Boltzmann) distribution: -->
 
 $$P_B(\{ \student_i \}) = \frac{1}{Z_B} \exp \left( - \beta \mathcal{H}\left( \{ \student_i \} \right)\ \right)$$ {#eq:canonicaldistribution}
 
-This description, however, is rather complex depending on the kind of applications we want to follow. A common procedure to simplify our model is to consider a *mean field approximation*, which projects our solution (the probability distribution $P_B$, which depends on the whole set $\{\student_i\}$ all at once) into a a parametric family of separable probability distributions $P_0 = \Pi_i P_i(\student_i)$ much simpler to work with.
+This description, however, is rather complex depending on the kind of applications we want to follow. A common procedure to simplify our model is to consider a **mean field approximation**, which projects our solution (the probability distribution $P_B$, which depends on the whole set $\{\student_i\}$ all at once) into a a parametric family of separable probability distributions $P_0 = \Pi_i P_i(\student_i)$ much simpler to work with.
 
 In that case, we do not wish to choose a separable distribution indiscriminately; we want to pick as close as possible the specific $P_0$ which best approximates $P_B$ given the constraints we have assigned to it. That is a calculation we can do maximizing the entropy $S$ (or minimizing the Kullback-Leibler divergence), as follows:
 
@@ -53,13 +57,13 @@ $$ P_{\mathrm{MF}}(\student) = \frac{1}{Z} \left[ \varepsilon + \left(1 - 2\vare
 We can now come back to the definition of our order parameters and evaluate explicitly their values by integration:
 
 \begin{align}
-     m &= \int \mathrm{d}\student_i h_i P_i = \frac{1}{Z_k} \int \mathrm{d}\student_i h_i \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r h_i + \sigma_i m \right) \right) \right]^{\beta \nu \gamma^2} \\
-    &= \frac{1}{Z_i} \frac{1}{\sqrt{K}} \int \mathrm{d}\student_i\ \xi \cdot \student_i \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r \frac{\xi \cdot \student_i}{\sqrt{K}} + \mathrm{sign} \left( \xi \cdot \student_i \right)  m \right) \right) \right]^{\beta \nu \gamma^2}
+    m &= \int \mathrm{d}\student_i h_i P_i = \frac{1}{Z_k} \int \mathrm{d}\student_i h_i \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r h_i + \sigma_i m \right) \right) \right]^{\beta \nu \gamma^2} \\
+    \nonumber &= \frac{1}{Z_i} \frac{1}{\sqrt{K}} \int \mathrm{d}\student_i\ \xi \cdot \student_i \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r \frac{\xi \cdot \student_i}{\sqrt{K}} + \mathrm{sign} \left( \xi \cdot \student_i \right)  m \right) \right) \right]^{\beta \nu \gamma^2}
 \end{align}
 
 \begin{align}
-     r &= \int \mathrm{d}\student_i \sigma_i P_i = \frac{1}{Z_k} \int \mathrm{d}\student_i \sigma_i \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r h_i + \sigma_i m \right) \right) \right]^{\beta \nu \gamma^2} \\
-    &= \frac{1}{Z_i} \int \mathrm{d}\student_i\ \mathrm{sign} \left( \xi \cdot \student_i \right) \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r \frac{\xi \cdot \student_i}{\sqrt{K}} + \mathrm{sign} \left( \xi \cdot \student_i \right)  m \right) \right) \right]^{\beta \nu \gamma^2}
+    r &= \int \mathrm{d}\student_i \sigma_i P_i = \frac{1}{Z_k} \int \mathrm{d}\student_i \sigma_i \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r h_i + \sigma_i m \right) \right) \right]^{\beta \nu \gamma^2} \\
+    \nonumber &= \frac{1}{Z_i} \int \mathrm{d}\student_i\ \mathrm{sign} \left( \xi \cdot \student_i \right) \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r \frac{\xi \cdot \student_i}{\sqrt{K}} + \mathrm{sign} \left( \xi \cdot \student_i \right)  m \right) \right) \right]^{\beta \nu \gamma^2}
 \end{align}
 
 Since we can always rotate the coordinate system to a given orientation, we choose one in which $\xi = |\xi| \hat{\mathrm{e}}_5$, so that $\xi \cdot \student_i = \sqrt{K} \cos\theta$ and all the other angular integrals are trivial besides the one in $\theta$:
@@ -73,5 +77,3 @@ Since we can always rotate the coordinate system to a given orientation, we choo
 where we implicitly defined the function $B(\theta) \equiv B(\theta| \varepsilon, \gamma, m, r, \beta\nu)$ :
 
 $$ B(\theta) = \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r\cos\theta + \mathrm{sign} \left( \cos\theta \right)  m \right) \right) \right]^{\beta \nu \gamma^2} $$ {#eq:bfunction}
-
-Although there is no analytical solution to those equations they can be solved numerically.

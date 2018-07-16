@@ -1,6 +1,8 @@
 
 ## Computational Results {#sec:mfresults}
 
+Although there is no analytical solution to those equations they can be solved numerically.
+
 Equations  [@eq:mfeqs] can only be solved numerically, and we do it by an iterative process. Let  $u=(m,r,\zeta)$ , then the set of equations is  of the type $u= F(u)$. An initial value $u_0$ is chosen and the map
 
 $$ u_t=(1-\alpha) u_{t-1}+ \alpha F(u_{t-1}) $$ {#eq:updatemap}
