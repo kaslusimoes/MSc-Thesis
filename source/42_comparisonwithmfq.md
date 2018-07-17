@@ -12,11 +12,11 @@ We can see clear from [@fig:zeitgeists], as [@Graham2009] already mentioned, tha
 One last important fact to consider is that "Moderates" can be seen as a kind of transition between "Liberals" and "Conservatives", as expected.
 <!-- In fact, although not being shown here, the mean vectors of the $7$ political affiliations can be arranged in a linear dispersion along a curve, with $\mathit{pa} = 1$ ("Very Liberal") and $\mathit{pa} = 7$ ("Very Conservative") at the extremes of this curve. -->
 
-The different posteriors of $\gamma$ due to each choice of those Zeitgeists are presented in [@fig:posteriorgamma]
+The different posteriors of $g$ due to each choice of those Zeitgeists are presented in [@fig:posteriorgamma]
 
-![Different posteriors for $\gamma$ given the chosen Zeitgeist and the political affiliation of the responses $\{h\}$. Since the distributions are sharp, for most points the error bars cannot be distinguished from the mean values, so we can use the latter to describe the posteriors](images/posteriorgamma4zeitgeists.png){#fig:posteriorgamma width='95%'}
+![Different posteriors for $g$ given the chosen Zeitgeist and the political affiliation of the responses $\{h\}$. Since the distributions are sharp, for most points the error bars cannot be distinguished from the mean values, so we can use the latter to describe the posteriors](images/posteriorgamma4zeitgeists.png){#fig:posteriorgamma width='95%'}
 
-One can see that the choice of the Zeitgeist matters greatly when searching for a distribution $P(h|\gamma)$ that matches the data. More specifically, one can see from [@fig:posteriorgamma] that the same group, for example $\mathit{pa} = 1$, can have different values of $\gamma$ for different choices of the Zeitgeist.
+One can see that the choice of the Zeitgeist matters greatly when searching for a distribution $P(h|g)$ that matches the data. More specifically, one can see from [@fig:posteriorgamma] that the same group, for example $\mathit{pa} = 1$, can have different values of $g$ for different choices of the Zeitgeist.
 
 ![FIX THIS FIGURE. AGGREGATE ALL 4](images/phconservatives.png){#fig:probh width='40%'}
 
@@ -31,13 +31,13 @@ One can see that the choice of the Zeitgeist matters greatly when searching for 
 
 \includegraphics[width=0.45\textwidth]{figures/phmoderates.png}
 \includegraphics[width=0.45\textwidth]{figures/phtotalpop.png}
-\caption{The histogram of opinions $h$ for a given _pa_ group considering an specific Zeitgeist and the corresponding best fit of the model $P(h|\gamma)$ given the data}
+\caption{The histogram of opinions $h$ for a given _pa_ group considering an specific Zeitgeist and the corresponding best fit of the model $P(h|g)$ given the data}
 \label{fig:probh}
 \end{figure} -->
 
-Looking at [@fig:probh] we can observe that the model fits the data better for higher values of $\gamma$, which come naturally from the posterior with more moderate Zeitgeists, which do not align exactly with Conservatives nor with Liberals.
+Looking at [@fig:probh] we can observe that the model fits the data better for higher values of $g$, which come naturally from the posterior with more moderate Zeitgeists, which do not align exactly with Conservatives nor with Liberals.
 
 From the analysis presented above, we would like to propose $2$ ideas for future models:
 
-1. The model's parameter $\gamma$, more than a characterization of the Liberal-Conservative spectrum, it is a description of the extremism of a society. As a given political group has moral beliefs $\student_i$ more aligned with the chosen Zeitgeist, more concentrated they will become and more "extremist" (with less room for a change of opinion) they will behave;
+1. The model's parameter $g$, more than a characterization of the Liberal-Conservative spectrum, is a description of the extremism of a society. As a given political group has moral beliefs $\student_i$ more aligned with the chosen Zeitgeist, more concentrated they will become and more "extremist" (with less room for a change of opinion) they will behave;
 2. The choice of the Zeitgeist - the question being asked to the agents - is a highly relevant characteristic of the model presented, and is not a feature we can extract from the Moral Foundations data alone. One must have additional hypothesis, which ought to be validated by other means.
