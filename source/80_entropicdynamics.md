@@ -74,12 +74,12 @@ $$ \eta^b_{n+1} = \eta^b_{n} - \frac{\partial}{\partial \theta_b^{n}} \log Z_{n+
 
 <!-- ACTUALLY THIS IS NOT REMARKABLE AT ALL, JUST REMEMBER FROM STATMECH E=-d/db logZ. MAYBE WE COULD ELIMINATE THE DERIVATION ABOVE? -->
 
-The partition function $Z_{n+1}$ depends only on the *intrinsic* mechanisms of the machine, not taking into account the generator family chosen. We will deal more with this topic in section [@sec:bayesgaussperceptron].
+The partition function $Z_{n+1}$ depends only on the *intrinsic* mechanisms of the machine, not taking into account the generator family chosen. We will deal more with this topic in [@sec:bayesgaussperceptron].
 
 
 ## Gaussian Parametric Family {#sec:bayesgausslearn}
 
-In this subsection we analyze how the parameters of a Multivariate Gaussian distribution update under the framework developed in section [@sec:bayeslearn]. We chose it due to its generality, importance and easy of use.
+In this subsection we analyze how the parameters of a Multivariate Gaussian distribution update under the framework developed in [@sec:bayeslearn]. We chose it due to its generality, importance and easy of use.
 
 The set of generators we assume to be relevant to draw an inference over a vector $\mathbf{B}\in \mathbb{R}^K$, will be:
 
@@ -146,7 +146,7 @@ Since the set of generators being used is the same as last section's, we know th
 The learning situation described by $\model$ can be interpreted as follows: consider a pair of vectors (*perceptrons*) $\mathbf{J}, \mathbf{B}\in \mathbb{R}^K$ where $\mathbf{B}$ is called professor and $\mathbf{J}$ is called student. The student $\mathbf{J}$ will learn to imitate the professor $\mathbf{B}$ through examples $(\xi_\mu, \sigma_\mu)$, where $\xi_\mu \in \mathbb{R}^K$ is typically called an issue and $\tau_\mu = \mathrm{sign}(\mathbf{B}\cdot \xi_\mu)$ is the professor's opinion over the respective question. The student assumes the opinion can be corrupted by a multiplicative noise $\varepsilon$ (a distrust) when it is received from the professor. The set of $n$ pairs issue-opinion $\mathcal{D}_n = \{ (\xi_\mu, \sigma_\mu)_{\mu=1}^n \}$ is called learning set at time $n$.
 
 
-As we have already laid out our inference problem in section [@sec:bayeslearn] and solved it for the gaussian parametric family in section [@sec:bayesgausslearn], all that is left is to calculate the free energy $-\log Z_n$.
+As we have already laid out our inference problem in [@sec:bayeslearn] and solved it for the gaussian parametric family in [@sec:bayesgausslearn], all that is left is to calculate the free energy $-\log Z_n$.
 
 \begin{align}
      Z_{n+1} &= \int \mathrm{d}\xx\ P(\mathcal{D}_{n+1}| \xx) P(\xx| \theta_n) = \int \mathrm{d}\mathbf{B}\ P(\xi) P(\sigma| \xi, \mathbf{B}) Q_n(\mathbf{B}) \\
