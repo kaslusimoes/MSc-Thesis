@@ -259,7 +259,9 @@ $for(include-before)$
 $include-before$
 $endfor$
 $if(toc)$
-\tableofcontents
+\hypertarget{sec:toc}{%
+\tableofcontents}
+\addcontentsline{toc}{chapter}{Table of Contents}
 $else$
 {
 $if(colorlinks)$
@@ -273,8 +275,9 @@ $if(lot)$
 \listoftables
 $endif$
 $if(lof)$
-\listoffigures
-$endif$
+\hypertarget{sec:lof}{%
+\listoffigures}
+\addcontentsline{toc}{chapter}{List of Figures}$endif$
 $body$
 $if(natbib)$
 $if(bibliography)$

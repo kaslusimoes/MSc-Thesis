@@ -1,9 +1,9 @@
 
 ## Prediction of opinions distribution in societies {#sec:zeitgeistandextremism}
 
-TALK HERE WHY I SHOULD USE ANOTHER MODEL TO MAKE COMPARISONS WITH DATA
+As mentioned at the beginning of [@sec:models], the model presented in [@sec:meanfield], although presenting some interesting features, is not suitable to make comparisons with data.
 
-In [@Vicente2014] were introduced the following interaction Hamiltonian in a society:
+We proceed by following the development in [@Vicente2014], where they introduced an interaction Hamiltonian in a society as presented below:
 
 $$  \mathcal{H} = - \frac{1+\delta}{2} \sum_{\langle ij \rangle} h_i h_j + \frac{1-\delta}{2} \sum_{\langle ij \rangle} |h_i h_j| $$ {#eq:Hamiltonianvisujeca}
 
