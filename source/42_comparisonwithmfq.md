@@ -31,7 +31,7 @@ One can see that the choice of the Zeitgeist matters greatly when searching for 
 
 \includegraphics[width=0.45\textwidth]{figures/phmoderates.png}
 \includegraphics[width=0.45\textwidth]{figures/phtotalpop.png}
-\caption{The histogram of opinions $h$ for a given \textit{pa} group considering an specific Zeitgeist and the corresponding best fit of the model $P(h|\gamma)$ given the data}
+\caption{The histogram of opinions $h$ for a given _pa_ group considering an specific Zeitgeist and the corresponding best fit of the model $P(h|\gamma)$ given the data}
 \label{fig:probh}
 \end{figure} -->
 
@@ -39,5 +39,5 @@ Looking at [@fig:probh] we can observe that the model fits the data better for h
 
 From the analysis presented above, we would like to propose $2$ ideas for future models:
 
-1. The model's parameter $\gamma$, more than a characterization of the Liberal-Conservative spectrum, it is a description of the \textit{extremism} of a society. As a given political group has moral beliefs $\student_i$ more aligned with the chosen Zeitgeist, more concentrated they will become and more "extremist" (with less room for a change of opinion) they will behave;
-2. The choice of the Zeitgeist - the \textit{question} being asked to the agents - is a highly relevant characteristic of the model presented, and is not a feature we can extract from the Moral Foundations data alone. One must have additional hypothesis, which ought to be validated by other means.
+1. The model's parameter $\gamma$, more than a characterization of the Liberal-Conservative spectrum, it is a description of the extremism of a society. As a given political group has moral beliefs $\student_i$ more aligned with the chosen Zeitgeist, more concentrated they will become and more "extremist" (with less room for a change of opinion) they will behave;
+2. The choice of the Zeitgeist - the question being asked to the agents - is a highly relevant characteristic of the model presented, and is not a feature we can extract from the Moral Foundations data alone. One must have additional hypothesis, which ought to be validated by other means.
