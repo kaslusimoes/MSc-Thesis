@@ -5,13 +5,13 @@ In [@sec:meanfield] the only values of mistrust $\varepsilon$ explored were betw
 
 ![Exemplification of the interactions between and inside the 2 communities in a bipartite society](images/antiferromagnetic-2groups.png){#fig:antiferro2groups width='55%'}
 
-We borrow the Hamiltonian from [@eq:Hamiltonianvisujeca] in [@sec:meanfield], and consider two different situations to build the Hamiltonian of a bipartite society: the first one, in which the agents interacting are agreeing $h_ih_j>0$; and a second one, in which the agents are disagreeing $h_ih_j<0$. This two situations give us different contributions, respectively: $-\delta h_ih_j$ and $-h_ih_j$.
+We borrow the Hamiltonian from [@eq:hamiltonianvisujeca] in [@sec:meanfield], and consider two different situations to build the Hamiltonian of a bipartite society: the first one, in which the agents interacting are agreeing $h_ih_j>0$; and a second one, in which the agents are disagreeing $h_ih_j<0$. This two situations give us different contributions, respectively: $-\delta h_ih_j$ and $-h_ih_j$.
 
 The first term, which required $h_ih_j>0$, will be the interaction term inside a given community, whereas the second one, which required $h_ih_j<0$, will be the interaction term between communities.
 
 After modulating the antiferromagnetic interaction with a noise level, the relevant Hamiltonian is:
 
-$$  \mathcal{H} =  -\frac{\delta}{N} \sum_{\langle i, j \rangle \in A} h_i h_j -\frac{\delta}{N} \sum_{\langle i, j \rangle \in B} h_i h_j - \frac{(1 - 2 \varepsilon)}{N} \sum_{\substack{i \in A \\ j \in B}} h_i h_j $$ {#eq:Hamiltonian2}
+$$  \mathcal{H} =  -\frac{\delta}{N} \sum_{\langle i, j \rangle \in A} h_i h_j -\frac{\delta}{N} \sum_{\langle i, j \rangle \in B} h_i h_j - \frac{(1 - 2 \varepsilon)}{N} \sum_{\substack{i \in A \\ j \in B}} h_i h_j $$ {#eq:hamiltonian2}
 
 where the $h_i \in [-1, 1]$ are the opinion fields for each of the $N$ agents. The parameters $\delta$ and $\varepsilon$ can have values on the interval $[-1, 1]$. We note that $\delta$ describes the intensity of the in-group interactions (always ferromagnetic), whereas $\varepsilon$ describes the inter-group interactions (which can become antiferromagnetic when $\varepsilon > 0.5$).
 

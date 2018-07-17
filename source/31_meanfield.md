@@ -9,7 +9,7 @@ $$ \mathbf{J}_{n+1} = \mathbf{J}_n - \nabla_{\mathbf{J}_n} \gamma^2 \log\left[\v
 
 Under those circumstances, the only relevant information to describe the evolution of our system is going to be the term inside the differentiation, and we can consider that our society of agents $\{ \studenti \}$ can be described totally by one specific Hamiltonian $\mathcal{H}$:
 
-$$  \mathcal{H}=  - \gamma^2 \sum_{\langle i,j \rangle} \log \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\gamma \left( \sigma_i h_j + \sigma_j h_i \right) \right) \right] = \sum_{\langle i,j \rangle} V_{ij} $$ {#eq:Hamiltonian1}
+$$  \mathcal{H}=  - \gamma^2 \sum_{\langle i,j \rangle} \log \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\gamma \left( \sigma_i h_j + \sigma_j h_i \right) \right) \right] = \sum_{\langle i,j \rangle} V_{ij} $$ {#eq:hamiltonian1}
 
 From the rules of entropic inference, we can study this society using the following canonical (Boltzmann) probability distribution:
 
@@ -37,7 +37,7 @@ $$ P_k(\student_k) = \frac{1}{Z_k} \exp \left( - \beta \sum_{i \in \partial k} \
 
 Unfortunately, due to the rather complex form of the potential $V_{ij}$, the equation above is intractable. In that case, instead of selecting the best mean field probability distribution family, we are going to choose one with a similar functional form.
 
-We proceed comparing the exact mean field projection done above and the Hamiltonian in [@eq:Hamiltonian1] to an approximate distribution that takes into account only an effective number of neighbors $\nu_{(i)}$ with effective interactions $m_{(i)}$ and $r_{(i)}$:
+We proceed comparing the exact mean field projection done above and the Hamiltonian in [@eq:hamiltonian1] to an approximate distribution that takes into account only an effective number of neighbors $\nu_{(i)}$ with effective interactions $m_{(i)}$ and $r_{(i)}$:
 
 $$ P_j(\student_j) = \frac{1}{Z_j} \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\gamma \left( r_{(i)} h_j + \sigma_j m_{(i)} \right) \right) \right]^{\beta \nu_{(j)} \gamma^2} $$
 
@@ -78,4 +78,4 @@ where we implicitly defined the function $B(\theta) \equiv B(\theta| \varepsilon
 
 $$ B(\theta) = \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r\cos\theta + \mathrm{sign} \left( \cos\theta \right)  m \right) \right) \right]^{\beta \nu \gamma^2} $$ {#eq:bfunction}
 
-We can now use a computer to find the values of $(m, r \zeta)$ for each set of parameters $\varepsilon, \gamma, \beta\nu$, and have some insight of the behaviour of the system. We present this in [@sec:mfresults]
+We can now use a computer to find the values of $(m, r \zeta)$ for each set of parameters $\varepsilon, \gamma, \beta\nu$, and have some insight on the behaviour of the system. We present this in [@sec:mfresults].
