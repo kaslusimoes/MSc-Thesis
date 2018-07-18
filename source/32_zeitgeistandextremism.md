@@ -45,5 +45,3 @@ Now we recognize the Gamma integral $\Gamma(z) = \int_0^\infty \mathrm{d}t\ t^{z
 Inserting back into the Bayes' rule, we obtain the posterior $g |\{h_i\}_{i \in \mathit{pa}} \sim \Gamma\left(k_0+2n, \frac{\theta_0}{1+\theta_0(n-m)} \right)$. Explicitly:
 
 $$  P(g| \{h_i\}_{i \in \mathit{pa}}) = \frac{\left(\frac{1}{\theta_0} + n_{pa} - m_{pa} \right)^{k_0+2n_{pa}}}{\Gamma(k_0 + 2n_{pa})} g^{k_0 - 1 + 2 n_{pa}} e^{-g\left(\frac{1}{\theta_0} + n_{pa} - m_{pa} \right)} $$ {#eq:posteriorgamma}
-
-Now we can see the different gamma posteriors for each _pa_ and each choice of Zeitgeist.
