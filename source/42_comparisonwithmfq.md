@@ -18,22 +18,8 @@ The different posteriors of $g$ due to each choice of those Zeitgeists are prese
 
 One can see that the choice of the Zeitgeist matters greatly when searching for a distribution $P(h|g)$ that matches the data. More specifically, one can see from [@fig:posteriorgamma] that the same group, for example $\mathit{pa} = 1$, can have different values of $g$ for different choices of the Zeitgeist.
 
-![FIX THIS FIGURE. AGGREGATE ALL 4](images/phconservatives.png){#fig:phconservatives width='40%'}
-
-
-<!-- FIX THIS FIGURE
-
- \begin{figure}[h!]
-\centering
-\includegraphics[width=0.45\textwidth]{figures/phconservatives.png}
-\includegraphics[width=0.45\textwidth]{figures/phliberals.png}
-\\
-
-\includegraphics[width=0.45\textwidth]{figures/phmoderates.png}
-\includegraphics[width=0.45\textwidth]{figures/phtotalpop.png}
-\caption{The histogram of opinions $h$ for a given _pa_ group considering an specific Zeitgeist and the corresponding best fit of the model $P(h|g)$ given the data}
-\label{fig:probh}
-\end{figure} -->
+<!-- Linux command: `montage -mode concatenate -geometry 1210x850 -tile 2x2 ph-*.png 4groupsph.png` -->
+![The histogram of opinions $h$ for a given _pa_ group considering an specific Zeitgeist and the corresponding best fit of the model $P(h|g)$ given the data](images/4groupsph.png){#fig:4groupsph width='90%'}
 
 Looking at [@fig:probh] we can observe that the model fits the data better for higher values of $g$, which come naturally from the posterior with more moderate Zeitgeists, which do not align exactly with Conservatives nor with Liberals.
 
