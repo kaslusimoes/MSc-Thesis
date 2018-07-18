@@ -28,8 +28,14 @@ We can also change variables in our mean field probability distribution. This is
     &= \frac1C\ (1 - h^2)\ \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac{r}\gamma h + \frac{m}{\gamma}\sign h  \right) \right]^{\beta \nu \gamma^2}
 \end{align}
 
-Now we can compute other interesting order parameters, such as the variance $v_m = \mean{h^2} - \mean{h}^2$. The computational results we found are presented in [@fig:mfvariance].
+where $m$ and $r$ remain the expected values defined before: $m = \langle h \rangle$ and $r = \langle \sign h \rangle$. Now we can also compute other order parameters, such as the variance $v_m = \mean{h^2} - \mean{h}^2$.
 
-![Variance of the field $h$ with respect to selected values of $\beta\nu$ and $\gamma$](images/variance.png){#fig:mfvariance width='90%'}
+The computational results we found are presented in [@fig:probh] and [@fig:mfvariance].
 
-A last point to note is that higher values of $\varepsilon$ shift the phase boundary in [@fig:phasem] upwards. This is because there is more noise in the interaction between agents therefore it is more difficult to establish agreement. However, for values $\varepsilon \geq 0.5$, the noise is large enough that the system yields no stable solution. This is the first idea that led us to pursue a different model in [@sec:mfantiferromagnetic;@sec:mfantiresults] with explicit antiferromagnetic interactions,
+![Probability distribution $P(h|\varepsilon, \gamma, \beta\nu)$ for several values of the parameters. FIX THIS! ](images/probh.png){#fig:probh width='70%'}
+
+![Variance of the field $h$ with respect to selected values of $\beta\nu$ and $\gamma$](images/variance.png){#fig:mfvariance width='99%'}
+
+We note that the distribution $P(h)$ ([@fig:probh]) has a discontinuity in $h=0$ due to the $\sign h$ term. This is a source of complication when trying to fit empirical data, specially because we could not find a tangible explanation for this behavior in the mechanisms of the model. This is one of the main reasons we discuss a different model in [@sec:zeitgeistandextremism; and @sec:comparisonmfq]
+
+A last point to observe is that higher values of $\varepsilon$ shift the phase boundary in [@fig:phasem] upwards. This is because there is more noise in the interaction between agents therefore it is more difficult to establish agreement. However, for values $\varepsilon \geq 0.5$, the noise is large enough that the system yields no stable solution. This is the first idea that led us to pursue a different model in [@sec:mfantiferromagnetic; and @sec:mfantiresults] with explicit antiferromagnetic interactions.

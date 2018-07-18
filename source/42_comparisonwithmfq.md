@@ -18,7 +18,7 @@ The different posteriors of $g$ due to each choice of those Zeitgeists are prese
 
 One can see that the choice of the Zeitgeist matters greatly when searching for a distribution $P(h|g)$ that matches the data. More specifically, one can see from [@fig:posteriorgamma] that the same group, for example $\mathit{pa} = 1$, can have different values of $g$ for different choices of the Zeitgeist.
 
-![FIX THIS FIGURE. AGGREGATE ALL 4](images/phconservatives.png){#fig:probh width='40%'}
+![FIX THIS FIGURE. AGGREGATE ALL 4](images/phconservatives.png){#fig:phconservatives width='40%'}
 
 
 <!-- FIX THIS FIGURE
