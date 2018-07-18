@@ -15,7 +15,7 @@ It can be seen that there is a phase transition depending on the parameters $\be
 
 [@fig:phasem] shows that, for fixed $\beta$, the phase border can be crossed by increasing the value of $\gamma$. This seems paradoxical, since larger $\gamma$ is associated to a larger norm of the covariance matrix (that is, a higher uncertainty in [@eq:multigaussian]). The explanation for this comes from the fact that the gradient of the evidence (also called _modulation function_ $F_{mod}$), which determines the dynamics in [@eq:upstudentfinal], increases in magnitude with $\gamma$ when both agents concur. This is shown in [@fig:modfunc]
 
-![Modulation function/gradient of the evidence for different values of $\gamma$. IMPROVE THIS! Change $\rho \to \gamma$](images/modfunc.png){#fig:modfunc width='65%'}
+![Modulation function/gradient of the evidence for different values of $\gamma$. The noise $\varepsilon$ is fixed at $0.2$, but changing to other values between $0.$ and $0.5$ does not change qualitatively the figure](images/modfunc.png){#fig:modfunc width='75%'}
 
 High $\gamma$ agents rely not only on the novelty brought by disagreement but also learn from corroborating examples. For low $\gamma$, agents learn primordially from the novelty of disagreement. Therefore high $\gamma$ agents will keep on learning even after there is agreement on an issue, resulting in a more ordered society. This same behavior was found in previous works [see e.g. @Alves2015;@Caticha2015;@Alves2016]
 

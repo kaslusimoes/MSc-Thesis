@@ -1,64 +1,46 @@
-using Plots, LaTeXStrings, SpecialFunctions;
+using Plots, LaTeXStrings, Distributions;
 pyplot();
 
 #####################################################
 # useful definitions
-isq2pi   = 1/sqrt(2*π)
-sqrt2    = sqrt(2)
+invsq2pi = 1/sqrt(2*π)
 
-#####################################################
 # useful functions
-gsq(ρ) = sqrt(1 - ρ^2)/ρ
-H(x)    = 0.5*erfc(x/sqrt2)
-
-# #####################################################
-# # modulation function (divided by gamma)
-#
-# function fmod(h,ρ)
-#     gm = gsq(ρ)
-#     return isq2pi * exp(-0.5*(h/gm)^2) / H(-h/gm)
-# end
-
-# plot()
-
-# xi = linspace(-10,10,10000)
-# for ρi in [0, 0.3, 0.6, 0.9]
-#     fi = [fmod(x, ρi) for x in xi]
-#     plot!(xi, fi, label=L"$\rho = $" * "$(ρi)")
-# end
-
-# plot!(title = "Modulation Function", legend= :topright)
-# plot!(xaxis = (L"$\frac{h \sigma}{\gamma}$", (-10., 10.), -10:2.:10.),
-#       yaxis = (L"$\frac{F_{mod}}{\gamma}$", 0.:5:20) )
-# savefig("../Data/figures/modfunc.png")
-
+G(x)     = pdf(Normal(), x)
+Φ(x)     = cdf(Normal(), x)
 #####################################################
-# modulation function with noise ϵ (divided by gamma)
-#
-function fmodeps(h,ρ,ϵ)
-    gm      = gsq(ρ)
-    om2eps  = 1 - 2ϵ
-    return isq2pi * om2eps * exp(-0.5*(h/gm)^2) / ( ϵ + om2eps*H(-h/gm) )
+
+function fh(σh,γ,ε)
+    x = σh/γ
+    Z = ε + (1 - 2ε)*Φ(x)
+    return (1 - 2ε)*G(x) / Z
 end
+
+# # w ⋅ Δw, must always be positve, obviously
+# function gh(σh,γ,ε)
+#     x = σh/γ
+#     Z = ε + (1 - 2ε)*Φ(x)
+#     return γ^2 * (1 - 2ε)*G(x) * x / Z
+# end
 
 plot()
 
-εi  = 0.2
+ε  = 0.2
 xi  = linspace(-10,10,10000)
-for ρi in [0.1, 0.3, 0.6, 0.9]
-    fi = [fmodeps(x, ρi, εi) for x in xi]
-    plot!(xi, fi, label=L"$\rho = $" * "$(ρi)")
+for γ in [100., 10., 5., 2., 0.5] # ρ ≈ [0.1, 0.3, 0.6, 0.9]
+    fi = [fh(x, γ, ε) for x in xi]
+    plot!(xi, fi, label=L"$\gamma = $" * "$(γ)")
 end
 
 annotate!([(-8, 0.35, text("discordance", 10,:black, :center)),
            (+8, 0.35, text("concordance", 10,:black, :center)),
            (0., 0.08, text("region of doubt", 10,:black, :center))])
 # scatter!([-8, 0., 8], [0.34, 0.065, 0.34], marker = (:hline, 60, 0.8, :blue), label="")
-#scatter!([-8, 0., 8], [0.35, 0.08, 0.35], marker = (:hline, :50, 0.2, :blue), series_annotations=["discordance", "region of doubt", "concordance"])
+# scatter!([-8, 0., 8], [0.35, 0.08, 0.35], marker = (:hline, :50, 0.2, :blue), series_annotations=["discordance", "region of doubt", "concordance"])
 
 
-plot!(title = "Modulation Function", legend= :topright)
-plot!(xaxis = (L"$\frac{h \sigma}{\gamma}$", (-10., 10.), -10:2.:10.),
-      yaxis = (L"$\frac{F_{mod}}{\gamma}$", (0., 0.6), 0:0.1:0.6) )
+plot!(legend= :topright) # title = "Modulation Function, " * L"$\varepsilon = $" * "$ε", 
+plot!(xaxis = (L"$\frac{h \sigma}{\gamma}$", (-10., 10.), -10:2.:10.))
+plot!(yaxis = (L"$F_{mod}$", (0., 0.6), 0:0.1:0.6) )
 
-savefig("../images/modfunc.png")#, dpi = 300)
+savefig("../images/modfunc.png")
