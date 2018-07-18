@@ -39,7 +39,6 @@ where $Z_j$ is the new partition function/normalization of the model. Inserting 
 
 $$ P_j(\student_j) = \frac{1}{Z_j} \exp \left( \beta \gamma^2 \sum_{i \in \partial j} \int \mathrm{d}\student_i P_i \log \left[ \varepsilon + \left(1 - 2\varepsilon\right) \mathlarger{\Phi} \left( \frac{\sigma_i h_j + \sigma_j h_i}{\gamma} \right) \right] \right) $$ {#eq:meanfieldexact2}
 
-
 Unfortunately, due to the rather complex form of the potential $V_{ij}$, the integral in [@eq:meanfieldexact2] is intractable. In that case, instead of selecting the best mean field probability distribution family, we are going to choose an approximation with a similar functional form.
 
 Let us consider the fact that in a mean field model agent $j$ does not interact directly with another agent $i$, but only with an external effective field. With that in mind we can approximate the integral over $i$ in [@eq:meanfieldexact2] to $\log\left[ \varepsilon + \left(1 - 2\varepsilon\right) \mathlarger{\Phi} \left( \frac{r h_j + \sigma_j m}{\gamma} \right)\right]$. The sum over neighbors $\partial j$ becomes an effective number of neighbors for agent $j$ that can also be approximated to a constant value $\nu$ throughout society. Although people have different number of peers depending on their sociability, we expect them to have similar values nonetheless.

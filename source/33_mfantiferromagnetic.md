@@ -5,7 +5,7 @@ As we will shown in [@sec:mfresults] the only values of mistrust $\varepsilon$ e
 
 ![Exemplification of the interactions between and inside the 2 communities in a bipartite society](images/antiferromagnetic-2groups.png){#fig:antiferro2groups width='55%'}
 
-We borrow [@eq:hamiltonianvisujeca] from [@sec:zeitgeistandextremism], and consider two different situations to build the Hamiltonian of a bipartite society: the first one, in which the agents interacting are agreeing $h_ih_j>0$; and a second one, in which the agents are disagreeing $h_ih_j<0$. These two situations give different contributions, respectively: $-\delta h_ih_j$ and $-h_ih_j$.
+We borrow [@eq:hamiltonianvisujeca] from [@sec:visujecaextension], and consider two different situations to build the Hamiltonian of a bipartite society: the first one, in which the agents interacting are agreeing $h_ih_j>0$; and a second one, in which the agents are disagreeing $h_ih_j<0$. These two situations give different contributions, respectively: $-\delta h_ih_j$ and $-h_ih_j$.
 
 The first term, which required $h_ih_j>0$, will be the interaction term inside a given community, whereas the second one, which required $h_ih_j<0$, will be the interaction term between communities.
 

@@ -36,6 +36,6 @@ The computational results we found are presented in [@fig:probh] and [@fig:mfvar
 
 ![Variance of the field $h$ with respect to selected values of $\beta\nu$ and $\gamma$](images/variance.png){#fig:mfvariance width='99%'}
 
-We note that the distribution $P(h)$ ([@fig:probh]) has a discontinuity in $h=0$ due to the $\sign h$ term. This is a source of complication when trying to fit empirical data, specially because we could not find a tangible explanation for this behavior in the mechanisms of the model. This is one of the main reasons we discuss a different model in [@sec:zeitgeistandextremism; and @sec:comparisonmfq]
+We note that the distribution $P(h)$ ([@fig:probh]) has a discontinuity in $h=0$ due to the $\sign h$ term, which is a source of complication when trying to fit empirical data. This is one of the main reasons we discuss a different model in [@sec:visujecaextension; and @sec:comparisonmfq]
 
 A last point to observe is that higher values of $\varepsilon$ shift the phase boundary in [@fig:phasem] upwards. This is because there is more noise in the interaction between agents therefore it is more difficult to establish agreement. However, for values $\varepsilon \geq 0.5$, the noise is large enough that the system yields no stable solution. This is the first idea that led us to pursue a different model in [@sec:mfantiferromagnetic; and @sec:mfantiresults] with explicit antiferromagnetic interactions.

@@ -1,5 +1,5 @@
 
-## Prediction of opinions distribution in societies {#sec:zeitgeistandextremism}
+## Prediction of opinions distribution in societies {#sec:visujecaextension}
 
 As mentioned at the beginning of [@sec:models], the model presented in [@sec:meanfield], although presenting some interesting features, is not suitable to make comparisons with data.
 
@@ -15,7 +15,9 @@ $$  P_{\mathrm{MF}}(h) = \frac{g^2}{2} (1-h^2)\ e^{-g\left(1-h\right)} $$ {#eq:m
 
 where $g$ is a parameter aggregating $\beta$ and $\delta$. As before, $h$ is the dot product between the agent's inner moral representation $\student$ and a discussed query (Zeitgeist) $\zeitgeist$.
 
-Assuming one has access to the distribution of opinions of several people from an specific political affiliation (_pa_), we can make the hypothesis that all agents of that _pa_ have their moral opinions sampled from the same distribution $P(h|g_{\mathit{pa}})$. This is not the same as saying that all liberals are the same, or that a liberal agent cannot have the same opinion as a conservative one in a give topic; we are only saying that there must be some similarity between people that think alike, they ought to be characterized in groups, and we can describe this using a probability distribution.
+TALK MORE ABOUT THE HYPOTHESIS MADE TO GET HERE, SUCH AS h>0, AND THAT WE BREAK IN [@sec:mfantiferromagnetic]
+
+Assuming one has access to the distribution of opinions of several people from an specific political affiliation (_pa_), we can make the hypothesis that all agents of that _pa_ have their moral opinions sampled from the same distribution $P(h|g_{\mathit{pa}})$. This is not the same as saying that all liberals are the same, or that a liberal agent cannot have the same opinion as a conservative one in a given topic; we are only saying that there must be some similarity between people that think alike, they ought to be characterized in groups, and we can describe this using a probability distribution.
 
 Then, one can use [@eq:mfvisujeca] and apply Bayes' theorem to it to find an estimator $\hat{g}_{pa}$ given a set of data $\{h_i\}_{i \in \mathit{pa}}$:
 

@@ -10,7 +10,7 @@ This model yields some interesting results regarding the phase transition betwee
 1. It is too intractable to enable us perform comparisons with available data;
 2. It cannot account for the existence of opposite and polarized groups without resorting to additional hypothesis.
 
-Henceforth, we analyze alternative models in [@sec:zeitgeistandextremism; and @sec:mfantiferromagnetic] that maintain some resemblance to the model before while also accounting for those 2 points.
+Henceforth, we analyze alternative models in [@sec:visujecaextension; and @sec:mfantiferromagnetic] that maintain some resemblance to the model before while also accounting for those 2 points.
 <!-- Both models are built taking into consideration efforts made in [@Vicente2014] -->
 
 <!-- Henceforth, in the other subsections we analyze alternative models based on the one presented in Vicente et al. 2014 that could also account for those 2 points. The first one consists of an analysis of the large dataset built by [@Graham2013] containing the responses to a set of questions about moral issues from $N \sim \mathcal{O}(10^5)$ persons from several countries. The second one is a saddle-point approximation to a bipartite society model with possibility of antiferromagnetic interactions between the 2 groups. -->
