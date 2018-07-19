@@ -24,7 +24,7 @@ In [@sec:comparisonmfq] we show that another parameter, $g$, has a similar role 
 We can also change variables in our mean field probability distribution. This is useful because the inner representation $\student_i$ is not readily accessible to the experimentalist, whereas the opinion field $h$ in some applications might be:
 
 \begin{align}
-    P(h) &= \int \measure{\student}\ \delta\left( \frac{\student \cdot \zeitgeist}{\sqrt{K}}  - h \right) P_{\mathrm{MF}}(\student) \\
+    P(h|\varepsilon, \gamma, \beta\nu) &= \int \measure{\student}\ \delta\left( \frac{\student \cdot \zeitgeist}{\sqrt{K}}  - h \right) P_{\mathrm{MF}}(\student) \\
     &= \frac1C\ (1 - h^2)\ \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac{r}\gamma h + \frac{m}{\gamma}\sign h  \right) \right]^{\beta \nu \gamma^2}
 \end{align}
 
@@ -36,6 +36,6 @@ The computational results we found are presented in [@fig:probh] and [@fig:mfvar
 
 ![Variance of the field $h$ with respect to selected values of $\beta\nu$ and $\gamma$](images/variance.png){#fig:mfvariance width='99%'}
 
-We note that the distribution $P(h)$ ([@fig:probh]) has a discontinuity in $h=0$ due to the $\sign h$ term, which is a source of complication when trying to fit empirical data. This is one of the main reasons we discuss a different model in [@sec:visujecaextension; and @sec:comparisonmfq]
+We note that the distribution $P(h|\varepsilon, \gamma, \beta\nu)$ ([@fig:probh]) has a discontinuity in $h=0$ due to the $\sign h$ term, which is a source of complication when trying to fit empirical data. This is one of the main reasons we discuss a different model in [@sec:visujecaextension; and @sec:comparisonmfq]
 
 A last point to observe is that higher values of $\varepsilon$ shift the phase boundary in [@fig:phasem] upwards. This is because there is more noise in the interaction between agents therefore it is more difficult to establish agreement. However, for values $\varepsilon \geq 0.5$, the noise is large enough that the system yields no stable solution. This is the first idea that led us to pursue a different model in [@sec:mfantiferromagnetic; and @sec:mfantiresults] with explicit antiferromagnetic interactions.
