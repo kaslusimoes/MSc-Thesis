@@ -17,7 +17,7 @@ From [@fig:phasediagram], beyond the expected behavior of an all-agreeing phase 
 
 ![Free energy $f(x, y)$ landscape when $\beta = 10.0, \delta = 0.25, \varepsilon = 0.6$ and $\rho_A = \rho_B = 0.5$. This is a region in which there is no consensus among the communities](images/freeenergy-beta10-delta25-eps6-rho05.png){#fig:freeenergydisorder width='60%'}
 
-We also present the other $2$ expected behaviours: consensus and polarization in [@fig:freeenergyconsensus; and @fig:freeenergypolarization]. Note that depending on the initial choice $(x_0, y_0)$ of alignment of the communities with the issue being discussed the society (the iterative algorithm) would converge to different and opposing states.
+We also present the other $2$ expected behaviours: consensus and polarization in [@fig:freeenergyconsensus; and @fig:freeenergypolarization]. Note that depending on the initial choice $(x_0, y_0)$ of alignment of the communities with the issue being discussed the society (the iterative algorithm) would converge to different and opposing states. This does not mean much about the dynamics of the model, it is only a statement on which group would align in favor of against of a given opinion (e.g. in one hypothetical situation community $A$ could be in favor of a free basic income policy and community $B$ against it, whereas under another initial condition the communities would change roles).
 
 ![Free energy $f(x, y)$ landscape when $\beta = 10.0, \delta = 0.8, \varepsilon = 0.2$ and $\rho_A = \rho_B = 0.5$. This is a region in which there is overall consensus among the society](images/freeenergy-beta10-delta8-eps2-rho05.png){#fig:freeenergyconsensus width='60%'}
 
