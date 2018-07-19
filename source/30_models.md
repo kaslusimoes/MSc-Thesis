@@ -19,7 +19,7 @@ The second model shifts the perspective to a simpler model studied by [@Vicente2
 
 <!-- The first one analyzes the importance of the questions being discussed by the agents in a given society, comparing with data from Moral Foundation group of [@Graham2009]. This study is motivated by the following questions: Are all extremists the same? Are conservative people more extremists than liberal ones? How can we characterize those groups?; -->
 
-Finally, the third model extends the previous one to a setting in which we have two opposing parties that can have an antiferromagnetic interaction between them. This model presents an interesting interplay between having a cohesive "friends" group and opposing the "foes" group.
+Finally, the third model extends the previous one to a setting in which we have two opposing parties that have an antiferromagnetic interaction between them, but ferromagnetic inside each group. This model presents an interesting interplay between having a cohesive "friends" group and opposing the "foes" group.
 <!-- We will see that it becomes possible to extend the level of noise between agents $\varepsilon$ to values not reachable in [@sec:meanfield]. -->
 
 <!-- The second study is a bipartite society model in which we have ferromagnetic interactions inside each group, and possibly antiferromagnetic interactions between agents of the two groups. -->
