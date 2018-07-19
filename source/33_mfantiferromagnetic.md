@@ -1,5 +1,5 @@
 
-## A model of a Bipartite Society {#sec:mfantiferromagnetic}
+## A model for a Bipartite Society {#sec:mfantiferromagnetic}
 
 As we will shown in [@sec:mfresults] the only values of mistrust $\varepsilon$ explored for the model described in [@sec:meanfield] were between $0$ and $0.5$. This is because for values of $\varepsilon > 0.5$ the society enters a frustrated state which cannot be resolved by aligning nor anti-aligning the opinions of the agents. A similar problem is known for the infinite-range Ising model and can be solved separating the spins into 2 groups. We proceed the same way: the groups of agents, which we call _communities_, have ferromagnetic interactions within them and antiferromagnetic ones between elements of different the communities (depicted in [@fig:antiferro2groups]).
 
@@ -31,6 +31,8 @@ We recognize that we have only squared terms in the Hamiltonian, which renders t
 
 We can associate some quantities from [@eq:modhamiltonian] to quantities in [@eq:gaussiantrick2d] to continue the calculation:
 
+\vspace{-6mm}
+
 \begin{align}
     &A = \frac1N \sum_{i\in A} h_i\ \qquad\ B = \frac1N \sum_{j\in B} h_j \\
     &\frac{1}{1-\rho^2} = \beta N \delta\ \qquad\ \frac{\rho}{1-\rho^2} = \beta N (1-2\varepsilon)
@@ -53,6 +55,8 @@ Now, we have:
 
 where we defined $z_B = \delta x + (1-2\varepsilon) y$ and $z_B = \delta y + (1-2\varepsilon) x$. Now we evaluate the integral over $h$ separating into contributions from group $A$ and contributions from group $B$:
 
+\vspace{-4mm}
+
 \begin{align}
     I_h &= \int \mathrm{d}h\ \exp\left( \beta z_A \sum_{i \in A} h_i + \beta z_B \sum_{j \in B} h_j \right) \\
     &= \int \mathrm{d}h_A\ \exp\left( \beta z_A \sum_{j \in A} h_i \right)\int \mathrm{d}h_B\ \exp\left( \beta z_B \sum_{j \in B} h_j \right) \\
@@ -74,6 +78,6 @@ where $\rho_{A,B} = \frac{n_{A,B}}{N}$ is the fraction of agents in a given popu
 We expect $N$ to be large, so we expand $f(x, y)$ around its maximum $(x^*, y^*)$ to obtain a good approximation of the integral. This is known as Laplace's method. Differentiating $f$ with respect to its variables and finding the maxima, one obtains the following set of equations:
 
 \begin{align}
-	z_A^* = \rho_A \delta \left[ \coth \beta z_A^* - \frac{1}{\beta z_A^*} \right] + \rho_B (1-2\varepsilon) \left[ \coth \beta z_B^* - \frac{1}{\beta z_B^*} \right] \\
-	z_B^* = \rho_B \delta \left[ \coth \beta z_B^* - \frac{1}{\beta z_B^*} \right] + \rho_A (1-2\varepsilon) \left[ \coth \beta z_A^* - \frac{1}{\beta z_A^*} \right]
+	z_A^* = \rho_A \delta \left[ \coth \beta z_A^* - \frac{1}{\beta z_A^*} \right] + \rho_B (1-2\varepsilon) \left[ \coth \beta z_B^* - \frac{1}{\beta z_B^*} \right] \label{eq:fmaxima} \\
+	z_B^* = \rho_B \delta \left[ \coth \beta z_B^* - \frac{1}{\beta z_B^*} \right] + \rho_A (1-2\varepsilon) \left[ \coth \beta z_A^* - \frac{1}{\beta z_A^*} \right] \nonumber
 \end{align}
