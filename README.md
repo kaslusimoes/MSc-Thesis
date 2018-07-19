@@ -8,6 +8,12 @@ I'll (at least _try_ to) write this thesis using [Markdown](https://daringfireba
 
 Under (heavy) construction!
 
+## Open Science
+
+I need to post the code I used to generate each figure in the thesis. If, for some obscure reason I forgot to do that, feel free to ask me!
+
+They should be inside the folder `code/`
+
 ## Research
 
 Broadly speaking, my work could be described as an use of __inferential tools__ (bayesian \& entropic methods, statistical physics as well) to develop models about __how people reason on moral issues and exchange opinions with their peers in society__. Our (me, my [adviser](https://scholar.google.com/citations?user=L8JJ5dgAAAAJ) and our group) models are influenced by [learning of perceptrons](http://iopscience.iop.org/article/10.1088/0305-4470/25/23/020/meta), [Moral Foundations Theory](http://www.moralfoundations.org/) and MaxEnt/Entropic Dynamics (a nice introduction is given Ariel Caticha [here](https://www.albany.edu/physics/ACaticha-EIFP-book.pdf)).

@@ -32,7 +32,7 @@ where $m$ and $r$ remain the expected values defined before: $m = \langle h \ran
 
 The computational results we found are presented in [@fig:probh] and [@fig:mfvariance].
 
-![Probability distribution $P(h|\varepsilon, \gamma, \beta\nu)$ for several values of the parameters. FIX THIS! ](images/probh.png){#fig:probh width='70%'}
+![Probability distribution $P(h|\varepsilon, \gamma, \beta\nu)$ for a set of values for the model's parameters.](images/probh.png){#fig:probh width='70%'}
 
 ![Variance of the field $h$ with respect to selected values of $\beta\nu$ and $\gamma$](images/variance.png){#fig:mfvariance width='99%'}
 
