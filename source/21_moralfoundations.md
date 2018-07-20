@@ -1,6 +1,16 @@
 
 ## Moral Foundations Theory {#sec:moralfoundations}
 
-Hardest of all is to define which topics on humanities I will discourse.
+For a long time [@algo] philosophers [@maisum] and psychologists [@maisoutro] have been wondering  about the nature of morality: what is to be considered morally correct? Should morality be deontological or consequentialist? [@exposição] This is not a question we shall investigate here.
 
-I think it is worth a subsection to talk about Moral Foundations, but it depends on the direction my dissertation will follow.. I will leave this as it is as a placeholder for *humanities* topics, but I still need to think this through. (Also, what about Gelfand's tightness measure?)
+Another path worth pursuing is how do people think morality? This has been more recently been investigated by [@Haidt2010] in an extensive line of research, comprehending .....
+
+TALK ABOUT MORAL INTUITION
+
+TALK HOW IT MAY NOT BE THE FULL PICTURE
+
+TALK ABOUT MORAL DIMENSIONS
+
+TALK ABOUT POLITICAL AFFILIATIONS
+
+This research culminated in discovering that people from different political affiliations tend to see moral assertions through different "lenses":

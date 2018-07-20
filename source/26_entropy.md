@@ -1,6 +1,8 @@
 
 ## Entropy and Inference {#sec:entropy}
 
-Not so sure yet of this one.
+Entropy has always been an elusive concept to physicists. Starting with [@Jaynes1957; @Jaynes1957a] an understanding of entropy as a tool for making inferences about the world has began. After several developments [@Skilling1991; @who] we seem to reaching a point in which whole Physics theories can be derived as a Maximum Entropy (ME) model [@Caticha2017a]. Here we follow mainly the presentation from [@Caticha2012].
 
-Definitely I must start talking about what entropy is, derive it *à la* Caticha and compare with Bayes etc. Maybe I should also talk about Physics and Statistical Mechanics since my Master is in *Physics*
+DO SOME DERIVATION FOR RELATIVE Entropy
+
+TALK ABOUT STATMECH FROM ENTROPY
