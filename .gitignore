@@ -4,6 +4,7 @@ output/*.tex
 images/svg
 library.bib
 
+tex2pdf.-*
 
 # GitHub's TeX project default .gitignore
 ## Core latex/pdflatex auxiliary files:

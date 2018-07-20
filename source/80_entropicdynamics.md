@@ -41,19 +41,19 @@ To do that one can minimize the distance (maximize the entropy) between the dist
 
 
 \begin{align}
-     \Lambda[P, Q, \{\Delta_a\}] = &\int \mathrm{d}\xx\ Q_{n+1} \log\frac{Q_{n+1}}{Q_n} - \Delta^a \left[\int \mathrm{d}\xx\ f^a Q_{n+1} - \eta^a \right] \\
+     \Lambda[P, Q, \{\Delta_a\}] = &\int \mathrm{d}\xx\ Q_{n+1} \log\frac{Q_{n+1}}{Q_n} - \Delta_a \left[\int \mathrm{d}\xx\ f^a Q_{n+1} - \eta^a \right] \\
     &\quad - \Delta_0 \left[ \int \mathrm{d}\xx\ Q_{n+1} - 1 \right]
 \end{align}
 
 Since both $Q_n$ and $P_n$ are already fixed, one can only minimize the Lagrangian varying the posterior distribution $Q_{n+1}$. Taking a functional derivative, one finds:
 
-$$ \frac{\delta \Lambda}{\delta Q_{n+1}} = \int \mathrm{d}\xx\ \delta Q_{n+1} \left[ \log Q_{n+1} + 1 - \log Q_n - \Delta^a f^a - \Delta_0 \right]$$
+$$ \frac{\delta \Lambda}{\delta Q_{n+1}} = \int \mathrm{d}\xx\ \delta Q_{n+1} \left[ \log Q_{n+1} + 1 - \log Q_n - \Delta_a f^a - \Delta_0 \right]$$
 
 ![Schematic representation of the update procedure done to revise the distribution $Q_n$. It goes as follows: one uses Bayes' Theorem (blue path) to get the new constraints and then updates the distribution through maximum entropy (red path), therefore minimizing the distance relative to the prior while enforcing the new expected values of the posterior.](images/em-updateproject.png){#fig:updateproject width='55%'}
 
 Equating this to zero, one finds the expression for the Maximum Entropy (ME) posterior:
 
-$$Q_{n+1}(\xx) = Q_n(\xx)\ \mathrm{e}^{-1 + \Delta_0 + \Delta^a f^a} = \frac{1}{\zeta_{n+1}} \exp\left(- \theta_a^{n+1} f^a(\xx) \right)$$
+$$Q_{n+1}(\xx) = Q_n(\xx)\ \mathrm{e}^{-1 + \Delta_0 + \Delta_a f^a} = \frac{1}{\zeta_{n+1}} \exp\left(- \theta_a^{n+1} f^a(\xx) \right)$$
 
 where $\theta^{n+1}_a = \theta^n_a + \Delta_a$ and $\zeta_{n+1}$ is the new normalization factor. If one takes a derivative with respect to $\Delta_b$ it becomes evident that the constraint adopted was:
 
