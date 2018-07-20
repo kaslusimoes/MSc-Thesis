@@ -1,5 +1,6 @@
 ---
 title: Emergent Collective Properties in Societies of Neural Networks
+titulo: Propriedades Coletivas Emergentes em Sociedades de Redes Neurais
 author: Lucas Silva Simões
 advisor: Nestor Caticha
 institute: Instituto de Física, Universidade de São Paulo
@@ -12,6 +13,20 @@ resumo: |
     Deveria ser igual ao outro
 
     Por enquanto só um placeholder
+
+keywords:
+    - Entropic dynamics
+    - Social systems
+    - Agent models
+    - Mean field
+    - Statistical physics
+
+palavras-chave:
+    - Dinâmica entrópica
+    - Sistemas sociais
+    - Modelos de agente
+    - Campo médio
+    - Física Estatística
 
 lof: true
 toc: true
