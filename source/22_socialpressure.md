@@ -11,4 +11,4 @@ We also have evidence from PSYCHOLOGY? that people tend to learn from each other
 
 Social Pressure (Group Pressure?)
 
-"Self-categorization can be a crucial determining factor in social influence" [@Abrams1990], WHICH MAKES SENSE BECAUSE I WANT TO KNOW IN WHICH CATEGORY I AM TO KNOW IN WHOM SHOULD I BELIEVE AND TO WHOM I MUST CONFORM
+"Self-categorization can be a crucial determining factor in social influence" [@Abrams1990], (which makes sense because i want to know in which category i am to know in whom should i believe and to whom i must conform)

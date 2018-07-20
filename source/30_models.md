@@ -10,6 +10,8 @@ This model yields some interesting results regarding the phase transition betwee
 1. It is too intractable to perform comparisons with available data;
 2. It cannot account for the existence of opposite and polarized groups without resorting to additional hypothesis.
 
+\newpage
+
 Henceforth, we analyze alternative models in [@sec:visujecaextension; and @sec:mfantiferromagnetic] that maintain some resemblance to the model before while also accounting for those 2 points.
 <!-- Both models are built taking into consideration efforts made in [@Vicente2014] -->
 

@@ -13,6 +13,6 @@ Maybe the division could be only: Discussion/Interpretation (what's the differen
 
 Ideas for the future:
 
-- For example, [@Alves2018] has shown that when the number of issues being discussed increases beyond the dimensionality of the space, $K$, the society enters a state similar to a glassy phase;
+- For example, [@Alves2018] have shown that when the number of issues being discussed increases beyond the dimensionality of the space, $K$, the society enters a state similar to a glassy phase;
 - We could also do the inference $P(g|loc, pa, Q)$ and try to generalize something about the countries, the political groups and the questions (higher g, higher tightness all other fix);
-- Some other thing I forgot
+- Some other things I forgot
