@@ -1,7 +1,7 @@
 
 \appendix
 
-# Entropic Dynamics Calculations {#sec:appendix}
+# Entropic Dynamics Calculations {#ch:appendix}
 
 Here we present the full derivation of the results shown in [@sec:entropicdynamics]
 

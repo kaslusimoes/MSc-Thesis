@@ -1,7 +1,7 @@
 
 ## Prediction of opinions distribution in societies {#sec:visujecaextension}
 
-As mentioned at the beginning of [@sec:models], the model presented in [@sec:meanfield], although presenting some interesting features, is not suitable to make comparisons with data.
+As mentioned at the beginning of [@ch:models], the model presented in [@sec:meanfield], although presenting some interesting features, is not suitable to make comparisons with data.
 
 We proceed by following the development in [@Vicente2014], where they introduced an interaction Hamiltonian in a society as presented below:
 

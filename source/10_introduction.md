@@ -1,9 +1,11 @@
 
-# Introduction {#sec:introduction}
+# Introduction {#ch:introduction}
 
 How can we integrate the fact that sometimes people agree with one another other, and other times disagree on their moral valuations? One can naturally imagine two alternative situations: one in which the whole society agrees on what is considered correct, and one in which chaos reign, because cannot seem to reach a consensus. How is it then that our societies maintain a considerable level of disagreement while still retaining some organization? How can there be a coexistence of variability in opinions with a cohesiveness that enables a society to thrive and develop? In times when we are haunted with cultural and political wars between people with different opinions, one cannot but wonder which are the physical variables that describe this cohesiveness and richness of cultures in a society, and what one can expect about times to come.
 
-On this research it is highly relevant that one does not dismiss the progress already made in fields such as psychology, neuroscience and anthropology. Jonathan Haidt and collaborators have published several works [@Haidt2001; @Haidt2010; @Haidt2007] studying
+On this research it is highly relevant that one does not dismiss the progress already made in fields such as psychology, neuroscience and anthropology. Jonathan Haidt and collaborators have published several works [@Haidt2001; @Haidt2010; @Haidt2007] studying MORALITY
+
+
 
 - Introduce some Haidt and Psychology
 

@@ -3,7 +3,7 @@
 
 The idea of entropic dynamics has started with work from Ariel Caticha [for an extensive treatment see e.g. @Caticha2012]. It was created as a tool to recover the laws of physics as rules of inference - which is still being pursued, as one can see in [@Ipek2018]. However, the idea has proven to be a powerful concept in other areas as well. For example, [@Alves2016] has described the existence of sympatric multiculturalism of societies using this rationale.
 
-Here we follow [@Alves2015; @Alves2016; @Alves2018] and describe a model for perceptron agents using Entropic Dynamics. The full derivation can be found in [@sec:appendix].
+Here we follow [@Alves2015; @Alves2016; @Alves2018] and describe a model for perceptron agents using Entropic Dynamics. The full derivation can be found in [@ch:appendix].
 
 ### Basics {#sec:edbasics}
 
