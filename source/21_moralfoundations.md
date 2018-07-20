@@ -9,6 +9,8 @@ TALK ABOUT MORAL INTUITION
 
 TALK HOW IT MAY NOT BE THE FULL PICTURE
 
+Although Haidt's _moral intuitionist_ model has drawbacks and shortcomings [@Pizarro2003], it is already clear that emotions are important when studying morality assessment (cite something from [@Greene2009]).
+
 TALK ABOUT MORAL DIMENSIONS
 
 TALK ABOUT POLITICAL AFFILIATIONS
