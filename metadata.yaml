@@ -4,9 +4,10 @@ author: Lucas Silva Simões
 advisor: Nestor Caticha
 institute: Instituto de Física, Universidade de São Paulo
 abstract: |
-    This project deals with the study of dynamics of learning in a society. We approach mainly two points: the first one is to understand how the question being discussed by the agents in a given society influences the outcomes of the discussion, and how this reflects in the overall organization of the group; the second point is dedicated to study the possible different interactions between opposing parties and to which extent disagreement affects the overall cohesiveness of the society, having the discussed question fixed.
+    This project deals with the study of the learning dynamics of agents in a society. For that we employ techniques from statistical mechanics, machine learning and probability theory. Agents interact in pairs by exchanging for/against opinions about issues using a perceptron algorithm. Employing a maximum entropy analysis one can describe the interacting pair as a dynamics along the gradient of the logarithm of the evidence. This permits introducing a energy like quantities and approximate global Hamiltonians. We test different hypothesis having in mind the weaknesses and predictive power of each one. Knowledge of the expected value of the Hamiltonian is relevant information for the state of the society, inducing a canonical distribution by maximum entropy. The results are interpreted with the usual tools from statistical mechanics and thermodynamics.
 
-    For that we employ techniques from statistical mechanics, machine learning and probability theory. Both agent-based models and typical statistical physics ones can be constructed with Maximum Entropy methods, and the results are interpreted with the usual tools from statistical mechanics and thermodynamics.
+    Some of the questions we discuss are a assessing the existence of phase transitions separating ordered and disordered phases depending on the society parameters; an assessing how the issue being discussed by the agents influences the outcomes of the discussion, and how this reflects in the overall organization of the group; and an study of the possible different interactions between opposing parties and to which extent disagreement affects the overall cohesiveness of the society, having the discussed question fixed.
+
 
 lof: true
 toc: true

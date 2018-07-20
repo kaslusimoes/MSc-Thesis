@@ -26,3 +26,7 @@ MFT
 MFQ
 
 : Moral Foundations Questionnaire
+
+_pa_
+
+: political affiliations, the political inclination categories MFQ's respondents give to themselves

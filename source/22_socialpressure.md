@@ -10,3 +10,5 @@ Reinforcement Learning [maybe @Yeung2004]
 We also have evidence from PSYCHOLOGY? that people tend to learn from each other in order to conform more with the group bla bla [see? @Asch1956; @Sherif1937]
 
 Social Pressure (Group Pressure?)
+
+"Self-categorization can be a crucial determining factor in social influence" [@Abrams1990], WHICH MAKES SENSE BECAUSE I WANT TO KNOW IN WHICH CATEGORY I AM TO KNOW IN WHOM SHOULD I BELIEVE AND TO WHOM I MUST CONFORM
