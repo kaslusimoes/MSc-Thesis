@@ -1,7 +1,7 @@
 
 # Definitions {#sec:definitions .unnumbered}
 
-That's enough for now, but the spacing between the name of the thing being defined and the defiition should be the same throughout the whole definition list.. maybe I should use another procedure, more LaTeX-like (a table, perhaps?)
+<!-- maybe use a LaTeX table for same spacing throughout the lines -->
 
 $\mathbf{x}$
 

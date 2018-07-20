@@ -67,7 +67,7 @@ where we defined $z_B = \delta x + (1-2\varepsilon) y$ and $z_B = \delta y + (1-
 Inserting this result back into $Z$, one obtains:
 
 <!-- WAS A GATHER ENVIRONMENT -->
-$$ Z_B = 2^N \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi} \sqrt{\beta\delta N} e^{Nf(x, y)} $$
+$$ Z_B = 2^N \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi} \sqrt{\beta\delta N} e^{Nf(x, y)} $$ {#eq:zantiferro}
 
 where $f$ will be associated to the free energy of the model:
 
@@ -81,3 +81,7 @@ We expect $N$ to be large, so we expand $f(x, y)$ around its maximum $(x^*, y^*)
 	z_A^* = \rho_A \delta \left[ \coth \beta z_A^* - \frac{1}{\beta z_A^*} \right] + \rho_B (1-2\varepsilon) \left[ \coth \beta z_B^* - \frac{1}{\beta z_B^*} \right] \label{eq:fmaxima} \\
 	z_B^* = \rho_B \delta \left[ \coth \beta z_B^* - \frac{1}{\beta z_B^*} \right] + \rho_A (1-2\varepsilon) \left[ \coth \beta z_A^* - \frac{1}{\beta z_A^*} \right] \nonumber
 \end{align}
+
+One can then come back to [@eq:zantiferro], continue Laplace's method extracting the term $e^{Nf(x^*, y^*)}$ from the integral and taking the logarithm to obtain:
+
+$$ \log Z_B(\beta, \delta, \varepsilon) = N f(x^*, y^*, \beta, \delta, \varepsilon) + \mathrm{const.} + \mathcal{O}(N) $$ {#eq:finallogzanti}
