@@ -266,6 +266,14 @@ $endif$
 $for(include-before)$
 $include-before$
 $endfor$
+
+$if(lot)$
+\listoftables
+$endif$
+$if(lof)$
+\hypertarget{sec:lof}{%
+\listoffigures}
+\addcontentsline{toc}{chapter}{List of Figures}$endif$
 $if(toc)$
 \hypertarget{sec:toc}{%
 \tableofcontents}
@@ -279,13 +287,6 @@ $endif$
 \tableofcontents
 }
 $endif$
-$if(lot)$
-\listoftables
-$endif$
-$if(lof)$
-\hypertarget{sec:lof}{%
-\listoffigures}
-\addcontentsline{toc}{chapter}{List of Figures}$endif$
 $body$
 $if(natbib)$
 $if(bibliography)$

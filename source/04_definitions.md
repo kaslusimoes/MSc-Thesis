@@ -3,6 +3,8 @@
 
 <!-- maybe use a LaTeX table for same spacing throughout the lines -->
 
+This should come before toc, by IFUSP rules
+
 $\mathbf{x}$
 
 : variable being inferred
