@@ -254,6 +254,12 @@ $if(abstract)$
 $abstract$
 \end{abstract}
 $endif$
+$if(resumo)$
+\renewcommand{\abstractname}{Resumo}
+\begin{abstract}
+$resumo$
+\end{abstract}
+$endif$
 $endif$
 $for(include-before)$
 $include-before$
