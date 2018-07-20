@@ -1,5 +1,5 @@
 
-# Introduction {#ch:introduction}
+# Introduction {#sec:ch:introduction}
 
 How can we integrate the fact that sometimes people agree with one another other, and other times disagree on their moral valuations? One can naturally imagine two alternative situations: one in which the whole society agrees on what is considered correct, and one in which chaos reign, because cannot seem to reach a consensus. How is it then that our societies maintain a considerable level of disagreement while still retaining some organization? How can there be a coexistence of variability in opinions with a cohesiveness that enables a society to thrive and develop? In times when we are haunted with cultural and political wars between people with different opinions, one cannot but wonder which are the physical variables that describe this cohesiveness and richness of cultures in a society, and what one can expect about times to come.
 
@@ -9,7 +9,7 @@ On this research it is highly relevant that one does not dismiss the progress al
 
 - Introduce some Haidt and Psychology
 
-Although Haidt's _moral intuitionist_ model has its drawbacks and shortcomings [@Pizarro2003], it is already clear that emotions are important when assessing morality (something from [@Greene2009]).
+Although Haidt's _moral intuitionist_ model has drawbacks and shortcomings [@Pizarro2003], it is already clear that emotions are important when studying morality assessment (cite something from [@Greene2009]).
 
 This problem is relevant to the understanding of the human mind to the extent that [@Greene2009] says: "[the field of moral neuropsychology] provides a set of useful entry points into the broader problems of complex cognition and decision making".
 

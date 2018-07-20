@@ -1,5 +1,5 @@
 
-# Models {#ch:models}
+# Models {#sec:ch:models}
 
 Entropic dynamics results shown in [@sec:entropicdynamics] can give rise to several different models and predictions, three of which we present in this chapter. Our main goal is to understand more about how humans interact in society, with an emphasis in: understanding group formation; assessing the possibility of categorizing and describing different political groups; and gauging the importance of selecting the issues to be discussed in a society.
 
