@@ -1,13 +1,15 @@
 
 # Conclusion and Perspectives {#sec:ch:conclusion}
 
-My work is nice. I found *this* of interesting and stepped into *that* problem. Future perspectives indicate that we could have done *that* way, and maybe *this* is also a good idea for a new project.
+<!-- My work is nice. I found *this* of interesting and stepped into *that* problem. Future perspectives indicate that we could have done *that* way, and maybe *this* is also a good idea for a new project.
 
 Maybe the division could be only: Discussion/Interpretation (what's the difference) and Future Directions
 
-## Discussion of the results
+-->
 
-## Interpretation of the results
+In this dissertation we considered three models derived from entropic dynamics results for gaussian perceptrons-like agents in a $\mathbb{R}^K$ space.
+
+## Discussion of the results
 
 ## Final Remarks
 
