@@ -1,9 +1,9 @@
 
 ## Moral Foundations Theory {#sec:moralfoundations}
 
-For a long time [@algo] philosophers [@maisum] and psychologists [@maisoutro] have been wondering  about the nature of morality: what is to be considered morally correct? Should morality be deontological or consequentialist? [@exposição] This is not a question we shall investigate here.
+For a long time [@Someone] philosophers [@Someone] and psychologists [@Someone] have been wondering  about the nature of morality: what is to be considered morally correct? Should morality be deontological or consequentialist? [@Someone] This is not a question we shall investigate here.
 
-Another path worth pursuing is how do people think morality? This has been more recently been investigated by [@Haidt2010] in an extensive line of research, comprehending .....
+Another path worth pursuing is: how do people think morality? This has been more recently been investigated in an extensive line of research by [@Haidt2010], comprehending .....
 
 TALK ABOUT MORAL INTUITION
 
@@ -11,6 +11,8 @@ Although Haidt's _moral intuitionist_ model has drawbacks and shortcomings [@Piz
 
 TALK ABOUT MORAL DIMENSIONS
 
+Moral Foundations Questionnaire (MFQ)
+
 TALK ABOUT POLITICAL AFFILIATIONS
 
-This research culminated in discovering that people from different political affiliations tend to see moral assertions through different "lenses": people more inclined to be define as Liberals tend to give more importance to features such as Harm and Care, whereas people self-labeled as Conservatives aggregate Inroup, Loyalty and Purity dimensions to the first 2. We reproduced this result with data from the Moral Foundations Questionnaire (MFQ) in [fig:4zeitgeists]
+This research culminated in discovering that people from different political affiliations tend to see moral assertions through different "lenses": people more inclined to be define as Liberals tend to give more importance to features such as Harm and Care, whereas people self-labeled as Conservatives aggregate Inroup, Loyalty and Purity dimensions to the first 2. We reproduced this result in [@fig:4zeitgeists]
