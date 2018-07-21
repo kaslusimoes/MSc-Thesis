@@ -11,6 +11,16 @@ As [@Watts2004] says: "no one descends with such fury and in so great a number a
 - Axelrod's models for dissemination of culture [@Axelrod1997] and for the evolution of cooperation [@Axelrod1981];
 - Caticha and Vicente's models on social consensus [@Caticha2010], morality and political affiliation descriptions [@Vicente2014; @Caticha2015] and community formation [@Alves2016]
 
-This dissertation fits in the line of work from this last point. The tools used are that of bayesian and entropic inference, statistical physics and machine learning. Bayesian and entropic learning because we are dealing in situations of incomplete information; statistical mechanics because it is a natural extension of the first two and because we it provides us a toolbox of methods to solve the problems encountered (such as mean field, Laplace's method to find a partition function, among other); and machine learning to inform our choice of models.
+This dissertation fits in the line of work from this last point. The tools used are that of bayesian and entropic inference, statistical physics and machine learning. Bayesian and entropic learning because we are dealing with situations of incomplete information; statistical mechanics because it is a natural extension of the first two and provides a toolbox of methods (such as mean field, Laplace's method to find a partition function, among others) to solve the problems encountered; and machine learning to inform our choice of models.
 
-FINISH WITH SOME QUESTIONS AND IDEAS THAT WE ARE GOING TO DEVELOP HERE.
+As mentioned at the beginning of this section, we are interested in the interplay between aggregation and dispersion forces in society, and how this gives rise to the social and cultural diversity we find in our societies. We also pursue understand better the coexistence of different political groups, how they talk with each other (or do not talk), and how one can characterize and describe different political affiliations in quantitative models. Since this is a fringe line of research, the number of questions abound and many times it is difficult to narrow down specific motives and hypothesis. A good research, in that scenario, may be not answering a comprehensible and well delimited question about the system being modeled, but leveraging understanding in what variables and descriptions better capture the phenomena under observation.
+
+Although we do not presume to be called giants, we believe that sometimes one must do this "foraging"[^schroedinger] task to support future work of greater minds.[^newton] 
+
+[^newton]:
+
+    "If I have seen further it is by standing on the shoulders of Giants."[@Newton1675]
+
+[^schroedinger]:
+
+    "I can see no other escape from this dilemma (lest our true aim be lost for ever) than that some of us should venture to embark on a synthesis of facts and theories, albeit with second-hand and incomplete knowledge of some of them, and at the risk of making fool of ourselves. So much for my apology." [@Schrodinger1944]
