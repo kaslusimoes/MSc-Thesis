@@ -5,15 +5,19 @@ author: Lucas Silva Simões
 advisor: Nestor Caticha
 institute: Instituto de Física, Universidade de São Paulo
 abstract: |
-    This project deals with the study of the learning dynamics of agents in a society. For that we employ techniques from statistical mechanics, machine learning and probability theory. Agents interact in pairs by exchanging for/against opinions about issues using a perceptron algorithm. Employing a maximum entropy analysis one can describe the interacting pair as a dynamics along the gradient of the logarithm of the evidence. This permits introducing a energy like quantities and approximate global Hamiltonians. We test different hypothesis having in mind the weaknesses and predictive power of each one. Knowledge of the expected value of the Hamiltonian is relevant information for the state of the society, inducing a canonical distribution by maximum entropy. The results are interpreted with the usual tools from statistical mechanics and thermodynamics.
+    This project deals with the study of the social learning dynamics of agents in a society. For that we employ techniques from statistical mechanics, machine learning and probability theory.
 
-    Some of the questions we discuss are assessing the existence of phase transitions separating ordered and disordered phases depending on the society parameters; an assessing how the issue being discussed by the agents influences the outcomes of the discussion, and how this reflects in the overall organization of the group; and an study of the possible different interactions between opposing parties and to which extent disagreement affects the overall cohesiveness of the society, having the discussed question fixed.
+    Agents interact in pairs by exchanging for/against opinions about issues using a perceptron algorithm. Making use of a maximum entropy analysis one can describe the interacting pair as a dynamics along the gradient of the logarithm of the evidence. This permits introducing energy like quantities and approximate global Hamiltonians. We test different hypothesis having in mind the weaknesses and predictive power of each one. Knowledge of the expected value of the Hamiltonian is relevant information for the state of the society, inducing a canonical distribution by maximum entropy. The results are interpreted with the usual tools from statistical mechanics and thermodynamics.
+
+    Some of the questions we discuss are: assessing the existence of phase transitions separating ordered and disordered phases depending on the society parameters; gauging how the issue being discussed by the agents influences the outcomes of the discussion, and how this reflects in the overall organization of the group; and an study of the possible different interactions between opposing parties and to which extent disagreement affects the cohesiveness of the society.
 
 resumo: |
-    Deveria ser igual ao outro
+    Esse projeto lida com o estudo da dinâmica de aprendizado social de agentes em uma sociedade. Para isso empregamos técnicas de mecânica estatística, aprendizado de máquina e teoria de probabilidades.
 
-    Por enquanto só um placeholder
+    Agentes interagem em pares trocando opiniões pró/contra questões usando um algoritmo _perceptron_. Fazendo-se uso de uma análise de máxima entropia, pode-se descrever o par da interação como uma dinâmica ao longo do gradiente do logaritmo da evidência. Isso permite introduzir quantidades similares a energia e Hamiltonianos globais aproximados. Testamos diferentes hipóteses tendo em mente as fraquezas e os poderes preditivos de cada uma. Conhecimento do valor esperado do Hamiltoniano é informação relevant para o estado da sociedade, induzindo uma distributição canônica a partir de máxima entropia. Os resultados são interpretados com as ferramentas usuais de mecânica estatística e termodinâmica.
 
+    Algumas das questões que discutimos são: determinar a existência de transições de fase separando fases ordenada e desordenada dependendo dos parâmetros da sociedade; avaliar o quanto a questão sendo discutida pelos agentes influencia os resultados da discussão, e como isso se reflete na organização do grupo como um todo; e um estudo das possíveis diferentes interações entre partidos opostos e até que ponto o desacordo afeta a coesão da sociedade.
+    
 keywords:
     - Entropic dynamics
     - Social systems

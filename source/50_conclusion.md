@@ -7,9 +7,12 @@ Maybe the division could be only: Discussion/Interpretation (what's the differen
 
 -->
 
-In this dissertation we considered three models derived from entropic dynamics results for gaussian perceptrons-like agents in a $\mathbb{R}^K$ space.
+In this dissertation we considered three models derived from entropic dynamics results for gaussian perceptron-like agents over a $\mathbb{R}^K$ space.
 
 ## Discussion of the results
+
+- "hunker down" method to retain friends group polarized and not disperse trying to disagree with foes
+-
 
 ## Final Remarks
 
