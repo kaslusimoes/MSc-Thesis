@@ -30,6 +30,8 @@ To give one last perspective, [@Abrams1990] gathered insights from the work of s
 
 From a more contemporary perspective, we also have results from neuroscience explaining how is it that social estrangement causes real physical pain [@Eisenberger2003; @Eisenberger2004; @Eisenberger2012].
 
+TALK ABOUT NEUROSCIENCE HERE
+
 Reinforcement Learning [maybe @Yeung2004]
 
 
