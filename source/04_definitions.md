@@ -5,6 +5,10 @@
 
 This should come before toc, by IFUSP rules
 
+ME
+
+: Maximum Entropy
+
 $\mathbf{x}$
 
 : variable being inferred
