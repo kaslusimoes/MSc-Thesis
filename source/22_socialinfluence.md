@@ -28,9 +28,12 @@ To give one last perspective, [@Abrams1990] gathered experimental setups from se
 
 ### Neuroscience of Exclusion {#sec:neuroexclusion}
 
-From a more contemporary perspective, we also have results from neuroscience explaining how is it that social estrangement causes real physical pain [@Eisenberger2003; @Eisenberger2004; @Eisenberger2012].
+We also have evidence from neuroscience [@Eisenberger2003] explaining how is it that _social pain_ [^socialpain] experiences recruit the same neural machinery employed during physical pain ones. Several participants had to play a virtual game in which they experienced being socially rejected by other peers in 2 different situations: first in an implicit event and then an explicit exclusion scenario. In both cases the researches found a distinguished fMRI signal in two regions: dorsal anterior cingulate cortex (_dACC_) and right ventral prefrontal cortex (_RVPFC_).
 
-TALK ABOUT NEUROSCIENCE HERE
+In fact, growing number of research is surfacing the importance of this interplay between physical and social distress. [@Eisenberger2004] says that social support in humans even "increases tolerance to electric shock stimulation [@44] and decreases levels of self-repeated pain during cold-pressor task [@45]". A recent review by [@Eisenberger2012] analyses those claims in more depth and has pointers to further evidence for the interested reader.
+<!-- social estrangement -->
+<!-- 44 Buck, R.W. and Parke, R.D. (1972) Behavioral and physiological response to the presence of a friendly or neutral person in two types of stressful situations. J. Pers. Soc. Psychol. 24, 143 – 153
+45 Brown, J.L. et al. (2003) Social support and experimental pain. Psychosom. Med. 65, 276– 283 -->
 
 Reinforcement Learning [maybe @Yeung2004]
 
@@ -38,3 +41,7 @@ Reinforcement Learning [maybe @Yeung2004]
 [^psychwiki]:
 
     <http://www.psychwiki.com/wiki/Deutsch,_M.,_%26_Gerard,_H._B._(1955)._A_study_of_normative_and_informational_social_influences_upon_individual_judgment._The_Journal_of_Abnormal_and_Social_Psychology,_51(3),_629-636.>
+
+[^socialpain]:
+
+    "Social pain is defined as the distressing experience arising from the perception of actual or potential psychological distance from close others or a social group" [@Eisenberger2004]
