@@ -7,15 +7,15 @@ To look for the relevant information that describes the model we first look at t
 
 $$ \mathbf{J}_{n+1} = \mathbf{J}_n - \nabla_{\mathbf{J}_n} \gamma^2 \log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\gamma} \right)\right] $$ {#eq:upstudentfinal}
 
-Under those circumstances, we assume the term inside the differentiation is relevant and sufficient information to describe the evolution of our system, and we can consider that our society of agents $\{ \studenti \}$ can be described totally by one specific Hamiltonian $\mathcal{H}$:
+Under those circumstances, we assume the term inside the differentiation is relevant and sufficient information to describe the evolution of our system, and we can consider that our society of agents $\{ \studenti \}$ can be described totally by one specific Hamiltonian $\hamiltonian$:
 
-$$  \mathcal{H}=  - \gamma^2 \sum_{\langle i,j \rangle} \log \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\gamma \left( \sigma_i h_j + \sigma_j h_i \right) \right) \right] = \sum_{\langle i,j \rangle} V_{ij} $$ {#eq:hamiltonian1}
+$$  \hamiltonian=  - \gamma^2 \sum_{\langle i,j \rangle} \log \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\gamma \left( \sigma_i h_j + \sigma_j h_i \right) \right) \right] = \sum_{\langle i,j \rangle} V_{ij} $$ {#eq:hamiltonian1}
 
 From the rules of entropic inference, we can study this society using the following canonical (Boltzmann) probability distribution:
 
-<!-- We also suppose that the mean value of this quantity $\left\langle \mathcal{H} \right\rangle$ is conserved throughout the configuration evolution of the society, that is, $\mathcal{H}$ remains close to some fixed value $E$ of energy but has the possibility of oscillating to higher/lower energy values depending on some "temperature" parameter (which can also be seen as a "social pressure"). In a Maximum Entropy framework, we can say that the probability distribution describing this society with this information paradigm is given by the canonical (Boltzmann) distribution: -->
+<!-- We also suppose that the mean value of this quantity $\left\langle \hamiltonian \right\rangle$ is conserved throughout the configuration evolution of the society, that is, $\hamiltonian$ remains close to some fixed value $E$ of energy but has the possibility of oscillating to higher/lower energy values depending on some "temperature" parameter (which can also be seen as a "social pressure"). In a Maximum Entropy framework, we can say that the probability distribution describing this society with this information paradigm is given by the canonical (Boltzmann) distribution: -->
 
-$$P_B(\{ \student_i \}) = \frac{1}{Z_B} \exp \left( - \beta \mathcal{H}\left( \{ \student_i \} \right)\ \right)$$ {#eq:canonicaldistribution}
+$$P_B(\{ \student_i \}) = \frac{1}{Z_B} \exp \left( - \beta \hamiltonian\left( \{ \student_i \} \right)\ \right)$$ {#eq:canonicaldistribution}
 
 This description, however, is rather complex depending on the kind of applications we want to follow. A common procedure to simplify our model is to consider a mean field approximation, which projects our solution (the probability distribution $P_B$, which depends on the whole set $\{\student_i\}$ all at once) into a a parametric family of separable probability distributions $P_0 = \Pi_i P_i(\student_i)$ much simpler to work with.
 
@@ -23,8 +23,8 @@ In that case, we do not wish to choose a separable distribution indiscriminately
 
 \begin{align}
       S[P_0 || P_B] &= - \iint \left( \prod_{i=1}^N \mathrm{d}\student_i \right) P_0 \log \left( \frac{P_0}{P_B} \right) \\
-      &= - \iint \left( \prod_i \mathrm{d}\student_i \right) P_0 \left[ \log \left( Z_B \right) + \beta \mathcal{H}+ \log \left(\Pi_i P_i \right) \right] \\
-     &= \left\langle \log Z_B  - \beta \mathcal{H}- \sum_i \log P_i \right\rangle_{P_0}
+      &= - \iint \left( \prod_i \mathrm{d}\student_i \right) P_0 \left[ \log \left( Z_B \right) + \beta \hamiltonian+ \log \left(\Pi_i P_i \right) \right] \\
+     &= \left\langle \log Z_B  - \beta \hamiltonian- \sum_i \log P_i \right\rangle_{P_0}
 \end{align}
 
 We want to find $P_0$ so that variations of $S$ equals to zero, $\delta S = 0$. Usual functional calculus arguments lead to:

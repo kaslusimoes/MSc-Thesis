@@ -10,11 +10,8 @@ Another characteristic necessary is that this tool has to work by default with v
 The requirements above are only the ground construction of our "plausibilities" theory. So far we could have many tools fulfilling those. That is why we constrain our theory with a set of _desiderata_ (desires) that our method must also obey:
 
 1. We want "plausibilities" to be _transitive_, that is, if $A|B \succ A|C$ and $A|C \succ A|D$, then it must follow that $A|B \succ A|D$;
-
 2. We want that for every possible way of composing a given assertion the plausibilities of them all must be the same;
-
 3. There must be  2 unknown numbers $v_T$ and $v_F$ that represent the concepts of **True** and **False**, that is $a|a = v_T$ and $a| \mathbf{not}\ a = v_F$, respectively;
-
 4. There must be 2 unknown functions $F$ and $G$ to represent the logical operators **and** and **or**.
 
 As much as is may sound absurd, it can be proved (as is in fact done in the references given above), that the rules of probability theory follow from these 4 _desiderata_. To be more explicit, those are the rules:

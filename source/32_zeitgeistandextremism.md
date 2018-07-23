@@ -5,11 +5,11 @@ As mentioned at the beginning of [@sec:ch:models], the model presented in [@sec:
 
 We proceed by following the development in [@Vicente2014], where they introduced an interaction Hamiltonian in a society as presented below:
 
-$$  \mathcal{H} = - \frac{1+\delta}{2} \sum_{\langle ij \rangle} h_i h_j + \frac{1-\delta}{2} \sum_{\langle ij \rangle} |h_i h_j| $$ {#eq:hamiltonianvisujeca}
+$$  \hamiltonian = - \frac{1+\delta}{2} \sum_{\langle ij \rangle} h_i h_j + \frac{1-\delta}{2} \sum_{\langle ij \rangle} |h_i h_j| $$ {#eq:hamiltonianvisujeca}
 
 where $\delta$ is a "psychological cost" of agreement between agents, with $0<\delta<1$. When $\delta = 0$ the agents are called "error correctors", because they do not change their moral vectors in the case of matching opinions, and when $\delta = 1$ they are called "corroboration seekers", because they attribute the same amount of information to both cases: agreement or disagreement.
 
-On this same paper, the authors develop a mean-field approximation using [@eq:hamiltonianvisujeca] and the Maximum Entropy method, similar to the one performed in [@sec:meanfield] to arrive at [@eq:meanfieldexact]. The information constraint on the expected value of the energy $\mean{\mathcal{H}} = E$ enforces the appearance of a Lagrange multiplier $\beta$, the "social pressure" of the society. The resulting distribution is:
+On this same paper, the authors develop a mean-field approximation using [@eq:hamiltonianvisujeca] and the Maximum Entropy method, similar to the one performed in [@sec:meanfield] to arrive at [@eq:meanfieldexact]. The information constraint on the expected value of the energy $\mean{\hamiltonian} = E$ enforces the appearance of a Lagrange multiplier $\beta$, the "social pressure" of the society. The resulting distribution is:
 
 $$  P_{\mathrm{MF}}(h) = \frac{g^2}{2} (1-h^2)\ e^{-g\left(1-h\right)} $$ {#eq:mfvisujeca}
 

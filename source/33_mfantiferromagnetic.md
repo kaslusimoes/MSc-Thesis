@@ -9,16 +9,16 @@ We borrow [@eq:hamiltonianvisujeca] from [@sec:visujecaextension], and consider 
 
 After modulating the antiferromagnetic interaction with a noise level $\varepsilon$, the Hamiltonian describing our bipartite society is:
 
-$$  \mathcal{H} =  -\frac{\delta}{N} \sum_{\langle i, j \rangle \in A} h_i h_j -\frac{\delta}{N} \sum_{\langle i, j \rangle \in B} h_i h_j - \frac{(1 - 2 \varepsilon)}{N} \sum_{\substack{i \in A \\ j \in B}} h_i h_j $$ {#eq:hamiltonian2}
+$$  \hamiltonian =  -\frac{\delta}{N} \sum_{\langle i, j \rangle \in A} h_i h_j -\frac{\delta}{N} \sum_{\langle i, j \rangle \in B} h_i h_j - \frac{(1 - 2 \varepsilon)}{N} \sum_{\substack{i \in A \\ j \in B}} h_i h_j $$ {#eq:hamiltonian2}
 
 where the $h_i \in [-1, 1]$ are the opinion fields for each of the $N$ agents. Both parameters $\delta$ and $\varepsilon$ can have values on the interval $[-1, 1]$. We note that $\delta$ describes the intensity of the in-group ferromagnetic interactions, whereas $\varepsilon$ describes the inter-group antiferromagnetic ones.
 
-Considering the constraint of the expected value of the energy $\langle\mathcal{H}\rangle_{P_B} = E$, usual maximum entropy arguments lead us to a canonical distribution $P_B(\{h_i\}) = \frac{1}{Z_B} \exp(-\beta \mathcal{H})$. We proceed evaluating the partition function of the model.
+Considering the constraint of the expected value of the energy $\langle\hamiltonian\rangle_{P_B} = E$, usual maximum entropy arguments lead us to a canonical distribution $P_B(\{h_i\}) = \frac{1}{Z_B} \exp(-\beta \hamiltonian)$. We proceed evaluating the partition function of the model.
 
 First, let us rewrite the Hamiltonian in the following way:
 
 \begin{align}
-  \mathcal{H} &=  -\frac{\delta}{N} \sum_{\langle i, j \rangle \in A} h_i h_j -\frac{\delta}{N} \sum_{\langle i, j \rangle \in B} h_i h_j - \frac{(1 - 2 \varepsilon)}{N} \sum_{\substack{i \in A \\ j \in B}} h_i h_j \\
+  \hamiltonian &=  -\frac{\delta}{N} \sum_{\langle i, j \rangle \in A} h_i h_j -\frac{\delta}{N} \sum_{\langle i, j \rangle \in B} h_i h_j - \frac{(1 - 2 \varepsilon)}{N} \sum_{\substack{i \in A \\ j \in B}} h_i h_j \\
   =& -\frac{N}{2} \left[ \delta \left( \frac1N \sum_{i \in A} h_i \right)^2 + \delta \left( \frac1N \sum_{j \in B} h_i \right)^2 + 2(1 - 2 \varepsilon) \left( \frac1N \sum_{i \in A} h_i \right) \left( \frac1N \sum_{j \in B} h_j \right) \right] \label{eq:modhamiltonian}
 \end{align}
 
@@ -39,7 +39,7 @@ We can associate some quantities from [@eq:modhamiltonian] to quantities in [@eq
 Now, we have:
 
 \begin{align}
-    Z_B &= \int_{-1}^1 \mathrm{d}h_1 \int_{-1}^1 \mathrm{d}h_2 \cdots \int_{-1}^1 \mathrm{d}h_N\ \exp(-\beta \mathcal{H}) = \int \mathrm{d}h\ \exp(-\beta \mathcal{H}) \\
+    Z_B &= \int_{-1}^1 \mathrm{d}h_1 \int_{-1}^1 \mathrm{d}h_2 \cdots \int_{-1}^1 \mathrm{d}h_N\ \exp(-\beta \hamiltonian) = \int \mathrm{d}h\ \exp(-\beta \hamiltonian) \\
     &= \int \mathrm{d}h\ \exp \left\{ \frac{\beta N}{2} \left[ \delta \left( \frac1N \sum_{i \in A} h_i \right)^2 + \delta \left( \frac1N \sum_{j \in B} h_i \right)^2 \right. \right. \\
     &\hspace{30mm}\ + \left. \left. 2(1 - 2 \varepsilon) \left( \frac1N \sum_{i \in A} h_i \right) \left( \frac1N \sum_{j \in B} h_j \right) \right] \right\}
 \end{align}

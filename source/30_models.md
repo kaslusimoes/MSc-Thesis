@@ -3,7 +3,7 @@
 
 Entropic dynamics results shown in [@sec:entropicdynamics] can give rise to several different models and predictions, three of which we present in this chapter. Our main goal is to understand more about how humans interact in society, with an emphasis in: understanding group formation; assessing the possibility of categorizing and describing different political groups; and gauging the importance of selecting the issues to be discussed in a society.
 
-The first model we present ([@sec:meanfield]) is a statistical mechanics model defined by the potential described in [@eq:freeenergy]. After a mean field approximation we obtain, in [@sec:mfresults], a phase transition between an ordered and a disordered phase. This result was already known by [@Vicente2009a; @Vicente2014] using similar models, and we show a different approach to obtain the expected outcome.
+The first model we present ([@sec:meanfield]) is a statistical mechanics model defined by the potential described in [@eq:freeenergy]. After a mean field approximation we obtain, in [@sec:mfresults], a phase transition between an ordered and a disordered phase. This result was already known by [@Caticha2011; @Vicente2014] using similar models, and we show a different approach to obtain the expected outcome.
 
 This model yields some interesting results regarding the phase transition between ordered and disordered societies, but it has two major drawbacks:
 
