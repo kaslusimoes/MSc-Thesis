@@ -79,7 +79,7 @@ The partition function $Z_{n+1}$ depends only on the *intrinsic* mechanisms of t
 
 ## Gaussian Parametric Family {#sec:bayesgausslearn}
 
-In this subsection we analyze how the parameters of a Multivariate Gaussian distribution update under the framework developed in [@sec:bayeslearn]. We chose it due to its generality, importance and easy of use.
+In this subsection we analyse how the parameters of a Multivariate Gaussian distribution update under the framework developed in [@sec:bayeslearn]. We chose it due to its generality, importance and easy of use.
 
 The set of generators we assume to be relevant to draw an inference over a vector $\prof\in \mathbb{R}^K$, will be:
 
@@ -137,7 +137,7 @@ $$
     \begin{cases} -\tau\ &\text{with probability}\ \ \ \varepsilon \\
     \ \ \tau\vphantom{\frac{0}{0}}\ &\text{with probability}\ 1 - \varepsilon
     \end{cases} \\
-\mathit{inference:}& \mathbb{E}[B^{i}] = J^{i},\  \mathbb{E}[B^{i}B^{j}] = C_{ij} + J^{i}J^{j}
+\mathit{inference:}& \mathbb{E}[B^{i}] = J^{i},\  \mathbb{E}[B^{i}B^{j}] = C^{ij} + J^{i}J^{j}
 \end{cases}
 $$ {#eq:model}
 
@@ -176,7 +176,7 @@ $$\left\langle \Theta( \sigma \xi \cdot \prof) \right\rangle_{Q_n(\prof)} = \int
 
 where we used the definition of $h_n$ (a projection of the issue $\xi$ over the mean value $\mathbf{J}_n$) and defined a new variable $\Gamma_n^2 = \frac1K \xi \cdot \mathbf{C}_n \xi$, as the norm of the issue presented to the student weighted by its correlation matrix $\mathbf{C}_n$.
 
-Analyzing each case $\sigma = \pm 1$ separately we end up with:
+Analysing each case $\sigma = \pm 1$ separately we end up with:
 
 $$ Z_{n+1} = k_\xi \left[ \varepsilon + \left( 1 - 2\varepsilon \right)\Phi\left( \frac{\sigma h_n}{\Gamma_n}\right)\right] $$ {#eq:partitionbayesgaussperceptron}
 

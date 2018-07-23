@@ -1,11 +1,12 @@
 
-## Consensus formation in a Mean Field Society {#sec:mfresults}
+## Model 1 {#sec:mfresults}
+<!-- Consensus formation in a Mean Field Society -->
 
 Although we could not find analytical solutions to [@eq:mfeqs] in [@sec:meanfield], they can be solved numerically by an iterative process as follows: let  $u=(m,r,\zeta)$ , then the set of equations is of the type $u= F(u)$, where $F$ is given by [@eq:mfeqs]. An initial value $u_0$ is chosen and we iterate the map below until reaching a fixed point.
 
 $$ u_t = (1-\alpha) u_{t-1}+ \alpha F(u_{t-1}) $$ {#eq:updatemap}
 
-Since convergence did not pose us as a problem, no attempt at optimizing $\alpha$ was made. The result can be checked by choosing different starting points $u_0$. The results are shown in [@fig:mfeqs].
+Since convergence was not a problem, no attempt at optimizing $\alpha$ was made. The result can be checked by choosing different starting points $u_0$. The results are shown in [@fig:mfeqs].
 
 ![Solutions of [@eq:mfeqs]. Top: The normalization of the MF distribution $\zeta$ as a function of the social pressure and number of neighbors ($\beta \nu$). Bottom: Magnetization $m$. The other order parameter $r$ has a similar behavior to $m$.](images/orderparameter.png){#fig:mfeqs width='80%'}
 

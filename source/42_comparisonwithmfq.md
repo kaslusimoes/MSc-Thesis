@@ -1,5 +1,6 @@
 
-## Comparison with MFQ opinions data {#sec:comparisonmfq}
+## Model 2 {#sec:comparisonmfq}
+<!-- Comparison with MFQ opinions data -->
 
 Recall that in [@sec:visujecaextension] we had two important results: [@eq:mfvisujeca], which describes the model's main prediction $P(h|g)$; and [@eq:posteriorgamma] which enables us to estimate the parameter $g$ given an histogram of opinions $\{h_i\}$ for a given population _pa_ and a fixed Zeitgeist $\zeitgeist$.
 
@@ -11,9 +12,6 @@ In [@Vicente2014] they chose $\zeitgeist$ as the mean vector of Conservative res
 ![The 4 different Zeitgeist hypothesis shown for comparison. All extracted from MFQ's respondents data.](images/4zeitgeists.png){#fig:4zeitgeists width='70%'}
 
 We can see from [@fig:4zeitgeists], as mentioned in [@Haidt2007], that one can differentiate through all $7$ political affiliations (although here we show only Conservatives, Moderates and Liberals) by looking at the relevance each group attributes to each moral dimension. Liberals tend to give more importance to Harm and Fairness whereas Conservatives give almost equal importance to all $5$ dimensions (slightly more to Ingroup, Authority and Purity dimensions). Additionally, the mean vector for the whole population tends somewhat more towards the Liberals due to a greater number of respondents with this political affiliation.
-
-<!-- One last important fact to consider is that "Moderates" can be seen as a kind of transition between "Liberals" and "Conservatives", as expected. -->
-<!-- In fact, although not being shown here, the mean vectors of the $7$ political affiliations can be arranged in a linear dispersion along a curve, with $\mathit{pa} = 1$ ("Very Liberal") and $\mathit{pa} = 7$ ("Very Conservative") at the extremes of this curve. -->
 
 The different estimates for $g$ for each of the Zeitgeists presented above were evaluated using [@eq:posteriorgamma] and can be seen in [@fig:posteriorgamma]:
 

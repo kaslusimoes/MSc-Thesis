@@ -1,5 +1,6 @@
 
-## A model for a Bipartite Society {#sec:mfantiferromagnetic}
+## Model 3 {#sec:mfantiferromagnetic}
+<!-- A model for a Bipartite Society -->
 
 As we will shown in [@sec:mfresults] the only values of mistrust $\varepsilon$ explored for the model described in [@sec:meanfield] were between $0$ and $0.5$. This is because for values of $\varepsilon > 0.5$ the society enters a frustrated state which cannot be resolved by aligning nor anti-aligning the opinions of the agents. A similar problem is known for the infinite-range Ising model and can be solved separating the spins into 2 groups. We proceed the same way: the groups of agents, which we call _communities_, have ferromagnetic interactions within them and antiferromagnetic ones between elements of different the communities (depicted in [@fig:antiferro2groups]).
 

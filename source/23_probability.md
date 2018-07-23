@@ -1,7 +1,7 @@
 
 ## Probability Theory {#sec:probability}
 
-Probability theory is often an underestimated tool in a scientist career. Much of the failure to see the importance of probability theory comes from an incorrect understanding of what it is.[^laplace] Therefore, without further due, we shall derive the rules of probability and explain what they are meant to be and what one is meant to do with them. [^refderivation]
+Probability theory is often an underestimated tool in a scientist career. Much of the failure to see the importance of probability theory comes from an incorrect understanding of what it is.[^laplace] Therefore we present the outline of a derivation[^refderivation] of the rules of probability and explain what they are meant to be and what one is meant to do with them. 
 
 We begin by defining the problem at hand: we want a mathematical tool to reason in situations of incomplete information and that is an extension to Boolean logic. That is, we want a tool that incorporate the concepts of **True**, **False**, **and**, **or**, **not** and extend them to deal with inference settings in which we cannot be certain about the veracity or falsehood of assertions $a, b, c, \cdots$, we must be available to say whether some assertion is more "plausible" $\succ$ than another one or not.
 

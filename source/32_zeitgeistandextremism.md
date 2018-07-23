@@ -1,5 +1,6 @@
 
-## Distribution of opinions in societies {#sec:visujecaextension}
+## Model 2 {#sec:visujecaextension}
+<!-- Distribution of opinions in societies -->
 
 As mentioned at the beginning of [@sec:ch:models], the model presented in [@sec:meanfield], although presenting some interesting features, is not suitable to make comparisons with data.
 
@@ -23,7 +24,7 @@ Then, one can use [@eq:mfvisujeca] and apply Bayes' theorem to it to find an est
 
 $$  P(g| \{h_i\}_{i \in \mathit{pa}}) \propto P(g) \prod_{i \in \mathit{pa}} P(h_i | g) $$ {#eq:bayesgamma}
 
-We note that $P(h|g)$ resembles a Gamma distribution in $g$ and choose a prior distribution $g \sim \mathrm{Gamma}(k_0, \theta_0)$ - that is $P(g) = \frac{\theta_0^{-k_0}}{\Gamma(k_0)} g^{k_0-1} e^{-g/\theta_0}$. This will yield us a Gamma distribution as a posterior as well. First we evaluate the normalization factor $P(\{h_i\}_{pa})$
+We note that $P(h|g)$ resembles a Gamma distribution in $g$ and choose a prior distribution $g \sim \mathrm{Gamma}(k_0, \theta_0)$ - that is $P(g) = \frac{\theta_0^{-k_0}}{\Gamma(k_0)} g^{k_0-1} e^{-g/\theta_0}$. This yields a Gamma distribution as a posterior as well. First we evaluate the normalization factor $P(\{h_i\}_{pa})$:
 
 \begin{align}
     P(\{h_i\}) &= \int_0^\infty \mathrm{d}g\ P(\{h_i\}, g) \\
@@ -32,10 +33,10 @@ We note that $P(h|g)$ resembles a Gamma distribution in $g$ and choose a prior d
     &= \frac{\theta_0^{-k_0}}{2^n \Gamma(k_0)} \prod_{i} (1-h_i^2) \int_0^\infty \mathrm{d}g\ g^{2n + k_0-1} e^{-g\left(n + 1/\theta_0 - m \right)}
 \end{align}
 
-where $n$ is the number of respondents in the group being considered and $m = \sum_i h_i$ is some kind of magnetization of the group.
+where $n$ is the number of respondents in the group being considered and $m = \sum_i h_i$ is analogous to a magnetization of the group.
 <!-- magnetization of a given political group of respondents $\mathit{pa}$.  -->
 
-Now we recognize the Gamma integral $\Gamma(z) = \int_0^\infty \mathrm{d}t\ t^{z-1} e^{-t}$ with $z = 2n + k_0$ to solve the integration. Making the substitution $t = g\left( n - m + 1/\theta_0 \right)$, we obtain:
+Recognize the Gamma integral $\Gamma(z) = \int_0^\infty \mathrm{d}t\ t^{z-1} e^{-t}$ with $z = 2n + k_0$ to do the integration. Making the substitution $t = g\left( n - m + 1/\theta_0 \right)$, we obtain:
 
 \begin{align}
     P(\{h_i\}) &= \frac{\theta_0^{-k_0}}{2^n \Gamma(k_0)} \left(n + 1/\theta_0 - m \right)^{-2n - k_0 + 1} \prod_{i} (1-h_i^2) \int_0^\infty \mathrm{d}t\ t^{2n + k_0-1} e^{-t}  \\

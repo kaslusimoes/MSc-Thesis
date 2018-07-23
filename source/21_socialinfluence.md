@@ -5,7 +5,9 @@ Human beings are social [@Baumeister1995] and adaptive beings. Here we show some
 
 ### Psychology: Conformity and Group Categorization {#sec:psychconformity}
 
-For many the pioneer of social psychology experiments, Sherif dedicated himself to the study of _attitudes_ and _social influence_. In particular, one of his first articles studied what he called  "the daily phenomena of suggestion (…) in the formation of attitudes" [@Sherif1937 pg. 98]. On that experiment participants had to perform the same visual task twice: at the first trial they did it in pairs; and individually, in a second trial. What Sherif noted was twofold:
+For many the pioneer of social psychology experiments, Sherif dedicated himself to the study of _attitudes_ and _social influence_. In particular, one of his first articles studied what he called  "the daily phenomena of suggestion (…) in the formation of attitudes" [@Sherif1937 pg. 98]. On that experiment participants had to perform the same visual task twice: at the first trial they did it in pairs; and individually, in a second trial.
+
+What Sherif noted was twofold:
 
 - During the first trial, there is a norm (standard) and a range of responses that are established within the group, and subjects typically update their responses to conform to the group;
 - This conformity is retained when the subject comes back to the second trial, several days later, showing that this kind of influence has lasting effects on the subject.

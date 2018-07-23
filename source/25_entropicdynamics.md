@@ -7,7 +7,7 @@ Here we follow [@Cesar2014; @Alves2015; @Alves2016; @Alves2018] and describe a m
 
 ### The basics {#sec:edbasics}
 
-We have a probability distribution $Q$ over the variables $\xx$ we want to study. This probability is defined by a set of generator functions $\{f^a\}_{a=1}^G$ whose expected value $\langle f^a \rangle = \eta^a$ is known. Under those conditions maximum entropy says the distribution with least biased information at a given timestep $n$ is:
+Incomplete knowledge about the variables $\xx$ under study is represented by distribution $Q(\xx)$, which belongs to a family defined by a set of generator functions $\{f^a\}_{a=1}^G$. Once the expected values $\langle f^a \rangle = \eta^a$ are known, maximum entropy yields the distribution with least biased information at a given timestep $n$ is:
 
 $$ Q_n(\xx) = \frac1\zeta_n \exp \left( - \sum_{a=1}^G \theta^a_n f^a(\xx) \right) \equiv P(\xx|\theta_n) $$ {#eq:distq}
 
@@ -23,7 +23,7 @@ It is not trivial to change between the representations $\{\theta_a\}$ and $\{ \
 
 ### Perceptron model
 
-To continue with a proper model of an agent, we must first state the universe of discourse being inferred. In our model the variable being inferred is $\xx = (\prof, \varepsilon)$ where $\prof \in \mathbb{R}^K$ and for simplicity we consider $\varepsilon$ is a known quantity between $0$ and $1$ [that hypothesis is relaxed in @Alves2018].
+To continue with a proper model of an agent, we must first state the universe of discourse being inferred. In our model the variable being inferred is $\xx = (\prof, \varepsilon)$ where $\xi \in \mathbb{R}^K$ and for simplicity we consider $\varepsilon$ is a known quantity between $0$ and $1$ [that hypothesis is relaxed in @Alves2018].
 
 We also need to state what is the data $y$ that will be available to the inference. In our case, $y = (\xi, \sigma)$ with $\prof \in \mathbb{R}^K$ and $\sigma \in \{\pm 1\}$. This represents a situation in which an agent is trying to learn how to classify an issue $\xi$ with classification $\sigma$.
 

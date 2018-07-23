@@ -1,5 +1,6 @@
 
-## Bipartite society: cohesiveness and antagonism {#sec:mfantiresults}
+## Model 3 {#sec:mfantiresults}
+<!-- Bipartite society: cohesiveness and antagonism -->
 
 In [@sec:mfantiferromagnetic] we presented a model for a bipartite society that presented a balance between in-group ferromagnetism and inter-group antiferromagnetism. This lead us to [@eq:fmaxima], a set of consistent relations we needed to solve to find the stable solutions $(x^*, y^*)$ corresponding to the maxima of $f(x, y)$.
 
