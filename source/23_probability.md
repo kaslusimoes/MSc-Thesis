@@ -17,7 +17,7 @@ The requirements above are only the ground construction of our "plausibilities" 
 
 4. There must be 2 unknown functions $F$ and $G$ to represent the logical operators **and** and **or**.
 
-As much as sounds absurd, it can be proved (as is in fact done in the references given above), that the rules of probability theory follow from these 4 _desiderata_. To be more explicit, those are the rules:
+As much as is may sound absurd, it can be proved (as is in fact done in the references given above), that the rules of probability theory follow from these 4 _desiderata_. To be more explicit, those are the rules:
 
 \begin{align}
     & p(a | a ) = v_T = 1, \qquad  p( a | \bar{a}) = v_F = 0 \\
@@ -26,7 +26,7 @@ As much as sounds absurd, it can be proved (as is in fact done in the references
     & p(a|c) + p(\bar{a}|c) = 1
 \end{align}
 
-and from those simple rules we can obtain all the other known relations for probabilities.
+and from these simple rules we can obtain all the other known relations for probabilities.
 
 The advantage of this method is that, instead of describing a mathematical tool first and then trying to interpret and understand its function, we start by defining the purpose of our tool and then the functioning comes naturally.
 
