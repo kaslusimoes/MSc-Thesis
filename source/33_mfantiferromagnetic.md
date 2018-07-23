@@ -37,16 +37,15 @@ We can associate some quantities from [@eq:modhamiltonian] to quantities in [@eq
     &\frac{1}{1-\rho^2} = \beta N \delta\ \qquad\ \frac{\rho}{1-\rho^2} = \beta N (1-2\varepsilon)
 \end{align}
 
+\newpage
+
 Now, we have:
 
 \begin{align}
     Z_B &= \int_{-1}^1 \mathrm{d}h_1 \int_{-1}^1 \mathrm{d}h_2 \cdots \int_{-1}^1 \mathrm{d}h_N\ \exp(-\beta \hamiltonian) = \int \mathrm{d}h\ \exp(-\beta \hamiltonian) \\
     &= \int \mathrm{d}h\ \exp \left\{ \frac{\beta N}{2} \left[ \delta \left( \frac1N \sum_{i \in A} h_i \right)^2 + \delta \left( \frac1N \sum_{j \in B} h_i \right)^2 \right. \right. \\
-    &\hspace{30mm}\ + \left. \left. 2(1 - 2 \varepsilon) \left( \frac1N \sum_{i \in A} h_i \right) \left( \frac1N \sum_{j \in B} h_j \right) \right] \right\}
-\end{align}
-
-\begin{align}
-    Z_B &= \int \mathrm{d}h\ \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi\sqrt{1 - \rho^2}}\ \exp\left( -\frac{ x^2 + y^2 + 2\rho x y - 2A(x+\rho y) - 2B(y+\rho x)}{2(1-\rho^2)} \right) \\
+    &\hspace{30mm}\ + \left. \left. 2(1 - 2 \varepsilon) \left( \frac1N \sum_{i \in A} h_i \right) \left( \frac1N \sum_{j \in B} h_j \right) \right] \right\} \\
+    &= \int \mathrm{d}h\ \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi\sqrt{1 - \rho^2}}\ \exp\left( -\frac{ x^2 + y^2 + 2\rho x y - 2A(x+\rho y) - 2B(y+\rho x)}{2(1-\rho^2)} \right) \\
     &= \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi\sqrt{1 - \rho^2}} \exp\left( -\frac{x^2 + y^2 + 2\rho x y}{2(1-\rho^2)} \right) \int \mathrm{d}h\ \exp\left( \frac{A(x+\rho y) + B(y+\rho x)}{1-\rho^2} \right) \\
     &= \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi} \sqrt{\beta \delta N} \exp\left( -\frac{\beta N}{2} \left(\delta x^2 + \delta y^2 + 2(1-2\varepsilon) x y \right) \right) \\
     &\hspace{30mm} \times \int \mathrm{d}h\ \exp\left( \beta z_A \sum_{i \in A} h_i + \beta z_B \sum_{j \in B} h_j \right)
@@ -63,7 +62,6 @@ where we defined $z_B = \delta x + (1-2\varepsilon) y$ and $z_B = \delta y + (1-
 
 Inserting this result back into $Z$, one obtains:
 
-<!-- WAS A GATHER ENVIRONMENT -->
 $$ Z_B = 2^N \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi} \sqrt{\beta\delta N} e^{Nf(x, y)} $$ {#eq:zantiferro}
 
 where $f$ will be associated to the free energy of the model:

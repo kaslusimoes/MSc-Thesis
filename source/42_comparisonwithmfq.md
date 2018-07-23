@@ -31,6 +31,4 @@ From the analysis presented above, we propose $2$ ideas for future models:
 <!-- Linux command: `montage -mode concatenate -geometry 1210x850 -tile 2x2 ph-*.png 4groupsph.png` -->
 ![The histogram of opinions $h$ for a given _pa_ group considering an specific Zeitgeist and the corresponding best fit of the model $P(h|g)$ given the data](images/4groupsph.png){#fig:4groupsph width='100%'}
 
-\newpage
-
 <!-- One can also note a resemblance between this model's $g$ and last model's $\gamma$. Both describe the cohesiveness of a society/community THINK MORE ABOUT THIS -->
