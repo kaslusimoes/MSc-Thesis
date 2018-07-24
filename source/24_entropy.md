@@ -27,7 +27,7 @@ We must first define what is our informational context and space of discourse, t
 
 Now we can proceed with the calculation of the family of  _canonical distributions_. Consider a set of functions $f_a(\xx)$ known to provide relevant about the system one wants to study. We happen to know the expected values of those functions: $\langle f_a(\xx) \rangle = F_a$. Maximum Entropy tells us that we must maximize the function $S$ with respect to distribution $p$ taking that piece of information in consideration:
 
-$$ S[p|q] = - \int\mathrm{d}\xx\ p(\xx) \log \left( \frac{p(\xx)}{q(\xx)} \right) + \alpha \left( \int\mathrm{d}\xx\ p(\xx) - 1\right) + \sum_a \lambda_a \left( \int\mathrm{d}\xx\ p(\xx) f_a(\xx) - F_a \right) $$ {#eq:entropyforcanonical}
+$$ \mathcal{L}[p|q] = - \int\mathrm{d}\xx\ p(\xx) \log \left( \frac{p(\xx)}{q(\xx)} \right) + \alpha \left( \int\mathrm{d}\xx\ p(\xx) - 1\right) + \sum_a \lambda_a \left( \int\mathrm{d}\xx\ p(\xx) f_a(\xx) - F_a \right) $$ {#eq:entropyforcanonical}
 
 where the constraint for $\alpha$ comes from the fact that probability distributions must be properly normalized.
 
