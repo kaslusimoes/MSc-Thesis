@@ -23,12 +23,13 @@ The comparison of the fit $P(h|g)$ with the histograms $\{h_i\}$ can be seen at 
 
 Another information we can extract from the figures shown is that lower $g$ values appear when we choose Zeitgeists of Conservatives or Liberals, while the fit using Zeitgeists of Moderates or of the Total Population yield predictions more comparable with the data. We believe that - being the Conservatives and Liberals far from each other on the _pa_ spectrum - choosing a Zeitgeist along one of those groups forces the other group to have widely spread opinions. It is a geometric feature of MFQ's data.
 
-From the analysis presented above, we propose $2$ ideas for future models:
-
-1. The model's parameter $g$, more than a characterization of the Liberal-Conservative spectrum, as was thought before, is a description of the extremism of a community. As a given political group has moral beliefs $\student_i$ more aligned with the Zeitgeist being discussed, more gathered around the issue they will become and more "extremist" (with less room for a change of opinion) they will behave;
-2. The choice of the Zeitgeist - the question being asked to the agents - is a highly relevant characteristic of the model presented, and is not a feature we can extract from the Moral Foundations data alone. One must have additional hypothesis, which ought to be validated by other means.
-
 <!-- Linux command: `montage -mode concatenate -geometry 1210x850 -tile 2x2 ph-*.png 4groupsph.png` -->
 ![The histogram of opinions $h$ for a given _pa_ group considering an specific Zeitgeist and the corresponding best fit of the model $P(h|g)$ given the data](images/4groupsph.png){#fig:4groupsph width='100%'}
+
+From the analysis presented above, we propose $2$ ideas for future models:
+
+1. The choice of the Zeitgeist - the question being asked to the agents - is a highly relevant characteristic of the model presented, and is not a feature we can extract from the Moral Foundations data alone. One must have additional hypothesis, which ought to be validated by other means.
+2. The model's parameter $g$, more than a characterization of the Liberal-Conservative spectrum, as was thought before, is a description of the extremism of a community. As a given political group has moral beliefs $\student_i$ more aligned with the Zeitgeist being discussed, more gathered around the issue they will become and more "extremist" (with less room for a change of opinion) they will behave;
+
 
 <!-- One can also note a resemblance between this model's $g$ and last model's $\gamma$. Both describe the cohesiveness of a society/community THINK MORE ABOUT THIS -->

@@ -12,7 +12,7 @@ Since convergence was not a problem, no attempt at optimizing $\alpha$ was made.
 
 It can be seen that there is a phase transition depending on the parameters $\beta\nu$ and $\gamma$. We investigate further this transition by looking at the phase diagram in [@fig:phasem].
 
-![Phase diagram in the space $\gamma \times \beta\nu$. A phase transition separates an ordered from a disordered phase as signaled by the value of the order parameter $m$. Here, the value of $\varepsilon$  was $0.1$ and as it grows towards $0.5$ the ordered phase decreases.](images/phasetransition.png){#fig:phasem width='70%'}
+![Phase diagram in the space $\gamma \times \beta\nu$. A phase transition separates an ordered from a disordered phase as signaled by the value of the order parameter $m$. Here, the value of $\varepsilon$  was $0.1$ and as it grows towards $0.5$ the ordered phase decreases.](images/phasetransition.png){#fig:phasem width='60%'}
 
 [@fig:phasem] shows that, for fixed $\beta$, the phase border can be crossed by increasing the value of $\gamma$. This seems paradoxical, since larger $\gamma$ is associated to a larger norm of the covariance matrix (that is, a higher uncertainty in [@eq:multigaussian]). The explanation for this comes from the fact that the gradient of the evidence (also called _modulation function_ $F_{mod}$), which determines the dynamics in [@eq:upstudentfinal], increases in magnitude with $\gamma$ when both agents concur. This is shown in [@fig:modfunc]
 
@@ -33,9 +33,9 @@ where $m$ and $r$ remain the expected values defined before: $m = \langle h \ran
 
 The computational results we found are presented in [@fig:probh] and [@fig:mfvariance].
 
-![Probability distribution $P(h|\varepsilon, \gamma, \beta\nu)$ for a set of values for the model's parameters.](images/probh.png){#fig:probh width='70%'}
+![Probability distribution $P(h|\varepsilon, \gamma, \beta\nu)$ for a set of values for the model's parameters.](images/probh.png){#fig:probh width='75%'}
 
-![Variance of the field $h$ with respect to selected values of $\beta\nu$ and $\gamma$](images/variance.png){#fig:mfvariance width='99%'}
+![Variance of the field $h$ with respect to selected values of $\beta\nu$ and $\gamma$](images/variance.png){#fig:mfvariance width='75%'}
 
 We note that the distribution $P(h|\varepsilon, \gamma, \beta\nu)$ ([@fig:probh]) has a discontinuity in $h=0$ due to the $\sign h$ term, which is a source of complication when trying to fit empirical data. This is one of the main reasons we discuss a different model in [@sec:visujecaextension; and @sec:comparisonmfq]
 
