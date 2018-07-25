@@ -250,6 +250,11 @@ $endif$
 $if(title)$
 % \maketitle
 \input{style/folha-rosto.tex}
+$if(acknowledgements)$
+\section*{Acknowledgements}
+$acknowledgements$
+\newpage
+$endif$
 $if(abstract)$
 \begin{abstract}
 $abstract$
