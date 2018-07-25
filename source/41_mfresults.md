@@ -12,9 +12,9 @@ Since convergence was not a problem, no attempt at optimizing $\alpha$ was made.
 
 It can be seen that there is a phase transition depending on the parameters $\beta\nu$ and $\gamma$. We investigate further this transition by looking at the phase diagram in [@fig:phasem].
 
-![Phase diagram in the space $\gamma \times \beta\nu$. A phase transition separates an ordered from a disordered phase as signaled by the value of the order parameter $m$. Here, the value of $\varepsilon$  was $0.1$ and as it grows towards $0.5$ the ordered phase decreases.](images/phasetransition.png){#fig:phasem width='60%'}
-
 [@fig:phasem] shows that, for fixed $\beta$, the phase border can be crossed by increasing the value of $\gamma$. This seems paradoxical, since larger $\gamma$ is associated to a larger norm of the covariance matrix (that is, a higher uncertainty in [@eq:multigaussian]). The explanation for this comes from the fact that the gradient of the evidence (also called _modulation function_ $F_{mod}$), which determines the dynamics in [@eq:upstudentfinal], increases in magnitude with $\gamma$ when both agents concur. This is shown in [@fig:modfunc]
+
+![Phase diagram in the space $\gamma \times \beta\nu$. A phase transition separates an ordered from a disordered phase as signaled by the value of the order parameter $m$. Here, the value of $\varepsilon$  was $0.1$ and as it grows towards $0.5$ the ordered phase decreases.](images/phasetransition.png){#fig:phasem width='60%'}
 
 ![Modulation function/gradient of the evidence for different values of $\gamma$. The noise $\varepsilon$ is fixed at $0.2$, but changing to other values between $0.$ and $0.5$ does not change qualitatively the figure](images/modfunc.png){#fig:modfunc width='75%'}
 

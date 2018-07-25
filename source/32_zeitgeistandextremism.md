@@ -45,6 +45,8 @@ Recognize the Gamma integral $\Gamma(z) = \int_0^\infty \mathrm{d}t\ t^{z-1} e^{
     &= \frac{1}{2^n} \frac{\theta_0^{-k_0}}{\left(n + \frac{1}{\theta_0} - m \right)^{2n + k_0 - 1}} \frac{\Gamma(2n + k_0)}{ \Gamma(k_0)} \prod_{i} (1-h_i^2)
 \end{align}
 
+\newpage
+
 Inserting back into the Bayes' rule, we obtain the posterior $\tilde{\beta} |\{h_i\}_{i \in \mathit{pa}} \sim \Gamma\left(k_0+2n, \frac{\theta_0}{1+\theta_0(n-m)} \right)$. Explicitly:
 
 $$  P(\tilde{\beta}| \{h_i\}_{i \in \mathit{pa}}) = \frac{\left(\frac{1}{\theta_0} + n_{pa} - m_{pa} \right)^{k_0+2n_{pa}}}{\Gamma(k_0 + 2n_{pa})} \tilde{\beta}^{k_0 - 1 + 2 n_{pa}} e^{-\tilde{\beta}\left(\frac{1}{\theta_0} + n_{pa} - m_{pa} \right)} $$ {#eq:posteriorgamma}

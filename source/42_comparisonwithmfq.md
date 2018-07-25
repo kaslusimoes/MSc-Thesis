@@ -24,7 +24,7 @@ The comparison of the fit $P(h|\tilde{\beta})$ with the histograms $\{h_i\}$ can
 Another information we can extract from the figures shown is that lower $\tilde{\beta}$ values appear when we choose Zeitgeists of Conservatives or Liberals, while the fit using Zeitgeists of Moderates or of the Total Population yield predictions more comparable with the data. We believe that - being the Conservatives and Liberals far from each other on the _pa_ spectrum - choosing a Zeitgeist along one of those groups forces the other group to have widely spread opinions. It is a geometric feature of MFQ's data.
 
 <!-- Linux command: `montage -mode concatenate -geometry 1210x850 -tile 2x2 ph-*.png 4groupsph.png` -->
-![The histogram of opinions $h$ for a given _pa_ group considering an specific Zeitgeist and the corresponding best fit of the model $P(h|\tilde{\beta})$ given the data](images/4groupsph.png){#fig:4groupsph width='100%'}
+![The histogram of opinions $h$ for a given _pa_ group considering an specific Zeitgeist and the corresponding best fit of the model $P(h|\tilde{\beta})$ given the data](images/4groupsph.png){#fig:4groupsph width='90%'}
 
 From the analysis presented above, we propose $2$ ideas for future models:
 

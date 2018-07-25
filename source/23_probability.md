@@ -27,7 +27,9 @@ and from these simple rules we can obtain all the other known relations for prob
 
 The advantage of the method we outlined is that, instead of describing a mathematical tool first and then trying to interpret and understand its function, we start by defining the purpose of our tool and then the functioning comes naturally.
 
-Now that we know that probabilities are the mathematical object describing plausibilities of assertions in face of incomplete knowledge, one can develop other insights in using them. For example, one can take the product rule ([@eq:productrule]) to prove the Bayes' rule:
+Now that we know that probabilities are the mathematical object describing plausibilities of assertions in face of incomplete knowledge, one can develop other insights in using them.
+
+For example, one can take the product rule ([@eq:productrule]) to prove the Bayes' rule:
 
 $$ p(b|ac) = \frac{p(a|bc) p(b|c)}{p(a|c)} = \frac{p(a|bc) p(b|c)}{\sum_b p(a|bc) p(b|c)} $$ {#eq:bayesrule}
 

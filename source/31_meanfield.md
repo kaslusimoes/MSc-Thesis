@@ -10,9 +10,11 @@ $$ \mathbf{J}_{n+1} = \mathbf{J}_n - \nabla_{\mathbf{J}_n} \gamma^2 \log\left[\v
 
 Under those circumstances, we assume the term inside the differentiation is relevant and sufficient information to describe the evolution of our system, and we can consider that our society of agents $\{ \studenti \}$ can be described totally by one specific Hamiltonian $\hamiltonian$:
 
-$$  \hamiltonian=  - \gamma^2 \sum_{\langle i,j \rangle} \log \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\gamma \left( \sigma_i h_j + \sigma_j h_i \right) \right) \right] = \sum_{\langle i,j \rangle} V_{ij} $$ {#eq:hamiltonian1}
+$$  \hamiltonian =  - \gamma^2 \sum_{\langle i,j \rangle} \log \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac1\gamma \left( \sigma_i h_j + \sigma_j h_i \right) \right) \right] = \sum_{\langle i,j \rangle} V_{ij} $$ {#eq:hamiltonian1}
 
-From the rules of entropic inference, we can study this society using the following canonical (Boltzmann) probability distribution:
+\newpage
+
+We can study this society using entropic inference, which lead us to the following canonical (Boltzmann) probability distribution:
 
 <!-- We also suppose that the mean value of this quantity $\left\langle \hamiltonian \right\rangle$ is conserved throughout the configuration evolution of the society, that is, $\hamiltonian$ remains close to some fixed value $E$ of energy but has the possibility of oscillating to higher/lower energy values depending on some "temperature" parameter (which can also be seen as a "social pressure"). In a Maximum Entropy framework, we can say that the probability distribution describing this society with this information paradigm is given by the canonical (Boltzmann) distribution: -->
 
@@ -36,7 +38,11 @@ The desired result can only be obtained for any variation $\delta P_j$ if the te
 
 $$ P_j(\student_j) = \frac{1}{Z_j} \exp \left( - \beta \sum_{i \in \partial j} \int \mathrm{d}\student_i P_i V_{ij} \right)$$ {#eq:meanfieldexact}
 
-where $Z_j$ is the new partition function/normalization of the model. Inserting back $V_{ij}$:
+where $Z_j$ is the new partition function/normalization of the model.
+
+\newpage
+
+Inserting back $V_{ij}$ ([@eq:hamiltonian1]):
 
 $$ P_j(\student_j) = \frac{1}{Z_j} \exp \left( \beta \gamma^2 \sum_{i \in \partial j} \int \mathrm{d}\student_i P_i \log \left[ \varepsilon + \left(1 - 2\varepsilon\right) \mathlarger{\Phi} \left( \frac{\sigma_i h_j + \sigma_j h_i}{\gamma} \right) \right] \right) $$ {#eq:meanfieldexact2}
 
@@ -61,7 +67,7 @@ And our final mean field probability distribution becomes:
 
 $$ P_{\mathrm{MF}}(\student) = \frac{1}{Z} \left[ \varepsilon + \left(1 - 2\varepsilon\right) \Phi \left( \frac{r}\gamma h(\student) + \frac{m}{\gamma} \sign h(\student) \right) \right]^{\beta \nu \gamma^2} $$ {#eq:meanfieldfinal}
 
-This result does not mean that all the agents are identical, but that they draw their moral vector from the same probability distribution (being held constant all the other parameters: $\beta, \varepsilon, \gamma$).
+This result does not mean that all the agents are identical, but that they draw their moral vector from the same probability distribution (being held constant parameters $\beta, \varepsilon, \gamma$).
 
 We can also rewrite our order parameters
 
@@ -88,3 +94,5 @@ where we implicitly defined the function $B(\theta) \equiv B(\theta| \varepsilon
 $$ B(\theta) = \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r\cos\theta + \mathrm{sign} \left( \cos\theta \right)  m \right) \right) \right]^{\beta \nu \gamma^2} $$ {#eq:bfunction}
 
 We now proceed to the numerical determination of values of $(m, r, \zeta)$ for each set of parameters $(\varepsilon, \gamma, \beta\nu)$ by integrating [@eq:mfeqs]. We present this in [@sec:results:model1].
+
+\newpage

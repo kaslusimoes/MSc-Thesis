@@ -78,7 +78,11 @@ The information available to perform the inference comes in the form of data $y 
 
 We also hypothesize to have background information about a multiplicative noise $\varepsilon$ with value between $0$ and $1$.
 
-The likelihood distribution of the model, which is the distribution that describes the data generation process, is $P(\xi, \sigma| \prof, \varepsilon) = P(\xi| \prof, \varepsilon) P(\sigma| \xi, \prof, \varepsilon)$. For simplicity we consider $P(\xi) = \delta\left( \xi - \zeitgeist \right)$, an issue that is always being discussed in the society. As mentioned before, the model for $P(\sigma | \xi, \prof, \varepsilon)$ is that of binary linear classifier:
+The likelihood distribution of the model, which is the distribution that describes the data generation process, is $P(\xi, \sigma| \prof, \varepsilon) = P(\xi| \prof, \varepsilon) P(\sigma| \xi, \prof, \varepsilon)$. For simplicity we consider $P(\xi) = \delta\left( \xi - \zeitgeist \right)$, an issue that is always being discussed in the society.
+
+\newpage
+
+As mentioned before, the model for $P(\sigma | \xi, \prof, \varepsilon)$ is that of binary linear classifier subject to multiplicative noise:
 
 \begin{align}
     P(\sigma| \zeitgeist, \prof, \varepsilon) &= \varepsilon \Theta\left( - \sigma \prof \cdot \zeitgeist \right) + (1 - \varepsilon) \Theta\left( \sigma \prof \cdot \zeitgeist \right) \nonumber \\
@@ -114,6 +118,8 @@ Now we can come back to [@eq:gradientdescent] and find
 
 $$ J^{i}_{n+1} = J^{i}_n - \frac{\partial \log Z_{n+1}}{\partial \lambda^i_n} = J^{i}_n - C^{li}_n \frac{\partial \log Z_{n+1}}{\partial J^{l}_n}$$ {#eq:upstudenti}
 
+\newpage
+
 Noticing that $\mathbf{C}$ is symmetric because it is a covariance matrix, we can write in vectorial form:
 
 $$ \mathbf{J}_{n+1} = \mathbf{J}_n + \mathbf{C}_n \nabla_{\mathbf{J}_n} \log Z_{n+1}$$ {#eq:upstudent}
@@ -147,8 +153,11 @@ Remembering the likelihood distribution from [@eq:likelihoodperceptron], we now 
 \begin{align}
     \left\langle \Theta( \sigma \xi \cdot \prof) \right\rangle_{Q_n(\prof)} &= \int \mathrm{d}\prof\ \Theta\left( \sigma \xi \cdot \prof\right) \frac{1}{\left| 2\pi \mathbf{C_n}\right|^{\frac12}} \exp \left[ -\frac12 (\prof- \mathbf{J}_n) \cdot \mathbf{C}_n^{-1} (\prof- \mathbf{J}_n) \right] \\
     = \int \mathrm{d}b\ \Theta(\sigma b)\ &\int \frac{\mathrm{d}\prof}{\left| 2\pi \mathbf{C_n}\right|^{\frac12}}\ \exp \left[ -\frac12 (\prof- \mathbf{J}_n) \cdot \mathbf{C}_n^{-1} (\prof- \mathbf{J}_n) \right] \delta \left( b - \frac{1}{\sqrt{K}} \xi \cdot \prof\right) \\
-    = \int \mathrm{d}b\ \Theta(\sigma b)\ &\int \frac{\mathrm{d}\hat{b}}{2\pi} e^{i\hat{b}b} \int \frac{\mathrm{d}\prof}{\left| 2\pi \mathbf{C_n}\right|^{\frac12}} \exp \left[ -\frac12 (\prof- \mathbf{J}_n) \cdot \mathbf{C}_n^{-1} (\prof- \mathbf{J}_n) - \frac{i\hat{b}}{\sqrt{K}} \xi \cdot \prof\right] \\
-    = \int \mathrm{d}b\ \Theta(\sigma b)\ &\int \frac{\mathrm{d}\hat{b}}{2\pi} e^{ib\hat{b}}\ \exp \left[ -\frac12 \left( \frac{\hat{b}^2}{K} \xi \cdot \mathbf{C}_n \xi + \frac{2i\hat{b}}{\sqrt{K}} \xi \cdot \mathbf{J}_n \right) \right] \\
+    = \int \mathrm{d}b\ \Theta(\sigma b)\ &\int \frac{\mathrm{d}\hat{b}}{2\pi} e^{i\hat{b}b} \int \frac{\mathrm{d}\prof}{\left| 2\pi \mathbf{C_n}\right|^{\frac12}} \exp \left[ -\frac12 (\prof- \mathbf{J}_n) \cdot \mathbf{C}_n^{-1} (\prof- \mathbf{J}_n) - \frac{i\hat{b}}{\sqrt{K}} \xi \cdot \prof\right]
+\end{align}  
+
+\begin{align}
+    \left\langle \Theta( \sigma \xi \cdot \prof) \right\rangle_{Q_n(\prof)} = \int \mathrm{d}b\ \Theta(\sigma b)\ &\int \frac{\mathrm{d}\hat{b}}{2\pi} e^{ib\hat{b}}\ \exp \left[ -\frac12 \left( \frac{\hat{b}^2}{K} \xi \cdot \mathbf{C}_n \xi + \frac{2i\hat{b}}{\sqrt{K}} \xi \cdot \mathbf{J}_n \right) \right] \\
     = \int \mathrm{d}b\ \Theta(\sigma b)\ &\int \frac{\mathrm{d}\hat{b}}{2\pi} \exp \left[ -\frac12 \left( \hat{b}^2\Gamma_n^2 + 2i\hat{b} (h_n - b) \right) \right] \\
     = \int \mathrm{d}b\ \Theta(\sigma b)\ &\frac{1}{\sqrt{2\pi \Gamma_n^2}} \exp \left[ -\frac12 \left( \frac{h_n - b}{\Gamma_n} \right)^2 \right]
 \end{align}

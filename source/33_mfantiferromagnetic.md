@@ -51,12 +51,15 @@ Now, we have:
     &\hspace{30mm} \times \int \mathrm{d}h\ \exp\left( \beta z_A \sum_{i \in A} h_i + \beta z_B \sum_{j \in B} h_j \right)
 \end{align}
 
-where we defined $z_B = \delta x + (1-2\varepsilon) y$ and $z_B = \delta y + (1-2\varepsilon) x$. Now we evaluate the integral over $h$ separating into contributions from group $A$ and contributions from group $B$:
+where we defined $z_B = \delta x + (1-2\varepsilon) y$ and $z_B = \delta y + (1-2\varepsilon) x$. Now we evaluate the integral over $h$ separating into contributions from group $A$ or from group $B$:
 
 \begin{align}
     I_h &= \int \mathrm{d}h\ \exp\left( \beta z_A \sum_{i \in A} h_i + \beta z_B \sum_{j \in B} h_j \right) \\
-    &= \int \mathrm{d}h_A\ \exp\left( \beta z_A \sum_{j \in A} h_i \right)\int \mathrm{d}h_B\ \exp\left( \beta z_B \sum_{j \in B} h_j \right) \\
-    &= \left[ \int_{-1}^1 \mathrm{d}h_i\ \exp\left( \beta z_A h_i \right) \right]^{n_A} \left[ \int_{-1}^1 \mathrm{d}h_j\ \exp\left( \beta z_B h_j \right) \right]^{n_B} \\
+    &= \int \mathrm{d}h_A\ \exp\left( \beta z_A \sum_{j \in A} h_i \right)\int \mathrm{d}h_B\ \exp\left( \beta z_B \sum_{j \in B} h_j \right)
+\end{align}
+
+\begin{align}
+    I_h &= \left[ \int_{-1}^1 \mathrm{d}h_i\ \exp\left( \beta z_A h_i \right) \right]^{n_A} \left[ \int_{-1}^1 \mathrm{d}h_j\ \exp\left( \beta z_B h_j \right) \right]^{n_B} \\
     &= 2^N \left[ \frac{\sinh \beta z_A}{\beta z_A} \right]^{n_A} \left[ \frac{\sinh \beta z_B}{\beta z_B} \right]^{n_B}
 \end{align}
 
