@@ -9,28 +9,18 @@ abstract: |
 
     Agents interact in pairs by exchanging for/against opinions about issues using an algorithm constrained by available information. Making use of a maximum entropy analysis one can describe the interacting pair as a dynamics along the gradient of the logarithm of the evidence. This permits introducing energy like quantities and approximate global Hamiltonians. We test different hypothesis having in mind the limitations and advantages of each one. Knowledge of the expected value of the Hamiltonian is relevant information for the state of the society, inducing a canonical distribution by maximum entropy. The results are interpreted with the usual tools from statistical mechanics and thermodynamics.
 
-    Some of the questions we discuss are: the existence of phase transitions separating ordered and disordered phases depending on the society parameters; gauging how the issue being discussed by the agents influences the outcomes of the discussion, and how this reflects on the overall organization of the group; and an study of the possible different interactions between opposing parties and to which extent disagreement affects the cohesiveness of the society.
+    Some of the questions we discuss are: the existence of phase transitions separating ordered and disordered phases depending on the society parameters; how the issue being discussed by the agents influences the outcomes of the discussion, and how this reflects on the overall organization of the group; and the possible different interactions between opposing parties, and to which extent disagreement affects the cohesiveness of the society.
+
+    \textit{\textbf{keywords}}: Entropic dynamics, Social systems, Agent models, Statistical physics, Mean field
 
 resumo: |
     Esse projeto lida com o estudo da dinâmica de aprendizado social de agentes em uma sociedade. Para isso empregamos técnicas de mecânica estatística, aprendizado de máquina e teoria de probabilidades.
 
-    Agentes interagem em pares trocando opiniões pró/contra questões usando um algoritmo _perceptron_. Fazendo-se uso de uma análise de máxima entropia, pode-se descrever o par da interação como uma dinâmica ao longo do gradiente do logaritmo da evidência. Isso permite introduzir quantidades similares a energia e Hamiltonianos globais aproximados. Testamos diferentes hipóteses tendo em mente as fraquezas e os poderes preditivos de cada uma. Conhecimento do valor esperado do Hamiltoniano é informação relevant para o estado da sociedade, induzindo uma distributição canônica a partir de máxima entropia. Os resultados são interpretados com as ferramentas usuais de mecânica estatística e termodinâmica.
+    Agentes interagem em pares trocando opiniões pró/contra questões usando um algoritmo restringido pela informação disponível. Fazendo-se uso de uma análise de máxima entropia, pode-se descrever o par da interação como uma dinâmica ao longo do gradiente do logaritmo da evidência. Isso permite introduzir quantidades similares a energia e Hamiltonianos globais aproximados. Testamos diferentes hipóteses tendo em mente as limitações e as vantagens de cada uma. Conhecimento do valor esperado do Hamiltoniano é informação relevante para o estado da sociedade, induzindo uma distributição canônica a partir de máxima entropia. Os resultados são interpretados com as ferramentas usuais de mecânica estatística e termodinâmica.
 
-    Algumas das questões que discutimos são: determinar a existência de transições de fase separando fases ordenada e desordenada dependendo dos parâmetros da sociedade; avaliar o quanto a questão sendo discutida pelos agentes influencia os resultados da discussão, e como isso se reflete na organização do grupo como um todo; e um estudo das possíveis diferentes interações entre partidos opostos e até que ponto o desacordo afeta a coesão da sociedade.
+    Algumas das questões que discutimos são: a existência de transições de fase separando fases ordenada e desordenada dependendo dos parâmetros da sociedade; o como a questão sendo discutida pelos agentes influencia os resultados da discussão, e como isso se reflete na organização do grupo como um todo; e as possíveis diferentes interações entre partidos opostos, e até que ponto o desacordo afeta a coesão da sociedade.
 
-keywords:
-    - Entropic dynamics
-    - Social systems
-    - Agent models
-    - Mean field
-    - Statistical physics
-
-palavras-chave:
-    - Dinâmica entrópica
-    - Sistemas sociais
-    - Modelos de agente
-    - Campo médio
-    - Física Estatística
+    \textit{\textbf{palavras-chave}}: Dinâmica entrópica, Sistemas sociais, Modelos de agente, Física Estatística, Campo médio
 
 lof: true
 toc: true
