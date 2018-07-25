@@ -1,12 +1,14 @@
 
-## Model 3 {#sec:mfantiferromagnetic}
+## Model 3 {#sec:methods:model3}
 <!-- A model for a Bipartite Society -->
 
-As we will shown in [@sec:mfresults] the only values of mistrust $\varepsilon$ explored for the model described in [@sec:meanfield] were between $0$ and $0.5$. This is because for values of $\varepsilon > 0.5$ the society enters a frustrated state which cannot be resolved by aligning nor anti-aligning the opinions of the agents. A similar problem is known for the infinite-range Ising model and can be solved separating the spins into 2 groups. We proceed the same way: the groups of agents, which we call _communities_, have ferromagnetic interactions within them and antiferromagnetic ones between elements of different the communities (depicted in [@fig:antiferro2groups]).
+In our third model we investigate the existence of groups, or factions, inside the society. This is a situation not encountered naturally in the models presented before in the case of one discussed query, $\zeitgeist$. Another advantage this model has over the one in [@sec:methods:model1] is that in that one the only values of mistrust $\varepsilon$ we could explore were between $0$ and $0.5$ (as we present in [@sec:results:model1]). This is because for values of $\varepsilon > 0.5$ the society enters a frustrated state which cannot be resolved by aligning nor anti-aligning the opinions of the agents. A similar problem is known for the infinite-range Ising model and can be solved separating the spins into 2 groups.
+
+Both because of our interest in investigating groups' interactions in society and because of the drawback of the first model just mentioned, we proceed in the same way of the infinite-range Ising model: we separate the agents into 2 groups, which we call _communities_. These communities have ferromagnetic interactions within them and antiferromagnetic ones between elements of different groups (depicted in [@fig:antiferro2groups]).
 
 ![Exemplification of the interactions between and inside the 2 communities in a bipartite society](images/antiferromagnetic-2groups.png){#fig:antiferro2groups width='55%'}
 
-We borrow [@eq:hamiltonianvisujeca] from [@sec:visujecaextension], and consider two different situations to build the Hamiltonian of a bipartite society: the first one, in which the agents interacting are agreeing $h_ih_j>0$; and a second one, in which the agents are disagreeing $h_ih_j<0$. These two situations yield different contributions: $-\delta h_ih_j$ and $-h_ih_j$, respectively. The first term will be the interaction term inside a given community, whereas the second one will be the interaction term between communities.
+We borrow [@eq:hamiltonianvisujeca] from [@sec:methods:model2], and consider two different situations to build the Hamiltonian of a bipartite society: the first one, in which the agents interacting are agreeing $h_ih_j>0$; and a second one, in which the agents are disagreeing $h_ih_j<0$. These two situations yield different contributions: $-\delta h_ih_j$ and $-h_ih_j$, respectively. The first term will be the interaction term inside a given community, whereas the second one will be the interaction term between communities.
 
 After modulating the antiferromagnetic interaction with a noise level $\varepsilon$, the Hamiltonian describing our bipartite society is:
 
@@ -36,8 +38,6 @@ We can associate some quantities from [@eq:modhamiltonian] to quantities in [@eq
     &A = \frac1N \sum_{i\in A} h_i\ \qquad\ B = \frac1N \sum_{j\in B} h_j \\
     &\frac{1}{1-\rho^2} = \beta N \delta\ \qquad\ \frac{\rho}{1-\rho^2} = \beta N (1-2\varepsilon)
 \end{align}
-
-\newpage
 
 Now, we have:
 
@@ -80,3 +80,5 @@ We expect $N$ to be large, so we expand $f(x, y)$ around its maximum $(x^*, y^*)
 One can then come back to [@eq:zantiferro], continue Laplace's method extracting the term $e^{Nf(x^*, y^*)}$ from the integral and taking the logarithm to obtain:
 
 $$ \log Z_B(\beta, \delta, \varepsilon) = N f(x^*, y^*, \beta, \delta, \varepsilon) + \mathrm{const.} + \mathcal{O}(N) $$ {#eq:finallogzanti}
+
+Now, with the partition function, we have the thermodynamical model and we can understand the behaviour of the system under different regimes of the parameters.

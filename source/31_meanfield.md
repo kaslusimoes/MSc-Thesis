@@ -1,8 +1,8 @@
 
-## Model 1 {#sec:meanfield}
+## Model 1 {#sec:methods:model1}
 <!-- A Mean Field society model -->
 
-A possible strategy to study a society of the agents developed in [@sec:entropicdynamics] is to recognize relevant information that describes the model and proceed with Statistical Mechanics tools. At some point the calculation might become intractable and one must transition to approximate results and/or computational methods. In this section we develop a Mean Field approach to an specific canonical ensemble of social agents in a noisy society. The work follows closely [@Simoes2018].
+In our first model we are interested in studying the distribution of opinions in a society discussing one issue, the $\zeitgeist$. A possible strategy is to take a society of the agents developed in [@sec:entropicdynamics], recognize relevant information describing the model and proceed with Statistical Mechanics calculations. At some point the calculation might become intractable and one must transition to approximate results and/or computational methods. In this section we develop a Mean Field approach to an specific canonical ensemble of social agents in a noisy society. The work follows closely [@Simoes2018].
 
 To look for the relevant information that describes the model we first look at the Update [@eq:upstudent; @eq:upc]. For simplicity we consider that the description of our "moral space" $\mathbb{R}^K$ is already one that renders the "moral dimensions" independent from one another, and we assume that $\mathbf{C}_n =  \gamma^2_n \mathbb1$. We also assume that, for a certain timescale, the evolution of $\gamma$ is frozen. Hence, the update mechanism is going to be led only by:
 
@@ -87,4 +87,4 @@ where we implicitly defined the function $B(\theta) \equiv B(\theta| \varepsilon
 
 $$ B(\theta) = \left[ \varepsilon + \left(1 - 2\varepsilon\right)  \Phi \left( \frac1\gamma \left( r\cos\theta + \mathrm{sign} \left( \cos\theta \right)  m \right) \right) \right]^{\beta \nu \gamma^2} $$ {#eq:bfunction}
 
-We now proceed to the numerical determination of values of $(m, r, \zeta)$ for each set of parameters $(\varepsilon, \gamma, \beta\nu)$ by integrating [@eq:mfeqs]. We present this in [@sec:mfresults].
+We now proceed to the numerical determination of values of $(m, r, \zeta)$ for each set of parameters $(\varepsilon, \gamma, \beta\nu)$ by integrating [@eq:mfeqs]. We present this in [@sec:results:model1].

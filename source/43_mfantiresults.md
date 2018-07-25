@@ -1,8 +1,8 @@
 
-## Model 3 {#sec:mfantiresults}
+## Model 3 {#sec:results:model3}
 <!-- Bipartite society: cohesiveness and antagonism -->
 
-In [@sec:mfantiferromagnetic] we presented a model for a bipartite society that presented a balance between in-group ferromagnetism and inter-group antiferromagnetism. This lead us to [@eq:fmaxima], a set of consistent relations we needed to solve to find the stable solutions $(x^*, y^*)$ corresponding to the maxima of $f(x, y)$.
+In [@sec:methods:model3] we presented a model for a bipartite society that presented a balance between in-group ferromagnetism and inter-group antiferromagnetism. This lead us to [@eq:fmaxima], a set of consistent relations we needed to solve to find the stable solutions $(x^*, y^*)$ corresponding to the maxima of $f(x, y)$.
 
 Before solving the system it is useful to have a proper interpretation to $x^*$ and $y^*$. To do that we can insert source terms $H_A \sum_{i \in A} h_i + H_B \sum_{j \in B} h_j$ in the Hamiltonian ([@eq:hamiltonian2]), which shifts the free energy with $\beta z_{A,B} \to \beta\left( z_{A,B} + H_{A,B} \right)$. Usual statistical mechanics calculations lead us into:
 
@@ -31,8 +31,6 @@ From [@fig:phasediagram], beyond the expected behavior of an all-agreeing phase 
 ![Free energy $f(x, y)$ landscape when $\beta = 10.0, \delta = 0.25, \varepsilon = 0.6$ and $\rho_A = \rho_B = 0.5$. This is a region in which there is no consensus among the communities](images/freeenergy-beta10-delta25-eps6-rho05.png){#fig:freeenergydisorder width='70%'}
 
 We also present the other $2$ behaviours, expected from previous models: consensus in [@fig:freeenergyconsensus] and polarization in [@fig:freeenergypolarization]. Note that, depending on the initial choice of alignment of the communities $(x_0, y_0)$, the society (or, the iterative algorithm) converges to different and opposing states. This does not mean much about the dynamics of the model, it is only a statement on which group would align in favor of against of a given opinion (e.g. in one hypothetical situation community $A$ could be in favor of a free basic income policy and community $B$ against it, whereas under another initial condition the communities would change roles).
-
-\newpage
 
 ![Free energy $f(x, y)$ landscape when $\beta = 10.0, \delta = 0.8, \varepsilon = 0.2$ and $\rho_A = \rho_B = 0.5$. This is a region in which there is overall consensus among the society](images/freeenergy-beta10-delta8-eps2-rho05.png){#fig:freeenergyconsensus width='70%'}
 

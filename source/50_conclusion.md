@@ -9,7 +9,9 @@ To pursue that goal we presented 3 different models derived from the same maximu
 
 In the first model we tried to be as faithful as possible to the results obtained from the maximum entropy agents model. We completed a mean field approximation, but not without some compromises to the model. We found a phase transition between an ordered phase and a disordered one, representing two different states the society of agents could be.
 
-The phases can be characterized by the product $\gamma \times \beta\nu$, with higher $\gamma$ and higher $\beta\nu$ being the consensus society (the one with non-zero magnetization). We explain more the parameters in light of the results obtained:
+The phases can be characterized by the product $\gamma \times \beta\nu$, with higher $\gamma$ and higher $\beta\nu$ being the consensus society (the one with non-zero magnetization).
+
+Now, in light of the results obtained, we can better interpret the parameters:
 
 - $\gamma$ being the variance of the inference being made ($\mathbf{C}_n =  \gamma^2_n \mathbb1$ in [@eq:multigaussian]), it represents the uncertainty when reasoning incomplete information about the classifier vector $\prof$. Higher $\gamma$ is related to an agent more open to learning and adapting to the opinion of their peers. We saw that in [@fig:modfunc];
 - $\beta\nu$ came with the statistical mechanical model and the mean field approximation: it is a condensate of $\beta$, the pressure that constraints the learning to an specific behaviour, and $\nu$, the effective number of peers each agent has. Higher $\beta\nu$ thus represent a greater peer pressure forcing the agent to adapt to the overall environment, therefore it is also a polarizing force.
@@ -61,7 +63,7 @@ For example, we have reasons to believe that it is possible to find regimes of t
 
 As for new initiatives, we name a few perspectives for the future:
 
-- There has been some research in our group (possibly [@Alves2018]) to understand situations in which the society discusses more than one question. This could lead into richer structures of organization in the society;
+- There has been some research in our group [possibly @Alves2018] to understand situations in which the society discusses more than one question. This could lead into richer structures of organization in the society;
 
 - Another possibility that was investigated by the student but so far found inconclusive results is the comparison of the peer pressure parameter in the first model, $\beta$, with the _tightness_ measure presented in [@Gelfand2011]. There has been some work on this by [@Cesar2014], but we have reasons to believe that our new concept of extremists may help have further insights on this topic;
 

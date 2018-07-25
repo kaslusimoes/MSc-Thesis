@@ -76,7 +76,7 @@ To continue with a model for an agent, we must first state the learning scenario
 
 The information available to perform the inference comes in the form of data $y = (\xi, \sigma)$ with $\xi \in \mathbb{R}^K$ and $\sigma \in \{\pm 1\}$. This represents a situation in which an agent is trying to learn how to classify an issue $\xi$ with an opinion $\sigma$. This classification task induces a separation of $\mathbb{R}^K$ by a hyperplane and is consistent with the idea that agents are evaluating whether they agree ($+1$) or disagree ($-1$) with the issue $\xi$.
 
-We also hypothesize to have background information about a multiplicative noise $\varepsilon$ with value between $0$ and $1.
+We also hypothesize to have background information about a multiplicative noise $\varepsilon$ with value between $0$ and $1$.
 
 The likelihood distribution of the model, which is the distribution that describes the data generation process, is $P(\xi, \sigma| \prof, \varepsilon) = P(\xi| \prof, \varepsilon) P(\sigma| \xi, \prof, \varepsilon)$. For simplicity we consider $P(\xi) = \delta\left( \xi - \zeitgeist \right)$, an issue that is always being discussed in the society. As mentioned before, the model for $P(\sigma | \xi, \prof, \varepsilon)$ is that of binary linear classifier:
 
@@ -165,8 +165,7 @@ Finally, taking the logarithm (and discarding the constant part $P(\xi)$ which w
 
 $$ -\log Z_{n+1} = -\log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\Gamma_n} \right)\right] $$ {#eq:freeenergy}
 
-__EXPLAIN WHY Z IS IMPORTANT, not an energy but some kind of generation of dynamics. A "cost function", as people say in ML__
-
+This quantity is highly important because of [@eq:gradientdescent; @eq:upstudent; @eq:upc]. It functions as a cost function, generating the dynamics of the model. Although it is not an energy, it will have the same role a Hamiltonian has in statistical mechanical systems (see [@sec:statmech]): it is relevant and sufficient information to describe the evolution of our system and which we can use with maximum entropy.
 
 [^einstein-summation]:
 

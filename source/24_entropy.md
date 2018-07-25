@@ -19,7 +19,7 @@ Once again we follow [@Caticha2017b]. We shall not present the full derivation d
 
 Note there is a philosophical statement when we say that ME is a method of _updating_ probability distributions, or beliefs. Doing that we exclude the possibility of having a situation of "information emptiness". There is always a background, a context, over which we perform our inference. This is a non-trivial but central characteristic of the method developed.
 
-### Statistical Mechanics from Maximum Entropy
+### Statistical Mechanics from Maximum Entropy {#sec:statmech}
 
 Now, with ME at our disposal, one can obtain several interesting results as corollaries to different informational settings. We show one for its relevance in physics: _Statistical Mechanics_.
 

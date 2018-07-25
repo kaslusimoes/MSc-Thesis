@@ -1,8 +1,8 @@
 
-## Model 1 {#sec:mfresults}
+## Model 1 {#sec:results:model1}
 <!-- Consensus formation in a Mean Field Society -->
 
-Although we could not find analytical solutions to [@eq:mfeqs] in [@sec:meanfield], they can be solved numerically by an iterative process as follows: let  $u=(m,r,\zeta)$ , then the set of equations is of the type $u= F(u)$, where $F$ is given by [@eq:mfeqs]. An initial value $u_0$ is chosen and we iterate the map below until reaching a fixed point.
+Although we could not find analytical solutions to [@eq:mfeqs] in [@sec:methods:model1], they can be solved numerically by an iterative process as follows: let  $u=(m,r,\zeta)$ , then the set of equations is of the type $u= F(u)$, where $F$ is given by [@eq:mfeqs]. An initial value $u_0$ is chosen and we iterate the map below until reaching a fixed point.
 
 $$ u_t = (1-\alpha) u_{t-1}+ \alpha F(u_{t-1}) $$ {#eq:updatemap}
 
@@ -20,7 +20,7 @@ It can be seen that there is a phase transition depending on the parameters $\be
 
 High $\gamma$ agents rely not only on the novelty brought by disagreement but also learn from corroborating examples. For low $\gamma$, agents learn primordially from the novelty of disagreement. Therefore high $\gamma$ agents will keep on learning even after there is agreement on an issue, resulting in a more ordered society. This same behavior was found in previous works [see e.g. @Alves2015;@Caticha2015;@Alves2016]
 
-In [@sec:comparisonmfq] we show that another parameter, $g$, has a similar role in defining the "corroboration level" of a society, and we will give another interpretation closely related to this one.
+In [@sec:results:model2] we show that another parameter, $g$, has a similar role in defining the "corroboration level" of a society, and we will give another interpretation closely related to this one.
 
 We can also change variables in our mean field probability distribution. This is useful because the inner representation $\student_i$ is not readily accessible to the experimentalist, whereas the opinion field $h$ in some applications might be:
 
@@ -37,6 +37,6 @@ The computational results we found are presented in [@fig:probh] and [@fig:mfvar
 
 ![Variance of the field $h$ with respect to selected values of $\beta\nu$ and $\gamma$](images/variance.png){#fig:mfvariance width='75%'}
 
-We note that the distribution $P(h|\varepsilon, \gamma, \beta\nu)$ ([@fig:probh]) has a discontinuity in $h=0$ due to the $\sign h$ term, which is a source of complication when trying to fit empirical data. This is one of the main reasons we discuss a different model in [@sec:visujecaextension; and @sec:comparisonmfq]
+We note that the distribution $P(h|\varepsilon, \gamma, \beta\nu)$ ([@fig:probh]) has a discontinuity in $h=0$ due to the $\sign h$ term, which is a source of complication when trying to fit empirical data. This is one of the main reasons we discuss a different model in [@sec:methods:model2; and @sec:results:model2]
 
-A last point to observe is that higher values of $\varepsilon$ shift the phase boundary in [@fig:phasem] upwards. This is because there is more noise in the interaction between agents therefore it is more difficult to establish agreement. However, for values $\varepsilon \geq 0.5$, the noise is large enough that the system yields no stable solution. This is the first idea that led us to pursue a different model in [@sec:mfantiferromagnetic; and @sec:mfantiresults] with explicit antiferromagnetic interactions.
+A last point to observe is that higher values of $\varepsilon$ shift the phase boundary in [@fig:phasem] upwards. This is because there is more noise in the interaction between agents therefore it is more difficult to establish agreement. However, for values $\varepsilon \geq 0.5$, the noise is large enough that the system yields no stable solution. This is the first idea that led us to pursue a different model in [@sec:methods:model3; and @sec:results:model3] with explicit antiferromagnetic interactions.

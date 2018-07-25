@@ -19,15 +19,21 @@ As much as is may sound absurd, it can be proved [as is in fact done in e.g. @Co
 \begin{align}
     & p(a | a ) = v_T = 1, \qquad  p( a | \bar{a}) = v_F = 0 \\
     & p(a + b|c) = p(a|c) + p(b|c) - p(ab|c) \\
-    & p(ab|c) = p(a|c)p(b|ac) = p(b|c)p(a|bc) = p(ab|c) \\
+    & p(ab|c) = p(a|c)p(b|ac) = p(b|c)p(a|bc) = p(ab|c) \label{eq:productrule}\\
     & p(a|c) + p(\bar{a}|c) = 1
 \end{align}
 
 and from these simple rules we can obtain all the other known relations for probabilities.
 
-The advantage of this method is that, instead of describing a mathematical tool first and then trying to interpret and understand its function, we start by defining the purpose of our tool and then the functioning comes naturally.
+The advantage of the method we outlined is that, instead of describing a mathematical tool first and then trying to interpret and understand its function, we start by defining the purpose of our tool and then the functioning comes naturally.
 
-__NOW TALK MORE ABOUT WHY IT IS USEFUL, SOME EXAMPLES__
+Now that we know that probabilities are the mathematical object describing plausibilities of assertions in face of incomplete knowledge, one can develop other insights in using them. For example, one can take the product rule ([@eq:productrule]) to prove the Bayes' rule:
+
+$$ p(b|ac) = \frac{p(a|bc) p(b|c)}{p(a|c)} = \frac{p(a|bc) p(b|c)}{\sum_b p(a|bc) p(b|c)} $$ {#eq:bayesrule}
+
+Let us illustrate: consider $b=$"it will rain today", the assertion we want to reason about; $c=$"I am in São Paulo in January, a city where there is on average 15 rainy days in that time of the year"[^saopaulo], our background information; and $a=$"there are dark clouds in the sky", the new experimental data to which we have access. In that informational scenario, a person using [@eq:bayesrule] most certainly would not leave the house without an umbrella. That is because the new data $a$ (provided we have background information $c$ ), produces further insight into assertion $b$, rendering $p(b|ac) > p(b|c)$.
+
+This understanding of probability theory will permeate our assumptions and developments throughout this dissertation, and we also employ Bayes' rule in [@sec:entropicdynamics; @sec:methods:model2].
 
 [^laplace]:
 
@@ -36,3 +42,7 @@ __NOW TALK MORE ABOUT WHY IT IS USEFUL, SOME EXAMPLES__
 [^refderivation]:
 
     We follow mostly the expositions by [@Caticha2017b], built on work by [@Cox2001; @Jaynes2003; @Caticha2012 and several others]
+
+[^saopaulo]:
+
+    Taken from <https://en.wikipedia.org/wiki/S%C3%A3o_paulo#Climate>
