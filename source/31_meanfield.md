@@ -2,7 +2,7 @@
 ## Model 1 {#sec:meanfield}
 <!-- A Mean Field society model -->
 
-A possible strategy to study a society of the agents developed in [@sec:bayesgaussperceptron] is to recognize relevant information that describes the model and proceed with Statistical Mechanics tools. At some point the calculation might become intractable and one must transition to approximate results and/or computational methods. In this section we develop a Mean Field approach to an specific canonical ensemble of social agents in a noisy society. The work follows closely [@Simoes2018].
+A possible strategy to study a society of the agents developed in [@sec:entropicdynamics] is to recognize relevant information that describes the model and proceed with Statistical Mechanics tools. At some point the calculation might become intractable and one must transition to approximate results and/or computational methods. In this section we develop a Mean Field approach to an specific canonical ensemble of social agents in a noisy society. The work follows closely [@Simoes2018].
 
 To look for the relevant information that describes the model we first look at the Update [@eq:upstudent; @eq:upc]. For simplicity we consider that the description of our "moral space" $\mathbb{R}^K$ is already one that renders the "moral dimensions" independent from one another, and we assume that $\mathbf{C}_n =  \gamma^2_n \mathbb1$. We also assume that, for a certain timescale, the evolution of $\gamma$ is frozen. Hence, the update mechanism is going to be led only by:
 

@@ -247,9 +247,13 @@ $else$
 \date{\today}
 $endif$
 \begin{document}
+\pagenumbering{gobble}
 $if(title)$
 % \maketitle
 \input{style/folha-rosto.tex}
+$if(pagestyle)$
+\pagestyle{$pagestyle$}
+$endif$
 $if(acknowledgements)$
 \section*{Acknowledgements}
 $acknowledgements$
@@ -270,11 +274,11 @@ $endif$
 $for(include-before)$
 $include-before$
 $endfor$
-
+\pagenumbering{arabic}
 $if(toc)$
-\hypertarget{sec:toc}{%
+\hypertarget{sec:toc}{
+%\addcontentsline{toc}{chapter}{Table of Contents}
 \tableofcontents}
-\addcontentsline{toc}{chapter}{Table of Contents}
 $else$
 {
 $if(colorlinks)$
@@ -288,9 +292,9 @@ $if(lot)$
 \listoftables
 $endif$
 $if(lof)$
-\hypertarget{sec:lof}{%
+\hypertarget{sec:lof}{
+%\addcontentsline{toc}{chapter}{List of Figures}
 \listoffigures}
-\addcontentsline{toc}{chapter}{List of Figures}
 $endif$
 
 $body$

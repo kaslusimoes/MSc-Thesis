@@ -1,6 +1,5 @@
 meta-ignore/
-output/*.pdf
-output/*.tex
+output/
 images/svg
 library.bib
 

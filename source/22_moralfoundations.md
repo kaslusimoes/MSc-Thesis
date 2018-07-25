@@ -1,7 +1,7 @@
 
 ## Moral Foundations Theory {#sec:moralfoundations}
 
-How do people assess morality in everyday life? This has been more recently been investigated extensively by Haidt and collaborators [a nice explanation can be found in @Haidt2007]. We outline some of their conclusions below.
+How do people assess morality in everyday life? This has been more recently investigated extensively by Haidt and collaborators [a nice explanation can be found in @Haidt2007]. We outline some of their conclusions below.
 
 In [@Haidt2001] was proposed that moral judgment is not a consequence of moral reasoning, but of "quick, automatic evaluations (_intuitions_)". According to this proposal moral reasoning "is an effortful process, engaged in after a moral judgment is made, in which a person searches for arguments that will support an already-made judgment" (pg. 818)
 

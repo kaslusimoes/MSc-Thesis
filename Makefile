@@ -28,9 +28,7 @@ pdf:
 	metadata.yaml "$(INPUTDIR)"/*.md \
 	--template="$(STYLEDIR)/template.tex" \
 	-V documentclass=report \
-	-V fontsize=12pt -V papersize:a4 \
-	-V geometry:"twoside, top=4cm, bottom=3cm, inner=4cm, outer=3cm" \
-	-V linkcolor=blue \
+	-V fontsize=12pt -V papersize:a4 -V classoption:twoside \
 	--filter pandoc-crossref \
 	--filter pandoc-citeproc \
 	--pdf-engine="$(PDFLATEX)" \
@@ -42,9 +40,7 @@ tex:
 	metadata.yaml "$(INPUTDIR)"/*.md \
 	--template="$(STYLEDIR)/template.tex" \
 	-V documentclass=report \
-	-V fontsize=12pt -V papersize:a4 \
-	-V geometry:"twoside, top=4cm, bottom=3cm, inner=4cm, outer=3cm" \
-	-V linkcolor=blue \
+	-V fontsize=12pt -V papersize:a4 -V classoption:twoside \
 	--filter pandoc-crossref \
 	--filter pandoc-citeproc \
 	-s -o $(OUTPUTDIR)/thesis.tex

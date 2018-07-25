@@ -33,9 +33,9 @@ For historical accounts of the development of these ideas (and also great review
 
 We present these studies on brain's error-correcting mechanisms in this subsection because there is a connect between them and the studies of social exclusion: both have the _ACC_ in common and both deal with situations in which the human brain is dedicated to changing one's perspective and adapt.
 
-[^psychwiki]:
+<!-- [^psychwiki]:
 
-    <http://www.psychwiki.com/wiki/Deutsch,_M.,_%26_Gerard,_H._B._(1955)._A_study_of_normative_and_informational_social_influences_upon_individual_judgment._The_Journal_of_Abnormal_and_Social_Psychology,_51(3),_629-636.>
+    <http://www.psychwiki.com/wiki/Deutsch,_M.,_%26_Gerard,_H._B._(1955)._A_study_of_normative_and_informational_social_influences_upon_individual_judgment._The_Journal_of_Abnormal_and_Social_Psychology,_51(3),_629-636.> -->
 
 [^socialpain]:
 

@@ -116,11 +116,11 @@ $$ J^{i}_{n+1} = J^{i}_n - \frac{\partial \log Z_{n+1}}{\partial \lambda^i_n} = 
 
 Noticing that $\mathbf{C}$ is symmetric because it is a covariance matrix, we can write in vectorial form:
 
-$$ \mathbf{J}_{n+1} = \mathbf{J}_n + \mathbf{C}_n \cdot \nabla_{\mathbf{J}_n} \log Z_{n+1}$$ {#eq:upstudent}
+$$ \mathbf{J}_{n+1} = \mathbf{J}_n + \mathbf{C}_n \nabla_{\mathbf{J}_n} \log Z_{n+1}$$ {#eq:upstudent}
 
 Similarly, one can follow the same procedure to study the evolution of $C^{ij}_n$:
 
-$$ \mathbf{C}_{n+1} = \mathbf{C}_n + \mathbf{C}_n \cdot \left( \mathbf{H}_{\mathbf{J}_n} \log Z_{n+1} \right) \cdot \mathbf{C}_n $$ {#eq:upc}
+$$ \mathbf{C}_{n+1} = \mathbf{C}_n + \mathbf{C}_n \left( \mathbf{H}_{\mathbf{J}_n} \log Z_{n+1} \right) \mathbf{C}_n $$ {#eq:upc}
 
 where $\mathbf{H}_{\mathbf{J}_n} \log Z_{n+1}$ is the Hessian matrix of second derivatives of $\log Z_{n+1}$ with respect to the elements of $\mathbf{J}_n$.
 
@@ -165,6 +165,7 @@ Finally, taking the logarithm (and discarding the constant part $P(\xi)$ which w
 
 $$ -\log Z_{n+1} = -\log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\Gamma_n} \right)\right] $$ {#eq:freeenergy}
 
+__EXPLAIN WHY Z IS IMPORTANT, not an energy but some kind of generation of dynamics. A "cost function", as people say in ML__
 
 
 [^einstein-summation]:
