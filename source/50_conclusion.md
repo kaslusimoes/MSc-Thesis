@@ -55,18 +55,37 @@ We saw that the two obvious outcomes were present: the "_polarized_ society" and
 
     The non-trivial case is one in which there is weak intra-group and inter-group interactions. This leads into an situation which only minimizes the energy by depolarizing the society
 
+The concepts of societies in which there is overall consensus or polarized societies are easy to grasp, but the concept of a frustrated one deserves more attention. Here we start to understand some of the results mentioned in [@sec:socialinfluence] in view of the model presented:
+
+- first, [@Sherif1937] noted that norms established in a group were important for a subject to retain a certain opinion in a next trial;
+- second, [@Deutsch1955] made a distinction between "normative" and "informational" types of influence, the first kind being the most strong of the two;
+- and lastly, [@Abrams1990] emphasized the importance of categorization: perceiving to which group I and my peers belong, and adapting accordingly.
+
+All the studies mentioned highlight the importance of norms in a group to guarantee its cohesiveness and to protect the groups' opinions from another group. Without strong norms inside a group it is easy for an external, rival, group to inject concepts and beliefs and co-opt the first group. It is also a strong set of norms that gives people the sense of belonging to something, and stimulates them to work towards some collective ideal.
+
+\newpage
+
+In our third model, a frustrated society is a society in which the communities are not well established, there is no categorization, neither defining who is my friend nor who is my enemy. This is in contraposition to the results found in the works mentioned, because there there were clear categories, and groups of individuals influencing other subjects (or not, when these did not trust the peers to be from their group).
+
+We believe this behaviour in our model can be attributed to a society with a weak set of norms. This can be seen in both variables: $\delta$ defines the strength of the moral norm required to be categorized as a member of one group; and $\varepsilon$ the strength of the moral norm of _not_ being part of the _other_ group. If both variables have negligent values, then the agents perform poor categorization and we have zero magnetization throughout the society. This is a worse situation to the community than a polarized society, because now the group is vulnerable to a hypothetical third party to arrive and "attack" its weak moral or cultural identity.
+
 ## Final Remarks
 
 We present several small results that advance the understanding of the agent-models one can develop with Maximum Entropy and the framework shown here, but there are many more ideas worth pursuing using those models or even inventing others.
 
-For example, we have reasons to believe that it is possible to find regimes of the parameters in the third model that yield an analytical solution to the expression for the partition function. One could also investigate the behaviour of the system when $N_A \neq N_B$, and see whther the model agree with the effects of a majority group encountered experimentally by [@Asch1956]. Those two ideas were not pursued due to the time constraint the student was subject to.
+For example, we have reasons to believe that it is possible to find regimes of the parameters in the third model that yield an analytical solution to the expression for the partition function. One could also investigate the behaviour of the system when $N_A \neq N_B$, and see whether the model agree with the effects of a majority group encountered experimentally by [@Asch1956]. Those two ideas were not pursued due to the time constraint the student was subject to.
 
-As for new initiatives, we name a few perspectives for the future:
+As for new initiatives, we name some perspectives for the future:
 
 - There has been some research in our group [possibly @Alves2018] to understand situations in which the society discusses more than one question. This could lead into richer structures of organization in the society;
 
 - Another possibility that was investigated by the student but so far found inconclusive results is the comparison of the peer pressure parameter in the first model, $\beta$, with the _tightness_ measure presented in [@Gelfand2011]. There has been some work on this by [@Cesar2014], but we have reasons to believe that our new concept of extremists may help have further insights on this topic;
 
-- Closely related to the last point, one could also do the inference $P(g|country, \mathit{pa}, question)$ and try to generalize something about the countries, the political groups and the questions being asked. This would require looking into the data of the MFQ differently;
+- Closely related to the last point, one could also do the inference $P(g|country, \mathit{pa}, question)$ and try to generalize something about the countries, the political groups and the questions being asked;
+
+- An idea that emerges from the topic of norms and categorization discussed in the third model is the existence of _convincing strategies_ that can co-opt one group into thinking like another group. We believe this is an important problem worth investigating due to several relevant situations that can be cast into this frame, namely: external agent influencing an election, mass opinion manipulation, cultural, moral and religious colonialism, among others;
 
 - One last idea we would like to propose is a re-framing of the problem: instead of performing inference over the learning of one agent, and extrapolating it to a society of agents, one could try to think on an inference over the society as a whole. We believe this could provide alternative intuitions on the evolution of the system.
+
+We believe this line of work is only flourishing, with many possible avenues still worth exploring. The problem is complex, rich in details, and difficult, which only stimulates further research in the area. The tools presented have proved to have great descriptive power and reasonable interpretations to deal with the problem at hand.
+<!-- We hope many will find this enterprise enthusiastic and will  -->
