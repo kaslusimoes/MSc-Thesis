@@ -16,10 +16,8 @@ They should be inside the `code/` folder.
 
 ## Research
 
-Broadly speaking, my work could be described as an use of __inferential tools__ (bayesian \& entropic methods, statistical physics as well) to develop models about __how people reason on moral issues and exchange opinions with their peers in society__. Our [^group] models are influenced by [learning of perceptrons](http://iopscience.iop.org/article/10.1088/0305-4470/25/23/020/meta), [Moral Foundations Theory](http://www.moralfoundations.org/) and MaxEnt/Entropic Dynamics (a nice introduction is given by Ariel Caticha [here](https://www.albany.edu/physics/ACaticha-EIFP-book.pdf)).
+Broadly speaking, my work could be described as an use of __inferential tools__ (bayesian \& entropic methods, statistical physics as well) to develop models about __how people reason on moral issues and exchange opinions with their peers in society__. Our <sup>1</sup> models are influenced by [learning of perceptrons](http://iopscience.iop.org/article/10.1088/0305-4470/25/23/020/meta), [Moral Foundations Theory](http://www.moralfoundations.org/) and MaxEnt/Entropic Dynamics (a nice introduction is given by Ariel Caticha [here](https://www.albany.edu/physics/ACaticha-EIFP-book.pdf)).
 
 If you'd like to, feel free to send me an email.
 
-[^others]:
-
-    Me, my [adviser](https://scholar.google.com/citations?user=L8JJ5dgAAAAJ), [Felippe](https://github.com/flipgthb) and others in our group
+<sup>1</sup> Me, my [advisor](https://scholar.google.com/citations?user=L8JJ5dgAAAAJ), [Felippe](https://github.com/flipgthb) and others in our group
