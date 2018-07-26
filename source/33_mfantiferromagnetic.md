@@ -48,19 +48,19 @@ Now, we have:
     &= \int \mathrm{d}h\ \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi\sqrt{1 - \rho^2}}\ \exp\left( -\frac{ x^2 + y^2 + 2\rho x y - 2A(x+\rho y) - 2B(y+\rho x)}{2(1-\rho^2)} \right) \\
     &= \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi\sqrt{1 - \rho^2}} \exp\left( -\frac{x^2 + y^2 + 2\rho x y}{2(1-\rho^2)} \right) \int \mathrm{d}h\ \exp\left( \frac{A(x+\rho y) + B(y+\rho x)}{1-\rho^2} \right) \\
     &= \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi} \sqrt{\beta \delta N} \exp\left( -\frac{\beta N}{2} \left(\delta x^2 + \delta y^2 + 2(1-2\varepsilon) x y \right) \right) \\
-    &\hspace{30mm} \times \int \mathrm{d}h\ \exp\left( \beta z_A \sum_{i \in A} h_i + \beta z_B \sum_{j \in B} h_j \right)
+    &\hspace{30mm} \times \int \mathrm{d}h\ \exp\left( \beta \left[ \delta x + (1-2\varepsilon)y\right] \sum_{i \in A} h_i + \beta \left[ \delta y + (1-2\varepsilon)x \right] \sum_{j \in B} h_j \right)
 \end{align}
 
-where we defined $z_B = \delta x + (1-2\varepsilon) y$ and $z_B = \delta y + (1-2\varepsilon) x$. Now we evaluate the integral over $h$ separating into contributions from group $A$ or from group $B$:
+Now we evaluate the integral over $h$ separating into contributions from each group:
 
 \begin{align}
-    I_h &= \int \mathrm{d}h\ \exp\left( \beta z_A \sum_{i \in A} h_i + \beta z_B \sum_{j \in B} h_j \right) \\
-    &= \int \mathrm{d}h_A\ \exp\left( \beta z_A \sum_{j \in A} h_i \right)\int \mathrm{d}h_B\ \exp\left( \beta z_B \sum_{j \in B} h_j \right)
+    I_h &= \int \mathrm{d}h\ \exp\left( \beta \left[ \delta x + (1-2\varepsilon)y \right] \sum_{i \in A} h_i + \beta \left[ \delta y + (1-2\varepsilon)x \right] \sum_{j \in B} h_j \right) \\
+    &= \int \mathrm{d}h_A\ \exp\left( \beta \left[ \delta x + (1-2\varepsilon)y \right] \sum_{j \in A} h_i \right)\int \mathrm{d}h_B\ \exp\left( \beta \left[ \delta y + (1-2\varepsilon)x \right] \sum_{j \in B} h_j \right)
 \end{align}
 
 \begin{align}
-    I_h &= \left[ \int_{-1}^1 \mathrm{d}h_i\ \exp\left( \beta z_A h_i \right) \right]^{n_A} \left[ \int_{-1}^1 \mathrm{d}h_j\ \exp\left( \beta z_B h_j \right) \right]^{n_B} \\
-    &= 2^N \left[ \frac{\sinh \beta z_A}{\beta z_A} \right]^{n_A} \left[ \frac{\sinh \beta z_B}{\beta z_B} \right]^{n_B}
+    I_h &= \left[ \int_{-1}^1 \mathrm{d}h_i\ \exp\left( \beta \left[ \delta x + (1-2\varepsilon)y \right] h_i \right) \right]^{N_A} \left[ \int_{-1}^1 \mathrm{d}h_j\ \exp\left( \beta \left[ \delta y + (1-2\varepsilon)x \right] h_j \right) \right]^{N_B} \\
+    &= 2^N \left[ \frac{\sinh \beta \left[ \delta x + (1-2\varepsilon)y \right]}{\beta \left[ \delta x + (1-2\varepsilon)y \right]} \right]^{N_A} \left[ \frac{\sinh \beta \left[ \delta y + (1-2\varepsilon)x \right]}{\beta \left[ \delta y + (1-2\varepsilon)x \right]} \right]^{N_B}
 \end{align}
 
 Inserting this result back into $Z$, one obtains:
@@ -69,15 +69,18 @@ $$ Z_B = 2^N \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi} \sqrt{\beta\delta N}
 
 where $f$ will be associated to the free energy of the model:
 
-$$ f(x, y) = \rho_A \log \left( \frac{\sinh \beta z_A}{\beta z_A} \right) + \rho_B \log \left( \frac{\sinh \beta z_B}{\beta z_B} \right) - \frac{\beta \delta}{2} \left( x^2 + y^2 \right) - \beta (1-2\varepsilon) xy $$
-
-where $\rho_{A,B} = \frac{n_{A,B}}{N}$ is the fraction of agents in a given population, and we implicitly defined two auxiliary variables for ease of calculation: $z_A = \delta x + (1-2\varepsilon)y$ and $z_B = \delta y + (1-2\varepsilon)x$.
+\begin{align}
+    f(x, y) &= \frac{N_A}{N} \log \left( \frac{\sinh \beta \left[ \delta x + (1-2\varepsilon)y \right]}{\beta \left[ \delta x + (1-2\varepsilon)y \right]} \right) + \frac{N_B}{N} \log \left( \frac{\sinh \beta \left[ \delta y + (1-2\varepsilon)x \right]}{\beta \left[ \delta y + (1-2\varepsilon)x \right]} \right) \\
+    \nonumber &\qquad - \frac{\beta \delta}{2} \left( x^2 + y^2 \right) - \beta (1-2\varepsilon) xy
+\end{align}
 
 We expect $N$ to be large, so we expand $f(x, y)$ around its maximum $(x^*, y^*)$ to obtain a good approximation of the integral. This is known as Laplace's method. Differentiating $f$ with respect to its variables and finding the maxima, one obtains the following set of equations:
 
 \begin{align}
-	z_A^* = \rho_A \delta \left[ \coth \beta z_A^* - \frac{1}{\beta z_A^*} \right] + \rho_B (1-2\varepsilon) \left[ \coth \beta z_B^* - \frac{1}{\beta z_B^*} \right] \label{eq:fmaxima} \\
-	z_B^* = \rho_B \delta \left[ \coth \beta z_B^* - \frac{1}{\beta z_B^*} \right] + \rho_A (1-2\varepsilon) \left[ \coth \beta z_A^* - \frac{1}{\beta z_A^*} \right] \nonumber
+	\label{eq:fmaxima1} N \left[ \delta x^* + (1-2\varepsilon)y^* \right] &= N_A \delta \left[ \coth \beta \delta x^* + (1-2\varepsilon)y^* - \frac{1}{\beta \delta x^* + (1-2\varepsilon)y^*} \right] \\
+    \nonumber +& N_B (1-2\varepsilon) \left[ \coth \beta \delta y^* + (1-2\varepsilon)x^* - \frac{1}{\beta \delta y^* + (1-2\varepsilon)x^*} \right] \\
+	\label{eq:fmaxima2} N \left[ \delta y^* + (1-2\varepsilon)x^* \right] &= N_B \delta \left[ \coth \beta \delta y^* + (1-2\varepsilon)x^* - \frac{1}{\beta \delta y^* + (1-2\varepsilon)x^*} \right] \\
+    \nonumber +& N_A (1-2\varepsilon) \left[ \coth \beta \delta x^* + (1-2\varepsilon)y^* - \frac{1}{\beta \delta x^* + (1-2\varepsilon)y^*} \right] \nonumber
 \end{align}
 
 One can then come back to [@eq:zantiferro], continue Laplace's method extracting the term $e^{Nf(x^*, y^*)}$ from the integral and taking the logarithm to obtain:

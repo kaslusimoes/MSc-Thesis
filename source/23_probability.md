@@ -43,7 +43,7 @@ This understanding of probability theory will permeate our assumptions and devel
 
 [^refderivation]:
 
-    We follow mostly the expositions by [@Caticha2017b], built on work by [@Cox2001; @Jaynes2003; @Caticha2012 and several others]
+    We follow mostly the expositions by [@Caticha2012], built on work by [@Cox2001; @Jaynes2003; and several others]
 
 [^saopaulo]:
 

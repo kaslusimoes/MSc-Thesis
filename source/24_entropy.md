@@ -13,7 +13,7 @@ The method to find the proper tool to update our inferences under situations of 
 4. We want invariance of labels (change of variables);
 5. We want independent systems to be describes evenly together or separately
 
-Once again we follow [@Caticha2017b]. We shall not present the full derivation due to its length and it not being the focus of this dissertation. The result obtained is:
+We shall not present the full derivation due to its length and it not being the focus of this dissertation. One can look at [@Caticha2012] for a pedagogical exposition. The result obtained is:
 
 > In order to _update_ from a probability distribution $q(\xx)$ when new information arrives and forces a review of beliefs, one must choose the distribution $p(\xx)$ that maximizes the functional $$S[p|q] = - \int \mathrm{d}\xx\ p(\xx) \log\left( \frac{p(\xx)}{q(\xx)} \right) \label{eq:maxentropy} $$ subject to the constraints imposed by new information.
 

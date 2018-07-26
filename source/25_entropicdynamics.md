@@ -1,7 +1,7 @@
 
 ## Entropic Dynamics {#sec:entropicdynamics}
 
-The idea of entropic dynamics has started with work from Ariel Caticha [for a pedagogical review see e.g. @Caticha2012]. It was created as a tool to recover the laws of physics as rules of inference - which is still being pursued, as one can see in [@Ipek2018]. However, the idea has proven to be a powerful concept in other areas as well. For example, [@Alves2016] has described the existence of sympatric multiculturalism of societies using this rationale.
+The idea of entropic dynamics has started with work from Ariel Caticha [for a pedagogical review see e.g. @Caticha2012 as a tool to recover the laws of physics as rules of inference. However, the idea has proven to be a powerful concept in other areas as well. For example, [@Alves2016] has described the existence of sympatric multiculturalism of societies using this rationale.
 
 Here we follow [@Cesar2014; @Alves2015; @Alves2016; @Alves2018] and use Entropic Dynamics to describe a model for agents learning how to classify vectors into two groups.
 

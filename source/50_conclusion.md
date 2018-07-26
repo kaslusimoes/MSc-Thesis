@@ -59,7 +59,7 @@ We saw that the two obvious outcomes were present: the "_polarized_ society" and
 
 We present several small results that advance the understanding of the agent-models one can develop with Maximum Entropy and the framework shown here, but there are many more ideas worth pursuing using those models or even inventing others.
 
-For example, we have reasons to believe that it is possible to find regimes of the parameters in the third model that yield an analytical solution to the expression for the partition function. One could also investigate the behaviour of the system when $\rho_A \neq \rho_B$, and see whther the model agree with the effects of a majority group encountered experimentally by [@Asch1956]. Those two ideas were not pursued due to the time constraint the student was subject to.
+For example, we have reasons to believe that it is possible to find regimes of the parameters in the third model that yield an analytical solution to the expression for the partition function. One could also investigate the behaviour of the system when $N_A \neq N_B$, and see whther the model agree with the effects of a majority group encountered experimentally by [@Asch1956]. Those two ideas were not pursued due to the time constraint the student was subject to.
 
 As for new initiatives, we name a few perspectives for the future:
 
