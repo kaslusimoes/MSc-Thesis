@@ -10,7 +10,7 @@ Those are really nice references! (But it has not been easy)
 
 ## Open Science
 
-I need to post the code I used to generate each figure in the dissertation. If, for some obscure reason I forgot to do that, feel free to ask me!
+I need to post the code I used (`julia version 0.6.4`) to generate each figure in the dissertation. If, for some obscure reason I forgot to do that, feel free to ask me!
 
 They should be inside the `code/` folder.
 
