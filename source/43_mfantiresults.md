@@ -4,11 +4,7 @@
 
 In [@sec:methods:model3] we presented a model for a bipartite society that presented a balance between in-group ferromagnetism and inter-group antiferromagnetism. This lead us to [@eq:fmaxima1;@eq:fmaxima2], a set of consistent relations we needed to solve to find the stable solutions $(x^*, y^*)$ corresponding to the maxima of $f(x, y)$.
 
-\newpage
-
 We repeat the results below for completeness:
-
-\vspace{-5mm}
 
 \begin{align}
     &f(x, y) = \frac{N_A}{N} \log \left( \frac{\sinh \beta \delta x + (1-2\varepsilon)y}{\beta \delta x + (1-2\varepsilon)y} \right) + \frac{N_B}{N} \log \left( \frac{\sinh \beta \delta y + (1-2\varepsilon)x}{\beta \delta y + (1-2\varepsilon)x} \right) \\
@@ -18,13 +14,9 @@ We repeat the results below for completeness:
 
 Before solving the system it is useful to have a proper interpretation to $x^*$ and $y^*$. To do that we can insert source terms $H_A \sum_{i \in A} h_i$ and $H_B \sum_{j \in B} h_j$ in the Hamiltonian ([@eq:hamiltonian2]):
 
-\vspace{-5mm}
-
 $$  \hamiltonian =  -\frac{\delta}{N} \sum_{\langle i, j \rangle \in A} h_i h_j -\frac{\delta}{N} \sum_{\langle i, j \rangle \in B} h_i h_j - \frac{(1 - 2 \varepsilon)}{N} \sum_{\substack{i \in A \\ j \in B}} h_i h_j - H_A \sum_{i \in A} h_i - H_B \sum_{j \in B} h_j $$  {#eq:hamiltonian3}
 
 This shifts the free energy with $\beta z_{A,B} \to \beta\left( z_{A,B} + H_{A,B} \right)$, which give us the following partition function:
-
-\vspace{-3mm}
 
 \begin{align}
     \log Z_B &= N_A \log \left( \frac{\sinh \beta (\delta x^* + (1-2\varepsilon)y^* + H_A)}{\beta (\delta x^* + (1-2\varepsilon)y^* + H_A)} \right) \label{eq:finallogzanti2} \\
@@ -50,9 +42,9 @@ where we defined $m_A \equiv \frac1N \left\langle \sum_{i \in A} h_i \right\rang
 Now we can take [@eq:fmaxima1;@eq:fmaxima2]:
 
 \begin{align}
-	\nonumber N \left[ \delta x^* + (1-2\varepsilon)y^* \right] &= N_A \delta \left[ \coth \beta \delta x^* + (1-2\varepsilon)y^* - \frac{1}{\beta \delta x^* + (1-2\varepsilon)y^*} \right] \\
+	N \left[ \delta x^* + (1-2\varepsilon)y^* \right] &= N_A \delta \left[ \coth \beta \delta x^* + (1-2\varepsilon)y^* - \frac{1}{\beta \delta x^* + (1-2\varepsilon)y^*} \right] \\
     \nonumber +& N_B (1-2\varepsilon) \left[ \coth \beta \delta y^* + (1-2\varepsilon)x^* - \frac{1}{\beta \delta y^* + (1-2\varepsilon)x^*} \right] \\
-	\nonumber N \left[ \delta y^* + (1-2\varepsilon)x^* \right] &= N_B \delta \left[ \coth \beta \delta y^* + (1-2\varepsilon)x^* - \frac{1}{\beta \delta y^* + (1-2\varepsilon)x^*} \right] \\
+	N \left[ \delta y^* + (1-2\varepsilon)x^* \right] &= N_B \delta \left[ \coth \beta \delta y^* + (1-2\varepsilon)x^* - \frac{1}{\beta \delta y^* + (1-2\varepsilon)x^*} \right] \\
     \nonumber +& N_A (1-2\varepsilon) \left[ \coth \beta \delta x^* + (1-2\varepsilon)y^* - \frac{1}{\beta \delta x^* + (1-2\varepsilon)y^*} \right] \nonumber
 \end{align}
 

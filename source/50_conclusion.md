@@ -81,7 +81,7 @@ As for new initiatives, we name some perspectives for the future:
 
 - Another possibility that was investigated by the student but so far found inconclusive results is the comparison of the peer pressure parameter in the first model, $\beta$, with the _tightness_ measure presented in [@Gelfand2011]. There has been some work on this by [@Cesar2014], but we have reasons to believe that our new concept of extremists may help have further insights on this topic;
 
-- Closely related to the last point, one could also do the inference $P(g|country, \mathit{pa}, question)$ and try to generalize something about the countries, the political groups and the questions being asked;
+- Closely related to the last point, one could also do the inference $P(g|\mathrm{country}, \mathit{pa}, \mathrm{question})$ and try to generalize something about the countries, the political groups and the questions being asked. This would require a different preprocessing of the MFQ data, instead of taking the mean value of several questions at once;
 
 - An idea that emerges from the topic of norms and categorization discussed in the third model is the existence of _convincing strategies_ that can co-opt one group into thinking like another group. We believe this is an important problem worth investigating due to several relevant situations that can be cast into this frame, namely: external agent influencing an election, mass opinion manipulation, cultural, moral and religious colonialism, among others;
 
