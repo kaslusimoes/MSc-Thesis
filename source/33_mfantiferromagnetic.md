@@ -4,6 +4,8 @@
 
 In our third model we investigate the existence of groups, or factions, inside the society. This is a situation not encountered naturally in the models presented before in the case of one discussed query, $\zeitgeist$. Another advantage this model has over the one in [@sec:methods:model1] is that in that one the only values of mistrust $\varepsilon$ we could explore were between $0$ and $0.5$ (as we present in [@sec:results:model1]). This is because for values of $\varepsilon > 0.5$ the society enters a frustrated state which cannot be resolved by aligning nor anti-aligning the opinions of the agents. A similar problem is known for the infinite-range Ising model and can be solved separating the spins into 2 groups.
 
+__FALAR DO MEU MODELO SEM MOSTRAR NÃO ROLA, ALÉM DISSO ESCREVER ALGO DO ISING__
+
 Both because of our interest in investigating groups' interactions in society and because of the drawback of the first model just mentioned, we proceed in the same way of the infinite-range Ising model: we separate the agents into 2 groups, which we call _communities_. These communities have ferromagnetic interactions within them and antiferromagnetic ones between elements of different groups (depicted in [@fig:antiferro2groups]).
 
 ![Exemplification of the interactions between and inside the 2 communities in a bipartite society](images/antiferromagnetic-2groups.png){#fig:antiferro2groups width='55%'}

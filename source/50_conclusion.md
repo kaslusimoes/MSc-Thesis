@@ -20,7 +20,12 @@ Now, in light of the results obtained, we can better interpret the parameters:
 - $\gamma$ being the variance of the inference being made ($\mathbf{C}_n =  \gamma^2_n \mathbb1$ in [@eq:multigaussian]), it represents the uncertainty when reasoning incomplete information about the classifier vector $\prof$. Higher $\gamma$ is related to an agent more open to learning and adapting to the opinion of their peers. We saw that in [@fig:modfunc];
 - $\beta\nu$ came with the statistical mechanical model and the mean field approximation: it is a condensate of $\beta$, the pressure that constraints the learning to an specific behaviour, and $\nu$, the effective number of peers each agent has. Higher $\beta\nu$ thus represent a greater peer pressure forcing the agent to adapt to the overall environment, therefore it is also a polarizing force.
 
-We mentioned before that the mean field approximation came with compromises, and that could be seen in [@fig:probh]. This model clarifies much of the relevance and utility of each parameter, but some of its features render unfeasible the task of comparing model with data.
+Now we have a characterization fo the type of agent that contributes to a society in which consensus reigns: it is an agent open to learning from their trusted peers, what creates some kind of "echo chamber", because the agents emit similar opinions repeatedly and change their internal beliefs (the moral vectors $\student$) even in situations where there is already agreement between the interacting pair. This kind of agent is also one highly connected, because the greater is the number of connections it has, the stronger will be the pressure its peers exert over it.
+
+We have reasons to believe that the other kind of society described by this model, the one without magnetization, does not exist in reality (at least, not usually and not for a long period of time). This is because it is unsustainable to have a society in which all the agents do not share common values about the only thing that is discussed between them. In that scenario the agents have strictly held opinions (low $\gamma$) and are isolated from one another, not being pressured much by their peers (low $\beta\nu$). In the third model we look more deeply into this problem from a perspective of a _normless_ society.
+<!-- In a future extension [also pursued by @Alves2018], we shall include the discussion of a set of issues, instead of only one, and this we bring more attention to this topic. -->
+
+<!-- We mentioned before that the mean field approximation came with compromises, and that could be seen in [@fig:probh]. Despite that inadequacy, this model clarifies much of the relevance and utility of each parameter, and gave us intuitions into the directions to follow: simpler models which still captured the important parameters and behaviours; a closer look into the -->
 
 The second model, built upon the work by [@Vicente2014], was dedicated to establishing a comparison to data available from the MFQ. We offered a simple bayesian method to calculate the best parameter $g$ to a given dataset using Gamma distributions, and we challenged some of the assumptions presented before in the literature.
 
@@ -66,8 +71,6 @@ The concepts of societies in which there is overall consensus or polarized socie
 - and lastly, [@Abrams1990] emphasized the importance of categorization: perceiving to which group I and my peers belong, and adapting accordingly.
 
 All the studies mentioned highlight the importance of norms in a group to guarantee its cohesiveness and to protect the groups' opinions from another group. Without strong norms inside a group it is easy for an external, rival, group to inject concepts and beliefs and co-opt the first group. It is also a strong set of norms that gives people the sense of belonging to something, and stimulates them to work towards some collective ideal.
-
-\newpage
 
 In our third model, a frustrated society is a society in which the communities are not well established, there is no categorization, neither defining who is my friend nor who is my enemy. This is in contraposition to the results found in the works mentioned, because there there were clear categories, and groups of individuals influencing other subjects (or not, when these did not trust the peers to be from their group).
 

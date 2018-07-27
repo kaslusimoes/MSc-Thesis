@@ -51,4 +51,4 @@ Inserting back into the Bayes' rule, we obtain the posterior $\tilde{\beta} |\{h
 
 $$  P(\tilde{\beta}| \{h_i\}_{i \in \mathit{pa}}) = \frac{\left(\frac{1}{\theta_0} + n_{pa} - m_{pa} \right)^{k_0+2n_{pa}}}{\Gamma(k_0 + 2n_{pa})} \tilde{\beta}^{k_0 - 1 + 2 n_{pa}} e^{-\tilde{\beta}\left(\frac{1}{\theta_0} + n_{pa} - m_{pa} \right)} $$ {#eq:posteriorgamma}
 
-This posterior is used to predict $\tilde{\beta}$ to a given dataset. In the specific case of [@sec:results:model2] we use it on MFQ data for different _pa_ and extract tendencies for the behaviours of each political group.
+This posterior is used to predict $\tilde{\beta}$ to a given dataset. In the specific case of [@sec:results:model2] we use it on MFQ data for different political affiliations and extract tendencies for the behaviours of each political group.
