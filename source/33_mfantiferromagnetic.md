@@ -2,9 +2,10 @@
 ## Model 3 {#sec:methods:model3}
 <!-- A model for a Bipartite Society -->
 
-In our third model we investigate the existence of groups, or factions, inside the society. This is a situation not encountered naturally in the models presented before in the case of one discussed query, $\zeitgeist$. Another advantage this model has over the one in [@sec:methods:model1] is that in that one the only values of mistrust $\varepsilon$ we could explore were between $0$ and $0.5$ (as we present in [@sec:results:model1]). This is because for values of $\varepsilon > 0.5$ the society enters a frustrated state which cannot be resolved by aligning nor anti-aligning the opinions of the agents.
-
+__Não falar como vantagem do modelo 3 mas expor a fraqueza do modelo 1. Ai então falar que temos o mesmo problema no Ising z e apresentar a solução__
 __FALAR DO MEU MODELO SEM MOSTRAR NÃO ROLA, ALÉM DISSO ESCREVER ALGO DO ISING__
+
+In our third model we investigate the conditions for existence of groups, or factions, inside a society of agents. This is a situation not encountered naturally in the models presented before, in the case of only one discussed query, $\zeitgeist$. Another advantage this model has over the one in [@sec:methods:model1] is that in that one the only values of mistrust $\varepsilon$ we could explore were between $0$ and $0.5$ (as we present in [@sec:results:model1]). This is because for values of $\varepsilon > 0.5$ the society enters a frustrated state which cannot be resolved by aligning nor anti-aligning the opinions of the agents.
 
 A similar problem is known for the infinite-range Ising model which we present below
 
@@ -26,20 +27,20 @@ Now we define $m = \frac1N \sum_i s_i$ and substitute [@eq:gaussiantrick1d] into
 
 \begin{align}
     Z_I &= 2^N \intinf \frac{\mathrm{d}M}{\sqrt{2\pi/(\beta J N)}} \exp \left( - \frac12 \beta J N M^2 \right) \exp \left( N \log \cosh (\beta J M + \beta h ) \right) \\
-    &= c_N \intinf \mathrm{d}M e^{-N\beta J f(M)}
+    &= c_N \intinf \mathrm{d}M e^{-N\beta J f(M)} \label{eq:partitionising2}
 \end{align}
 
-where $c_N$ is the collection of the constants and $f(M) = \frac1 M^2 - \frac{1}{\beta J} \log \cosh (\beta J M + \beta h)$ can be associated to the free energy of the model.
+where $c_N$ is the collection of the constants and $f(M) = \frac12 M^2 - \frac{1}{\beta J} \log \cosh (\beta J M + \beta h)$ can be associated to the free energy of the model.
 
 We expect $N$ to be large, so we expand $f(M)$ around its maximum $M^*$ to obtain a good approximation of the integral. This is known as Laplace's method. Differentiating $f$ with respect to $M$ and finding the maximum, one obtains the known relation of Curie-Weiss:
 
-$$ M^* = \tanh [\beta (J M^* + h)] $$ {#eq:curieweiss}
+$$ M^* = \tanh [\beta J M^* + \beta h)] $$ {#eq:curieweiss}
 
-Back to the partition function, one can do the integral and obtain the thermodynamics of the mode:
+Back to the partition function in [@eq:partitionising2], one solve the integral and finally obtain the free energy of the model:
 
 $$ \frac{1}{\beta J N} \log Z_I = - f(M^*) + \mathrm{constant\ terms} $$ {#eq:thermoising}
 
-For this calculation to work properly it depends on the fact that $J>0$. If we force $J<0$ and look at [@eq:curieweiss], we can see that, when the external field $h$ is zero, the only solution is a zero magnetization system.
+One caveat of this calculation is that, for it to work properly, it depends on the fact that $J>0$. If we force $J<0$ and look at [@eq:curieweiss], we can see that, when the external field $h$ is zero, the only solution is a zero magnetization system, as we saw our the first model.
 <!-- If we considered antiferromagnetic interactions, that is $J<0$, the gaussian substitution needed to find the final solution would not be valid. Also,  -->
 
 This motivates the separation of the Ising spins into 2 groups: inside the groups the interaction is ferromagnetic and between spins of different groups it is antiferromagnetic. The hamiltonian then is:
@@ -51,12 +52,12 @@ __SHOW A SIMPLE SOLUTION HERE__
 
 <!-- and can be solved separating the spins into 2 groups. -->
 
+
 ### Bipartite Society {#sec:bipartitesociety}
 
 __CHECK IF IT IS MAKING SENSE__
 
 Both because of our interest in investigating groups' interactions in society and because of the drawback of the first model just mentioned, we proceed in the same way of the infinite-range Ising model: we separate the agents into 2 groups, which we call _communities_. These communities have ferromagnetic interactions within them and antiferromagnetic ones between elements of different groups (depicted in [@fig:antiferro2groups]).
-
 
 ![Exemplification of the interactions between and inside the 2 communities in a bipartite society](images/antiferromagnetic-2groups.png){#fig:antiferro2groups width='55%'}
 

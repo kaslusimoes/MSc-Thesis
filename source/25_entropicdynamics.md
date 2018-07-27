@@ -138,7 +138,7 @@ Noticing that $\mathbf{C}$ is symmetric because it is a covariance matrix, we ca
 
 $$ \student_{n+1} = \student_n + \mathbf{C}_n \nabla_{\student_n} \log Z_{n+1}$$ {#eq:upstudent}
 
-We could follow the same procedure to study the evolution of $C^{ij}_n$ but in that case we would need to study the derivative of $\log Z_{n+1}$ with respect to $\left( C^{-1}_n \right)_{ij}$, which can be a complicated endeavour. We defer that to study the update through the analogous procedure of matching the generators' expected values:
+We could follow the same procedure to study the evolution of $C^{ij}_n$ but in that case we would need to study the derivative of $\log Z_{n+1}$ with respect to $\left( C^{-1}_n \right)_{ij}$, which can be a complicated endeavour. We prefer to study the update through the analogous procedure of matching the generators' expected values:
 
 \vspace{-5mm}
 
@@ -161,16 +161,12 @@ From that, we obtain
 
 \begin{align}
     \nabla_{\student_n} Q_n = Q_n \mathbf{C}_n^{-1} (\prof - \student_n) \\
-    \mathbf{C}_n \nabla_{\student_n} Q_n = Q_n(\prof - \student_n)
+    \mathbf{C}_n \nabla_{\student_n} Q_n = Q_n(\prof - \student_n) \\
+    \nonumber \\
+    \profi Q_n = \studenti_n Q_ + \sum_k C_n^{ik} \del{Q_n}{\studenti[k]_n} \label{eq:auxiliary}
 \end{align}
 
-And also
-
-\vspace{-5mm}
-
-$$ \therefore\ \profi Q_n = \studenti_n Q_ + \sum_k C_n^{ik} \del{Q_n}{\studenti[k]_n} $$
-
-Now we can go back to equation (\ref{eq:upc1}) and use the result obtained to get:
+Now we can go back to [@eq:upc1] and use the result obtained in [@eq:auxiliary] to get:
 
 \vspace{-5mm}
 
@@ -181,7 +177,7 @@ Now we can go back to equation (\ref{eq:upc1}) and use the result obtained to ge
     &\qquad \left. + \sum_k C_n^{jk} \Del{\studenti[k]_n} \int \mathrm{d}\prof L_{n+1}  \left( \studenti_n Q_n + \sum_l C_n^{il} \del{Q_n}{\studenti[l]_n} \right) \right]
 \end{align}
 
-Solving the integrals, we obtain:
+Applying the derivatives and substituting the integrals as the definition for $Z$, we obtain:
 
 <!--
 Now one has to solve each of the four integrals separately to proceed:
@@ -203,7 +199,7 @@ Solving them and going back to the original equation, we have: -->
     &\qquad+ \left. C_n^{ji} Z_{n+1} + \sum_k \sum_l  C_n^{jk} C_n^{il} \Del{\studenti[k]_n} \Del{\studenti[l]_n} Z_{n+1} \right]
 \end{align}
 
-Now we cancel the $Z_{n+1}$ terms that can be canceled and incorporate the others into the derivatives, using the definition of $\log Z_n$:
+Now we cancel the $Z_{n+1}$ terms that can be canceled and incorporate the others into the derivatives, using the fact that the derivative of $\log Z_n$ is $\frac{1}{Z_n}$:
 
 \begin{align}
     \nonumber C^{ij}_{n+1} + \studenti_{n+1} \studenti[j]_{n+1} &= C_n^{ji} + \studenti_n \studenti[j]_n  - \studenti[j]_n \sum_k C_n^{ik} \del{\log Z_{n+1}}{\studenti[k]_n} - \studenti_n \sum_k C_n^{jk} \del{\log Z_{n+1}}{\studenti[k]_n} \\
@@ -240,13 +236,11 @@ Again, in vectorial form:
 
 $$ \mathbf{C}_{n+1} = \mathbf{C}_n + \mathbf{C}_n \left( \mathbf{H}_{\student_n} \log Z_{n+1} \right) \mathbf{C}_n $$ {#eq:upc}
 
-where $\mathbf{H}_{\student_n} \log Z_{n+1}$ is the Hessian matrix of second derivatives of $\log Z_{n+1}$ with respect to the elements of $\student_n$:
+where $\mathbf{H}_{\student_n} \log Z_{n+1}$ is a notation for the matrix of second derivatives of $\log Z_{n+1}$ with respect to the elements of $\student_n$
 
-$$ \left[ \mathbf{H}_{\student_n} \log Z_{n+1} \right]_{ij} = \Del{\studenti}\Del{\studenti[j]} \log Z_{n+1}  $$ {#eq:hessian}
+Finally, [@eq:upstudent; @eq:upc] describe the update for the expected values $\student_n$ and $\mathbf{C}_n$, respectively. Now we only need to calculate the $Z_{n+1}$ term to complete our entropic dynamics inference describing social agents.
 
-[@eq:upstudent; @eq:upc] are update equations for the expected values $\student_n, \mathbf{C}_n$ of the probability distribution corresponding to our inference over $\prof$ at timestep $n$.
-
-### Calculating the update
+### Calculating $Z_{n+1}$
 
 At last we can calculate the evidence of the model $Z_{n+1}$
 <!-- = \int \mathrm{d}\xx\ P(y_{n+1}|\xx) Q_n(\xx)$ -->
@@ -290,7 +284,7 @@ Finally, taking the logarithm (and discarding the constant part $P(\xi)$ which w
 
 $$ -\log Z_{n+1} = -\log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\Gamma_n} \right)\right] $$ {#eq:freeenergy}
 
-This quantity is highly important because of [@eq:gradientdescent; @eq:upstudent; @eq:upc]. It functions as a cost function, generating the dynamics of the model. Although it is not an energy, it will have the same role a Hamiltonian has in statistical mechanical systems (see [@sec:statmech]): it is relevant and sufficient information to describe the evolution of our system and which we can use with maximum entropy.
+This quantity is highly important because of [@eq:gradientdescent; @eq:upstudent; @eq:upc]. It functions as a cost function, generating the dynamics of the model. Although it is not an energy, it will have the same role a Hamiltonian has in statistical mechanical systems (see [@sec:statmech]): it is relevant and sufficient information to describe the evolution of our system.
 
 [^einstein-summation]:
 
