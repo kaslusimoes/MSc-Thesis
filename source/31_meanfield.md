@@ -6,7 +6,7 @@ In our first model we are interested in studying the distribution of opinions in
 
 To look for the relevant information that describes the model we first look at the Update [@eq:upstudent; @eq:upc]. For simplicity we consider that the description of our "moral space" $\mathbb{R}^K$ is already one that renders the "moral dimensions" independent from one another, and we assume that $\mathbf{C}_n =  \gamma^2_n \mathbb1$. We also assume that, for a certain timescale, the evolution of $\gamma$ is frozen. Hence, the update mechanism is going to be led only by:
 
-$$ \mathbf{J}_{n+1} = \mathbf{J}_n - \nabla_{\mathbf{J}_n} \gamma^2 \log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\gamma} \right)\right] $$ {#eq:upstudentfinal}
+$$ \student_{n+1} = \student_n - \nabla_{\student_n} \gamma^2 \log\left[\varepsilon + \left(1 - 2\varepsilon\right) \Phi\left( \tfrac{\sigma h_n}{\gamma} \right)\right] $$ {#eq:upstudentfinal}
 
 Under those circumstances, we assume the term inside the differentiation is relevant and sufficient information to describe the evolution of our system, and we can consider that our society of agents $\{ \studenti \}$ can be described totally by one specific Hamiltonian $\hamiltonian$:
 
