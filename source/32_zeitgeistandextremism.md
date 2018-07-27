@@ -16,7 +16,9 @@ where $\tilde{\beta}$ is a parameter aggregating $\beta$ and $\delta$. As before
 
 We should also note there is an assumption that $h>0$ made to get to [@eq:mfvisujeca]. This enforces a cohesive society, because the magnetization $\langle h \rangle$ will be positive as well. To some extent we break this hypothesis later in [@sec:methods:model3].
 
-Assuming one has access to the distribution of opinions for several people from an specific political affiliation (_pa_), we can make the hypothesis that all agents of that _pa_ have their moral opinions sampled from the same distribution $P(h|\tilde{\beta}_{\mathit{pa}})$. This is not the same as saying that all liberals are identical, or that a liberal agent cannot have the same opinion as a conservative one in a given topic; we are only saying that there must be some similarity between people that think alike, they ought to be characterized in groups, and we can describe this using a probability distribution.
+Assuming one has access to responses from several people of one same group $g$. This group is a collective of people that shares similar cultural and moral values. We make the hypothesis that all responses obtained from subjects of that were sampled from the same distribution $P(h|\tilde{\beta}_g)$. In our case, we are going to use the different political affiliations (_pa_) the respondents of the MFQ attribute to themselves. The distribution we sample from, therefore, is $P(h|\tilde{\beta}_{\mathit{pa}})$ for a given political affiliation _pa_.
+
+This choice of groups is not the same as saying that all liberals are identical, or that a liberal agent cannot have the same opinion as a conservative one in a specific topic; we are only saying that there must be some similarity between people that think alike, they ought to be characterized in groups, and we can describe this using a probability distribution.
 
 Then, one can use [@eq:mfvisujeca] and apply Bayes' theorem to it to find an estimator for $\tilde{\beta}$ given a set of data $\{h_i\}_{i \in \mathit{pa}}$:
 
@@ -51,4 +53,4 @@ Inserting back into the Bayes' rule, we obtain the posterior $\tilde{\beta} |\{h
 
 $$  P(\tilde{\beta}| \{h_i\}_{i \in \mathit{pa}}) = \frac{\left(\frac{1}{\theta_0} + n_{pa} - m_{pa} \right)^{k_0+2n_{pa}}}{\Gamma(k_0 + 2n_{pa})} \tilde{\beta}^{k_0 - 1 + 2 n_{pa}} e^{-\tilde{\beta}\left(\frac{1}{\theta_0} + n_{pa} - m_{pa} \right)} $$ {#eq:posteriorgamma}
 
-This posterior is used to predict $\tilde{\beta}$ to a given dataset. In the specific case of [@sec:results:model2] we use it on MFQ data for different political affiliations and extract tendencies for the behaviours of each political group.
+This posterior is used to predict $\tilde{\beta}$ for a given dataset. The advantage of using a posterior distribution instead of a point estimate is that we have more information about the inference being made. In a case where one finds a bimodal posterior distribution, for example, one knows that a mean value estimate would not describe well the data. In the specific case of [@sec:results:model2] we use it on MFQ data for different political affiliations, and luckily we obtained as a sharp distribution, which justifies a maximum a posteriori or a mean value estimates.
