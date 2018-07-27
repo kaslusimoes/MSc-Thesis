@@ -64,16 +64,10 @@ From [@fig:phasediagram], beyond the expected behavior of an all-agreeing phase 
 
 We also present the other $2$ behaviours, expected from previous models: consensus in [@fig:freeenergyconsensus] and polarization in [@fig:freeenergypolarization]. Note that, depending on the initial choice of alignment of the communities $(x_0, y_0)$, the society (or, the iterative algorithm) converges to different and opposing states. This does not mean much about the dynamics of the model, it is only a statement on which group would align in favor of against of a given opinion (e.g. in one hypothetical situation community $A$ could be in favor of a free basic income policy and community $B$ against it, whereas under another initial condition the communities would change roles).
 
-We also show some plots of the free energy at the transition $\varepsilon = 0.5$ in [@fig:freeenergynext1;@fig:freeenergynext2]. Since the society is at the transition, both consensus and polarization scenarios can be observed when $\delta$ is high. When $\delta$ is small the only possible state is the one without any consensus in the society.
-
-\newpage
+We also show some plots of the free energy at the transition $\varepsilon = 0.5$ in [@fig:freeenergynext1;@fig:freeenergynext2]. Since the society is at the transition, both consensus and polarization scenarios can be observed when $\delta$ is high.
 
 ![Free energy $f(x, y)$ landscape when $\beta = 10.0, \delta = 0.8, \varepsilon = 0.2$ and $N_A = N_B$ . This is a region in which there is overall consensus among the society](images/freeenergy-beta10-delta8-eps2-rho05.png){#fig:freeenergyconsensus width='70%'}
 
 ![Free energy $f(x, y)$ landscape when $\beta = 10.0, \delta = 0.8, \varepsilon = 0.8$ and $N_A = N_B$ . This is a region in which there is internal consensus on each community but they disagree with one another.](images/freeenergy-beta10-delta8-eps8-rho05.png){#fig:freeenergypolarization width='70%'}
-
-\newpage
-
-![Free energy $f(x, y)$ landscape when $\beta = 10.0, \delta = 0.3, \varepsilon = 0.5$ and $N_A = N_B$ .](images/freeenergy-beta10-delta3-eps5-rho05.png){#fig:freeenergynext1 width='70%'}
 
 ![Free energy $f(x, y)$ landscape when $\beta = 10.0, \delta = 0.8, \varepsilon = 0.5$ and $N_A = N_B$ .](images/freeenergy-beta10-delta9-eps5-rho05.png){#fig:freeenergynext2 width='70%'}

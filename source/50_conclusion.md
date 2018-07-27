@@ -7,9 +7,13 @@ To pursue that goal we presented 3 different models derived from the same maximu
 
 ## Discussion of the results
 
-In the first model we tried to be as faithful as possible to the results obtained from the maximum entropy agents model. We completed a mean field approximation, but not without some compromises to the model. We found a phase transition between an ordered phase and a disordered one, representing two different states the society of agents could be.
+In the first model we tried to be as faithful as possible to the results obtained from the maximum entropy agents model. This model takes an entropic inference model of what a learning procedure of a social agent should be and extrapolates it to a society of agents.
+
+We completed a mean field approximation, but not without some compromises to the model. We found a phase transition between an ordered phase and a disordered one, representing two different states the society of agents could be.
 
 The phases can be characterized by the product $\gamma \times \beta\nu$, with higher $\gamma$ and higher $\beta\nu$ being the consensus society (the one with non-zero magnetization).
+
+\newpage
 
 Now, in light of the results obtained, we can better interpret the parameters:
 
