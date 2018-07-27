@@ -14,11 +14,11 @@ The hamiltonian describing the infinite-range Ising model is
 
 $$ \hamiltonian_I = - \frac{J}{N} \sum_{\langle ij \rangle} s_i s_j - h \sum_i s_i $$
 
-From that, the partition function is:
+From that, the usual partition function of the canonical ensemble i:
 
 $$ Z_I = \sum_{\{s\}} \exp \left( \frac{\beta J}{N} \sum_{\langle ij \rangle} s_i s_j + \beta h \sum_i s_i \right) $$ {#eq:partitionising1}
 
-We cannot do the sum to solve $Z_I$ with the quadratic terms in the exponential. So we have to use the following expression for a gaussian distribution:
+We cannot do the sum to solve $Z_I$ with the quadratic terms ($s_i s_j$) in the exponential, so we use the following expression for a gaussian distribution:
 
 $$ \exp\left(\frac{\beta J N m^2}{2}\right) = \intinf \frac{\mathrm{d}M}{\sqrt{2\pi/(\beta J N)}} \exp \left( - \frac12 \beta J N M^2 + \beta J N m M \right) $$ {#eq:gaussiantrick1d}
 
@@ -29,17 +29,25 @@ Now we define $m = \frac1N \sum_i s_i$ and substitute [@eq:gaussiantrick1d] into
     &= c_N \intinf \mathrm{d}M e^{-N\beta J f(M)}
 \end{align}
 
-where $f(M) = \frac1 M^2 - \frac{1}{\beta J} \log \cosh (\beta M + \beta h)$ can be associated to the free energy of the model.
+where $c_N$ is the collection of the constants and $f(M) = \frac1 M^2 - \frac{1}{\beta J} \log \cosh (\beta J M + \beta h)$ can be associated to the free energy of the model.
 
 We expect $N$ to be large, so we expand $f(M)$ around its maximum $M^*$ to obtain a good approximation of the integral. This is known as Laplace's method. Differentiating $f$ with respect to $M$ and finding the maximum, one obtains the known relation of Curie-Weiss:
 
-$$ M^* = \tanh [\beta (M^* + h)] $$ {#eq:curieweiss}
+$$ M^* = \tanh [\beta (J M^* + h)] $$ {#eq:curieweiss}
 
 Back to the partition function, one can do the integral and obtain the thermodynamics of the mode:
 
 $$ \frac{1}{\beta J N} \log Z_I = - f(M^*) + \mathrm{constant\ terms} $$ {#eq:thermoising}
 
-For this calculation to work properly we depends on the fact that $J>0$. If we considered antiferromagnetic interactions, that is $J<0$, the gaussian substitution needed to find the final solution would not be valid. This motivates the separation of the Ising spins into 2 groups: inside the groups the interaction is ferromagnetic and between spins of different groups it is antiferromagnetic.
+For this calculation to work properly it depends on the fact that $J>0$. If we force $J<0$ and look at [@eq:curieweiss], we can see that, when the external field $h$ is zero, the only solution is a zero magnetization system.
+<!-- If we considered antiferromagnetic interactions, that is $J<0$, the gaussian substitution needed to find the final solution would not be valid. Also,  -->
+
+This motivates the separation of the Ising spins into 2 groups: inside the groups the interaction is ferromagnetic and between spins of different groups it is antiferromagnetic. The hamiltonian then is:
+
+$$ \hamiltonian_{AI} = - \frac{J}{N} \sum_{\langle ij \rangle \in A} s_i s_j - \frac{J}{N} \sum_{\langle ij \rangle \in B} s_i s_j + \frac{J}{N} \sum_{\substack{i \in A \\ j \in B}} s_i s_j - h \sum_{i \in A} s_i  - h \sum_{j \in B} s_j $$
+
+
+__SHOW A SIMPLE SOLUTION HERE__
 
 <!-- and can be solved separating the spins into 2 groups. -->
 
