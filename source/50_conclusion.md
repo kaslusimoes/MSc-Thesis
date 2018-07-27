@@ -67,7 +67,7 @@ We saw that the two obvious outcomes were present: the "_polarized_ society" and
 The concepts of societies in which there is overall consensus or polarized societies are easy to grasp, but the concept of a frustrated one deserves more attention. Here we start to understand some of the results mentioned in [@sec:socialinfluence] in view of the model presented:
 
 - first, [@Sherif1937] noted that norms established in a group were important for a subject to retain a certain opinion in a next trial;
-- second, [@Deutsch1955] made a distinction between "normative" and "informational" types of influence, the first kind being the most strong of the two;
+- second, [@Deutsch1955] made a distinction between "normative" and "informational" types of influence, the first kind being the stronger of the two;
 - and lastly, [@Abrams1990] emphasized the importance of categorization: perceiving to which group I and my peers belong, and adapting accordingly.
 
 All the studies mentioned highlight the importance of norms in a group to guarantee its cohesiveness and to protect the groups' opinions from another group. Without strong norms inside a group it is easy for an external, rival, group to inject concepts and beliefs and co-opt the first group. It is also a strong set of norms that gives people the sense of belonging to something, and stimulates them to work towards some collective ideal.

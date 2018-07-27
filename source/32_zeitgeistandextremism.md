@@ -2,7 +2,7 @@
 ## Model 2 {#sec:methods:model2}
 <!-- Distribution of opinions in societies -->
 
-As mentioned at the beginning of [@sec:ch:models], the model presented in [@sec:methods:model1], although presenting some interesting features, is not suitable to make comparisons with data. In this second model we look at the same problem of characterizing the distribution of opinions in a society, but now with a different approach. We proceed by following the development in [@Vicente2014], where it was introduced the following interaction Hamiltonian in a society:
+As mentioned at the beginning of [@sec:ch:models], the model presented in [@sec:methods:model1], although presenting some interesting features, is not suitable to make comparisons with data. In this second model we look at the same problem of characterizing the distribution of opinions in a society, but now with a different approach. We proceed by following the development in [@Vicente2014], where following interaction Hamiltonian in a society was introduced:
 
 $$  \hamiltonian = - \frac{1+\delta}{2} \sum_{\langle ij \rangle} h_i h_j + \frac{1-\delta}{2} \sum_{\langle ij \rangle} |h_i h_j| $$ {#eq:hamiltonianvisujeca}
 
@@ -18,7 +18,7 @@ We should also note there is an assumption that $h>0$ made to get to [@eq:mfvisu
 
 Assuming one has access to responses from several people of one same group $g$. This group is a collective of people that shares similar cultural and moral values. We make the hypothesis that all responses obtained from subjects of that were sampled from the same distribution $P(h|\tilde{\beta}_g)$. In our case, we are going to use the different political affiliations (_pa_) the respondents of the MFQ attribute to themselves. The distribution we sample from, therefore, is $P(h|\tilde{\beta}_{\mathit{pa}})$ for a given political affiliation _pa_.
 
-This choice of groups is not the same as saying that all liberals are identical, or that a liberal agent cannot have the same opinion as a conservative one in a specific topic; we are only saying that there must be some similarity between people that think alike, they ought to be characterized in groups, and we can describe this using a probability distribution.
+This choice of groups is not the same as saying that all liberals are identical, or that a liberal agent cannot have the same opinion as a conservative one on a specific topic; we are only saying that there must be some similarity between people that think alike, they ought to be characterized in groups, and we can describe this using a probability distribution.
 
 Then, one can use [@eq:mfvisujeca] and apply Bayes' theorem to it to find an estimator for $\tilde{\beta}$ given a set of data $\{h_i\}_{i \in \mathit{pa}}$:
 
@@ -31,10 +31,10 @@ $$ P(\tilde{\beta}) = \frac{\theta_0^{-k_0}}{\Gamma(k_0)} \tilde{\beta}^{k_0-1} 
 This yields a Gamma distribution as a posterior as well. First we evaluate the normalization factor $P(\{h_i\}_{pa})$:
 
 \begin{align}
-    P(\{h_i\}) &= \int_0^\infty \mathrm{d}g\ P(\{h_i\}, \tilde{\beta}) \\
-    &= \int_0^\infty \mathrm{d}g\ \frac{\theta_0^{-k_0}}{\Gamma(k_0)} \tilde{\beta}^{k_0-1} e^{-\tilde{\beta}/\theta_0} \prod_{i} \frac{\tilde{\beta}^2}{2} (1-h_i^2)\ e^{-\tilde{\beta}\left(1-h_i\right)} \\
-    &= \int_0^\infty \mathrm{d}g\ \frac{\theta_0^{-k_0}}{\Gamma(k_0)} \tilde{\beta}^{k_0-1} e^{-\tilde{\beta}/\theta_0} \frac{\tilde{\beta}^{2n}}{2^n} e^{-\tilde{\beta}\left(n - m \right)} \prod_{i} (1-h_i^2) \\
-    &= \frac{\theta_0^{-k_0}}{2^n \Gamma(k_0)} \prod_{i} (1-h_i^2) \int_0^\infty \mathrm{d}g\ \tilde{\beta}^{2n + k_0-1} e^{-\tilde{\beta}\left(n + 1/\theta_0 - m \right)}
+    P(\{h_i\}) &= \int_0^\infty \mathrm{d}\tilde{\beta}\ P(\{h_i\}, \tilde{\beta}) \\
+    &= \int_0^\infty \mathrm{d}\tilde{\beta}\ \frac{\theta_0^{-k_0}}{\Gamma(k_0)} \tilde{\beta}^{k_0-1} e^{-\tilde{\beta}/\theta_0} \prod_{i} \frac{\tilde{\beta}^2}{2} (1-h_i^2)\ e^{-\tilde{\beta}\left(1-h_i\right)} \\
+    &= \int_0^\infty \mathrm{d}\tilde{\beta}\ \frac{\theta_0^{-k_0}}{\Gamma(k_0)} \tilde{\beta}^{k_0-1} e^{-\tilde{\beta}/\theta_0} \frac{\tilde{\beta}^{2n}}{2^n} e^{-\tilde{\beta}\left(n - m \right)} \prod_{i} (1-h_i^2) \\
+    &= \frac{\theta_0^{-k_0}}{2^n \Gamma(k_0)} \prod_{i} (1-h_i^2) \int_0^\infty \mathrm{d}\tilde{\beta}\ \tilde{\beta}^{2n + k_0-1} e^{-\tilde{\beta}\left(n + 1/\theta_0 - m \right)}
 \end{align}
 
 where $n$ is the number of respondents in the group being considered and $m = \sum_i h_i$ is analogous to a magnetization of the group.
@@ -49,7 +49,7 @@ Recognize the Gamma integral $\Gamma(z) = \int_0^\infty \mathrm{d}t\ t^{z-1} e^{
 
 \newpage
 
-Inserting back into the Bayes' rule, we obtain the posterior $\tilde{\beta} |\{h_i\}_{i \in \mathit{pa}} \sim \Gamma\left(k_0+2n, \frac{\theta_0}{1+\theta_0(n-m)} \right)$. Explicitly:
+Inserting back into Bayes' rule, we obtain the posterior $\tilde{\beta} |\{h_i\}_{i \in \mathit{pa}} \sim \Gamma\left(k_0+2n, \frac{\theta_0}{1+\theta_0(n-m)} \right)$. Explicitly:
 
 $$  P(\tilde{\beta}| \{h_i\}_{i \in \mathit{pa}}) = \frac{\left(\frac{1}{\theta_0} + n_{pa} - m_{pa} \right)^{k_0+2n_{pa}}}{\Gamma(k_0 + 2n_{pa})} \tilde{\beta}^{k_0 - 1 + 2 n_{pa}} e^{-\tilde{\beta}\left(\frac{1}{\theta_0} + n_{pa} - m_{pa} \right)} $$ {#eq:posteriorgamma}
 

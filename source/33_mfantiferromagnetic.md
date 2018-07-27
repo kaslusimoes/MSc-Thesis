@@ -2,11 +2,53 @@
 ## Model 3 {#sec:methods:model3}
 <!-- A model for a Bipartite Society -->
 
-In our third model we investigate the existence of groups, or factions, inside the society. This is a situation not encountered naturally in the models presented before in the case of one discussed query, $\zeitgeist$. Another advantage this model has over the one in [@sec:methods:model1] is that in that one the only values of mistrust $\varepsilon$ we could explore were between $0$ and $0.5$ (as we present in [@sec:results:model1]). This is because for values of $\varepsilon > 0.5$ the society enters a frustrated state which cannot be resolved by aligning nor anti-aligning the opinions of the agents. A similar problem is known for the infinite-range Ising model and can be solved separating the spins into 2 groups.
+In our third model we investigate the existence of groups, or factions, inside the society. This is a situation not encountered naturally in the models presented before in the case of one discussed query, $\zeitgeist$. Another advantage this model has over the one in [@sec:methods:model1] is that in that one the only values of mistrust $\varepsilon$ we could explore were between $0$ and $0.5$ (as we present in [@sec:results:model1]). This is because for values of $\varepsilon > 0.5$ the society enters a frustrated state which cannot be resolved by aligning nor anti-aligning the opinions of the agents.
 
 __FALAR DO MEU MODELO SEM MOSTRAR NÃO ROLA, ALÉM DISSO ESCREVER ALGO DO ISING__
 
+A similar problem is known for the infinite-range Ising model which we present below
+
+### Infinite-range Ising model {#sec:isingmodel}
+
+The hamiltonian describing the infinite-range Ising model is
+
+$$ \hamiltonian_I = - \frac{J}{N} \sum_{\langle ij \rangle} s_i s_j - h \sum_i s_i $$
+
+From that, the partition function is:
+
+$$ Z_I = \sum_{\{s\}} \exp \left( \frac{\beta J}{N} \sum_{\langle ij \rangle} s_i s_j + \beta h \sum_i s_i \right) $$ {#eq:partitionising1}
+
+We cannot do the sum to solve $Z_I$ with the quadratic terms in the exponential. So we have to use the following expression for a gaussian distribution:
+
+$$ \exp\left(\frac{\beta J N m^2}{2}\right) = \intinf \frac{\mathrm{d}M}{\sqrt{2\pi/(\beta J N)}} \exp \left( - \frac12 \beta J N M^2 + \beta J N m M \right) $$ {#eq:gaussiantrick1d}
+
+Now we define $m = \frac1N \sum_i s_i$ and substitute [@eq:gaussiantrick1d] into [@eq:partitionising1] to perform the sum and obtain:
+
+\begin{align}
+    Z_I &= 2^N \intinf \frac{\mathrm{d}M}{\sqrt{2\pi/(\beta J N)}} \exp \left( - \frac12 \beta J N M^2 \right) \exp \left( N \log \cosh (\beta J M + \beta h ) \right) \\
+    &= c_N \intinf \mathrm{d}M e^{-N\beta J f(M)}
+\end{align}
+
+where $f(M) = \frac1 M^2 - \frac{1}{\beta J} \log \cosh (\beta M + \beta h)$ can be associated to the free energy of the model.
+
+We expect $N$ to be large, so we expand $f(M)$ around its maximum $M^*$ to obtain a good approximation of the integral. This is known as Laplace's method. Differentiating $f$ with respect to $M$ and finding the maximum, one obtains the known relation of Curie-Weiss:
+
+$$ M^* = \tanh [\beta (M^* + h)] $$ {#eq:curieweiss}
+
+Back to the partition function, one can do the integral and obtain the thermodynamics of the mode:
+
+$$ \frac{1}{\beta J N} \log Z_I = - f(M^*) + \mathrm{constant\ terms} $$ {#eq:thermoising}
+
+For this calculation to work properly we depends on the fact that $J>0$. If we considered antiferromagnetic interactions, that is $J<0$, the gaussian substitution needed to find the final solution would not be valid. This motivates the separation of the Ising spins into 2 groups: inside the groups the interaction is ferromagnetic and between spins of different groups it is antiferromagnetic.
+
+<!-- and can be solved separating the spins into 2 groups. -->
+
+### Bipartite Society {#sec:bipartitesociety}
+
+__CHECK IF IT IS MAKING SENSE__
+
 Both because of our interest in investigating groups' interactions in society and because of the drawback of the first model just mentioned, we proceed in the same way of the infinite-range Ising model: we separate the agents into 2 groups, which we call _communities_. These communities have ferromagnetic interactions within them and antiferromagnetic ones between elements of different groups (depicted in [@fig:antiferro2groups]).
+
 
 ![Exemplification of the interactions between and inside the 2 communities in a bipartite society](images/antiferromagnetic-2groups.png){#fig:antiferro2groups width='55%'}
 
@@ -76,7 +118,8 @@ where $f$ will be associated to the free energy of the model:
     \nonumber &\qquad - \frac{\beta \delta}{2} \left( x^2 + y^2 \right) - \beta (1-2\varepsilon) xy
 \end{align}
 
-We expect $N$ to be large, so we expand $f(x, y)$ around its maximum $(x^*, y^*)$ to obtain a good approximation of the integral. This is known as Laplace's method. Differentiating $f$ with respect to its variables and finding the maxima, one obtains the following set of equations:
+<!-- We expect $N$ to be large, so we expand $f(x, y)$ around its maximum $(x^*, y^*)$ to obtain a good approximation of the integral. This is known as Laplace's method. Differentiating $f$ with respect to its variables and finding the maxima, one obtains the following set of equations: -->
+Once again, we employ Laplace's method __EXPLAIN MORE__
 
 \begin{align}
 	\label{eq:fmaxima1} N \left[ \delta x^* + (1-2\varepsilon)y^* \right] &= N_A \delta \left[ \coth \beta \delta x^* + (1-2\varepsilon)y^* - \frac{1}{\beta \delta x^* + (1-2\varepsilon)y^*} \right] \\

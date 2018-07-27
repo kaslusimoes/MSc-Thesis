@@ -280,9 +280,11 @@ $endfor$
 $if(toc)$
 \hypertarget{sec:toc}{
 %\addcontentsline{toc}{chapter}{Table of Contents}
-\newgeometry{left=3cm,right=3cm,bottom=4cm,top=3cm}
+%\usepackage[top=3cm, bottom=2cm, inner=3cm, outer=2cm]{geometry}
+\newgeometry{left=3cm,right=3cm,bottom=3cm,top=3cm}
 \tableofcontents
-\restoregeometry}
+\restoregeometry
+}
 $else$
 {
 $if(colorlinks)$
@@ -298,9 +300,10 @@ $endif$
 $if(lof)$
 \hypertarget{sec:lof}{
 %\addcontentsline{toc}{chapter}{List of Figures}
-\newgeometry{left=3cm,right=3cm,bottom=4cm,top=3cm}
+\newgeometry{left=3cm,right=3cm,bottom=3cm,top=3cm}
 \listoffigures
-\restoregeometry}
+\restoregeometry
+}
 $endif$
 
 $body$
