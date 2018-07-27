@@ -2,7 +2,7 @@
 ## Model 2 {#sec:methods:model2}
 <!-- Distribution of opinions in societies -->
 
-As mentioned at the beginning of [@sec:ch:models], the model presented in [@sec:methods:model1], although presenting some interesting features, is not suitable to make comparisons with data. In this second model we look at the same problem of characterizing the distribution of opinions in a society, but now with a different approach. We proceed by following the development in [@Vicente2014], where following interaction Hamiltonian in a society was introduced:
+As mentioned at the beginning of [@sec:ch:models], the model presented in [@sec:methods:model1], although presenting some interesting features, is not suitable to make comparisons with data. In this second model we look at the same problem of characterizing the distribution of opinions in a society, but now with a different approach. We build upon the development presented in [@Vicente2014], where following interaction Hamiltonian in a society was introduced:
 
 $$  \hamiltonian = - \frac{1+\delta}{2} \sum_{\langle ij \rangle} h_i h_j + \frac{1-\delta}{2} \sum_{\langle ij \rangle} |h_i h_j| $$ {#eq:hamiltonianvisujeca}
 
@@ -16,7 +16,9 @@ where $\tilde{\beta}$ is a parameter aggregating $\beta$ and $\delta$. As before
 
 We should also note there is an assumption that $h>0$ made to get to [@eq:mfvisujeca]. This enforces a cohesive society, because the magnetization $\langle h \rangle$ will be positive as well. To some extent we break this hypothesis later in [@sec:methods:model3].
 
-Assuming one has access to responses from several people of one same group $g$. This group is a collective of people that shares similar cultural and moral values. We make the hypothesis that all responses obtained from subjects of that were sampled from the same distribution $P(h|\tilde{\beta}_g)$. In our case, we are going to use the different political affiliations (_pa_) the respondents of the MFQ attribute to themselves. The distribution we sample from, therefore, is $P(h|\tilde{\beta}_{\mathit{pa}})$ for a given political affiliation _pa_.
+Assuming one has access to responses from several people of one same group $g$. This group is a collective of people that shares similar cultural and moral values. We make the hypothesis that all responses obtained from subjects of that were sampled from the same distribution $P(h|\tilde{\beta}_g)$.
+
+In our case, we are going to use the different political affiliations (_pa_) the respondents of the MFQ attribute to themselves. There are also other relevant information on the dataset that we chose to ignore on this first analysis, for example information on the country of the respondent, or the age. The distribution we sample from, therefore, is $P(h|\tilde{\beta}_{\mathit{pa}})$ for a given political affiliation _pa_.
 
 This choice of groups is not the same as saying that all liberals are identical, or that a liberal agent cannot have the same opinion as a conservative one on a specific topic; we are only saying that there must be some similarity between people that think alike, they ought to be characterized in groups, and we can describe this using a probability distribution.
 

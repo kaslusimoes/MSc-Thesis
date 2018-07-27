@@ -27,8 +27,8 @@ Another information we can extract from the figures shown is that lower $\tilde{
 
 From the analysis presented above, we propose $2$ ideas for future models:
 
-1. The choice of the Zeitgeist - the question being asked to the agents - is a highly relevant characteristic of the model presented, and is not a feature we can extract from the Moral Foundations data alone. One must have additional hypothesis, which ought to be validated by other means.
-2. The model's parameter $\tilde{\beta}$, more than a characterization of the Liberal-Conservative spectrum, as was thought before, is a description of the extremism of a community. As a given political group has moral beliefs $\student_i$ more aligned with the Zeitgeist being discussed, more gathered around the issue they will become and more "extremist" (with less room for a change of opinion) they will behave;
+1. The choice of the question being discussed by the agents, the Zeitgeist, is a highly relevant characteristic of the model presented, and is not a feature we can extract from the Moral Foundations data alone. One must have additional hypothesis, which ought to be validated by other means.
+2. The model's parameter $\tilde{\beta}$, more than a characterization of the Liberal-Conservative spectrum, as was thought before, is a description of the extremism of a community. As a given political group has moral beliefs $\student_i$ more aligned with the Zeitgeist being discussed, more gathered around the issue they will become and more "extremist" (with less room for a change of opinion) they will behave; __REESCREVER YODA__
 
 
 <!-- One can also note a resemblance between this model's $\tilde{\beta}$ and last model's $\gamma$. Both describe the cohesiveness of a society/community THINK MORE ABOUT THIS -->

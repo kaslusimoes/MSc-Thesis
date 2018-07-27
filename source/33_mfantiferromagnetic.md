@@ -2,8 +2,7 @@
 ## Model 3 {#sec:methods:model3}
 <!-- A model for a Bipartite Society -->
 
-__Não falar como vantagem do modelo 3 mas expor a fraqueza do modelo 1. Ai então falar que temos o mesmo problema no Ising z e apresentar a solução__
-__FALAR DO MEU MODELO SEM MOSTRAR NÃO ROLA, ALÉM DISSO ESCREVER ALGO DO ISING__
+__Problema: falar das vantagens do modelo sem que o leitor saiba qual é o modelo. Solução: Não falar como vantagem do modelo 3 mas expor a fraqueza do modelo 1. Ai então falar que temos o mesmo problema no Ising z e apresentar a solução__
 
 In our third model we investigate the conditions for existence of groups, or factions, inside a society of agents. This is a situation not encountered naturally in the models presented before, in the case of only one discussed query, $\zeitgeist$. Another advantage this model has over the one in [@sec:methods:model1] is that in that one the only values of mistrust $\varepsilon$ we could explore were between $0$ and $0.5$ (as we present in [@sec:results:model1]). This is because for values of $\varepsilon > 0.5$ the society enters a frustrated state which cannot be resolved by aligning nor anti-aligning the opinions of the agents.
 
