@@ -7,16 +7,24 @@ In [@sec:models:model3] we presented a model for a bipartite society that presen
 We repeat the results below for completeness:
 
 \begin{align}
-    &f(x, y) = \frac{N_A}{N} \log \left( \frac{\sinh \beta \delta x + (1-2\varepsilon)y}{\beta \delta x + (1-2\varepsilon)y} \right) + \frac{N_B}{N} \log \left( \frac{\sinh \beta \delta y + (1-2\varepsilon)x}{\beta \delta y + (1-2\varepsilon)x} \right) \\
-    \nonumber &\qquad\qquad\qquad - \frac{\beta \delta}{2} \left( x^2 + y^2 \right) - \beta (1-2\varepsilon) xy \\
-    &\delta x + (1-2\varepsilon)y = \delta x + (1-2\varepsilon)y,\ \qquad \delta y + (1-2\varepsilon)x = \delta y + (1-2\varepsilon)x
+    &f(x, y) = \frac{N_A}{N} \log \left( \frac{\sinh \beta \delta x + \beta (1-2\varepsilon)y}{\beta \delta x + \beta (1-2\varepsilon)y} \right) + \frac{N_B}{N} \log \left( \frac{\sinh \beta \delta y + \beta (1-2\varepsilon)x}{\beta \delta y + \beta (1-2\varepsilon)x} \right) \\
+    \nonumber &\qquad\qquad\qquad - \frac{\beta \delta}{2} \left( x^2 + y^2 \right) - \beta (1-2\varepsilon) xy
 \end{align}
 
 Before solving the system it is useful to have a proper interpretation to $x^*$ and $y^*$. To do that we can insert source terms $H_A \sum_{i \in A} h_i$ and $H_B \sum_{j \in B} h_j$ in the Hamiltonian ([@eq:hamiltonian2]):
 
+\vspace{-5mm}
+
 $$  \hamiltonian =  -\frac{\delta}{N} \sum_{\langle i, j \rangle \in A} h_i h_j -\frac{\delta}{N} \sum_{\langle i, j \rangle \in B} h_i h_j - \frac{(1 - 2 \varepsilon)}{N} \sum_{\substack{i \in A \\ j \in B}} h_i h_j - H_A \sum_{i \in A} h_i - H_B \sum_{j \in B} h_j $$  {#eq:hamiltonian3}
 
-This shifts the free energy with $\beta z_{A,B} \to \beta\left( z_{A,B} + H_{A,B} \right)$, which give us the following partition function:
+This modifies the free energy to:
+
+\begin{align}
+    \nonumber &f(x, y) = \frac{N_A}{N} \log \left( \frac{\sinh \beta H_A + \beta \delta x + \beta (1-2\varepsilon)y}{\beta H_A + \beta \delta x + \beta (1-2\varepsilon)y} \right) + \frac{N_B}{N} \log \left( \frac{\sinh \beta H_B + \beta \delta y + \beta (1-2\varepsilon)x}{\beta H_B + \beta \delta y + \beta (1-2\varepsilon)x} \right) \\
+    &\qquad\qquad\qquad - \frac{\beta \delta}{2} \left( x^2 + y^2 \right) - \beta (1-2\varepsilon) xy
+\end{align}
+
+And give us the following partition function:
 
 \begin{align}
     \log Z_B &= N_A \log \left( \frac{\sinh \beta (\delta x^* + (1-2\varepsilon)y^* + H_A)}{\beta (\delta x^* + (1-2\varepsilon)y^* + H_A)} \right) \label{eq:finallogzanti2} \\
@@ -62,7 +70,7 @@ From [@fig:phasediagram], beyond the expected behavior of an all-agreeing phase 
 
 ![Free energy $f(x, y)$ landscape when $\beta = 10.0, \delta = 0.25, \varepsilon = 0.6$ and $N_A = N_B$ . This is a region in which there is no consensus among the communities](images/freeenergy-beta10-delta25-eps6-rho05.png){#fig:freeenergydisorder width='70%'}
 
-We also present the other $2$ behaviours, expected from previous models: consensus in [@fig:freeenergyconsensus] and polarization in [@fig:freeenergypolarization]. Note that, depending on the initial choice of alignment of the communities $(x_0, y_0)$, the society (or, the iterative algorithm) converges to different and opposing states. This does not mean much about the dynamics of the model, it is only a statement on which group would align in favor of or against a given opinion (e.g. in one hypothetical situation community $A$ could be in favor ($\sigma = +1$) of $\zeitgeist$ and community $B$ against it ($\sigma = -1$), whereas under another initial condition the communities would change roles).
+We also present the other $2$ behaviours, expected from previous models: consensus in [@fig:freeenergyconsensus] and polarization in [@fig:freeenergypolarization]. Note that, depending on the initial choice of alignment of the communities $(x_0, y_0)$, the society (or, the iterative algorithm) converges to different and opposing states. This is not a statement about the dynamics of the model, but only on which group would align in favor of or against a given opinion (e.g. in one hypothetical situation community $A$ could be in favor ($\sigma = +1$) of $\zeitgeist$ and community $B$ against it ($\sigma = -1$), whereas under another initial condition the communities would change roles).
 
 We also show in [@fig:freeenergytransition] the free energy plot at $\varepsilon = 0.5$. Considering high values for $\delta$, since the society is at the transition between consensus and polarization, both scenarios can be observed depending on the choice of the initial points $(x_0, y_0)$.
 
