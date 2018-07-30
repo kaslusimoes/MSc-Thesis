@@ -33,11 +33,11 @@ Now we define $\mu = \frac1N \sum_i s_i$ and substitute [@eq:gaussiantrick1d] in
 
 where $c_N$ is a collection of the constants and $f(M) = - \frac12 M^2 + \frac{1}{\beta J} \log \cosh (\beta J M + \beta h)$ can be associated to the free energy of the model.
 
-We expect $N$ to be large, so we expand $f(M)$ around its maximum $M^*$ to obtain a good approximation of the integral. This is known as Laplace's method. Differentiating $f$ with respect to $M$ and finding the maximum, one obtains the known relation of Curie-Weiss:
+We expect $N$ to be large, so we expand $f(M)$ around its maximum $M^*$ to obtain a good approximation of the integral. This is known as Laplace's method.
+
+Differentiating $f$ with respect to $M$ and finding the maximum, one obtains the known relation of Curie-Weiss:
 
 $$ M^* = \tanh [\beta J M^* + \beta h)] $$ {#eq:curieweiss}
-
-\newpage
 
 Back to the partition function in [@eq:partitionising2], we approximate the integral and obtain the free energy of the model, $-f(M^*)$:
 
@@ -95,8 +95,6 @@ Both because of our interest in investigating groups' interactions in society an
 
 We borrow [@eq:hamiltonianvisujeca] from [@sec:models:model2], and consider two different situations to build the Hamiltonian of a bipartite society: the first one, in which the agents interacting are agreeing $h_ih_j>0$; and a second one, in which the agents are disagreeing $h_ih_j<0$. These two situations yield different contributions: $-\delta h_ih_j$ and $-h_ih_j$, respectively. The first term will be the interaction term inside a given community, whereas the second one will be the interaction term between communities.
 
-\newpage
-
 After modulating the antiferromagnetic interaction with a noise level $\varepsilon$, the Hamiltonian describing our bipartite society will become:
 
 $$  \hamiltonian =  -\frac{\delta}{N} \sum_{\langle i, j \rangle \in A} h_i h_j -\frac{\delta}{N} \sum_{\langle i, j \rangle \in B} h_i h_j - \frac{(1 - 2 \varepsilon)}{N} \sum_{\substack{i \in A \\ j \in B}} h_i h_j $$ {#eq:hamiltonian2}
@@ -112,8 +110,6 @@ First, let us rewrite the Hamiltonian using the definitions $\mu_A = \frac1N \su
 \end{align}
 
 Once again we have squared terms in the Hamiltonian, which hinders the evaluation of $Z_{b}$. We use the gaussian identity from [@eq:gaussiantrick2d] to simplify our expression for $Z_{b}$.
-
-\newpage
 
 The terms being compared are:
 
