@@ -2,7 +2,7 @@
 ## Model 1 {#sec:results:model1}
 <!-- Consensus formation in a Mean Field Society -->
 
-Although we could not find analytical solutions to [@eq:mfeqs] in [@sec:methods:model1], they can be solved numerically by an iterative process as follows: let  $u=(m,r,\zeta)$ , then the set of equations is of the type $u= F(u)$, where $F$ is given by [@eq:mfeqs]. An initial value $u_0$ is chosen and we iterate the map below until reaching a fixed point.
+Although we could not find analytical solutions to [@eq:mfeqs] in [@sec:models:model1], they can be solved numerically by an iterative process as follows: let  $u=(m,r,\zeta)$ , then the set of equations is of the type $u= F(u)$, where $F$ is given by [@eq:mfeqs]. An initial value $u_0$ is chosen and we iterate the map below until reaching a fixed point.
 
 $$ u_t = (1-\alpha) u_{t-1}+ \alpha F(u_{t-1}) $$ {#eq:updatemap}
 
@@ -37,6 +37,6 @@ The computational results we found are presented in [@fig:probh] and [@fig:mfvar
 
 ![Variance of the field $h$ with respect to selected values of $\beta\nu$ and $\gamma$](images/variance.png){#fig:mfvariance width='75%'}
 
-We note that the distribution $P(h|\varepsilon, \gamma, \beta\nu)$ ([@fig:probh]) has a discontinuity in $h=0$ due to the $\sign h$ term, which is a source of complication when trying to fit empirical data. This is one of the main reasons we discuss a different model in [@sec:methods:model2; and @sec:results:model2]
+We note that the distribution $P(h|\varepsilon, \gamma, \beta\nu)$ ([@fig:probh]) has a discontinuity in $h=0$ due to the $\sign h$ term, which is a source of complication when trying to fit empirical data. This is one of the main reasons we discuss a different model in [@sec:models:model2; and @sec:results:model2]
 
-A last point to observe is that higher values of $\varepsilon$ shift the phase boundary in [@fig:phasem] upwards. This is because there is more noise in the interaction between agents therefore it is more difficult to establish agreement. However, for values $\varepsilon \geq 0.5$, the noise is large enough that the system yields no stable solution. This is the first idea that led us to pursue a different model with explicit antiferromagnetic interactions in [@sec:methods:model3; and @sec:results:model3].
+A last point to observe is that higher values of $\varepsilon$ shift the phase boundary in [@fig:phasem] upwards. This is because there is more noise in the interaction between agents therefore it is more difficult to establish agreement. However, for values $\varepsilon \geq 0.5$, the noise is large enough that the system yields no stable solution. This is the first idea that led us to pursue a different model with explicit antiferromagnetic interactions in [@sec:models:model3; and @sec:results:model3].

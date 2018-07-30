@@ -7,22 +7,22 @@ To pursue that goal we presented 3 different models derived from the same maximu
 
 ## Discussion of the results
 
-In the first model we tried to be as faithful as possible to the results obtained from the maximum entropy agents model. This model takes an entropic inference model of what a learning procedure of a social agent should be and extrapolates it to a society of agents.
+In the first model we tried to be as faithful as possible to the results obtained from entropic dynamics ([@sec:entropicdynamics]). This model takes an entropic inference model of what a learning procedure of a social agent should be and extrapolates it to a society of agents.
 
 We completed a mean field approximation, but not without some compromises to the model. We found a phase transition between an ordered phase and a disordered one, representing two different states the society of agents could be.
 
-The phases can be characterized by the product of $\gamma$, __EXPLAIN__, and $\beta\nu$, __EXPLAIN__. Higher $\gamma$ and higher $\beta\nu$ being the consensus society (ordered society, the one with non-zero magnetization). Lower values for both give us a society without any consensus (disordered, with zero magnetization).
+The phases can be characterized by parameters $\gamma$ and $\beta\nu$. Respectively, they are the variance of distribution $Q_n(\prof)$ - the entropic dynamics inference being made in [@sec:entropicdynamics] - and the product of the lagrange multiplier $\beta$ of the statistical mechanical model in [@sec:models:model1] with the effective number of peers $\nu$ of the mean field approximation.
 
-\newpage
+Higher $\gamma$ and higher $\beta\nu$ being the consensus society (ordered society, the one with non-zero magnetization). Lower values for both give us a society without any consensus (disordered, with zero magnetization).
 
 Now, in light of the results obtained, we can better interpret the parameters:
 
-- $\gamma$ is the variance of the inference being made ($\mathbf{C}_n =  \gamma^2_n \mathbb1$ in [@eq:multigaussian]). It represents the uncertainty when dealing with incomplete information about the classifier vector $\prof$. Higher $\gamma$ is related to an agent being more open to learning from errors and adapting to the opinion of their peers. We saw that in [@fig:modfunc];
+- $\gamma$ represents the uncertainty when dealing with incomplete information about the classifier vector $\prof$. Higher $\gamma$ is related to an agent being more open to learning from errors and adapting to the opinion of their peers. We saw that in [@fig:modfunc];
 - $\beta\nu$ came from the statistical mechanical model and the mean field approximation: it arises from $\beta$, the pressure that constraints the learning to an specific behaviour, and $\nu$, the effective number of peers each agent has. Higher $\beta\nu$ thus represents a greater peer pressure forcing the agent to adapt to the overall environment, therefore it is also a polarizing force.
 
-Now we have a characterization of the type of agent that contributes to a society in which consensus reigns: it is an agent open to learning from their trusted peers, what creates some kind of "echo chamber", because the agents emit similar opinions repeatedly and change their internal beliefs (the moral vectors $\student$) even in situations where there is already agreement between the interacting pair. This kind of agent is also one highly connected, because the greater is the number of connections it has, the stronger will be the pressure its peers exert over it.
+Now we have a characterization of the type of agent that contributes to a society in which consensus reigns: first, it is an agent open to learning from corroboration of opinions as much as with novelty. This behaviour creates a kind of "echo chamber", because the agents emit similar opinions repeatedly and change their internal beliefs (the moral vectors $\student$) even in situations where there is already agreement between the interacting pair; secondly, the typical agent in consensus societies is also one highly connected, because the strength of the pressure peers exert over each other grows with the number of connections made, $\nu$.
 
-We are convinced that the other kind of society described by this model, the one without magnetization, does not exist in reality (at least, not usually and not for a long period of time). This is because it is unsustainable to have a society in which all the agents do not share common values about the only thing that is discussed between them. In that scenario the agents have strictly held opinions (low $\gamma$) and are isolated from one another, not being pressured much by their peers (low $\beta\nu$). In the third model we look more deeply into this problem from a perspective of a _normless_ society.
+We are convinced that the other kind of society described by this model, the one without magnetization, does not exist in reality (at least, not usually and not for a long period of time). This is because it should be unsustainable to have a society in which all the agents do not share common values about the only thing that is discussed between them. In that scenario the agents have strictly held opinions (low $\gamma$) and are isolated from one another, not being pressured much by their peers (low $\beta\nu$). In the third model we look more deeply into this problem from a perspective of a _normless_ society.
 <!-- In a future extension [also pursued by @Alves2018], we shall include the discussion of a set of issues, instead of only one, and this we bring more attention to this topic. -->
 
 <!-- We mentioned before that the mean field approximation came with compromises, and that could be seen in [@fig:probh]. Despite that inadequacy, this model clarifies much of the relevance and utility of each parameter, and gave us intuitions into the directions to follow: simpler models which still captured the important parameters and behaviours; a closer look into the -->
@@ -66,7 +66,7 @@ We saw that the two obvious outcomes were present: the "_polarized_ society" and
 The concepts of societies in which there is overall consensus or polarized societies are easy to grasp, but the concept of a frustrated one deserves more attention. Here we start to understand some of the results mentioned in [@sec:socialinfluence] in view of the model presented:
 
 - first, [@Sherif1937] noted that norms established in a group were important for a subject to retain a certain opinion in a next trial;
-- second, [@Deutsch1955] made a distinction between "normative" and "informational" types of influence, the first kind being the stronger of the two;
+- secondly, [@Deutsch1955] made a distinction between "normative" and "informational" types of influence, the first kind being the stronger of the two;
 - and lastly, [@Abrams1990] emphasized the importance of categorization: perceiving to which group I and my peers belong, and adapting accordingly.
 
 All the studies mentioned highlight the importance of norms in a group to guarantee its cohesiveness and to protect the groups' opinions from another group. Without strong norms inside a group it is easy for an external, rival, group to inject concepts and beliefs and co-opt the first group. It is also a strong set of norms that gives people the sense of belonging to something, and stimulates them to work towards some collective ideal.

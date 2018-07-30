@@ -39,7 +39,7 @@ $$ p(b|ac) = \frac{p(a|bc) p(b|c)}{p(a|c)} = \frac{p(a|bc) p(b|c)}{\sum_b p(a|bc
 
 Let us illustrate: consider $b=$"it will rain today", the assertion we want to reason about; $c=$"I am in São Paulo in January, a city where there is on average 15 rainy days in that time of the year"[^saopaulo], our background information; and $a=$"there are dark clouds in the sky", the new experimental data to which we have access. In that informational scenario, a person using [@eq:bayesrule] most certainly would not leave the house without an umbrella. That is because the new data $a$ (provided we have background information $c$ ), produces further insight into assertion $b$, rendering $p(b|ac) > p(b|c)$.
 
-This understanding of probability theory will permeate our assumptions and developments throughout this dissertation, and we also employ Bayes' rule in [@sec:entropicdynamics; @sec:methods:model2].
+This understanding of probability theory will permeate our assumptions and developments throughout this dissertation, and we also employ Bayes' rule in [@sec:entropicdynamics; @sec:models:model2].
 
 [^laplace]:
 

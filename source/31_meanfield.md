@@ -1,5 +1,5 @@
 
-## Model 1 {#sec:methods:model1}
+## Model 1 {#sec:models:model1}
 <!-- A Mean Field society model -->
 
 In our first model we are interested in studying the distribution of opinions in a society discussing one issue, the $\zeitgeist$. A possible strategy is to take a society of the agents developed in [@sec:entropicdynamics], recognize relevant information describing the model and proceed with Statistical Mechanics calculations. At some point the calculation might become intractable and one must transition to approximate results and/or computational methods. In this section we develop a Mean Field approach to an specific canonical ensemble of social agents in a noisy society. The work follows closely [@Simoes2018].

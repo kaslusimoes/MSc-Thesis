@@ -1,20 +1,20 @@
 
-## Model 2 {#sec:methods:model2}
+## Model 2 {#sec:models:model2}
 <!-- Distribution of opinions in societies -->
 
-As mentioned at the beginning of [@sec:ch:models], the model presented in [@sec:methods:model1], although presenting some interesting features, is not suitable to make comparisons with data. In this second model we look at the same problem of characterizing the distribution of opinions in a society, but now with a different approach. We build upon the development presented in [@Vicente2014], where following interaction Hamiltonian in a society was introduced:
+As mentioned at the beginning of [@sec:ch:models], the model presented in [@sec:models:model1], although presenting some interesting features, is not suitable to make comparisons with data. In this second model we look at the same problem of characterizing the distribution of opinions in a society, but now with a different approach. We build upon the development presented in [@Vicente2014], where following interaction Hamiltonian in a society was introduced:
 
 $$  \hamiltonian = - \frac{1+\delta}{2} \sum_{\langle ij \rangle} h_i h_j + \frac{1-\delta}{2} \sum_{\langle ij \rangle} |h_i h_j| $$ {#eq:hamiltonianvisujeca}
 
 where $\delta$ is a "psychological cost" of agreement between agents, with $0<\delta<1$. When $\delta = 0$ the agents are called "error correctors", because they do not change their moral vectors in the case of matching opinions, and when $\delta = 1$ they are called "corroboration seekers", because they attribute the same amount of information to both cases: agreement or disagreement.
 
-On this same paper, the authors develop a mean-field approximation using [@eq:hamiltonianvisujeca] and the Maximum Entropy method, similar to the one performed in [@sec:methods:model1] to arrive at [@eq:meanfieldexact]. The information constraint on the expected value of the energy $\mean{\hamiltonian} = E$ enforces the appearance of a Lagrange multiplier $\beta$, the "social pressure" of the society. The resulting distribution is:
+On this same paper, the authors develop a mean-field approximation using [@eq:hamiltonianvisujeca] and the Maximum Entropy method, similar to the one performed in [@sec:models:model1] to arrive at [@eq:meanfieldexact]. The information constraint on the expected value of the energy $\mean{\hamiltonian} = E$ enforces the appearance of a Lagrange multiplier $\beta$, the "social pressure" of the society. The resulting distribution is:
 
 $$  P_{\mathrm{MF}}(h) = \frac{\tilde{\beta}^2}{2} (1-h^2)\ e^{-\tilde{\beta}\left(1-h\right)} $$ {#eq:mfvisujeca}
 
 where $\tilde{\beta}$ is a parameter aggregating $\beta$ and $\delta$. As before, $h$ is the dot product between the agent's inner moral representation $\student$ and a discussed query (Zeitgeist) $\zeitgeist$.
 
-We should also note there is an assumption that $h>0$ made to get to [@eq:mfvisujeca]. This enforces a cohesive society, because the magnetization $\langle h \rangle$ will be positive as well. To some extent we break this hypothesis later in [@sec:methods:model3].
+We should also note there is an assumption that $h>0$ made to get to [@eq:mfvisujeca]. This enforces a cohesive society, because the magnetization $\langle h \rangle$ will be positive as well. To some extent we break this hypothesis later in [@sec:models:model3].
 
 Assuming one has access to responses from several people of one same group $g$. This group is a collective of people that shares similar cultural and moral values. We make the hypothesis that all responses obtained from subjects of that were sampled from the same distribution $P(h|\tilde{\beta}_g)$.
 

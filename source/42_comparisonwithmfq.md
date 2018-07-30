@@ -2,7 +2,7 @@
 ## Model 2 {#sec:results:model2}
 <!-- Comparison with MFQ opinions data -->
 
-Recall that in [@sec:methods:model2] we had two important results: [@eq:mfvisujeca], which describes the model's main prediction $P(h|\tilde{\beta})$; and [@eq:posteriorgamma] which enables us to estimate the parameter $\tilde{\beta}$ given an histogram of opinions $\{h_i\}$ for a given population _pa_ and a fixed Zeitgeist $\zeitgeist$.
+Recall that in [@sec:models:model2] we had two important results: [@eq:mfvisujeca], which describes the model's main prediction $P(h|\tilde{\beta})$; and [@eq:posteriorgamma] which enables us to estimate the parameter $\tilde{\beta}$ given an histogram of opinions $\{h_i\}$ for a given population _pa_ and a fixed Zeitgeist $\zeitgeist$.
 
 The Moral Foundations Questionnaire[see @Graham2009] has answers given from subjects to $30$ different questions in a scale from $0$ to $5$ assessing the importance the attribute to a certain statement aligned with one of the moral foundations. Because of this format, we had to perform a first processing on the data. We grouped the responses a subject gave to a moral foundation into a mean value of the answers aligned with that foundation. After that we normalized the $5$-vector of an individual to $1$. From that preprocessed data from the MFQ we could then obtain values for the moral vectors $\{\student_i\}_{i=1}^N$.
 
@@ -28,7 +28,9 @@ Another information we can extract from the figures shown is that lower $\tilde{
 From the analysis presented above, we propose $2$ ideas for future models:
 
 1. The choice of the question being discussed by the agents, the Zeitgeist, is a highly relevant characteristic of the model presented, and is not a feature we can extract from the Moral Foundations data alone. One must have additional hypothesis, which ought to be validated by other means.
-2. The model's parameter $\tilde{\beta}$, more than a characterization of the Liberal-Conservative spectrum, as was thought before, is a description of the extremism of a community. As a given political group has moral beliefs $\student_i$ more aligned with the Zeitgeist being discussed, more gathered around the issue they will become and more "extremist" (with less room for a change of opinion) they will behave; __REESCREVER YODA__
+2. The model's parameter $\tilde{\beta}$, more than a characterization of the Liberal-Conservative spectrum, as was thought before, is a description of the extremism of a community. If one takes a Zeitgeist more aligned with the moral beliefs $\student_i$ of one political group than of other groups, then the distribution of opinions of the former will appear as more polarized than distributions from other political groups, and it will also have less room for a change of opinion. This behaviour, which is described by high value of $\tilde{\beta}$, constitutes what we call an "extremist" group.
+
+<!-- As a given political group has moral beliefs $\student_i$ more aligned with the Zeitgeist being discussed, they will become more gathered around the issue and behave more "extremist" (with less room for a change of opinion); -->
 
 
 <!-- One can also note a resemblance between this model's $\tilde{\beta}$ and last model's $\gamma$. Both describe the cohesiveness of a society/community THINK MORE ABOUT THIS -->

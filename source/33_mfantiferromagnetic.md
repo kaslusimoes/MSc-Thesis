@@ -1,12 +1,14 @@
 
-## Model 3 {#sec:methods:model3}
+## Model 3 {#sec:models:model3}
 <!-- A model for a Bipartite Society -->
 
-__Problema: falar das vantagens do modelo sem que o leitor saiba qual é o modelo. Solução: Não falar como vantagem do modelo 3 mas expor a fraqueza do modelo 1. Ai então falar que temos o mesmo problema no Ising z e apresentar a solução__
+Both models presented before have the disadvantage of not being able to describe situations in which there is a subdivision of factions, or communities, inside a same society. Other results from our group [@Alves2016; @Alves2018] give us reason to believe that the multiplicative noise $\varepsilon$ is an important parameter to analyze this phenomena of group formation and opposition between different groups.
 
-In our third model we investigate the conditions for existence of groups, or factions, inside a society of agents. This is a situation not encountered naturally in the models presented before, in the case of only one discussed query, $\zeitgeist$. Another advantage this model has over the one in [@sec:methods:model1] is that in that one the only values of mistrust $\varepsilon$ we could explore were between $0$ and $0.5$ (as we present in [@sec:results:model1]). This is because for values of $\varepsilon > 0.5$ the society enters a frustrated state which cannot be resolved by aligning nor anti-aligning the opinions of the agents.
+This has led us into developing a third model, which would capture the intuitions we obtained with the first two models and could treat this situation of opposing communities' interactions. Our first model, despite being a cumbersome model to work with, had the parameter $\varepsilon$ naturally imbued into it. However, this model only yields reasonable results for $\varepsilon < 0.5$. This is because for values of $\varepsilon > 0.5$ the society enters a frustrated state which cannot be resolved by aligning nor anti-aligning the opinions of the agents. Our second model, while being more amenable to calculations, did not have a parameter enabling the existence of antiferromagnetic interactions.
 
-A similar problem is known for the infinite-range Ising model which we present below
+Our solution then, is to develop a model from the second model (because of ease of analytical manipulation and of interpretation of results) while still capturing the existence of a parameter that describes opposition and antiferromagnetism, $\varepsilon$.
+
+We build upon ideas of the infinite-range Ising model with antiferromagnetic interactions, which we present below.
 
 ### Infinite-range Ising model {#sec:isingmodel}
 
@@ -14,11 +16,11 @@ The hamiltonian describing the infinite-range Ising model is
 
 $$ \hamiltonian_I = - \frac{J}{N} \sum_{\langle ij \rangle} s_i s_j - h \sum_i s_i $$
 
-From that, the usual partition function of the canonical ensemble i:
+Considering the constraint of the expected value of the energy $\langle\hamiltonian\rangle = E$, usual maximum entropy arguments lead us to a canonical distribution $P_I(\{s_i\}) = \frac{1}{Z_I} \exp(-\beta \hamiltonian)$. We proceed evaluating the partition function of the model.
 
 $$ Z_I = \sum_{\{s\}} \exp \left( \frac{\beta J}{N} \sum_{\langle ij \rangle} s_i s_j + \beta h \sum_i s_i \right) $$ {#eq:partitionising1}
 
-We cannot do the sum to solve $Z_I$ with the quadratic terms ($s_i s_j$) in the exponential, so we use the following expression for a gaussian distribution:
+We cannot do the sum to solve $Z_I$ while having the quadratic terms ($s_i s_j$) in the exponential, so we use the following expression taken from the normalization of a gaussian distribution:
 
 $$ \exp\left(\frac{\beta J N m^2}{2}\right) = \intinf \frac{\mathrm{d}M}{\sqrt{2\pi/(\beta J N)}} \exp \left( - \frac12 \beta J N M^2 + \beta J N m M \right) $$ {#eq:gaussiantrick1d}
 
@@ -26,7 +28,7 @@ Now we define $m = \frac1N \sum_i s_i$ and substitute [@eq:gaussiantrick1d] into
 
 \begin{align}
     Z_I &= 2^N \intinf \frac{\mathrm{d}M}{\sqrt{2\pi/(\beta J N)}} \exp \left( - \frac12 \beta J N M^2 \right) \exp \left( N \log \cosh (\beta J M + \beta h ) \right) \\
-    &= c_N \intinf \mathrm{d}M e^{-N\beta J f(M)} \label{eq:partitionising2}
+    &= c_N \intinf \mathrm{d}M\ e^{-N\beta J f(M)} \label{eq:partitionising2}
 \end{align}
 
 where $c_N$ is the collection of the constants and $f(M) = \frac12 M^2 - \frac{1}{\beta J} \log \cosh (\beta J M + \beta h)$ can be associated to the free energy of the model.
@@ -35,16 +37,21 @@ We expect $N$ to be large, so we expand $f(M)$ around its maximum $M^*$ to obtai
 
 $$ M^* = \tanh [\beta J M^* + \beta h)] $$ {#eq:curieweiss}
 
-Back to the partition function in [@eq:partitionising2], one solve the integral and finally obtain the free energy of the model:
+Back to the partition function in [@eq:partitionising2], one approximate the integral and obtain the free energy of the model:
 
 $$ \frac{1}{\beta J N} \log Z_I = - f(M^*) + \mathrm{constant\ terms} $$ {#eq:thermoising}
 
-One caveat of this calculation is that, for it to work properly, it depends on the fact that $J>0$. If we force $J<0$ and look at [@eq:curieweiss], we can see that, when the external field $h$ is zero, the only solution is a zero magnetization system, as we saw our the first model.
+One caveat of this calculation is that, for it to work properly, it depends on the fact that $J>0$. If we force $J<0$ and look at [@eq:curieweiss], we can see that, when the external field $h$ is zero, the only solution is a zero magnetization system, as mentioned about our the first model.
 <!-- If we considered antiferromagnetic interactions, that is $J<0$, the gaussian substitution needed to find the final solution would not be valid. Also,  -->
 
 This motivates the separation of the Ising spins into 2 groups: inside the groups the interaction is ferromagnetic and between spins of different groups it is antiferromagnetic. The hamiltonian then is:
 
 $$ \hamiltonian_{AI} = - \frac{J}{N} \sum_{\langle ij \rangle \in A} s_i s_j - \frac{J}{N} \sum_{\langle ij \rangle \in B} s_i s_j + \frac{J}{N} \sum_{\substack{i \in A \\ j \in B}} s_i s_j - h \sum_{i \in A} s_i  - h \sum_{j \in B} s_j $$
+
+\begin{align}
+    \label{eq:gaussiantrick2d} \exp\left( \frac{A^2 + B^2 +2\rho A B}{2(1-\rho^2)} \right) &= \\
+    \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi\sqrt{1 - \rho^2}}\ &\exp\left( -\frac{ x^2 + y^2 + 2\rho x y - 2\mu_A(x+\rho y) - 2\mu_B(y+\rho x)}{2(1-\rho^2)} \right) \nonumber
+\end{align}
 
 
 __SHOW A SIMPLE SOLUTION HERE__
@@ -54,21 +61,19 @@ __SHOW A SIMPLE SOLUTION HERE__
 
 ### Bipartite Society {#sec:bipartitesociety}
 
-__CHECK IF IT IS MAKING SENSE__
+__CHECK IF IT IS MAKING SENSE. REDO ALL THIS IN LIGHT OF PREVIOUS SECTION__
 
 Both because of our interest in investigating groups' interactions in society and because of the drawback of the first model just mentioned, we proceed in the same way of the infinite-range Ising model: we separate the agents into 2 groups, which we call _communities_. These communities have ferromagnetic interactions within them and antiferromagnetic ones between elements of different groups (depicted in [@fig:antiferro2groups]).
 
 ![Exemplification of the interactions between and inside the 2 communities in a bipartite society](images/antiferromagnetic-2groups.png){#fig:antiferro2groups width='55%'}
 
-We borrow [@eq:hamiltonianvisujeca] from [@sec:methods:model2], and consider two different situations to build the Hamiltonian of a bipartite society: the first one, in which the agents interacting are agreeing $h_ih_j>0$; and a second one, in which the agents are disagreeing $h_ih_j<0$. These two situations yield different contributions: $-\delta h_ih_j$ and $-h_ih_j$, respectively. The first term will be the interaction term inside a given community, whereas the second one will be the interaction term between communities.
+We borrow [@eq:hamiltonianvisujeca] from [@sec:models:model2], and consider two different situations to build the Hamiltonian of a bipartite society: the first one, in which the agents interacting are agreeing $h_ih_j>0$; and a second one, in which the agents are disagreeing $h_ih_j<0$. These two situations yield different contributions: $-\delta h_ih_j$ and $-h_ih_j$, respectively. The first term will be the interaction term inside a given community, whereas the second one will be the interaction term between communities.
 
-After modulating the antiferromagnetic interaction with a noise level $\varepsilon$, the Hamiltonian describing our bipartite society is:
+After modulating the antiferromagnetic interaction with a noise level $\varepsilon$, the Hamiltonian describing our bipartite society will become:
 
 $$  \hamiltonian =  -\frac{\delta}{N} \sum_{\langle i, j \rangle \in A} h_i h_j -\frac{\delta}{N} \sum_{\langle i, j \rangle \in B} h_i h_j - \frac{(1 - 2 \varepsilon)}{N} \sum_{\substack{i \in A \\ j \in B}} h_i h_j $$ {#eq:hamiltonian2}
 
 where the $h_i \in [-1, 1]$ are the opinion fields for each of the $N$ agents. Both parameters $\delta$ and $\varepsilon$ can have values on the interval $[-1, 1]$. We note that $\delta$ describes the intensity of the in-group ferromagnetic interactions, whereas $\varepsilon$ describes the inter-group antiferromagnetic ones.
-
-Considering the constraint of the expected value of the energy $\langle\hamiltonian\rangle_{P_B} = E$, usual maximum entropy arguments lead us to a canonical distribution $P_B(\{h_i\}) = \frac{1}{Z_B} \exp(-\beta \hamiltonian)$. We proceed evaluating the partition function of the model.
 
 First, let us rewrite the Hamiltonian in the following way:
 
@@ -77,28 +82,21 @@ First, let us rewrite the Hamiltonian in the following way:
   =& -\frac{N}{2} \left[ \delta \left( \frac1N \sum_{i \in A} h_i \right)^2 + \delta \left( \frac1N \sum_{j \in B} h_i \right)^2 + 2(1 - 2 \varepsilon) \left( \frac1N \sum_{i \in A} h_i \right) \left( \frac1N \sum_{j \in B} h_j \right) \right] \label{eq:modhamiltonian}
 \end{align}
 
-We recognize that we have only squared terms in the Hamiltonian, which renders the evaluation of the partition function rather difficult. One way around this is to use the following gaussian identity:
+Once again we have squared terms in the Hamiltonian, which hinders the evaluation of $Z_B$, so we use the gaussian identity from [@eq:gaussiantrick2d]. The terms being compared are:
 
 \begin{align}
-    \label{eq:gaussiantrick2d} \exp\left( \frac{A^2 + B^2 +2\rho A B}{2(1-\rho^2)} \right) &= \\
-    \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi\sqrt{1 - \rho^2}}\ &\exp\left( -\frac{ x^2 + y^2 + 2\rho x y - 2A(x+\rho y) - 2B(y+\rho x)}{2(1-\rho^2)} \right) \nonumber
-\end{align}
-
-We can associate some quantities from [@eq:modhamiltonian] to quantities in [@eq:gaussiantrick2d] to continue the calculation:
-
-\begin{align}
-    &A = \frac1N \sum_{i\in A} h_i\ \qquad\ B = \frac1N \sum_{j\in B} h_j \\
+    &\mu_A = \frac1N \sum_{i\in A} h_i\ \qquad\ \mu_B = \frac1N \sum_{j\in B} h_j \\
     &\frac{1}{1-\rho^2} = \beta N \delta\ \qquad\ \frac{\rho}{1-\rho^2} = \beta N (1-2\varepsilon)
 \end{align}
 
-Now, we have:
+Then, making the substitution above, the partition function becomes:
 
 \begin{align}
     Z_B &= \int_{-1}^1 \mathrm{d}h_1 \int_{-1}^1 \mathrm{d}h_2 \cdots \int_{-1}^1 \mathrm{d}h_N\ \exp(-\beta \hamiltonian) = \int \mathrm{d}h\ \exp(-\beta \hamiltonian) \\
     &= \int \mathrm{d}h\ \exp \left\{ \frac{\beta N}{2} \left[ \delta \left( \frac1N \sum_{i \in A} h_i \right)^2 + \delta \left( \frac1N \sum_{j \in B} h_i \right)^2 \right. \right. \\
     &\hspace{30mm}\ + \left. \left. 2(1 - 2 \varepsilon) \left( \frac1N \sum_{i \in A} h_i \right) \left( \frac1N \sum_{j \in B} h_j \right) \right] \right\} \\
-    &= \int \mathrm{d}h\ \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi\sqrt{1 - \rho^2}}\ \exp\left( -\frac{ x^2 + y^2 + 2\rho x y - 2A(x+\rho y) - 2B(y+\rho x)}{2(1-\rho^2)} \right) \\
-    &= \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi\sqrt{1 - \rho^2}} \exp\left( -\frac{x^2 + y^2 + 2\rho x y}{2(1-\rho^2)} \right) \int \mathrm{d}h\ \exp\left( \frac{A(x+\rho y) + B(y+\rho x)}{1-\rho^2} \right) \\
+    &= \int \mathrm{d}h\ \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi\sqrt{1 - \rho^2}}\ \exp\left( -\frac{ x^2 + y^2 + 2\rho x y - 2\mu_A(x+\rho y) - 2\mu_B(y+\rho x)}{2(1-\rho^2)} \right) \\
+    &= \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi\sqrt{1 - \rho^2}} \exp\left( -\frac{x^2 + y^2 + 2\rho x y}{2(1-\rho^2)} \right) \int \mathrm{d}h\ \exp\left( \frac{\mu_A(x+\rho y) + \mu_B(y+\rho x)}{1-\rho^2} \right) \\
     &= \int_{R^2} \frac{\mathrm{d}x\mathrm{d}y}{2\pi} \sqrt{\beta \delta N} \exp\left( -\frac{\beta N}{2} \left(\delta x^2 + \delta y^2 + 2(1-2\varepsilon) x y \right) \right) \\
     &\hspace{30mm} \times \int \mathrm{d}h\ \exp\left( \beta \left[ \delta x + (1-2\varepsilon)y\right] \sum_{i \in A} h_i + \beta \left[ \delta y + (1-2\varepsilon)x \right] \sum_{j \in B} h_j \right)
 \end{align}
@@ -127,7 +125,7 @@ where $f$ will be associated to the free energy of the model:
 \end{align}
 
 <!-- We expect $N$ to be large, so we expand $f(x, y)$ around its maximum $(x^*, y^*)$ to obtain a good approximation of the integral. This is known as Laplace's method. Differentiating $f$ with respect to its variables and finding the maxima, one obtains the following set of equations: -->
-Once again, we employ Laplace's method __EXPLAIN MORE__
+Once again, we employ Laplace's method for approximation an integral by the maximum of its argument. Differentiating $f$ with respect to its arguments, $x$ and $y$, yields the following set of consistent equations to be satisfied at the maximum:
 
 \begin{align}
 	\label{eq:fmaxima1} N \left[ \delta x^* + (1-2\varepsilon)y^* \right] &= N_A \delta \left[ \coth \beta \delta x^* + (1-2\varepsilon)y^* - \frac{1}{\beta \delta x^* + (1-2\varepsilon)y^*} \right] \\
