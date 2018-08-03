@@ -1,7 +1,6 @@
 meta-ignore/
 output/
 images/svg
-library.bib
 
 tex2pdf.-*
 
