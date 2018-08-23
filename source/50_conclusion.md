@@ -27,7 +27,7 @@ We are convinced that the other kind of society described by this model, the one
 
 <!-- We mentioned before that the mean field approximation came with compromises, and that could be seen in [@fig:probh]. Despite that inadequacy, this model clarifies much of the relevance and utility of each parameter, and gave us intuitions into the directions to follow: simpler models which still captured the important parameters and behaviours; a closer look into the -->
 
-The second model, built upon the work by [@Vicente2014], was dedicated to establishing a comparison to data available from the MFQ. We offered a simple bayesian method to calculate the best parameter $g$ to a given dataset using Gamma distributions, and we challenged some of the assumptions presented before in the literature.
+The second model, built upon the work by [@Vicente2014], was dedicated to establishing a comparison to data available from the MFQ. We offered a simple bayesian method to calculate the best parameter $\tilde{\beta}$ to a given dataset using Gamma distributions, and we challenged some of the assumptions presented before in the literature.
 
 We showed how the choice of zeitgeist from the MFQ's data is not an immediate nor trivial one, and that one must have additional hypothesis to support that choice. The choice of a zeitgeist aligned with conservatives may have overall good support from experimental evidence, but one can think in a hypothetical scenario in which the most discussed topic may be aligned with liberals, or with any other direction of the space. In that case we could not think of conservatives as behaving "conservatively", since the group would have more spread opinions and would accept novelty more than corroboration.
 

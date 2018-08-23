@@ -20,7 +20,7 @@ It can be seen that there is a phase transition depending on the parameters $\be
 
 High $\gamma$ agents rely not only on the novelty brought by disagreement but also learn from corroborating examples. For low $\gamma$, agents learn primordially from the novelty of disagreement. Therefore high $\gamma$ agents will keep on learning even after there is agreement on an issue, resulting in a more ordered society. This same behavior was found in previous works [see e.g. @Alves2015;@Caticha2015;@Alves2016]
 
-In [@sec:results:model2] we show that another parameter, $g$, has a similar role in defining the "corroboration level" of a society, and we will give another interpretation closely related to this one.
+In [@sec:results:model2] we show that another parameter, $\tilde{\beta}$, has a similar role in defining the "corroboration level" of a society, and we will give another interpretation closely related to this one.
 
 We can also change variables in our mean field probability distribution. This is useful because the inner representation $\student_i$ is not readily accessible to the experimentalist, whereas the opinion field $h$ in some applications might be:
 
