@@ -77,5 +77,3 @@ We also show in [@fig:freeenergytransition] the free energy plot at $\varepsilon
 ![Free energy $f(x, y)$ landscape when $\beta = 10.0, \delta = 0.8, \varepsilon = 0.2$ and $N_A = N_B$ . This is a region in which there is overall consensus among the society](images/freeenergy-beta10-delta8-eps2-rho05.png){#fig:freeenergyconsensus width='70%'}
 
 ![Free energy $f(x, y)$ landscape when $\beta = 10.0, \delta = 0.8, \varepsilon = 0.8$ and $N_A = N_B$ . This is a region in which there is internal consensus on each community but they disagree with one another.](images/freeenergy-beta10-delta8-eps8-rho05.png){#fig:freeenergypolarization width='70%'}
-
-![Free energy $f(x, y)$ landscape when $\beta = 10.0, \delta = 0.8, \varepsilon = 0.5$ and $N_A = N_B$ .](images/freeenergy-beta10-delta9-eps5-rho05.png){#fig:freeenergytransition width='70%'}
