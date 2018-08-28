@@ -1,6 +1,7 @@
 meta-ignore/
 output/
 images/svg
+code/*.csv
 
 tex2pdf.-*
 
