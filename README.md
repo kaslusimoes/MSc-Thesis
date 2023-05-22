@@ -10,13 +10,17 @@ I've worked my way into writing this dissertation using [Markdown](https://darin
 
 ## Open Science
 
-In the spirit of open science I intended to post the code I used to generate each figure in the dissertation (`julia version 0.6.4`, maybe adapting to newer versions). That is still ongoing, so feel free to ask me if you want anything specific.
+The code used to generate each figure in the dissertation used `julia version 0.6.4` (so definitely out of the date with the most current versions, sorry, maybe adapting to newer versions). 
 
-They should be inside the `code/` folder.
+The code for simulations is in a separate repo, [here](https://github.com/lssimoes/SocialSystems.jl)
+
+Sharing the whole codebase is still ongoing, so feel free to ask me if you want anything specific.
 
 ## Research
 
-Broadly speaking, my work could be described as an use of __inferential tools__ (bayesian \& entropic methods, statistical physics as well) to develop models about __how people reason on moral issues and exchange opinions with their peers in society__. Our <sup>1</sup> models are influenced by [learning of perceptrons](http://iopscience.iop.org/article/10.1088/0305-4470/25/23/020/meta), [Moral Foundations Theory](http://www.moralfoundations.org/) and MaxEnt/Entropic Dynamics (a nice introduction is given by Ariel Caticha [here](https://www.albany.edu/physics/ACaticha-EIFP-book.pdf)).
+This work aims to understand how human beings learn their (moral) opinions from peers in society, and how that generates interesting dynamics at the societal level, e.g. with polarisation when people are trying to agree and learn with one another.
+
+Our<sup>1</sup> models are influenced by [learning of perceptrons](http://iopscience.iop.org/article/10.1088/0305-4470/25/23/020/meta), [Moral Foundations Theory](http://www.moralfoundations.org/) and MaxEnt/Entropic Dynamics (a nice introduction is given by Ariel Caticha [here](https://www.arielcaticha.com/my-book-entropic-physics)). The methods used are broadly (bayesian/entropic) inference methods and statistical physics.
 
 If you'd like to, feel free to send me an email.
 
